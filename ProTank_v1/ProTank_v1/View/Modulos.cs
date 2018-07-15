@@ -29,5 +29,10 @@ namespace ProTank_v1.View
         {
             Application.Exit();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.herramientaTableAdapter.Fill(this.protankDataSet.herramienta);
+        }
     }
 }

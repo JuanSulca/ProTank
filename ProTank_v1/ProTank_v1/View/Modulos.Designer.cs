@@ -73,13 +73,14 @@
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.protankDataSet = new ProTank_v1.protankDataSet();
-            this.herramientaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.herramientaTableAdapter = new ProTank_v1.protankDataSetTableAdapters.herramientaTableAdapter();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.periodoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.herramientaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.protankDataSet = new ProTank_v1.protankDataSet();
+            this.herramientaTableAdapter = new ProTank_v1.protankDataSetTableAdapters.herramientaTableAdapter();
             this.tabControlModulos.SuspendLayout();
             this.tabNuevoUsuario.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -94,8 +95,8 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.herramientaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlModulos
@@ -418,6 +419,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -430,6 +433,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(769, 288);
             this.dataGridView1.TabIndex = 2;
             // 
@@ -518,7 +522,7 @@
             this.tabHerramientas_Inventario.Location = new System.Drawing.Point(23, 4);
             this.tabHerramientas_Inventario.Name = "tabHerramientas_Inventario";
             this.tabHerramientas_Inventario.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabHerramientas_Inventario.Size = new System.Drawing.Size(778, 355);
+            this.tabHerramientas_Inventario.Size = new System.Drawing.Size(775, 349);
             this.tabHerramientas_Inventario.TabIndex = 1;
             this.tabHerramientas_Inventario.Text = "Inventario";
             // 
@@ -529,9 +533,9 @@
             this.panel5.Controls.Add(this.textBox4);
             this.panel5.Controls.Add(this.button7);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(3, 297);
+            this.panel5.Location = new System.Drawing.Point(3, 291);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(772, 55);
+            this.panel5.Size = new System.Drawing.Size(769, 55);
             this.panel5.TabIndex = 2;
             // 
             // button6
@@ -570,7 +574,7 @@
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 31;
-            this.dataGridView2.Size = new System.Drawing.Size(772, 349);
+            this.dataGridView2.Size = new System.Drawing.Size(769, 343);
             this.dataGridView2.TabIndex = 1;
             // 
             // panel4
@@ -634,19 +638,11 @@
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // protankDataSet
+            // timer1
             // 
-            this.protankDataSet.DataSetName = "protankDataSet";
-            this.protankDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // herramientaBindingSource
-            // 
-            this.herramientaBindingSource.DataMember = "herramienta";
-            this.herramientaBindingSource.DataSource = this.protankDataSet;
-            // 
-            // herramientaTableAdapter
-            // 
-            this.herramientaTableAdapter.ClearBeforeFill = true;
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -654,6 +650,7 @@
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
             this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // marcaDataGridViewTextBoxColumn
             // 
@@ -661,6 +658,7 @@
             this.marcaDataGridViewTextBoxColumn.DataPropertyName = "marca";
             this.marcaDataGridViewTextBoxColumn.HeaderText = "marca";
             this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
+            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // codigoHDataGridViewTextBoxColumn
             // 
@@ -668,6 +666,7 @@
             this.codigoHDataGridViewTextBoxColumn.DataPropertyName = "codigoH";
             this.codigoHDataGridViewTextBoxColumn.HeaderText = "codigoH";
             this.codigoHDataGridViewTextBoxColumn.Name = "codigoHDataGridViewTextBoxColumn";
+            this.codigoHDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // periodoDataGridViewTextBoxColumn
             // 
@@ -675,6 +674,21 @@
             this.periodoDataGridViewTextBoxColumn.DataPropertyName = "periodo";
             this.periodoDataGridViewTextBoxColumn.HeaderText = "periodo";
             this.periodoDataGridViewTextBoxColumn.Name = "periodoDataGridViewTextBoxColumn";
+            this.periodoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // herramientaBindingSource
+            // 
+            this.herramientaBindingSource.DataMember = "herramienta";
+            this.herramientaBindingSource.DataSource = this.protankDataSet;
+            // 
+            // protankDataSet
+            // 
+            this.protankDataSet.DataSetName = "protankDataSet";
+            this.protankDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // herramientaTableAdapter
+            // 
+            this.herramientaTableAdapter.ClearBeforeFill = true;
             // 
             // Modulos
             // 
@@ -708,8 +722,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.herramientaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -767,5 +781,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoHDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn periodoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Timer timer1;
     }
 }
