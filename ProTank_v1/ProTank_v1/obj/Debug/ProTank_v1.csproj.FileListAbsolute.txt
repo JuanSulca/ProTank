@@ -19,8 +19,10 @@ C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\bin\Debug\ProTank_v1.pd
 C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.Properties.Resources.resources
 C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.Login.resources
 C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.Modulos.resources
-C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewUser.resources
 C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.csproj.GenerateResource.Cache
 C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.exe
 C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.pdb
 C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.csprojResolveAssemblyReference.cache
+C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewPerson.resources
+C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewPerstamo.resources
+C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewTool.resources

@@ -88,12 +88,15 @@
     <Compile Include="View\NewPerson.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\NewPerson.Designer.cs" />
     <Compile Include="View\NewPerstamo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\NewPerstamo.Designer.cs" />
     <Compile Include="View\NewTool.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\NewTool.Designer.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -110,6 +113,9 @@
     <EmbeddedResource Include="View\Modulos.resx">
       <DependentUpon>Modulos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\NewPerson.resx" />
+    <EmbeddedResource Include="View\NewPerstamo.resx" />
+    <EmbeddedResource Include="View\NewTool.resx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

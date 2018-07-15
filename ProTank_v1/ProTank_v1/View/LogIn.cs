@@ -27,7 +27,15 @@ namespace ProTank_v1
             String uname = txtUname.Text;
             String pwd = new Hash().md5(txtPwd.Text);
             System.Windows.Forms.MessageBox.Show("uname: " + uname + ";" + "pwd: " + pwd);
-
+            protankDataSetTableAdapters.userLoginTableAdapter loginTable = new protankDataSetTableAdapters.userLoginTableAdapter();
+            protankDataSet ds = new protankDataSet();
+            loginTable.Fill(ds.userLogin);
+            protankDataSet.userLoginRow loginRow = ds.userLogin.FindByuname(uname);
+            if(loginRow.pwd == pwd)
+            {
+                System.Windows.Forms.MessageBox.Show("Succesfull log in!\n" + "rol: " + loginRow.rol);
+            }
+            /*Llamar a la pantalla modulo*/
         }
     }
 }
