@@ -17,6 +17,16 @@ namespace ProTank_v1
             InitializeComponent();
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String uname = txtUname.Text;
+            String pwd = new Hash().md5(txtPwd.Text);
+            System.Windows.Forms.MessageBox.Show("uname: " + uname + ";" + "pwd: " + pwd);
+        }
     }
 }
