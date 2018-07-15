@@ -27,6 +27,7 @@ namespace ProTank_v1
             String uname = txtUname.Text;
             String pwd = new Hash().md5(txtPwd.Text);
             System.Windows.Forms.MessageBox.Show("uname: " + uname + ";" + "pwd: " + pwd);
+
         }
     }
 }

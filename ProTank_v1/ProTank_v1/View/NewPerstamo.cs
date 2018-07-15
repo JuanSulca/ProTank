@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace ProTank_v1.View
 {
-    public partial class Modulos : Form
+    public partial class NewPerstamo : Form
     {
-        public Modulos()
+        public NewPerstamo()
         {
             InitializeComponent();
-        }
-
-        private void Modulos_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'protankDataSet.herramienta' table. You can move, or remove it, as needed.
-
         }
     }
 }
