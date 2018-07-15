@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProTank_v1.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,14 +20,13 @@ namespace ProTank_v1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             String uname = txtUname.Text;
             String pwd = new Hash().md5(txtPwd.Text);
-            System.Windows.Forms.MessageBox.Show("uname: " + uname + ";" + "pwd: " + pwd);
             protankDataSetTableAdapters.userLoginTableAdapter loginTable = new protankDataSetTableAdapters.userLoginTableAdapter();
             protankDataSet ds = new protankDataSet();
             loginTable.Fill(ds.userLogin);
@@ -34,8 +34,19 @@ namespace ProTank_v1
             if(loginRow.pwd == pwd)
             {
                 System.Windows.Forms.MessageBox.Show("Succesfull log in!\n" + "rol: " + loginRow.rol);
+                Modulos modulos = new Modulos();
+                modulos.Show();
+                this.Hide();
             }
-            /*Llamar a la pantalla modulo*/
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Acceso denegado!");
+            }
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
