@@ -60,17 +60,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contrato.cs" />
-    <Compile Include="Hash.cs" />
-    <Compile Include="Herramienta.cs" />
-    <Compile Include="Mantenimiento.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="Model\Contrato.cs" />
+    <Compile Include="Model\Hash.cs" />
+    <Compile Include="Model\Herramienta.cs" />
+    <Compile Include="Model\Mantenimiento.cs" />
+    <Compile Include="Model\Person.cs" />
     <Compile Include="protankDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>protankDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="User.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="View\NewUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,9 +134,7 @@
   <ItemGroup>
     <None Include="Properties\App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Icons\LogIn.ico" />
   </ItemGroup>
