@@ -66,12 +66,12 @@
     <Compile Include="Model\Mantenimiento.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\Prestamo.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="protankDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>protankDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Model\User.cs" />
     <Compile Include="View\Modulos.cs">
       <SubType>Form</SubType>
     </Compile>
