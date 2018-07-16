@@ -42,17 +42,17 @@ namespace ProTank_v1 {
         
         private userLoginDataTable tableuserLogin;
         
-        private global::System.Data.DataRelation relationFK__contrato__idPer__1A14E395;
+        private global::System.Data.DataRelation relationFK__contrato__idPer__412EB0B6;
         
-        private global::System.Data.DataRelation relationFK__mantenimi__codig__1ED998B2;
+        private global::System.Data.DataRelation relationFK__mantenimi__codig__45F365D3;
         
-        private global::System.Data.DataRelation relationFK__prestamo__codigo__30F848ED;
+        private global::System.Data.DataRelation relationFK__prestamo__codigo__4AB81AF0;
         
-        private global::System.Data.DataRelation relationFK__prestamo__idE__31EC6D26;
+        private global::System.Data.DataRelation relationFK__prestamo__idE__4BAC3F29;
         
-        private global::System.Data.DataRelation relationFK__userEmple__uname__173876EA;
+        private global::System.Data.DataRelation relationFK__userEmple__uname__3E52440B;
         
-        private global::System.Data.DataRelation relationFK__userEmplead__idE__164452B1;
+        private global::System.Data.DataRelation relationFK__userEmplead__idE__3D5E1FD2;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -398,12 +398,12 @@ namespace ProTank_v1 {
                     this.tableuserLogin.InitVars();
                 }
             }
-            this.relationFK__contrato__idPer__1A14E395 = this.Relations["FK__contrato__idPer__1A14E395"];
-            this.relationFK__mantenimi__codig__1ED998B2 = this.Relations["FK__mantenimi__codig__1ED998B2"];
-            this.relationFK__prestamo__codigo__30F848ED = this.Relations["FK__prestamo__codigo__30F848ED"];
-            this.relationFK__prestamo__idE__31EC6D26 = this.Relations["FK__prestamo__idE__31EC6D26"];
-            this.relationFK__userEmple__uname__173876EA = this.Relations["FK__userEmple__uname__173876EA"];
-            this.relationFK__userEmplead__idE__164452B1 = this.Relations["FK__userEmplead__idE__164452B1"];
+            this.relationFK__contrato__idPer__412EB0B6 = this.Relations["FK__contrato__idPer__412EB0B6"];
+            this.relationFK__mantenimi__codig__45F365D3 = this.Relations["FK__mantenimi__codig__45F365D3"];
+            this.relationFK__prestamo__codigo__4AB81AF0 = this.Relations["FK__prestamo__codigo__4AB81AF0"];
+            this.relationFK__prestamo__idE__4BAC3F29 = this.Relations["FK__prestamo__idE__4BAC3F29"];
+            this.relationFK__userEmple__uname__3E52440B = this.Relations["FK__userEmple__uname__3E52440B"];
+            this.relationFK__userEmplead__idE__3D5E1FD2 = this.Relations["FK__userEmplead__idE__3D5E1FD2"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -432,30 +432,30 @@ namespace ProTank_v1 {
             base.Tables.Add(this.tableuserEmpleado);
             this.tableuserLogin = new userLoginDataTable();
             base.Tables.Add(this.tableuserLogin);
-            this.relationFK__contrato__idPer__1A14E395 = new global::System.Data.DataRelation("FK__contrato__idPer__1A14E395", new global::System.Data.DataColumn[] {
+            this.relationFK__contrato__idPer__412EB0B6 = new global::System.Data.DataRelation("FK__contrato__idPer__412EB0B6", new global::System.Data.DataColumn[] {
                         this.tableperson.idColumn}, new global::System.Data.DataColumn[] {
                         this.tablecontrato.idPerColumn}, false);
-            this.Relations.Add(this.relationFK__contrato__idPer__1A14E395);
-            this.relationFK__mantenimi__codig__1ED998B2 = new global::System.Data.DataRelation("FK__mantenimi__codig__1ED998B2", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__contrato__idPer__412EB0B6);
+            this.relationFK__mantenimi__codig__45F365D3 = new global::System.Data.DataRelation("FK__mantenimi__codig__45F365D3", new global::System.Data.DataColumn[] {
                         this.tableherramienta.codigoHColumn}, new global::System.Data.DataColumn[] {
                         this.tablemantenimiento.codigoHColumn}, false);
-            this.Relations.Add(this.relationFK__mantenimi__codig__1ED998B2);
-            this.relationFK__prestamo__codigo__30F848ED = new global::System.Data.DataRelation("FK__prestamo__codigo__30F848ED", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__mantenimi__codig__45F365D3);
+            this.relationFK__prestamo__codigo__4AB81AF0 = new global::System.Data.DataRelation("FK__prestamo__codigo__4AB81AF0", new global::System.Data.DataColumn[] {
                         this.tableherramienta.codigoHColumn}, new global::System.Data.DataColumn[] {
                         this.tableprestamo.codigoHColumn}, false);
-            this.Relations.Add(this.relationFK__prestamo__codigo__30F848ED);
-            this.relationFK__prestamo__idE__31EC6D26 = new global::System.Data.DataRelation("FK__prestamo__idE__31EC6D26", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__prestamo__codigo__4AB81AF0);
+            this.relationFK__prestamo__idE__4BAC3F29 = new global::System.Data.DataRelation("FK__prestamo__idE__4BAC3F29", new global::System.Data.DataColumn[] {
                         this.tableempleado.idEColumn}, new global::System.Data.DataColumn[] {
                         this.tableprestamo.idEColumn}, false);
-            this.Relations.Add(this.relationFK__prestamo__idE__31EC6D26);
-            this.relationFK__userEmple__uname__173876EA = new global::System.Data.DataRelation("FK__userEmple__uname__173876EA", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__prestamo__idE__4BAC3F29);
+            this.relationFK__userEmple__uname__3E52440B = new global::System.Data.DataRelation("FK__userEmple__uname__3E52440B", new global::System.Data.DataColumn[] {
                         this.tableuserLogin.unameColumn}, new global::System.Data.DataColumn[] {
                         this.tableuserEmpleado.unameColumn}, false);
-            this.Relations.Add(this.relationFK__userEmple__uname__173876EA);
-            this.relationFK__userEmplead__idE__164452B1 = new global::System.Data.DataRelation("FK__userEmplead__idE__164452B1", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__userEmple__uname__3E52440B);
+            this.relationFK__userEmplead__idE__3D5E1FD2 = new global::System.Data.DataRelation("FK__userEmplead__idE__3D5E1FD2", new global::System.Data.DataColumn[] {
                         this.tableempleado.idEColumn}, new global::System.Data.DataColumn[] {
                         this.tableuserEmpleado.idEColumn}, false);
-            this.Relations.Add(this.relationFK__userEmplead__idE__164452B1);
+            this.Relations.Add(this.relationFK__userEmplead__idE__3D5E1FD2);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -741,7 +741,7 @@ namespace ProTank_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public contratoRow AddcontratoRow(personRow parentpersonRowByFK__contrato__idPer__1A14E395, decimal monto, short calificacion, string idCon, string descrip, System.DateTime fechaI, System.DateTime fechaE) {
+            public contratoRow AddcontratoRow(personRow parentpersonRowByFK__contrato__idPer__412EB0B6, decimal monto, short calificacion, string idCon, string descrip, System.DateTime fechaI, System.DateTime fechaE) {
                 contratoRow rowcontratoRow = ((contratoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -751,8 +751,8 @@ namespace ProTank_v1 {
                         descrip,
                         fechaI,
                         fechaE};
-                if ((parentpersonRowByFK__contrato__idPer__1A14E395 != null)) {
-                    columnValuesArray[0] = parentpersonRowByFK__contrato__idPer__1A14E395[2];
+                if ((parentpersonRowByFK__contrato__idPer__412EB0B6 != null)) {
+                    columnValuesArray[0] = parentpersonRowByFK__contrato__idPer__412EB0B6[2];
                 }
                 rowcontratoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowcontratoRow);
@@ -1675,14 +1675,14 @@ namespace ProTank_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public mantenimientoRow AddmantenimientoRow(herramientaRow parentherramientaRowByFK__mantenimi__codig__1ED998B2, System.DateTime fecha, string notas) {
+            public mantenimientoRow AddmantenimientoRow(herramientaRow parentherramientaRowByFK__mantenimi__codig__45F365D3, System.DateTime fecha, string notas) {
                 mantenimientoRow rowmantenimientoRow = ((mantenimientoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         fecha,
                         notas};
-                if ((parentherramientaRowByFK__mantenimi__codig__1ED998B2 != null)) {
-                    columnValuesArray[0] = parentherramientaRowByFK__mantenimi__codig__1ED998B2[2];
+                if ((parentherramientaRowByFK__mantenimi__codig__45F365D3 != null)) {
+                    columnValuesArray[0] = parentherramientaRowByFK__mantenimi__codig__45F365D3[2];
                 }
                 rowmantenimientoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowmantenimientoRow);
@@ -2299,18 +2299,18 @@ namespace ProTank_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public prestamoRow AddprestamoRow(herramientaRow parentherramientaRowByFK__prestamo__codigo__30F848ED, empleadoRow parentempleadoRowByFK__prestamo__idE__31EC6D26, System.DateTime fechaP, System.DateTime fechaD) {
+            public prestamoRow AddprestamoRow(herramientaRow parentherramientaRowByFK__prestamo__codigo__4AB81AF0, empleadoRow parentempleadoRowByFK__prestamo__idE__4BAC3F29, System.DateTime fechaP, System.DateTime fechaD) {
                 prestamoRow rowprestamoRow = ((prestamoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         fechaP,
                         fechaD};
-                if ((parentherramientaRowByFK__prestamo__codigo__30F848ED != null)) {
-                    columnValuesArray[0] = parentherramientaRowByFK__prestamo__codigo__30F848ED[2];
+                if ((parentherramientaRowByFK__prestamo__codigo__4AB81AF0 != null)) {
+                    columnValuesArray[0] = parentherramientaRowByFK__prestamo__codigo__4AB81AF0[2];
                 }
-                if ((parentempleadoRowByFK__prestamo__idE__31EC6D26 != null)) {
-                    columnValuesArray[1] = parentempleadoRowByFK__prestamo__idE__31EC6D26[2];
+                if ((parentempleadoRowByFK__prestamo__idE__4BAC3F29 != null)) {
+                    columnValuesArray[1] = parentempleadoRowByFK__prestamo__idE__4BAC3F29[2];
                 }
                 rowprestamoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowprestamoRow);
@@ -2897,16 +2897,16 @@ namespace ProTank_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public userEmpleadoRow AdduserEmpleadoRow(empleadoRow parentempleadoRowByFK__userEmplead__idE__164452B1, userLoginRow parentuserLoginRowByFK__userEmple__uname__173876EA) {
+            public userEmpleadoRow AdduserEmpleadoRow(empleadoRow parentempleadoRowByFK__userEmplead__idE__3D5E1FD2, userLoginRow parentuserLoginRowByFK__userEmple__uname__3E52440B) {
                 userEmpleadoRow rowuserEmpleadoRow = ((userEmpleadoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null};
-                if ((parentempleadoRowByFK__userEmplead__idE__164452B1 != null)) {
-                    columnValuesArray[0] = parentempleadoRowByFK__userEmplead__idE__164452B1[2];
+                if ((parentempleadoRowByFK__userEmplead__idE__3D5E1FD2 != null)) {
+                    columnValuesArray[0] = parentempleadoRowByFK__userEmplead__idE__3D5E1FD2[2];
                 }
-                if ((parentuserLoginRowByFK__userEmple__uname__173876EA != null)) {
-                    columnValuesArray[1] = parentuserLoginRowByFK__userEmple__uname__173876EA[0];
+                if ((parentuserLoginRowByFK__userEmple__uname__3E52440B != null)) {
+                    columnValuesArray[1] = parentuserLoginRowByFK__userEmple__uname__3E52440B[0];
                 }
                 rowuserEmpleadoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowuserEmpleadoRow);
@@ -3488,10 +3488,10 @@ namespace ProTank_v1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public personRow personRow {
                 get {
-                    return ((personRow)(this.GetParentRow(this.Table.ParentRelations["FK__contrato__idPer__1A14E395"])));
+                    return ((personRow)(this.GetParentRow(this.Table.ParentRelations["FK__contrato__idPer__412EB0B6"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__contrato__idPer__1A14E395"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__contrato__idPer__412EB0B6"]);
                 }
             }
             
@@ -3650,22 +3650,22 @@ namespace ProTank_v1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public prestamoRow[] GetprestamoRows() {
-                if ((this.Table.ChildRelations["FK__prestamo__idE__31EC6D26"] == null)) {
+                if ((this.Table.ChildRelations["FK__prestamo__idE__4BAC3F29"] == null)) {
                     return new prestamoRow[0];
                 }
                 else {
-                    return ((prestamoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__prestamo__idE__31EC6D26"])));
+                    return ((prestamoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__prestamo__idE__4BAC3F29"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public userEmpleadoRow[] GetuserEmpleadoRows() {
-                if ((this.Table.ChildRelations["FK__userEmplead__idE__164452B1"] == null)) {
+                if ((this.Table.ChildRelations["FK__userEmplead__idE__3D5E1FD2"] == null)) {
                     return new userEmpleadoRow[0];
                 }
                 else {
-                    return ((userEmpleadoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__userEmplead__idE__164452B1"])));
+                    return ((userEmpleadoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__userEmplead__idE__3D5E1FD2"])));
                 }
             }
         }
@@ -3782,22 +3782,22 @@ namespace ProTank_v1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public mantenimientoRow[] GetmantenimientoRows() {
-                if ((this.Table.ChildRelations["FK__mantenimi__codig__1ED998B2"] == null)) {
+                if ((this.Table.ChildRelations["FK__mantenimi__codig__45F365D3"] == null)) {
                     return new mantenimientoRow[0];
                 }
                 else {
-                    return ((mantenimientoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__mantenimi__codig__1ED998B2"])));
+                    return ((mantenimientoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__mantenimi__codig__45F365D3"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public prestamoRow[] GetprestamoRows() {
-                if ((this.Table.ChildRelations["FK__prestamo__codigo__30F848ED"] == null)) {
+                if ((this.Table.ChildRelations["FK__prestamo__codigo__4AB81AF0"] == null)) {
                     return new prestamoRow[0];
                 }
                 else {
-                    return ((prestamoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__prestamo__codigo__30F848ED"])));
+                    return ((prestamoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__prestamo__codigo__4AB81AF0"])));
                 }
             }
         }
@@ -3858,10 +3858,10 @@ namespace ProTank_v1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public herramientaRow herramientaRow {
                 get {
-                    return ((herramientaRow)(this.GetParentRow(this.Table.ParentRelations["FK__mantenimi__codig__1ED998B2"])));
+                    return ((herramientaRow)(this.GetParentRow(this.Table.ParentRelations["FK__mantenimi__codig__45F365D3"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__mantenimi__codig__1ED998B2"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__mantenimi__codig__45F365D3"]);
                 }
             }
             
@@ -3984,11 +3984,11 @@ namespace ProTank_v1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public contratoRow[] GetcontratoRows() {
-                if ((this.Table.ChildRelations["FK__contrato__idPer__1A14E395"] == null)) {
+                if ((this.Table.ChildRelations["FK__contrato__idPer__412EB0B6"] == null)) {
                     return new contratoRow[0];
                 }
                 else {
-                    return ((contratoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__contrato__idPer__1A14E395"])));
+                    return ((contratoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__contrato__idPer__412EB0B6"])));
                 }
             }
         }
@@ -4060,10 +4060,10 @@ namespace ProTank_v1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public herramientaRow herramientaRow {
                 get {
-                    return ((herramientaRow)(this.GetParentRow(this.Table.ParentRelations["FK__prestamo__codigo__30F848ED"])));
+                    return ((herramientaRow)(this.GetParentRow(this.Table.ParentRelations["FK__prestamo__codigo__4AB81AF0"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__prestamo__codigo__30F848ED"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__prestamo__codigo__4AB81AF0"]);
                 }
             }
             
@@ -4071,10 +4071,10 @@ namespace ProTank_v1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public empleadoRow empleadoRow {
                 get {
-                    return ((empleadoRow)(this.GetParentRow(this.Table.ParentRelations["FK__prestamo__idE__31EC6D26"])));
+                    return ((empleadoRow)(this.GetParentRow(this.Table.ParentRelations["FK__prestamo__idE__4BAC3F29"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__prestamo__idE__31EC6D26"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__prestamo__idE__4BAC3F29"]);
                 }
             }
             
@@ -4207,10 +4207,10 @@ namespace ProTank_v1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public userLoginRow userLoginRow {
                 get {
-                    return ((userLoginRow)(this.GetParentRow(this.Table.ParentRelations["FK__userEmple__uname__173876EA"])));
+                    return ((userLoginRow)(this.GetParentRow(this.Table.ParentRelations["FK__userEmple__uname__3E52440B"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__userEmple__uname__173876EA"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__userEmple__uname__3E52440B"]);
                 }
             }
             
@@ -4218,10 +4218,10 @@ namespace ProTank_v1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public empleadoRow empleadoRow {
                 get {
-                    return ((empleadoRow)(this.GetParentRow(this.Table.ParentRelations["FK__userEmplead__idE__164452B1"])));
+                    return ((empleadoRow)(this.GetParentRow(this.Table.ParentRelations["FK__userEmplead__idE__3D5E1FD2"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__userEmplead__idE__164452B1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__userEmplead__idE__3D5E1FD2"]);
                 }
             }
         }
@@ -4276,11 +4276,11 @@ namespace ProTank_v1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public userEmpleadoRow[] GetuserEmpleadoRows() {
-                if ((this.Table.ChildRelations["FK__userEmple__uname__173876EA"] == null)) {
+                if ((this.Table.ChildRelations["FK__userEmple__uname__3E52440B"] == null)) {
                     return new userEmpleadoRow[0];
                 }
                 else {
-                    return ((userEmpleadoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__userEmple__uname__173876EA"])));
+                    return ((userEmpleadoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__userEmple__uname__3E52440B"])));
                 }
             }
         }
@@ -4780,7 +4780,7 @@ SELECT idPer, monto, calificacion, idCon, descrip, fechaI, fechaE FROM contrato 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=WIN-7R8UA3U5E6J;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
+            this._connection.ConnectionString = "Data Source=JUANSULCA;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5255,7 +5255,7 @@ SELECT fname, lname, idE, telef, cel FROM empleado WHERE (idE = @idE)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=WIN-7R8UA3U5E6J;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
+            this._connection.ConnectionString = "Data Source=JUANSULCA;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5690,7 +5690,7 @@ SELECT nombre, marca, codigoH, periodo FROM herramienta WHERE (codigoH = @codigo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=WIN-7R8UA3U5E6J;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
+            this._connection.ConnectionString = "Data Source=JUANSULCA;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6098,7 +6098,7 @@ SELECT codigoH, fecha, notas FROM mantenimiento WHERE (codigoH = @codigoH) AND (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=WIN-7R8UA3U5E6J;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
+            this._connection.ConnectionString = "Data Source=JUANSULCA;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6464,7 +6464,7 @@ SELECT fname, lname, id, telef, cel FROM person WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=WIN-7R8UA3U5E6J;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
+            this._connection.ConnectionString = "Data Source=JUANSULCA;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6897,7 +6897,7 @@ SELECT codigoH, idE, fechaP, fechaD FROM prestamo WHERE (codigoH = @codigoH) AND
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=WIN-7R8UA3U5E6J;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
+            this._connection.ConnectionString = "Data Source=JUANSULCA;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7282,7 +7282,7 @@ SELECT codigo, nombre, precio, unidad FROM prodServ WHERE (codigo = @codigo)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=WIN-7R8UA3U5E6J;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
+            this._connection.ConnectionString = "Data Source=JUANSULCA;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7654,7 +7654,7 @@ SELECT codigo, nombre, precio, unidad FROM prodServ WHERE (codigo = @codigo)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=WIN-7R8UA3U5E6J;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
+            this._connection.ConnectionString = "Data Source=JUANSULCA;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7999,7 +7999,7 @@ SELECT codigo, nombre, precio, unidad FROM prodServ WHERE (codigo = @codigo)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=WIN-7R8UA3U5E6J;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
+            this._connection.ConnectionString = "Data Source=JUANSULCA;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

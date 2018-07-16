@@ -26,3 +26,6 @@ C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.cs
 C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewPerson.resources
 C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewPerstamo.resources
 C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewTool.resources
+D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\bin\Debug\ProTank_v1.exe.config
+D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.exe
+D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.pdb
