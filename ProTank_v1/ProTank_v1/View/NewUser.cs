@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ProTank_v1.View
 {
-    public partial class NewPerstamo : Form
+    public partial class NewUser : Form
     {
-        public NewPerstamo()
+        public NewUser()
         {
             InitializeComponent();
-        }
-
-        private void NewPerstamo_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Close();
         }
     }
 }

@@ -20,19 +20,12 @@ namespace ProTank_v1.View
         private void Modulos_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'protankDataSet.herramienta' table. You can move, or remove it, as needed.
-            this.herramientaTableAdapter.Fill(this.protankDataSet.herramienta);
-            // TODO: This line of code loads data into the 'protankDataSet.herramienta' table. You can move, or remove it, as needed.
 
         }
 
         private void Modulos_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            this.herramientaTableAdapter.Fill(this.protankDataSet.herramienta);
         }
     }
 }
