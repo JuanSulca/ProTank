@@ -28,10 +28,10 @@ namespace ProTank_v1
         {
             String uname = txtUname.Text;
             String pwd = new Hash().md5(txtPwd.Text);
-            protankDataSetTableAdapters.userLoginTableAdapter loginTable = new protankDataSetTableAdapters.userLoginTableAdapter();
-            protankDataSet ds = new protankDataSet();
+            protankDataSet1TableAdapters.userLoginTableAdapter loginTable = new protankDataSet1TableAdapters.userLoginTableAdapter();
+            protankDataSet1 ds = new protankDataSet1();
             loginTable.Fill(ds.userLogin);
-            protankDataSet.userLoginRow loginRow = ds.userLogin.FindByuname(uname);
+            protankDataSet1.userLoginRow loginRow = ds.userLogin.FindByuname(uname);
             if(loginRow.pwd == pwd)
             {
                 System.Windows.Forms.MessageBox.Show("Succesfull log in!\n" + "rol: " + loginRow.rol);

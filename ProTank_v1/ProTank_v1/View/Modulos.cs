@@ -15,6 +15,7 @@ namespace ProTank_v1.View
         public Modulos()
         {
             InitializeComponent();
+            dateModulos_Herramientas_tabPrestamos_horaFecha.Value = DateTime.Today;
         }
 
         private void Modulos_Load(object sender, EventArgs e)
@@ -34,6 +35,10 @@ namespace ProTank_v1.View
             Application.Exit();
         }
 
-        
+        private void dateModulos_Herramientas_tabPrestamos_horaFecha_ValueChanged(object sender, EventArgs e)
+        {
+            /*this.prestamoTableAdapter.Fill(this.protankDataSet1.prestamo);
+            this.prestamoBindingSource.Filter = "Fecha=" + dateModulos_Herramientas_tabPrestamos_horaFecha.Value;*/
+        }
     }
 }
