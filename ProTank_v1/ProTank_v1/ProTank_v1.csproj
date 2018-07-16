@@ -72,6 +72,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>protankDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="protankDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>protankDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\Modulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +122,7 @@
     <EmbeddedResource Include="View\NewPerson.resx" />
     <EmbeddedResource Include="View\NewPerstamo.resx" />
     <EmbeddedResource Include="View\NewTool.resx" />
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -136,6 +142,17 @@
     </None>
     <None Include="protankDataSet.xss">
       <DependentUpon>protankDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="protankDataSet1.xsc">
+      <DependentUpon>protankDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="protankDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>protankDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="protankDataSet1.xss">
+      <DependentUpon>protankDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

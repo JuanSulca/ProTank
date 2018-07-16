@@ -19,6 +19,12 @@ namespace ProTank_v1.View
 
         private void Modulos_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'protankDataSet11.prestamosH' table. You can move, or remove it, as needed.
+            this.prestamosHTableAdapter.Fill(this.protankDataSet11.prestamosH);
+            // TODO: This line of code loads data into the 'protankDataSet1.herramienta' table. You can move, or remove it, as needed.
+            this.herramientaTableAdapter.Fill(this.protankDataSet1.herramienta);
+            // TODO: This line of code loads data into the 'protankDataSet1.prestamo' table. You can move, or remove it, as needed.
+            this.prestamoTableAdapter.Fill(this.protankDataSet1.prestamo);
             // TODO: This line of code loads data into the 'protankDataSet.herramienta' table. You can move, or remove it, as needed.
 
         }
@@ -27,5 +33,7 @@ namespace ProTank_v1.View
         {
             Application.Exit();
         }
+
+        
     }
 }
