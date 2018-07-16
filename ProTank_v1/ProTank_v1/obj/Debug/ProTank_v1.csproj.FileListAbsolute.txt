@@ -39,3 +39,17 @@ D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewPerso
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewPerstamo.resources
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewTool.resources
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.csproj.GenerateResource.Cache
+C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\bin\Debug\ProTank_v1.exe.config
+C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\bin\Debug\ProTank_v1.exe
+C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\bin\Debug\ProTank_v1.pdb
+C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.csprojAssemblyReference.cache
+C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.Properties.Resources.resources
+C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.Login.resources
+C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.Modulos.resources
+C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewPerson.resources
+C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewPerstamo.resources
+C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewTool.resources
+C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.csproj.GenerateResource.cache
+C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.csproj.CoreCompileInputs.cache
+C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.exe
+C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.pdb
