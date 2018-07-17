@@ -21,5 +21,14 @@ namespace ProTank_v1.View
         {
             this.Close();
         }
+
+        private void NewPrestamo_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'protankDataSet1.empleado' table. You can move, or remove it, as needed.
+            this.empleadoTableAdapter.Fill(this.protankDataSet1.empleado);
+            // TODO: This line of code loads data into the 'protankDataSet1.herramienta' table. You can move, or remove it, as needed.
+            this.herramientaTableAdapter.Fill(this.protankDataSet1.herramienta);
+
+        }
     }
 }

@@ -91,57 +91,17 @@
             this.txtModulos_Herramientas_tabInventario_buscar = new System.Windows.Forms.TextBox();
             this.btnModulos_Herramientas_tabInventario_nuevaHerramienta = new System.Windows.Forms.Button();
             this.tableModulos_Herramientas_tabInventario_inventario = new System.Windows.Forms.DataGridView();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.periodoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.herramientaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblModulos_Herramientas_herramientas = new System.Windows.Forms.Label();
             this.lblModulos_Herramientas_protank = new System.Windows.Forms.Label();
             this.tabModulos_Contratos = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.panContratos_header = new System.Windows.Forms.Panel();
-            this.lblContratos_contratos = new System.Windows.Forms.Label();
-            this.lblContratos_protank = new System.Windows.Forms.Label();
-            this.tabModulos_Design = new System.Windows.Forms.TabPage();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.prestamoTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.prestamoTableAdapter();
-            this.herramientaTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.herramientaTableAdapter();
-            this.prestamosHTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.prestamosHTableAdapter();
-            this.contratoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.contratoTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.contratoTableAdapter();
-            this.tabModulos_ListaPersonas = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.personTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.personTableAdapter();
-            this.button3 = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.empleadoTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.empleadoTableAdapter();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.periodoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableModulos_Contratos_tabla = new System.Windows.Forms.DataGridView();
             this.idPerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.montoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calificacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -149,15 +109,55 @@
             this.descripDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contratoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.lblModulos_Contratos_nuevoCliente = new System.Windows.Forms.Label();
+            this.btnModulos_Contratos_nuevoCliente = new System.Windows.Forms.Button();
+            this.btnModulos_Contratos_buscarContrato = new System.Windows.Forms.Button();
+            this.txtModulos_Contratos_buscarContrato = new System.Windows.Forms.TextBox();
+            this.btnModulos_Contratos_ingresarContrato = new System.Windows.Forms.Button();
+            this.panContratos_header = new System.Windows.Forms.Panel();
+            this.lblContratos_contratos = new System.Windows.Forms.Label();
+            this.lblContratos_protank = new System.Windows.Forms.Label();
+            this.tabModulos_Design = new System.Windows.Forms.TabPage();
+            this.tabModulos_ListaPersonas = new System.Windows.Forms.TabPage();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.fnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.celDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.prestamoTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.prestamoTableAdapter();
+            this.herramientaTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.herramientaTableAdapter();
+            this.prestamosHTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.prestamosHTableAdapter();
+            this.contratoTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.contratoTableAdapter();
+            this.personTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.personTableAdapter();
+            this.empleadoTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.empleadoTableAdapter();
             this.tabControl_Modulos.SuspendLayout();
             this.tabModulos_NuevoUsuario.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -179,20 +179,20 @@
             this.panel4.SuspendLayout();
             this.tabModulos_Contratos.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableModulos_Contratos_tabla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contratoBindingSource)).BeginInit();
             this.panel8.SuspendLayout();
             this.panContratos_header.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.contratoBindingSource)).BeginInit();
             this.tabModulos_ListaPersonas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
+            this.panel11.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl_Modulos
@@ -226,7 +226,7 @@
             this.tabModulos_NuevoUsuario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabModulos_NuevoUsuario.Name = "tabModulos_NuevoUsuario";
             this.tabModulos_NuevoUsuario.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabModulos_NuevoUsuario.Size = new System.Drawing.Size(788, 378);
+            this.tabModulos_NuevoUsuario.Size = new System.Drawing.Size(924, 378);
             this.tabModulos_NuevoUsuario.TabIndex = 0;
             this.tabModulos_NuevoUsuario.Text = "Nuevo Usuario";
             this.tabModulos_NuevoUsuario.ToolTipText = "Crear nuevos usuarios";
@@ -256,7 +256,7 @@
             this.panel2.Location = new System.Drawing.Point(2, 72);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(784, 303);
+            this.panel2.Size = new System.Drawing.Size(920, 303);
             this.panel2.TabIndex = 5;
             // 
             // lblModulos_NuevoUsuario_ayuda
@@ -457,7 +457,7 @@
             this.panel1.Location = new System.Drawing.Point(2, 3);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 69);
+            this.panel1.Size = new System.Drawing.Size(920, 69);
             this.panel1.TabIndex = 4;
             // 
             // lblModulos_NuevoUsuario_nuevoUsuario
@@ -962,6 +962,34 @@
             this.tableModulos_Herramientas_tabInventario_inventario.Size = new System.Drawing.Size(887, 289);
             this.tableModulos_Herramientas_tabInventario_inventario.TabIndex = 1;
             // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // marcaDataGridViewTextBoxColumn
+            // 
+            this.marcaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "marca";
+            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
+            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
+            // 
+            // codigoHDataGridViewTextBoxColumn
+            // 
+            this.codigoHDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.codigoHDataGridViewTextBoxColumn.DataPropertyName = "codigoH";
+            this.codigoHDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codigoHDataGridViewTextBoxColumn.Name = "codigoHDataGridViewTextBoxColumn";
+            // 
+            // periodoDataGridViewTextBoxColumn
+            // 
+            this.periodoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.periodoDataGridViewTextBoxColumn.DataPropertyName = "periodo";
+            this.periodoDataGridViewTextBoxColumn.HeaderText = "Periodo de Mantenimiento";
+            this.periodoDataGridViewTextBoxColumn.Name = "periodoDataGridViewTextBoxColumn";
+            // 
             // herramientaBindingSource
             // 
             this.herramientaBindingSource.DataMember = "herramienta";
@@ -1022,7 +1050,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Silver;
-            this.panel7.Controls.Add(this.dataGridView3);
+            this.panel7.Controls.Add(this.tableModulos_Contratos_tabla);
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1032,14 +1060,14 @@
             this.panel7.Size = new System.Drawing.Size(920, 303);
             this.panel7.TabIndex = 7;
             // 
-            // dataGridView3
+            // tableModulos_Contratos_tabla
             // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AllowUserToResizeRows = false;
-            this.dataGridView3.AutoGenerateColumns = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tableModulos_Contratos_tabla.AllowUserToAddRows = false;
+            this.tableModulos_Contratos_tabla.AllowUserToDeleteRows = false;
+            this.tableModulos_Contratos_tabla.AllowUserToResizeRows = false;
+            this.tableModulos_Contratos_tabla.AutoGenerateColumns = false;
+            this.tableModulos_Contratos_tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableModulos_Contratos_tabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idPerDataGridViewTextBoxColumn,
             this.montoDataGridViewTextBoxColumn,
             this.calificacionDataGridViewTextBoxColumn,
@@ -1047,83 +1075,137 @@
             this.descripDataGridViewTextBoxColumn,
             this.fechaIDataGridViewTextBoxColumn,
             this.fechaEDataGridViewTextBoxColumn});
-            this.dataGridView3.DataSource = this.contratoBindingSource;
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersVisible = false;
-            this.dataGridView3.RowTemplate.Height = 31;
-            this.dataGridView3.Size = new System.Drawing.Size(920, 248);
-            this.dataGridView3.TabIndex = 3;
+            this.tableModulos_Contratos_tabla.DataSource = this.contratoBindingSource;
+            this.tableModulos_Contratos_tabla.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableModulos_Contratos_tabla.Location = new System.Drawing.Point(0, 0);
+            this.tableModulos_Contratos_tabla.Margin = new System.Windows.Forms.Padding(2);
+            this.tableModulos_Contratos_tabla.Name = "tableModulos_Contratos_tabla";
+            this.tableModulos_Contratos_tabla.RowHeadersVisible = false;
+            this.tableModulos_Contratos_tabla.RowTemplate.Height = 31;
+            this.tableModulos_Contratos_tabla.Size = new System.Drawing.Size(920, 248);
+            this.tableModulos_Contratos_tabla.TabIndex = 3;
+            // 
+            // idPerDataGridViewTextBoxColumn
+            // 
+            this.idPerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idPerDataGridViewTextBoxColumn.DataPropertyName = "idPer";
+            this.idPerDataGridViewTextBoxColumn.HeaderText = "Cliente";
+            this.idPerDataGridViewTextBoxColumn.Name = "idPerDataGridViewTextBoxColumn";
+            // 
+            // montoDataGridViewTextBoxColumn
+            // 
+            this.montoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.montoDataGridViewTextBoxColumn.DataPropertyName = "monto";
+            this.montoDataGridViewTextBoxColumn.HeaderText = "Costo del contrato";
+            this.montoDataGridViewTextBoxColumn.Name = "montoDataGridViewTextBoxColumn";
+            // 
+            // calificacionDataGridViewTextBoxColumn
+            // 
+            this.calificacionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.calificacionDataGridViewTextBoxColumn.DataPropertyName = "calificacion";
+            this.calificacionDataGridViewTextBoxColumn.HeaderText = "Calificación";
+            this.calificacionDataGridViewTextBoxColumn.Name = "calificacionDataGridViewTextBoxColumn";
+            // 
+            // idConDataGridViewTextBoxColumn
+            // 
+            this.idConDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idConDataGridViewTextBoxColumn.DataPropertyName = "idCon";
+            this.idConDataGridViewTextBoxColumn.HeaderText = "ID Contrato";
+            this.idConDataGridViewTextBoxColumn.Name = "idConDataGridViewTextBoxColumn";
+            // 
+            // descripDataGridViewTextBoxColumn
+            // 
+            this.descripDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripDataGridViewTextBoxColumn.DataPropertyName = "descrip";
+            this.descripDataGridViewTextBoxColumn.HeaderText = "Descripción";
+            this.descripDataGridViewTextBoxColumn.Name = "descripDataGridViewTextBoxColumn";
+            // 
+            // fechaIDataGridViewTextBoxColumn
+            // 
+            this.fechaIDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fechaIDataGridViewTextBoxColumn.DataPropertyName = "fechaI";
+            this.fechaIDataGridViewTextBoxColumn.HeaderText = "Inicio";
+            this.fechaIDataGridViewTextBoxColumn.Name = "fechaIDataGridViewTextBoxColumn";
+            // 
+            // fechaEDataGridViewTextBoxColumn
+            // 
+            this.fechaEDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fechaEDataGridViewTextBoxColumn.DataPropertyName = "fechaE";
+            this.fechaEDataGridViewTextBoxColumn.HeaderText = "Entrega";
+            this.fechaEDataGridViewTextBoxColumn.Name = "fechaEDataGridViewTextBoxColumn";
+            // 
+            // contratoBindingSource
+            // 
+            this.contratoBindingSource.DataMember = "contrato";
+            this.contratoBindingSource.DataSource = this.protankDataSet1;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.DarkGray;
-            this.panel8.Controls.Add(this.label10);
-            this.panel8.Controls.Add(this.button10);
-            this.panel8.Controls.Add(this.button8);
-            this.panel8.Controls.Add(this.textBox5);
-            this.panel8.Controls.Add(this.button9);
+            this.panel8.Controls.Add(this.lblModulos_Contratos_nuevoCliente);
+            this.panel8.Controls.Add(this.btnModulos_Contratos_nuevoCliente);
+            this.panel8.Controls.Add(this.btnModulos_Contratos_buscarContrato);
+            this.panel8.Controls.Add(this.txtModulos_Contratos_buscarContrato);
+            this.panel8.Controls.Add(this.btnModulos_Contratos_ingresarContrato);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel8.Location = new System.Drawing.Point(0, 248);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(920, 55);
             this.panel8.TabIndex = 2;
             // 
-            // label10
+            // lblModulos_Contratos_nuevoCliente
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(818, 22);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 13);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Nuevo Cliente";
+            this.lblModulos_Contratos_nuevoCliente.AutoSize = true;
+            this.lblModulos_Contratos_nuevoCliente.Location = new System.Drawing.Point(818, 22);
+            this.lblModulos_Contratos_nuevoCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblModulos_Contratos_nuevoCliente.Name = "lblModulos_Contratos_nuevoCliente";
+            this.lblModulos_Contratos_nuevoCliente.Size = new System.Drawing.Size(74, 13);
+            this.lblModulos_Contratos_nuevoCliente.TabIndex = 16;
+            this.lblModulos_Contratos_nuevoCliente.Text = "Nuevo Cliente";
             // 
-            // button10
+            // btnModulos_Contratos_nuevoCliente
             // 
-            this.button10.Image = global::ProTank_v1.Properties.Resources.LogIn;
-            this.button10.Location = new System.Drawing.Point(751, 6);
-            this.button10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(53, 45);
-            this.button10.TabIndex = 15;
-            this.toolTip1.SetToolTip(this.button10, "Permite crear un nuevo cliente");
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnModulos_Contratos_nuevoCliente.Image = global::ProTank_v1.Properties.Resources.LogIn;
+            this.btnModulos_Contratos_nuevoCliente.Location = new System.Drawing.Point(751, 6);
+            this.btnModulos_Contratos_nuevoCliente.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnModulos_Contratos_nuevoCliente.Name = "btnModulos_Contratos_nuevoCliente";
+            this.btnModulos_Contratos_nuevoCliente.Size = new System.Drawing.Size(53, 45);
+            this.btnModulos_Contratos_nuevoCliente.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.btnModulos_Contratos_nuevoCliente, "Permite crear un nuevo cliente");
+            this.btnModulos_Contratos_nuevoCliente.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnModulos_Contratos_buscarContrato
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(505, 12);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(147, 30);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Buscar Contrato";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnModulos_Contratos_buscarContrato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnModulos_Contratos_buscarContrato.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModulos_Contratos_buscarContrato.ForeColor = System.Drawing.Color.White;
+            this.btnModulos_Contratos_buscarContrato.Location = new System.Drawing.Point(505, 12);
+            this.btnModulos_Contratos_buscarContrato.Name = "btnModulos_Contratos_buscarContrato";
+            this.btnModulos_Contratos_buscarContrato.Size = new System.Drawing.Size(147, 30);
+            this.btnModulos_Contratos_buscarContrato.TabIndex = 2;
+            this.btnModulos_Contratos_buscarContrato.Text = "Buscar Contrato";
+            this.btnModulos_Contratos_buscarContrato.UseVisualStyleBackColor = false;
             // 
-            // textBox5
+            // txtModulos_Contratos_buscarContrato
             // 
-            this.textBox5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(336, 16);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(163, 25);
-            this.textBox5.TabIndex = 1;
+            this.txtModulos_Contratos_buscarContrato.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtModulos_Contratos_buscarContrato.Location = new System.Drawing.Point(336, 16);
+            this.txtModulos_Contratos_buscarContrato.Name = "txtModulos_Contratos_buscarContrato";
+            this.txtModulos_Contratos_buscarContrato.Size = new System.Drawing.Size(163, 25);
+            this.txtModulos_Contratos_buscarContrato.TabIndex = 1;
             // 
-            // button9
+            // btnModulos_Contratos_ingresarContrato
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(47, 12);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(153, 30);
-            this.button9.TabIndex = 0;
-            this.button9.Text = "Ingresar Contrato";
-            this.toolTip1.SetToolTip(this.button9, "Permite ingresar un nuevo contrato");
-            this.button9.UseVisualStyleBackColor = false;
+            this.btnModulos_Contratos_ingresarContrato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnModulos_Contratos_ingresarContrato.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModulos_Contratos_ingresarContrato.ForeColor = System.Drawing.Color.White;
+            this.btnModulos_Contratos_ingresarContrato.Location = new System.Drawing.Point(47, 12);
+            this.btnModulos_Contratos_ingresarContrato.Name = "btnModulos_Contratos_ingresarContrato";
+            this.btnModulos_Contratos_ingresarContrato.Size = new System.Drawing.Size(153, 30);
+            this.btnModulos_Contratos_ingresarContrato.TabIndex = 0;
+            this.btnModulos_Contratos_ingresarContrato.Text = "Ingresar Contrato";
+            this.toolTip1.SetToolTip(this.btnModulos_Contratos_ingresarContrato, "Permite ingresar un nuevo contrato");
+            this.btnModulos_Contratos_ingresarContrato.UseVisualStyleBackColor = false;
             // 
             // panContratos_header
             // 
@@ -1176,31 +1258,6 @@
             this.tabModulos_Design.Text = "Diseño";
             this.tabModulos_Design.UseVisualStyleBackColor = true;
             // 
-            // toolTip1
-            // 
-            this.toolTip1.IsBalloon = true;
-            // 
-            // prestamoTableAdapter
-            // 
-            this.prestamoTableAdapter.ClearBeforeFill = true;
-            // 
-            // herramientaTableAdapter
-            // 
-            this.herramientaTableAdapter.ClearBeforeFill = true;
-            // 
-            // prestamosHTableAdapter
-            // 
-            this.prestamosHTableAdapter.ClearBeforeFill = true;
-            // 
-            // contratoBindingSource
-            // 
-            this.contratoBindingSource.DataMember = "contrato";
-            this.contratoBindingSource.DataSource = this.protankDataSet1;
-            // 
-            // contratoTableAdapter
-            // 
-            this.contratoTableAdapter.ClearBeforeFill = true;
-            // 
             // tabModulos_ListaPersonas
             // 
             this.tabModulos_ListaPersonas.Controls.Add(this.panel12);
@@ -1213,6 +1270,63 @@
             this.tabModulos_ListaPersonas.TabIndex = 4;
             this.tabModulos_ListaPersonas.Text = "Clientes";
             this.tabModulos_ListaPersonas.UseVisualStyleBackColor = true;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.DarkGray;
+            this.panel12.Controls.Add(this.button6);
+            this.panel12.Controls.Add(this.button3);
+            this.panel12.Controls.Add(this.button4);
+            this.panel12.Controls.Add(this.textBox4);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel12.Location = new System.Drawing.Point(3, 320);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(918, 55);
+            this.panel12.TabIndex = 9;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(310, 13);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(147, 30);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "Eliminar Cliente";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(76, 13);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(147, 30);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Editar Cliente";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(711, 13);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(147, 30);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Buscar Cliente";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(542, 17);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(163, 25);
+            this.textBox4.TabIndex = 1;
             // 
             // dataGridView1
             // 
@@ -1237,6 +1351,46 @@
             this.dataGridView1.Size = new System.Drawing.Size(918, 303);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // fnameDataGridViewTextBoxColumn
+            // 
+            this.fnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fnameDataGridViewTextBoxColumn.DataPropertyName = "fname";
+            this.fnameDataGridViewTextBoxColumn.HeaderText = "Nombres";
+            this.fnameDataGridViewTextBoxColumn.Name = "fnameDataGridViewTextBoxColumn";
+            // 
+            // lnameDataGridViewTextBoxColumn
+            // 
+            this.lnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lnameDataGridViewTextBoxColumn.DataPropertyName = "lname";
+            this.lnameDataGridViewTextBoxColumn.HeaderText = "Apellidos";
+            this.lnameDataGridViewTextBoxColumn.Name = "lnameDataGridViewTextBoxColumn";
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Cédula";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // telefDataGridViewTextBoxColumn
+            // 
+            this.telefDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.telefDataGridViewTextBoxColumn.DataPropertyName = "telef";
+            this.telefDataGridViewTextBoxColumn.HeaderText = "Teléfono";
+            this.telefDataGridViewTextBoxColumn.Name = "telefDataGridViewTextBoxColumn";
+            // 
+            // celDataGridViewTextBoxColumn
+            // 
+            this.celDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.celDataGridViewTextBoxColumn.DataPropertyName = "cel";
+            this.celDataGridViewTextBoxColumn.HeaderText = "Celular";
+            this.celDataGridViewTextBoxColumn.Name = "celDataGridViewTextBoxColumn";
+            // 
+            // personBindingSource
+            // 
+            this.personBindingSource.DataMember = "person";
+            this.personBindingSource.DataSource = this.protankDataSet1;
             // 
             // panel11
             // 
@@ -1278,60 +1432,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "ProTank";
             // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.DarkGray;
-            this.panel12.Controls.Add(this.button6);
-            this.panel12.Controls.Add(this.button3);
-            this.panel12.Controls.Add(this.button4);
-            this.panel12.Controls.Add(this.textBox4);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel12.Location = new System.Drawing.Point(3, 320);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(918, 55);
-            this.panel12.TabIndex = 9;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(711, 13);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(147, 30);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Buscar Cliente";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(542, 17);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(163, 25);
-            this.textBox4.TabIndex = 1;
-            // 
-            // personBindingSource
-            // 
-            this.personBindingSource.DataMember = "person";
-            this.personBindingSource.DataSource = this.protankDataSet1;
-            // 
-            // personTableAdapter
-            // 
-            this.personTableAdapter.ClearBeforeFill = true;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(76, 13);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(147, 30);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Editar Cliente";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.panel13);
@@ -1344,18 +1444,6 @@
             this.tabPage1.TabIndex = 5;
             this.tabPage1.Text = "Empleados";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(310, 13);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(147, 30);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Eliminar Cliente";
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // panel13
             // 
@@ -1436,6 +1524,39 @@
             this.dataGridView2.Size = new System.Drawing.Size(918, 303);
             this.dataGridView2.TabIndex = 10;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "fname";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "lname";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Apellido";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "telef";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Teléfono";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "cel";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Celular";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // empleadoBindingSource
+            // 
+            this.empleadoBindingSource.DataMember = "empleado";
+            this.empleadoBindingSource.DataSource = this.protankDataSet1;
+            // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1476,154 +1597,33 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "ProTank";
             // 
-            // empleadoBindingSource
+            // toolTip1
             // 
-            this.empleadoBindingSource.DataMember = "empleado";
-            this.empleadoBindingSource.DataSource = this.protankDataSet1;
+            this.toolTip1.IsBalloon = true;
+            // 
+            // prestamoTableAdapter
+            // 
+            this.prestamoTableAdapter.ClearBeforeFill = true;
+            // 
+            // herramientaTableAdapter
+            // 
+            this.herramientaTableAdapter.ClearBeforeFill = true;
+            // 
+            // prestamosHTableAdapter
+            // 
+            this.prestamosHTableAdapter.ClearBeforeFill = true;
+            // 
+            // contratoTableAdapter
+            // 
+            this.contratoTableAdapter.ClearBeforeFill = true;
+            // 
+            // personTableAdapter
+            // 
+            this.personTableAdapter.ClearBeforeFill = true;
             // 
             // empleadoTableAdapter
             // 
             this.empleadoTableAdapter.ClearBeforeFill = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // marcaDataGridViewTextBoxColumn
-            // 
-            this.marcaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "marca";
-            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
-            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
-            // 
-            // codigoHDataGridViewTextBoxColumn
-            // 
-            this.codigoHDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.codigoHDataGridViewTextBoxColumn.DataPropertyName = "codigoH";
-            this.codigoHDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.codigoHDataGridViewTextBoxColumn.Name = "codigoHDataGridViewTextBoxColumn";
-            // 
-            // periodoDataGridViewTextBoxColumn
-            // 
-            this.periodoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.periodoDataGridViewTextBoxColumn.DataPropertyName = "periodo";
-            this.periodoDataGridViewTextBoxColumn.HeaderText = "Periodo de Mantenimiento";
-            this.periodoDataGridViewTextBoxColumn.Name = "periodoDataGridViewTextBoxColumn";
-            // 
-            // idPerDataGridViewTextBoxColumn
-            // 
-            this.idPerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idPerDataGridViewTextBoxColumn.DataPropertyName = "idPer";
-            this.idPerDataGridViewTextBoxColumn.HeaderText = "Cliente";
-            this.idPerDataGridViewTextBoxColumn.Name = "idPerDataGridViewTextBoxColumn";
-            // 
-            // montoDataGridViewTextBoxColumn
-            // 
-            this.montoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.montoDataGridViewTextBoxColumn.DataPropertyName = "monto";
-            this.montoDataGridViewTextBoxColumn.HeaderText = "Costo del contrato";
-            this.montoDataGridViewTextBoxColumn.Name = "montoDataGridViewTextBoxColumn";
-            // 
-            // calificacionDataGridViewTextBoxColumn
-            // 
-            this.calificacionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.calificacionDataGridViewTextBoxColumn.DataPropertyName = "calificacion";
-            this.calificacionDataGridViewTextBoxColumn.HeaderText = "Calificación";
-            this.calificacionDataGridViewTextBoxColumn.Name = "calificacionDataGridViewTextBoxColumn";
-            // 
-            // idConDataGridViewTextBoxColumn
-            // 
-            this.idConDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idConDataGridViewTextBoxColumn.DataPropertyName = "idCon";
-            this.idConDataGridViewTextBoxColumn.HeaderText = "ID Contrato";
-            this.idConDataGridViewTextBoxColumn.Name = "idConDataGridViewTextBoxColumn";
-            // 
-            // descripDataGridViewTextBoxColumn
-            // 
-            this.descripDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descripDataGridViewTextBoxColumn.DataPropertyName = "descrip";
-            this.descripDataGridViewTextBoxColumn.HeaderText = "Descripción";
-            this.descripDataGridViewTextBoxColumn.Name = "descripDataGridViewTextBoxColumn";
-            // 
-            // fechaIDataGridViewTextBoxColumn
-            // 
-            this.fechaIDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fechaIDataGridViewTextBoxColumn.DataPropertyName = "fechaI";
-            this.fechaIDataGridViewTextBoxColumn.HeaderText = "Inicio";
-            this.fechaIDataGridViewTextBoxColumn.Name = "fechaIDataGridViewTextBoxColumn";
-            // 
-            // fechaEDataGridViewTextBoxColumn
-            // 
-            this.fechaEDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fechaEDataGridViewTextBoxColumn.DataPropertyName = "fechaE";
-            this.fechaEDataGridViewTextBoxColumn.HeaderText = "Entrega";
-            this.fechaEDataGridViewTextBoxColumn.Name = "fechaEDataGridViewTextBoxColumn";
-            // 
-            // fnameDataGridViewTextBoxColumn
-            // 
-            this.fnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fnameDataGridViewTextBoxColumn.DataPropertyName = "fname";
-            this.fnameDataGridViewTextBoxColumn.HeaderText = "Nombres";
-            this.fnameDataGridViewTextBoxColumn.Name = "fnameDataGridViewTextBoxColumn";
-            // 
-            // lnameDataGridViewTextBoxColumn
-            // 
-            this.lnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.lnameDataGridViewTextBoxColumn.DataPropertyName = "lname";
-            this.lnameDataGridViewTextBoxColumn.HeaderText = "Apellidos";
-            this.lnameDataGridViewTextBoxColumn.Name = "lnameDataGridViewTextBoxColumn";
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Cédula";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // telefDataGridViewTextBoxColumn
-            // 
-            this.telefDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.telefDataGridViewTextBoxColumn.DataPropertyName = "telef";
-            this.telefDataGridViewTextBoxColumn.HeaderText = "Teléfono";
-            this.telefDataGridViewTextBoxColumn.Name = "telefDataGridViewTextBoxColumn";
-            // 
-            // celDataGridViewTextBoxColumn
-            // 
-            this.celDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.celDataGridViewTextBoxColumn.DataPropertyName = "cel";
-            this.celDataGridViewTextBoxColumn.HeaderText = "Celular";
-            this.celDataGridViewTextBoxColumn.Name = "celDataGridViewTextBoxColumn";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "fname";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "lname";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Apellido";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "telef";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Teléfono";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "cel";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Celular";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // Modulos
             // 
@@ -1666,26 +1666,26 @@
             this.panel4.PerformLayout();
             this.tabModulos_Contratos.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableModulos_Contratos_tabla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contratoBindingSource)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panContratos_header.ResumeLayout(false);
             this.panContratos_header.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.contratoBindingSource)).EndInit();
             this.tabModulos_ListaPersonas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1744,15 +1744,15 @@
         private System.Windows.Forms.CheckBox checkModulos_Herramientas_tabInventario_noNecesita;
         private System.Windows.Forms.Label lblModulos_Herramientas_tabInventario_mantenimiento;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnModulos_Contratos_buscarContrato;
+        private System.Windows.Forms.TextBox txtModulos_Contratos_buscarContrato;
+        private System.Windows.Forms.Button btnModulos_Contratos_ingresarContrato;
+        private System.Windows.Forms.Button btnModulos_Contratos_nuevoCliente;
         private System.Windows.Forms.Label lblModulos_NuevoUsuario_ayuda;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label lblModulos_NuevoUsuario_nuevaPersona;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridView tableModulos_Contratos_tabla;
+        private System.Windows.Forms.Label lblModulos_Contratos_nuevoCliente;
         private protankDataSet1TableAdapters.prestamoTableAdapter prestamoTableAdapter;
         private protankDataSet1TableAdapters.herramientaTableAdapter herramientaTableAdapter;
         private System.Windows.Forms.RadioButton radioButton2;
