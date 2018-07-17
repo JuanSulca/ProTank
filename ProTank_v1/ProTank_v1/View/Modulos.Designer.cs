@@ -105,6 +105,11 @@
             this.protankDataSet1 = new ProTank_v1.protankDataSet1();
             this.prestamosHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prestamosHTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.prestamosHTableAdapter();
+            this.herramientaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.periodoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.códigoHerramientaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.herramientaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.responsableDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -134,6 +139,7 @@
             this.panContratos_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.protankDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prestamosHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.herramientaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl_Modulos
@@ -827,9 +833,16 @@
             this.tableModulos_Herramientas_tabInventario_inventario.AllowUserToAddRows = false;
             this.tableModulos_Herramientas_tabInventario_inventario.AllowUserToDeleteRows = false;
             this.tableModulos_Herramientas_tabInventario_inventario.AllowUserToResizeRows = false;
+            this.tableModulos_Herramientas_tabInventario_inventario.AutoGenerateColumns = false;
             this.tableModulos_Herramientas_tabInventario_inventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.tableModulos_Herramientas_tabInventario_inventario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tableModulos_Herramientas_tabInventario_inventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableModulos_Herramientas_tabInventario_inventario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombreDataGridViewTextBoxColumn,
+            this.marcaDataGridViewTextBoxColumn,
+            this.codigoHDataGridViewTextBoxColumn,
+            this.periodoDataGridViewTextBoxColumn});
+            this.tableModulos_Herramientas_tabInventario_inventario.DataSource = this.herramientaBindingSource;
             this.tableModulos_Herramientas_tabInventario_inventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableModulos_Herramientas_tabInventario_inventario.Location = new System.Drawing.Point(3, 3);
             this.tableModulos_Herramientas_tabInventario_inventario.Margin = new System.Windows.Forms.Padding(2);
@@ -1060,20 +1073,56 @@
             // 
             this.prestamosHTableAdapter.ClearBeforeFill = true;
             // 
+            // herramientaBindingSource
+            // 
+            this.herramientaBindingSource.DataMember = "herramienta";
+            this.herramientaBindingSource.DataSource = this.protankDataSet1;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // marcaDataGridViewTextBoxColumn
+            // 
+            this.marcaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "marca";
+            this.marcaDataGridViewTextBoxColumn.HeaderText = "marca";
+            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
+            // 
+            // codigoHDataGridViewTextBoxColumn
+            // 
+            this.codigoHDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.codigoHDataGridViewTextBoxColumn.DataPropertyName = "codigoH";
+            this.codigoHDataGridViewTextBoxColumn.HeaderText = "codigoH";
+            this.codigoHDataGridViewTextBoxColumn.Name = "codigoHDataGridViewTextBoxColumn";
+            // 
+            // periodoDataGridViewTextBoxColumn
+            // 
+            this.periodoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.periodoDataGridViewTextBoxColumn.DataPropertyName = "periodo";
+            this.periodoDataGridViewTextBoxColumn.HeaderText = "periodo";
+            this.periodoDataGridViewTextBoxColumn.Name = "periodoDataGridViewTextBoxColumn";
+            // 
             // códigoHerramientaDataGridViewTextBoxColumn
             // 
+            this.códigoHerramientaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.códigoHerramientaDataGridViewTextBoxColumn.DataPropertyName = "Código Herramienta";
             this.códigoHerramientaDataGridViewTextBoxColumn.HeaderText = "Código Herramienta";
             this.códigoHerramientaDataGridViewTextBoxColumn.Name = "códigoHerramientaDataGridViewTextBoxColumn";
             // 
             // herramientaDataGridViewTextBoxColumn
             // 
+            this.herramientaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.herramientaDataGridViewTextBoxColumn.DataPropertyName = "Herramienta";
             this.herramientaDataGridViewTextBoxColumn.HeaderText = "Herramienta";
             this.herramientaDataGridViewTextBoxColumn.Name = "herramientaDataGridViewTextBoxColumn";
             // 
             // responsableDataGridViewTextBoxColumn
             // 
+            this.responsableDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.responsableDataGridViewTextBoxColumn.DataPropertyName = "Responsable";
             this.responsableDataGridViewTextBoxColumn.HeaderText = "Responsable";
             this.responsableDataGridViewTextBoxColumn.Name = "responsableDataGridViewTextBoxColumn";
@@ -1081,6 +1130,7 @@
             // 
             // fechaSalidaDataGridViewTextBoxColumn
             // 
+            this.fechaSalidaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.fechaSalidaDataGridViewTextBoxColumn.DataPropertyName = "Fecha Salida";
             this.fechaSalidaDataGridViewTextBoxColumn.HeaderText = "Fecha Salida";
             this.fechaSalidaDataGridViewTextBoxColumn.Name = "fechaSalidaDataGridViewTextBoxColumn";
@@ -1088,6 +1138,7 @@
             // 
             // horaSalidaDataGridViewTextBoxColumn
             // 
+            this.horaSalidaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.horaSalidaDataGridViewTextBoxColumn.DataPropertyName = "Hora Salida";
             this.horaSalidaDataGridViewTextBoxColumn.HeaderText = "Hora Salida";
             this.horaSalidaDataGridViewTextBoxColumn.Name = "horaSalidaDataGridViewTextBoxColumn";
@@ -1095,6 +1146,7 @@
             // 
             // retornoDataGridViewTextBoxColumn
             // 
+            this.retornoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.retornoDataGridViewTextBoxColumn.DataPropertyName = "Retorno";
             this.retornoDataGridViewTextBoxColumn.HeaderText = "Retorno";
             this.retornoDataGridViewTextBoxColumn.Name = "retornoDataGridViewTextBoxColumn";
@@ -1144,6 +1196,7 @@
             this.panContratos_header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.protankDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prestamosHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.herramientaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1226,11 +1279,16 @@
         private protankDataSet1 protankDataSet1;
         private System.Windows.Forms.BindingSource prestamosHBindingSource;
         private protankDataSet1TableAdapters.prestamosHTableAdapter prestamosHTableAdapter;
+        private System.Windows.Forms.BindingSource herramientaBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn códigoHerramientaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn herramientaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn responsableDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaSalidaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn horaSalidaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn retornoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn periodoDataGridViewTextBoxColumn;
     }
 }
