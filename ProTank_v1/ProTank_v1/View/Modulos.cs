@@ -20,6 +20,12 @@ namespace ProTank_v1.View
 
         private void Modulos_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'protankDataSet1.empleado' table. You can move, or remove it, as needed.
+            this.empleadoTableAdapter.Fill(this.protankDataSet1.empleado);
+            // TODO: This line of code loads data into the 'protankDataSet1.person' table. You can move, or remove it, as needed.
+            this.personTableAdapter.Fill(this.protankDataSet1.person);
+            // TODO: This line of code loads data into the 'protankDataSet1.contrato' table. You can move, or remove it, as needed.
+            this.contratoTableAdapter.Fill(this.protankDataSet1.contrato);
             // TODO: This line of code loads data into the 'protankDataSet1.herramienta' table. You can move, or remove it, as needed.
             this.herramientaTableAdapter.Fill(this.protankDataSet1.herramienta);
             // TODO: This line of code loads data into the 'protankDataSet1.prestamosH' table. You can move, or remove it, as needed.
@@ -50,6 +56,11 @@ namespace ProTank_v1.View
         }
 
         private void btnModulos_Herramientas_tabInventario_buscarHerramienta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
