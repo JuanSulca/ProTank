@@ -17,7 +17,7 @@ namespace ProTank_v1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NewPrestamo());
+            Application.Run(new Modulos());
         }
     }
 }
