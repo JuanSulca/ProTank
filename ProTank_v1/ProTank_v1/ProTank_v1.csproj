@@ -103,11 +103,11 @@
     <Compile Include="View\NewPerson.designer.cs">
       <DependentUpon>NewPerson.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\NewPerstamo.cs">
+    <Compile Include="View\NewPrestamo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\NewPerstamo.designer.cs">
-      <DependentUpon>NewPerstamo.cs</DependentUpon>
+    <Compile Include="View\NewPrestamo.designer.cs">
+      <DependentUpon>NewPrestamo.cs</DependentUpon>
     </Compile>
     <Compile Include="View\NewTool.cs">
       <SubType>Form</SubType>
@@ -137,8 +137,8 @@
     <EmbeddedResource Include="View\NewPerson.resx">
       <DependentUpon>NewPerson.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\NewPerstamo.resx">
-      <DependentUpon>NewPerstamo.cs</DependentUpon>
+    <EmbeddedResource Include="View\NewPrestamo.resx">
+      <DependentUpon>NewPrestamo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\NewTool.resx">
       <DependentUpon>NewTool.cs</DependentUpon>
