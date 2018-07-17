@@ -46,6 +46,8 @@
             this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.empleadoTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.empleadoTableAdapter();
             this.empleadoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.protankDataSet1)).BeginInit();
@@ -53,11 +55,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.herramientaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.comboBox2);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.label5);
@@ -69,7 +74,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 69);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(475, 198);
+            this.panel2.Size = new System.Drawing.Size(742, 198);
             this.panel2.TabIndex = 11;
             // 
             // comboBox2
@@ -156,7 +161,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(475, 69);
+            this.panel1.Size = new System.Drawing.Size(742, 69);
             this.panel1.TabIndex = 10;
             // 
             // label2
@@ -219,11 +224,32 @@
             this.empleadoBindingSource1.DataMember = "empleado";
             this.empleadoBindingSource1.DataSource = this.protankDataSet1;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(542, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 198);
+            this.panel3.TabIndex = 9;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(200, 198);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // NewPrestamo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 267);
+            this.ClientSize = new System.Drawing.Size(742, 267);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -240,6 +266,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.herramientaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -263,5 +291,7 @@
         private System.Windows.Forms.BindingSource empleadoBindingSource;
         private protankDataSet1TableAdapters.empleadoTableAdapter empleadoTableAdapter;
         private System.Windows.Forms.BindingSource empleadoBindingSource1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -111,15 +111,12 @@
             this.fechaEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contratoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel8 = new System.Windows.Forms.Panel();
-            this.lblModulos_Contratos_nuevoCliente = new System.Windows.Forms.Label();
-            this.btnModulos_Contratos_nuevoCliente = new System.Windows.Forms.Button();
             this.btnModulos_Contratos_buscarContrato = new System.Windows.Forms.Button();
             this.txtModulos_Contratos_buscarContrato = new System.Windows.Forms.TextBox();
             this.btnModulos_Contratos_ingresarContrato = new System.Windows.Forms.Button();
             this.panContratos_header = new System.Windows.Forms.Panel();
             this.lblContratos_contratos = new System.Windows.Forms.Label();
             this.lblContratos_protank = new System.Windows.Forms.Label();
-            this.tabModulos_Design = new System.Windows.Forms.TabPage();
             this.tabModulos_ListaPersonas = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -158,6 +155,10 @@
             this.contratoTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.contratoTableAdapter();
             this.personTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.personTableAdapter();
             this.empleadoTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.empleadoTableAdapter();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.btnModulos_Contratos_editarContrato = new System.Windows.Forms.Button();
+            this.btnModulos_Contratos_eliminarContrato = new System.Windows.Forms.Button();
             this.tabControl_Modulos.SuspendLayout();
             this.tabModulos_NuevoUsuario.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -200,7 +201,6 @@
             this.tabControl_Modulos.Controls.Add(this.tabModulos_NuevoUsuario);
             this.tabControl_Modulos.Controls.Add(this.tabModulos_Herramientas);
             this.tabControl_Modulos.Controls.Add(this.tabModulos_Contratos);
-            this.tabControl_Modulos.Controls.Add(this.tabModulos_Design);
             this.tabControl_Modulos.Controls.Add(this.tabModulos_ListaPersonas);
             this.tabControl_Modulos.Controls.Add(this.tabPage1);
             this.tabControl_Modulos.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -802,7 +802,7 @@
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(388, 50);
+            this.button5.Location = new System.Drawing.Point(501, 50);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(173, 30);
             this.button5.TabIndex = 9;
@@ -815,7 +815,7 @@
             this.btnModulos_Herramientas_tabInventario_editarHerramientav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnModulos_Herramientas_tabInventario_editarHerramientav.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModulos_Herramientas_tabInventario_editarHerramientav.ForeColor = System.Drawing.Color.White;
-            this.btnModulos_Herramientas_tabInventario_editarHerramientav.Location = new System.Drawing.Point(388, 14);
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.Location = new System.Drawing.Point(501, 14);
             this.btnModulos_Herramientas_tabInventario_editarHerramientav.Name = "btnModulos_Herramientas_tabInventario_editarHerramientav";
             this.btnModulos_Herramientas_tabInventario_editarHerramientav.Size = new System.Drawing.Size(173, 30);
             this.btnModulos_Herramientas_tabInventario_editarHerramientav.TabIndex = 8;
@@ -908,7 +908,7 @@
             this.btnModulos_Herramientas_tabInventario_buscarHerramienta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnModulos_Herramientas_tabInventario_buscarHerramienta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModulos_Herramientas_tabInventario_buscarHerramienta.ForeColor = System.Drawing.Color.White;
-            this.btnModulos_Herramientas_tabInventario_buscarHerramienta.Location = new System.Drawing.Point(202, 50);
+            this.btnModulos_Herramientas_tabInventario_buscarHerramienta.Location = new System.Drawing.Point(260, 50);
             this.btnModulos_Herramientas_tabInventario_buscarHerramienta.Name = "btnModulos_Herramientas_tabInventario_buscarHerramienta";
             this.btnModulos_Herramientas_tabInventario_buscarHerramienta.Size = new System.Drawing.Size(165, 30);
             this.btnModulos_Herramientas_tabInventario_buscarHerramienta.TabIndex = 2;
@@ -919,7 +919,7 @@
             // txtModulos_Herramientas_tabInventario_buscar
             // 
             this.txtModulos_Herramientas_tabInventario_buscar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModulos_Herramientas_tabInventario_buscar.Location = new System.Drawing.Point(202, 18);
+            this.txtModulos_Herramientas_tabInventario_buscar.Location = new System.Drawing.Point(260, 18);
             this.txtModulos_Herramientas_tabInventario_buscar.Name = "txtModulos_Herramientas_tabInventario_buscar";
             this.txtModulos_Herramientas_tabInventario_buscar.Size = new System.Drawing.Size(165, 25);
             this.txtModulos_Herramientas_tabInventario_buscar.TabIndex = 1;
@@ -1142,8 +1142,8 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.DarkGray;
-            this.panel8.Controls.Add(this.lblModulos_Contratos_nuevoCliente);
-            this.panel8.Controls.Add(this.btnModulos_Contratos_nuevoCliente);
+            this.panel8.Controls.Add(this.btnModulos_Contratos_eliminarContrato);
+            this.panel8.Controls.Add(this.btnModulos_Contratos_editarContrato);
             this.panel8.Controls.Add(this.btnModulos_Contratos_buscarContrato);
             this.panel8.Controls.Add(this.txtModulos_Contratos_buscarContrato);
             this.panel8.Controls.Add(this.btnModulos_Contratos_ingresarContrato);
@@ -1153,33 +1153,12 @@
             this.panel8.Size = new System.Drawing.Size(920, 55);
             this.panel8.TabIndex = 2;
             // 
-            // lblModulos_Contratos_nuevoCliente
-            // 
-            this.lblModulos_Contratos_nuevoCliente.AutoSize = true;
-            this.lblModulos_Contratos_nuevoCliente.Location = new System.Drawing.Point(818, 22);
-            this.lblModulos_Contratos_nuevoCliente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblModulos_Contratos_nuevoCliente.Name = "lblModulos_Contratos_nuevoCliente";
-            this.lblModulos_Contratos_nuevoCliente.Size = new System.Drawing.Size(74, 13);
-            this.lblModulos_Contratos_nuevoCliente.TabIndex = 16;
-            this.lblModulos_Contratos_nuevoCliente.Text = "Nuevo Cliente";
-            // 
-            // btnModulos_Contratos_nuevoCliente
-            // 
-            this.btnModulos_Contratos_nuevoCliente.Image = global::ProTank_v1.Properties.Resources.LogIn;
-            this.btnModulos_Contratos_nuevoCliente.Location = new System.Drawing.Point(751, 6);
-            this.btnModulos_Contratos_nuevoCliente.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnModulos_Contratos_nuevoCliente.Name = "btnModulos_Contratos_nuevoCliente";
-            this.btnModulos_Contratos_nuevoCliente.Size = new System.Drawing.Size(53, 45);
-            this.btnModulos_Contratos_nuevoCliente.TabIndex = 15;
-            this.toolTip1.SetToolTip(this.btnModulos_Contratos_nuevoCliente, "Permite crear un nuevo cliente");
-            this.btnModulos_Contratos_nuevoCliente.UseVisualStyleBackColor = true;
-            // 
             // btnModulos_Contratos_buscarContrato
             // 
             this.btnModulos_Contratos_buscarContrato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnModulos_Contratos_buscarContrato.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModulos_Contratos_buscarContrato.ForeColor = System.Drawing.Color.White;
-            this.btnModulos_Contratos_buscarContrato.Location = new System.Drawing.Point(505, 12);
+            this.btnModulos_Contratos_buscarContrato.Location = new System.Drawing.Point(754, 12);
             this.btnModulos_Contratos_buscarContrato.Name = "btnModulos_Contratos_buscarContrato";
             this.btnModulos_Contratos_buscarContrato.Size = new System.Drawing.Size(147, 30);
             this.btnModulos_Contratos_buscarContrato.TabIndex = 2;
@@ -1189,7 +1168,7 @@
             // txtModulos_Contratos_buscarContrato
             // 
             this.txtModulos_Contratos_buscarContrato.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModulos_Contratos_buscarContrato.Location = new System.Drawing.Point(336, 16);
+            this.txtModulos_Contratos_buscarContrato.Location = new System.Drawing.Point(585, 16);
             this.txtModulos_Contratos_buscarContrato.Name = "txtModulos_Contratos_buscarContrato";
             this.txtModulos_Contratos_buscarContrato.Size = new System.Drawing.Size(163, 25);
             this.txtModulos_Contratos_buscarContrato.TabIndex = 1;
@@ -1247,17 +1226,6 @@
             this.lblContratos_protank.TabIndex = 0;
             this.lblContratos_protank.Text = "ProTank";
             // 
-            // tabModulos_Design
-            // 
-            this.tabModulos_Design.Location = new System.Drawing.Point(4, 22);
-            this.tabModulos_Design.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabModulos_Design.Name = "tabModulos_Design";
-            this.tabModulos_Design.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabModulos_Design.Size = new System.Drawing.Size(924, 378);
-            this.tabModulos_Design.TabIndex = 3;
-            this.tabModulos_Design.Text = "Diseño";
-            this.tabModulos_Design.UseVisualStyleBackColor = true;
-            // 
             // tabModulos_ListaPersonas
             // 
             this.tabModulos_ListaPersonas.Controls.Add(this.panel12);
@@ -1274,7 +1242,9 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.DarkGray;
+            this.panel12.Controls.Add(this.label5);
             this.panel12.Controls.Add(this.button6);
+            this.panel12.Controls.Add(this.button8);
             this.panel12.Controls.Add(this.button3);
             this.panel12.Controls.Add(this.button4);
             this.panel12.Controls.Add(this.textBox4);
@@ -1289,7 +1259,7 @@
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(310, 13);
+            this.button6.Location = new System.Drawing.Point(178, 13);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(147, 30);
             this.button6.TabIndex = 4;
@@ -1301,7 +1271,7 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(76, 13);
+            this.button3.Location = new System.Drawing.Point(25, 13);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(147, 30);
             this.button3.TabIndex = 3;
@@ -1313,7 +1283,7 @@
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(711, 13);
+            this.button4.Location = new System.Drawing.Point(586, 13);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(147, 30);
             this.button4.TabIndex = 2;
@@ -1323,7 +1293,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(542, 17);
+            this.textBox4.Location = new System.Drawing.Point(406, 17);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(163, 25);
             this.textBox4.TabIndex = 1;
@@ -1625,6 +1595,53 @@
             // 
             this.empleadoTableAdapter.ClearBeforeFill = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(830, 23);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Nuevo Cliente";
+            // 
+            // button8
+            // 
+            this.button8.Image = global::ProTank_v1.Properties.Resources.LogIn;
+            this.button8.Location = new System.Drawing.Point(763, 7);
+            this.button8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(53, 45);
+            this.button8.TabIndex = 17;
+            this.toolTip1.SetToolTip(this.button8, "Permite crear un nuevo cliente");
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // btnModulos_Contratos_editarContrato
+            // 
+            this.btnModulos_Contratos_editarContrato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnModulos_Contratos_editarContrato.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModulos_Contratos_editarContrato.ForeColor = System.Drawing.Color.White;
+            this.btnModulos_Contratos_editarContrato.Location = new System.Drawing.Point(222, 12);
+            this.btnModulos_Contratos_editarContrato.Name = "btnModulos_Contratos_editarContrato";
+            this.btnModulos_Contratos_editarContrato.Size = new System.Drawing.Size(153, 30);
+            this.btnModulos_Contratos_editarContrato.TabIndex = 4;
+            this.btnModulos_Contratos_editarContrato.Text = "Editar Contrato";
+            this.toolTip1.SetToolTip(this.btnModulos_Contratos_editarContrato, "Permite ingresar un nuevo contrato");
+            this.btnModulos_Contratos_editarContrato.UseVisualStyleBackColor = false;
+            // 
+            // btnModulos_Contratos_eliminarContrato
+            // 
+            this.btnModulos_Contratos_eliminarContrato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnModulos_Contratos_eliminarContrato.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModulos_Contratos_eliminarContrato.ForeColor = System.Drawing.Color.White;
+            this.btnModulos_Contratos_eliminarContrato.Location = new System.Drawing.Point(391, 12);
+            this.btnModulos_Contratos_eliminarContrato.Name = "btnModulos_Contratos_eliminarContrato";
+            this.btnModulos_Contratos_eliminarContrato.Size = new System.Drawing.Size(153, 30);
+            this.btnModulos_Contratos_eliminarContrato.TabIndex = 4;
+            this.btnModulos_Contratos_eliminarContrato.Text = "Eliminar Contrato";
+            this.toolTip1.SetToolTip(this.btnModulos_Contratos_eliminarContrato, "Permite ingresar un nuevo contrato");
+            this.btnModulos_Contratos_eliminarContrato.UseVisualStyleBackColor = false;
+            // 
             // Modulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1696,7 +1713,6 @@
         private System.Windows.Forms.TabPage tabModulos_NuevoUsuario;
         private System.Windows.Forms.TabPage tabModulos_Herramientas;
         private System.Windows.Forms.TabPage tabModulos_Contratos;
-        private System.Windows.Forms.TabPage tabModulos_Design;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnModulos_NuevoUsuario_nuevaPersona;
         private System.Windows.Forms.CheckBox checkModulos_NuevoUsuario_servicios;
@@ -1747,12 +1763,10 @@
         private System.Windows.Forms.Button btnModulos_Contratos_buscarContrato;
         private System.Windows.Forms.TextBox txtModulos_Contratos_buscarContrato;
         private System.Windows.Forms.Button btnModulos_Contratos_ingresarContrato;
-        private System.Windows.Forms.Button btnModulos_Contratos_nuevoCliente;
         private System.Windows.Forms.Label lblModulos_NuevoUsuario_ayuda;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label lblModulos_NuevoUsuario_nuevaPersona;
         private System.Windows.Forms.DataGridView tableModulos_Contratos_tabla;
-        private System.Windows.Forms.Label lblModulos_Contratos_nuevoCliente;
         private protankDataSet1TableAdapters.prestamoTableAdapter prestamoTableAdapter;
         private protankDataSet1TableAdapters.herramientaTableAdapter herramientaTableAdapter;
         private System.Windows.Forms.RadioButton radioButton2;
@@ -1821,5 +1835,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Button btnModulos_Contratos_eliminarContrato;
+        private System.Windows.Forms.Button btnModulos_Contratos_editarContrato;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button8;
     }
 }
