@@ -40,5 +40,15 @@ namespace ProTank_v1.View
             /*this.prestamoTableAdapter.Fill(this.protankDataSet1.prestamo);
             this.prestamoBindingSource.Filter = "Fecha=" + dateModulos_Herramientas_tabPrestamos_horaFecha.Value;*/
         }
+
+        private void txtModulos_Herramientas_tabInventario_buscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModulos_Herramientas_tabInventario_buscarHerramienta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

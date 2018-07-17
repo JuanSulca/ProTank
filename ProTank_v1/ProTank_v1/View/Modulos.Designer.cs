@@ -34,7 +34,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblModulos_NuevoUsuario_ayuda = new System.Windows.Forms.Label();
             this.lblModulos_NuevoUsuario_nuevaPersona = new System.Windows.Forms.Label();
-            this.btnModulos_NuevoUsuario_nuevaPersona = new System.Windows.Forms.Button();
             this.checkModulos_NuevoUsuario_servicios = new System.Windows.Forms.CheckBox();
             this.checkModulos_NuevoUsuario_bodega = new System.Windows.Forms.CheckBox();
             this.checkModulos_NuevoUsuario_contratos = new System.Windows.Forms.CheckBox();
@@ -97,7 +96,6 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
@@ -113,6 +111,11 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnModulos_Herramientas_editarPrestamo = new System.Windows.Forms.Button();
             this.btnModulos_Herramientas_eliminarPrestamo = new System.Windows.Forms.Button();
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav = new System.Windows.Forms.Button();
+            this.btnModulos_NuevoUsuario_nuevaPersona = new System.Windows.Forms.Button();
+            this.btnModulos_Herramientas_refresh = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.txtModulos_Herramientas_tabInventario_refresh = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.tabControl_Modulos.SuspendLayout();
             this.tabModulos_NuevoUsuario.SuspendLayout();
@@ -171,7 +174,7 @@
             this.tabModulos_NuevoUsuario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabModulos_NuevoUsuario.Name = "tabModulos_NuevoUsuario";
             this.tabModulos_NuevoUsuario.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabModulos_NuevoUsuario.Size = new System.Drawing.Size(1040, 378);
+            this.tabModulos_NuevoUsuario.Size = new System.Drawing.Size(788, 378);
             this.tabModulos_NuevoUsuario.TabIndex = 0;
             this.tabModulos_NuevoUsuario.Text = "Nuevo Usuario";
             this.tabModulos_NuevoUsuario.ToolTipText = "Crear nuevos usuarios";
@@ -201,7 +204,7 @@
             this.panel2.Location = new System.Drawing.Point(2, 72);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1036, 303);
+            this.panel2.Size = new System.Drawing.Size(784, 303);
             this.panel2.TabIndex = 5;
             // 
             // lblModulos_NuevoUsuario_ayuda
@@ -225,17 +228,6 @@
             this.lblModulos_NuevoUsuario_nuevaPersona.Size = new System.Drawing.Size(89, 12);
             this.lblModulos_NuevoUsuario_nuevaPersona.TabIndex = 15;
             this.lblModulos_NuevoUsuario_nuevaPersona.Text = "Nueva Persona";
-            // 
-            // btnModulos_NuevoUsuario_nuevaPersona
-            // 
-            this.btnModulos_NuevoUsuario_nuevaPersona.Image = global::ProTank_v1.Properties.Resources.LogIn;
-            this.btnModulos_NuevoUsuario_nuevaPersona.Location = new System.Drawing.Point(490, 19);
-            this.btnModulos_NuevoUsuario_nuevaPersona.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnModulos_NuevoUsuario_nuevaPersona.Name = "btnModulos_NuevoUsuario_nuevaPersona";
-            this.btnModulos_NuevoUsuario_nuevaPersona.Size = new System.Drawing.Size(53, 45);
-            this.btnModulos_NuevoUsuario_nuevaPersona.TabIndex = 14;
-            this.toolTip1.SetToolTip(this.btnModulos_NuevoUsuario_nuevaPersona, "Crea un nuevo empleado");
-            this.btnModulos_NuevoUsuario_nuevaPersona.UseVisualStyleBackColor = true;
             // 
             // checkModulos_NuevoUsuario_servicios
             // 
@@ -402,7 +394,7 @@
             this.panel1.Location = new System.Drawing.Point(2, 3);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1036, 69);
+            this.panel1.Size = new System.Drawing.Size(784, 69);
             this.panel1.TabIndex = 4;
             // 
             // lblModulos_NuevoUsuario_nuevoUsuario
@@ -673,6 +665,7 @@
             this.panel5.BackColor = System.Drawing.Color.DarkGray;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.button5);
+            this.panel5.Controls.Add(this.btnModulos_Herramientas_tabInventario_editarHerramientav);
             this.panel5.Controls.Add(this.panel9);
             this.panel5.Controls.Add(this.btnModulos_Herramientas_tabInventario_buscarHerramienta);
             this.panel5.Controls.Add(this.txtModulos_Herramientas_tabInventario_buscar);
@@ -686,15 +679,16 @@
             // panel9
             // 
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel9.Controls.Add(this.txtModulos_Herramientas_tabInventario_refresh);
             this.panel9.Controls.Add(this.checkModulos_Herramientas_tabInventario_urgente);
             this.panel9.Controls.Add(this.checkModulos_Herramientas_tabInventario_proximo);
             this.panel9.Controls.Add(this.checkModulos_Herramientas_tabInventario_noNecesita);
             this.panel9.Controls.Add(this.lblModulos_Herramientas_tabInventario_mantenimiento);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(631, 0);
+            this.panel9.Location = new System.Drawing.Point(591, 0);
             this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(118, 91);
+            this.panel9.Size = new System.Drawing.Size(158, 91);
             this.panel9.TabIndex = 3;
             this.panel9.Tag = "";
             // 
@@ -757,27 +751,29 @@
             this.btnModulos_Herramientas_tabInventario_buscarHerramienta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnModulos_Herramientas_tabInventario_buscarHerramienta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModulos_Herramientas_tabInventario_buscarHerramienta.ForeColor = System.Drawing.Color.White;
-            this.btnModulos_Herramientas_tabInventario_buscarHerramienta.Location = new System.Drawing.Point(222, 50);
+            this.btnModulos_Herramientas_tabInventario_buscarHerramienta.Location = new System.Drawing.Point(202, 50);
             this.btnModulos_Herramientas_tabInventario_buscarHerramienta.Name = "btnModulos_Herramientas_tabInventario_buscarHerramienta";
             this.btnModulos_Herramientas_tabInventario_buscarHerramienta.Size = new System.Drawing.Size(165, 30);
             this.btnModulos_Herramientas_tabInventario_buscarHerramienta.TabIndex = 2;
             this.btnModulos_Herramientas_tabInventario_buscarHerramienta.Text = "Buscar Herramienta";
             this.btnModulos_Herramientas_tabInventario_buscarHerramienta.UseVisualStyleBackColor = false;
+            this.btnModulos_Herramientas_tabInventario_buscarHerramienta.Click += new System.EventHandler(this.btnModulos_Herramientas_tabInventario_buscarHerramienta_Click);
             // 
             // txtModulos_Herramientas_tabInventario_buscar
             // 
             this.txtModulos_Herramientas_tabInventario_buscar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModulos_Herramientas_tabInventario_buscar.Location = new System.Drawing.Point(222, 18);
+            this.txtModulos_Herramientas_tabInventario_buscar.Location = new System.Drawing.Point(202, 18);
             this.txtModulos_Herramientas_tabInventario_buscar.Name = "txtModulos_Herramientas_tabInventario_buscar";
             this.txtModulos_Herramientas_tabInventario_buscar.Size = new System.Drawing.Size(165, 25);
             this.txtModulos_Herramientas_tabInventario_buscar.TabIndex = 1;
+            this.txtModulos_Herramientas_tabInventario_buscar.TextChanged += new System.EventHandler(this.txtModulos_Herramientas_tabInventario_buscar_TextChanged);
             // 
             // btnModulos_Herramientas_tabInventario_nuevaHerramienta
             // 
             this.btnModulos_Herramientas_tabInventario_nuevaHerramienta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnModulos_Herramientas_tabInventario_nuevaHerramienta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModulos_Herramientas_tabInventario_nuevaHerramienta.ForeColor = System.Drawing.Color.White;
-            this.btnModulos_Herramientas_tabInventario_nuevaHerramienta.Location = new System.Drawing.Point(32, 34);
+            this.btnModulos_Herramientas_tabInventario_nuevaHerramienta.Location = new System.Drawing.Point(15, 34);
             this.btnModulos_Herramientas_tabInventario_nuevaHerramienta.Name = "btnModulos_Herramientas_tabInventario_nuevaHerramienta";
             this.btnModulos_Herramientas_tabInventario_nuevaHerramienta.Size = new System.Drawing.Size(160, 30);
             this.btnModulos_Herramientas_tabInventario_nuevaHerramienta.TabIndex = 0;
@@ -895,7 +891,7 @@
             this.tabModulos_Contratos.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabModulos_Contratos.Name = "tabModulos_Contratos";
             this.tabModulos_Contratos.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabModulos_Contratos.Size = new System.Drawing.Size(1040, 378);
+            this.tabModulos_Contratos.Size = new System.Drawing.Size(788, 378);
             this.tabModulos_Contratos.TabIndex = 2;
             this.tabModulos_Contratos.Text = "Contratos";
             this.tabModulos_Contratos.UseVisualStyleBackColor = true;
@@ -910,7 +906,7 @@
             this.panel7.Location = new System.Drawing.Point(2, 72);
             this.panel7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1036, 303);
+            this.panel7.Size = new System.Drawing.Size(784, 303);
             this.panel7.TabIndex = 7;
             // 
             // dataGridView3
@@ -921,7 +917,7 @@
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 31;
-            this.dataGridView3.Size = new System.Drawing.Size(1036, 248);
+            this.dataGridView3.Size = new System.Drawing.Size(784, 248);
             this.dataGridView3.TabIndex = 3;
             // 
             // panel8
@@ -935,7 +931,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel8.Location = new System.Drawing.Point(0, 248);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1036, 55);
+            this.panel8.Size = new System.Drawing.Size(784, 55);
             this.panel8.TabIndex = 2;
             // 
             // label10
@@ -947,17 +943,6 @@
             this.label10.Size = new System.Drawing.Size(74, 13);
             this.label10.TabIndex = 16;
             this.label10.Text = "Nuevo Cliente";
-            // 
-            // button10
-            // 
-            this.button10.Image = global::ProTank_v1.Properties.Resources.LogIn;
-            this.button10.Location = new System.Drawing.Point(823, 6);
-            this.button10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(53, 45);
-            this.button10.TabIndex = 15;
-            this.toolTip1.SetToolTip(this.button10, "Permite crear un nuevo cliente");
-            this.button10.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
@@ -1002,7 +987,7 @@
             this.panContratos_header.Location = new System.Drawing.Point(2, 3);
             this.panContratos_header.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panContratos_header.Name = "panContratos_header";
-            this.panContratos_header.Size = new System.Drawing.Size(1036, 69);
+            this.panContratos_header.Size = new System.Drawing.Size(784, 69);
             this.panContratos_header.TabIndex = 6;
             // 
             // lblContratos_contratos
@@ -1038,7 +1023,7 @@
             this.tabModulos_Design.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabModulos_Design.Name = "tabModulos_Design";
             this.tabModulos_Design.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabModulos_Design.Size = new System.Drawing.Size(1040, 378);
+            this.tabModulos_Design.Size = new System.Drawing.Size(788, 378);
             this.tabModulos_Design.TabIndex = 3;
             this.tabModulos_Design.Text = "tabPage4";
             this.tabModulos_Design.UseVisualStyleBackColor = true;
@@ -1066,13 +1051,14 @@
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.btnModulos_Herramientas_refresh);
             this.panel10.Controls.Add(this.radioButton3);
             this.panel10.Controls.Add(this.radioButton1);
             this.panel10.Controls.Add(this.radioButton2);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(642, 0);
+            this.panel10.Location = new System.Drawing.Point(591, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(109, 85);
+            this.panel10.Size = new System.Drawing.Size(160, 85);
             this.panel10.TabIndex = 6;
             // 
             // btnModulos_Herramientas_editarPrestamo
@@ -1101,16 +1087,71 @@
             this.toolTip1.SetToolTip(this.btnModulos_Herramientas_eliminarPrestamo, "Permite eliminar un préstamo de la lista\r\n");
             this.btnModulos_Herramientas_eliminarPrestamo.UseVisualStyleBackColor = false;
             // 
+            // btnModulos_Herramientas_tabInventario_editarHerramientav
+            // 
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.ForeColor = System.Drawing.Color.White;
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.Location = new System.Drawing.Point(388, 14);
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.Name = "btnModulos_Herramientas_tabInventario_editarHerramientav";
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.Size = new System.Drawing.Size(173, 30);
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.TabIndex = 8;
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.Text = "Editar Herramienta";
+            this.toolTip1.SetToolTip(this.btnModulos_Herramientas_tabInventario_editarHerramientav, "Permite editar la información de una herramienta existente");
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.UseVisualStyleBackColor = false;
+            // 
+            // btnModulos_NuevoUsuario_nuevaPersona
+            // 
+            this.btnModulos_NuevoUsuario_nuevaPersona.Image = global::ProTank_v1.Properties.Resources.LogIn;
+            this.btnModulos_NuevoUsuario_nuevaPersona.Location = new System.Drawing.Point(490, 19);
+            this.btnModulos_NuevoUsuario_nuevaPersona.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnModulos_NuevoUsuario_nuevaPersona.Name = "btnModulos_NuevoUsuario_nuevaPersona";
+            this.btnModulos_NuevoUsuario_nuevaPersona.Size = new System.Drawing.Size(53, 45);
+            this.btnModulos_NuevoUsuario_nuevaPersona.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.btnModulos_NuevoUsuario_nuevaPersona, "Crea un nuevo empleado");
+            this.btnModulos_NuevoUsuario_nuevaPersona.UseVisualStyleBackColor = true;
+            // 
+            // btnModulos_Herramientas_refresh
+            // 
+            this.btnModulos_Herramientas_refresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnModulos_Herramientas_refresh.Image = global::ProTank_v1.Properties.Resources.update;
+            this.btnModulos_Herramientas_refresh.Location = new System.Drawing.Point(109, 25);
+            this.btnModulos_Herramientas_refresh.Name = "btnModulos_Herramientas_refresh";
+            this.btnModulos_Herramientas_refresh.Size = new System.Drawing.Size(38, 30);
+            this.btnModulos_Herramientas_refresh.TabIndex = 6;
+            this.btnModulos_Herramientas_refresh.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.Image = global::ProTank_v1.Properties.Resources.LogIn;
+            this.button10.Location = new System.Drawing.Point(823, 6);
+            this.button10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(53, 45);
+            this.button10.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.button10, "Permite crear un nuevo cliente");
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // txtModulos_Herramientas_tabInventario_refresh
+            // 
+            this.txtModulos_Herramientas_tabInventario_refresh.BackColor = System.Drawing.Color.Transparent;
+            this.txtModulos_Herramientas_tabInventario_refresh.Image = global::ProTank_v1.Properties.Resources.update;
+            this.txtModulos_Herramientas_tabInventario_refresh.Location = new System.Drawing.Point(113, 34);
+            this.txtModulos_Herramientas_tabInventario_refresh.Name = "txtModulos_Herramientas_tabInventario_refresh";
+            this.txtModulos_Herramientas_tabInventario_refresh.Size = new System.Drawing.Size(38, 30);
+            this.txtModulos_Herramientas_tabInventario_refresh.TabIndex = 7;
+            this.txtModulos_Herramientas_tabInventario_refresh.UseVisualStyleBackColor = false;
+            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(440, 15);
+            this.button5.Location = new System.Drawing.Point(388, 50);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(160, 30);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Editar Herramienta";
+            this.button5.Size = new System.Drawing.Size(173, 30);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Eliminar Herramienta";
             this.toolTip1.SetToolTip(this.button5, "Permite ingresar la información de un nuevo préstamo");
             this.button5.UseVisualStyleBackColor = false;
             // 
@@ -1252,6 +1293,9 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button btnModulos_Herramientas_eliminarPrestamo;
         private System.Windows.Forms.Button btnModulos_Herramientas_editarPrestamo;
+        private System.Windows.Forms.Button btnModulos_Herramientas_tabInventario_editarHerramientav;
+        private System.Windows.Forms.Button btnModulos_Herramientas_refresh;
+        private System.Windows.Forms.Button txtModulos_Herramientas_tabInventario_refresh;
         private System.Windows.Forms.Button button5;
     }
 }
