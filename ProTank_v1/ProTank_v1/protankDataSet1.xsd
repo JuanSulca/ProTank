@@ -567,7 +567,7 @@ SELECT uname, pwd, rol FROM userLogin WHERE (uname = @uname)</CommandText>
               <DbSource ConnectionRef="protankConnectionString (Settings)" DbObjectName="protank.dbo.prestamosH" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT [Código Herramienta], Herramienta, Responsable, Salida, Retorno FROM dbo.prestamosH</CommandText>
+                    <CommandText>SELECT [Código Herramienta], Herramienta, Responsable, [Fecha Salida], [Hora Salida], Retorno FROM dbo.prestamosH</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -577,7 +577,8 @@ SELECT uname, pwd, rol FROM userLogin WHERE (uname = @uname)</CommandText>
               <Mapping SourceColumn="Código Herramienta" DataSetColumn="Código Herramienta" />
               <Mapping SourceColumn="Herramienta" DataSetColumn="Herramienta" />
               <Mapping SourceColumn="Responsable" DataSetColumn="Responsable" />
-              <Mapping SourceColumn="Salida" DataSetColumn="Salida" />
+              <Mapping SourceColumn="Fecha Salida" DataSetColumn="Fecha Salida" />
+              <Mapping SourceColumn="Hora Salida" DataSetColumn="Hora Salida" />
               <Mapping SourceColumn="Retorno" DataSetColumn="Retorno" />
             </Mappings>
             <Sources />
@@ -873,7 +874,14 @@ SELECT uname, pwd, rol FROM userLogin WHERE (uname = @uname)</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Salida" msprop:Generator_ColumnVarNameInTable="columnSalida" msprop:Generator_ColumnPropNameInRow="Salida" msprop:Generator_ColumnPropNameInTable="SalidaColumn" msprop:Generator_UserColumnName="Salida" type="xs:dateTime" />
+              <xs:element name="Fecha_x0020_Salida" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFecha_Salida" msprop:Generator_ColumnPropNameInRow="Fecha_Salida" msprop:Generator_ColumnPropNameInTable="Fecha_SalidaColumn" msprop:Generator_UserColumnName="Fecha Salida" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Hora_x0020_Salida" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHora_Salida" msprop:Generator_ColumnPropNameInRow="Hora_Salida" msprop:Generator_ColumnPropNameInTable="Hora_SalidaColumn" msprop:Generator_UserColumnName="Hora Salida" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="Retorno" msprop:Generator_ColumnVarNameInTable="columnRetorno" msprop:Generator_ColumnPropNameInRow="Retorno" msprop:Generator_ColumnPropNameInTable="RetornoColumn" msprop:Generator_UserColumnName="Retorno" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>

@@ -3421,7 +3421,9 @@ namespace ProTank_v1 {
             
             private global::System.Data.DataColumn columnResponsable;
             
-            private global::System.Data.DataColumn columnSalida;
+            private global::System.Data.DataColumn columnFecha_Salida;
+            
+            private global::System.Data.DataColumn columnHora_Salida;
             
             private global::System.Data.DataColumn columnRetorno;
             
@@ -3484,9 +3486,17 @@ namespace ProTank_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn SalidaColumn {
+            public global::System.Data.DataColumn Fecha_SalidaColumn {
                 get {
-                    return this.columnSalida;
+                    return this.columnFecha_Salida;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Hora_SalidaColumn {
+                get {
+                    return this.columnHora_Salida;
                 }
             }
             
@@ -3535,13 +3545,14 @@ namespace ProTank_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public prestamosHRow AddprestamosHRow(string Código_Herramienta, string Herramienta, string Responsable, System.DateTime Salida, System.DateTime Retorno) {
+            public prestamosHRow AddprestamosHRow(string Código_Herramienta, string Herramienta, string Responsable, System.DateTime Fecha_Salida, string Hora_Salida, System.DateTime Retorno) {
                 prestamosHRow rowprestamosHRow = ((prestamosHRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Código_Herramienta,
                         Herramienta,
                         Responsable,
-                        Salida,
+                        Fecha_Salida,
+                        Hora_Salida,
                         Retorno};
                 rowprestamosHRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowprestamosHRow);
@@ -3568,7 +3579,8 @@ namespace ProTank_v1 {
                 this.columnCódigo_Herramienta = base.Columns["Código Herramienta"];
                 this.columnHerramienta = base.Columns["Herramienta"];
                 this.columnResponsable = base.Columns["Responsable"];
-                this.columnSalida = base.Columns["Salida"];
+                this.columnFecha_Salida = base.Columns["Fecha Salida"];
+                this.columnHora_Salida = base.Columns["Hora Salida"];
                 this.columnRetorno = base.Columns["Retorno"];
             }
             
@@ -3581,8 +3593,10 @@ namespace ProTank_v1 {
                 base.Columns.Add(this.columnHerramienta);
                 this.columnResponsable = new global::System.Data.DataColumn("Responsable", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnResponsable);
-                this.columnSalida = new global::System.Data.DataColumn("Salida", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSalida);
+                this.columnFecha_Salida = new global::System.Data.DataColumn("Fecha Salida", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha_Salida);
+                this.columnHora_Salida = new global::System.Data.DataColumn("Hora Salida", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHora_Salida);
                 this.columnRetorno = new global::System.Data.DataColumn("Retorno", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRetorno);
                 this.columnCódigo_Herramienta.AllowDBNull = false;
@@ -3590,7 +3604,9 @@ namespace ProTank_v1 {
                 this.columnHerramienta.MaxLength = 60;
                 this.columnResponsable.ReadOnly = true;
                 this.columnResponsable.MaxLength = 121;
-                this.columnSalida.AllowDBNull = false;
+                this.columnFecha_Salida.ReadOnly = true;
+                this.columnHora_Salida.ReadOnly = true;
+                this.columnHora_Salida.MaxLength = 4000;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4688,12 +4704,33 @@ namespace ProTank_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime Salida {
+            public System.DateTime Fecha_Salida {
                 get {
-                    return ((global::System.DateTime)(this[this.tableprestamosH.SalidaColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableprestamosH.Fecha_SalidaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Fecha Salida\' in table \'prestamosH\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableprestamosH.SalidaColumn] = value;
+                    this[this.tableprestamosH.Fecha_SalidaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Hora_Salida {
+                get {
+                    try {
+                        return ((string)(this[this.tableprestamosH.Hora_SalidaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Hora Salida\' in table \'prestamosH\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableprestamosH.Hora_SalidaColumn] = value;
                 }
             }
             
@@ -4735,6 +4772,30 @@ namespace ProTank_v1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetResponsableNull() {
                 this[this.tableprestamosH.ResponsableColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFecha_SalidaNull() {
+                return this.IsNull(this.tableprestamosH.Fecha_SalidaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFecha_SalidaNull() {
+                this[this.tableprestamosH.Fecha_SalidaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsHora_SalidaNull() {
+                return this.IsNull(this.tableprestamosH.Hora_SalidaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetHora_SalidaNull() {
+                this[this.tableprestamosH.Hora_SalidaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8832,7 +8893,8 @@ SELECT codigo, nombre, precio, unidad FROM prodServ WHERE (codigo = @codigo)";
             tableMapping.ColumnMappings.Add("Código Herramienta", "Código Herramienta");
             tableMapping.ColumnMappings.Add("Herramienta", "Herramienta");
             tableMapping.ColumnMappings.Add("Responsable", "Responsable");
-            tableMapping.ColumnMappings.Add("Salida", "Salida");
+            tableMapping.ColumnMappings.Add("Fecha Salida", "Fecha Salida");
+            tableMapping.ColumnMappings.Add("Hora Salida", "Hora Salida");
             tableMapping.ColumnMappings.Add("Retorno", "Retorno");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -8850,8 +8912,8 @@ SELECT codigo, nombre, precio, unidad FROM prodServ WHERE (codigo = @codigo)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Código Herramienta], Herramienta, Responsable, Salida, Retorno FROM dbo.p" +
-                "restamosH";
+            this._commandCollection[0].CommandText = "SELECT [Código Herramienta], Herramienta, Responsable, [Fecha Salida], [Hora Sali" +
+                "da], Retorno FROM dbo.prestamosH";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

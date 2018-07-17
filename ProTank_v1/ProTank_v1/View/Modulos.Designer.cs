@@ -34,6 +34,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblModulos_NuevoUsuario_ayuda = new System.Windows.Forms.Label();
             this.lblModulos_NuevoUsuario_nuevaPersona = new System.Windows.Forms.Label();
+            this.btnModulos_NuevoUsuario_nuevaPersona = new System.Windows.Forms.Button();
             this.checkModulos_NuevoUsuario_servicios = new System.Windows.Forms.CheckBox();
             this.checkModulos_NuevoUsuario_bodega = new System.Windows.Forms.CheckBox();
             this.checkModulos_NuevoUsuario_contratos = new System.Windows.Forms.CheckBox();
@@ -56,24 +57,24 @@
             this.tabModulos_Control_Herramientas = new System.Windows.Forms.TabControl();
             this.tabModulos_Herramientas_Prestamos = new System.Windows.Forms.TabPage();
             this.tableModulos_Herramientas_tabPrestamos_prestamos = new System.Windows.Forms.DataGridView();
-            this.códigoHerramientaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.herramientaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.responsableDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.retornoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prestamosHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.protankDataSet11 = new ProTank_v1.protankDataSet1();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnModulos_Herramientas_eliminarPrestamo = new System.Windows.Forms.Button();
+            this.btnModulos_Herramientas_editarPrestamo = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btnModulos_Herramientas_refresh = new System.Windows.Forms.Button();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.dateModulos_Herramientas_tabPrestamos_horaFecha = new System.Windows.Forms.DateTimePicker();
             this.btnModulos_Herramientas_buscarPrestamo = new System.Windows.Forms.Button();
             this.txtModulos_Herramientas_Busqueda = new System.Windows.Forms.TextBox();
             this.btnModulos_Herramientas_ingresarPrestamo = new System.Windows.Forms.Button();
             this.tabModulos_Herramientas_Inventario = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.txtModulos_Herramientas_tabInventario_refresh = new System.Windows.Forms.Button();
             this.checkModulos_Herramientas_tabInventario_urgente = new System.Windows.Forms.CheckBox();
             this.checkModulos_Herramientas_tabInventario_proximo = new System.Windows.Forms.CheckBox();
             this.checkModulos_Herramientas_tabInventario_noNecesita = new System.Windows.Forms.CheckBox();
@@ -82,12 +83,6 @@
             this.txtModulos_Herramientas_tabInventario_buscar = new System.Windows.Forms.TextBox();
             this.btnModulos_Herramientas_tabInventario_nuevaHerramienta = new System.Windows.Forms.Button();
             this.tableModulos_Herramientas_tabInventario_inventario = new System.Windows.Forms.DataGridView();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoHDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.periodoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.herramientaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.protankDataSet1 = new ProTank_v1.protankDataSet1();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblModulos_Herramientas_herramientas = new System.Windows.Forms.Label();
             this.lblModulos_Herramientas_protank = new System.Windows.Forms.Label();
@@ -96,6 +91,7 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
@@ -104,19 +100,17 @@
             this.lblContratos_protank = new System.Windows.Forms.Label();
             this.tabModulos_Design = new System.Windows.Forms.TabPage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.prestamoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prestamoTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.prestamoTableAdapter();
             this.herramientaTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.herramientaTableAdapter();
+            this.protankDataSet1 = new ProTank_v1.protankDataSet1();
+            this.prestamosHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prestamosHTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.prestamosHTableAdapter();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.btnModulos_Herramientas_editarPrestamo = new System.Windows.Forms.Button();
-            this.btnModulos_Herramientas_eliminarPrestamo = new System.Windows.Forms.Button();
-            this.btnModulos_Herramientas_tabInventario_editarHerramientav = new System.Windows.Forms.Button();
-            this.btnModulos_NuevoUsuario_nuevaPersona = new System.Windows.Forms.Button();
-            this.btnModulos_Herramientas_refresh = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.txtModulos_Herramientas_tabInventario_refresh = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.códigoHerramientaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.herramientaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.responsableDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaSalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaSalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.retornoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl_Modulos.SuspendLayout();
             this.tabModulos_NuevoUsuario.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -126,23 +120,20 @@
             this.tabModulos_Control_Herramientas.SuspendLayout();
             this.tabModulos_Herramientas_Prestamos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableModulos_Herramientas_tabPrestamos_prestamos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prestamosHBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet11)).BeginInit();
             this.panel6.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.tabModulos_Herramientas_Inventario.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableModulos_Herramientas_tabInventario_inventario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.herramientaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet1)).BeginInit();
             this.panel4.SuspendLayout();
             this.tabModulos_Contratos.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel8.SuspendLayout();
             this.panContratos_header.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.prestamoBindingSource)).BeginInit();
-            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prestamosHBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl_Modulos
@@ -228,6 +219,17 @@
             this.lblModulos_NuevoUsuario_nuevaPersona.Size = new System.Drawing.Size(89, 12);
             this.lblModulos_NuevoUsuario_nuevaPersona.TabIndex = 15;
             this.lblModulos_NuevoUsuario_nuevaPersona.Text = "Nueva Persona";
+            // 
+            // btnModulos_NuevoUsuario_nuevaPersona
+            // 
+            this.btnModulos_NuevoUsuario_nuevaPersona.Image = global::ProTank_v1.Properties.Resources.LogIn;
+            this.btnModulos_NuevoUsuario_nuevaPersona.Location = new System.Drawing.Point(490, 19);
+            this.btnModulos_NuevoUsuario_nuevaPersona.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnModulos_NuevoUsuario_nuevaPersona.Name = "btnModulos_NuevoUsuario_nuevaPersona";
+            this.btnModulos_NuevoUsuario_nuevaPersona.Size = new System.Drawing.Size(53, 45);
+            this.btnModulos_NuevoUsuario_nuevaPersona.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.btnModulos_NuevoUsuario_nuevaPersona, "Crea un nuevo empleado");
+            this.btnModulos_NuevoUsuario_nuevaPersona.UseVisualStyleBackColor = true;
             // 
             // checkModulos_NuevoUsuario_servicios
             // 
@@ -489,7 +491,8 @@
             this.códigoHerramientaDataGridViewTextBoxColumn,
             this.herramientaDataGridViewTextBoxColumn,
             this.responsableDataGridViewTextBoxColumn,
-            this.salidaDataGridViewTextBoxColumn,
+            this.fechaSalidaDataGridViewTextBoxColumn,
+            this.horaSalidaDataGridViewTextBoxColumn,
             this.retornoDataGridViewTextBoxColumn});
             this.tableModulos_Herramientas_tabPrestamos_prestamos.Cursor = System.Windows.Forms.Cursors.Default;
             this.tableModulos_Herramientas_tabPrestamos_prestamos.DataSource = this.prestamosHBindingSource;
@@ -499,52 +502,6 @@
             this.tableModulos_Herramientas_tabPrestamos_prestamos.RowHeadersVisible = false;
             this.tableModulos_Herramientas_tabPrestamos_prestamos.Size = new System.Drawing.Size(751, 204);
             this.tableModulos_Herramientas_tabPrestamos_prestamos.TabIndex = 2;
-            // 
-            // códigoHerramientaDataGridViewTextBoxColumn
-            // 
-            this.códigoHerramientaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.códigoHerramientaDataGridViewTextBoxColumn.DataPropertyName = "Código Herramienta";
-            this.códigoHerramientaDataGridViewTextBoxColumn.HeaderText = "Código Herramienta";
-            this.códigoHerramientaDataGridViewTextBoxColumn.Name = "códigoHerramientaDataGridViewTextBoxColumn";
-            // 
-            // herramientaDataGridViewTextBoxColumn
-            // 
-            this.herramientaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.herramientaDataGridViewTextBoxColumn.DataPropertyName = "Herramienta";
-            this.herramientaDataGridViewTextBoxColumn.HeaderText = "Herramienta";
-            this.herramientaDataGridViewTextBoxColumn.Name = "herramientaDataGridViewTextBoxColumn";
-            // 
-            // responsableDataGridViewTextBoxColumn
-            // 
-            this.responsableDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.responsableDataGridViewTextBoxColumn.DataPropertyName = "Responsable";
-            this.responsableDataGridViewTextBoxColumn.HeaderText = "Responsable";
-            this.responsableDataGridViewTextBoxColumn.Name = "responsableDataGridViewTextBoxColumn";
-            this.responsableDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // salidaDataGridViewTextBoxColumn
-            // 
-            this.salidaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.salidaDataGridViewTextBoxColumn.DataPropertyName = "Salida";
-            this.salidaDataGridViewTextBoxColumn.HeaderText = "Salida";
-            this.salidaDataGridViewTextBoxColumn.Name = "salidaDataGridViewTextBoxColumn";
-            // 
-            // retornoDataGridViewTextBoxColumn
-            // 
-            this.retornoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.retornoDataGridViewTextBoxColumn.DataPropertyName = "Retorno";
-            this.retornoDataGridViewTextBoxColumn.HeaderText = "Retorno";
-            this.retornoDataGridViewTextBoxColumn.Name = "retornoDataGridViewTextBoxColumn";
-            // 
-            // prestamosHBindingSource
-            // 
-            this.prestamosHBindingSource.DataMember = "prestamosH";
-            this.prestamosHBindingSource.DataSource = this.protankDataSet11;
-            // 
-            // protankDataSet11
-            // 
-            this.protankDataSet11.DataSetName = "protankDataSet1";
-            this.protankDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel6
             // 
@@ -562,6 +519,54 @@
             this.panel6.Size = new System.Drawing.Size(751, 85);
             this.panel6.TabIndex = 1;
             // 
+            // btnModulos_Herramientas_eliminarPrestamo
+            // 
+            this.btnModulos_Herramientas_eliminarPrestamo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnModulos_Herramientas_eliminarPrestamo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModulos_Herramientas_eliminarPrestamo.ForeColor = System.Drawing.Color.White;
+            this.btnModulos_Herramientas_eliminarPrestamo.Location = new System.Drawing.Point(416, 45);
+            this.btnModulos_Herramientas_eliminarPrestamo.Name = "btnModulos_Herramientas_eliminarPrestamo";
+            this.btnModulos_Herramientas_eliminarPrestamo.Size = new System.Drawing.Size(153, 30);
+            this.btnModulos_Herramientas_eliminarPrestamo.TabIndex = 8;
+            this.btnModulos_Herramientas_eliminarPrestamo.Text = "Eliminar Prestamo";
+            this.toolTip1.SetToolTip(this.btnModulos_Herramientas_eliminarPrestamo, "Permite eliminar un préstamo de la lista\r\n");
+            this.btnModulos_Herramientas_eliminarPrestamo.UseVisualStyleBackColor = false;
+            // 
+            // btnModulos_Herramientas_editarPrestamo
+            // 
+            this.btnModulos_Herramientas_editarPrestamo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnModulos_Herramientas_editarPrestamo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModulos_Herramientas_editarPrestamo.ForeColor = System.Drawing.Color.White;
+            this.btnModulos_Herramientas_editarPrestamo.Location = new System.Drawing.Point(416, 10);
+            this.btnModulos_Herramientas_editarPrestamo.Name = "btnModulos_Herramientas_editarPrestamo";
+            this.btnModulos_Herramientas_editarPrestamo.Size = new System.Drawing.Size(153, 30);
+            this.btnModulos_Herramientas_editarPrestamo.TabIndex = 7;
+            this.btnModulos_Herramientas_editarPrestamo.Text = "Editar Prestamo";
+            this.toolTip1.SetToolTip(this.btnModulos_Herramientas_editarPrestamo, "Permite editar la información de un préstamo");
+            this.btnModulos_Herramientas_editarPrestamo.UseVisualStyleBackColor = false;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.btnModulos_Herramientas_refresh);
+            this.panel10.Controls.Add(this.radioButton3);
+            this.panel10.Controls.Add(this.radioButton1);
+            this.panel10.Controls.Add(this.radioButton2);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel10.Location = new System.Drawing.Point(591, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(160, 85);
+            this.panel10.TabIndex = 6;
+            // 
+            // btnModulos_Herramientas_refresh
+            // 
+            this.btnModulos_Herramientas_refresh.BackColor = System.Drawing.Color.DarkGray;
+            this.btnModulos_Herramientas_refresh.Image = global::ProTank_v1.Properties.Resources.update;
+            this.btnModulos_Herramientas_refresh.Location = new System.Drawing.Point(109, 25);
+            this.btnModulos_Herramientas_refresh.Name = "btnModulos_Herramientas_refresh";
+            this.btnModulos_Herramientas_refresh.Size = new System.Drawing.Size(38, 30);
+            this.btnModulos_Herramientas_refresh.TabIndex = 6;
+            this.btnModulos_Herramientas_refresh.UseVisualStyleBackColor = false;
+            // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
@@ -575,18 +580,6 @@
             this.radioButton3.Text = "Todo";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.radioButton2.Location = new System.Drawing.Point(12, 32);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(79, 16);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.Text = "Prestadas";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
@@ -598,6 +591,18 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Retornadas";
             this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.radioButton2.Location = new System.Drawing.Point(12, 32);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(79, 16);
+            this.radioButton2.TabIndex = 4;
+            this.radioButton2.Text = "Prestadas";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // dateModulos_Herramientas_tabPrestamos_horaFecha
             // 
@@ -676,6 +681,32 @@
             this.panel5.Size = new System.Drawing.Size(751, 93);
             this.panel5.TabIndex = 2;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(388, 50);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(173, 30);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Eliminar Herramienta";
+            this.toolTip1.SetToolTip(this.button5, "Permite ingresar la información de un nuevo préstamo");
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // btnModulos_Herramientas_tabInventario_editarHerramientav
+            // 
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.ForeColor = System.Drawing.Color.White;
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.Location = new System.Drawing.Point(388, 14);
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.Name = "btnModulos_Herramientas_tabInventario_editarHerramientav";
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.Size = new System.Drawing.Size(173, 30);
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.TabIndex = 8;
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.Text = "Editar Herramienta";
+            this.toolTip1.SetToolTip(this.btnModulos_Herramientas_tabInventario_editarHerramientav, "Permite editar la información de una herramienta existente");
+            this.btnModulos_Herramientas_tabInventario_editarHerramientav.UseVisualStyleBackColor = false;
+            // 
             // panel9
             // 
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -691,6 +722,16 @@
             this.panel9.Size = new System.Drawing.Size(158, 91);
             this.panel9.TabIndex = 3;
             this.panel9.Tag = "";
+            // 
+            // txtModulos_Herramientas_tabInventario_refresh
+            // 
+            this.txtModulos_Herramientas_tabInventario_refresh.BackColor = System.Drawing.Color.Transparent;
+            this.txtModulos_Herramientas_tabInventario_refresh.Image = global::ProTank_v1.Properties.Resources.update;
+            this.txtModulos_Herramientas_tabInventario_refresh.Location = new System.Drawing.Point(113, 34);
+            this.txtModulos_Herramientas_tabInventario_refresh.Name = "txtModulos_Herramientas_tabInventario_refresh";
+            this.txtModulos_Herramientas_tabInventario_refresh.Size = new System.Drawing.Size(38, 30);
+            this.txtModulos_Herramientas_tabInventario_refresh.TabIndex = 7;
+            this.txtModulos_Herramientas_tabInventario_refresh.UseVisualStyleBackColor = false;
             // 
             // checkModulos_Herramientas_tabInventario_urgente
             // 
@@ -786,16 +827,9 @@
             this.tableModulos_Herramientas_tabInventario_inventario.AllowUserToAddRows = false;
             this.tableModulos_Herramientas_tabInventario_inventario.AllowUserToDeleteRows = false;
             this.tableModulos_Herramientas_tabInventario_inventario.AllowUserToResizeRows = false;
-            this.tableModulos_Herramientas_tabInventario_inventario.AutoGenerateColumns = false;
             this.tableModulos_Herramientas_tabInventario_inventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.tableModulos_Herramientas_tabInventario_inventario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tableModulos_Herramientas_tabInventario_inventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableModulos_Herramientas_tabInventario_inventario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombreDataGridViewTextBoxColumn,
-            this.marcaDataGridViewTextBoxColumn,
-            this.codigoHDataGridViewTextBoxColumn1,
-            this.periodoDataGridViewTextBoxColumn});
-            this.tableModulos_Herramientas_tabInventario_inventario.DataSource = this.herramientaBindingSource;
             this.tableModulos_Herramientas_tabInventario_inventario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableModulos_Herramientas_tabInventario_inventario.Location = new System.Drawing.Point(3, 3);
             this.tableModulos_Herramientas_tabInventario_inventario.Margin = new System.Windows.Forms.Padding(2);
@@ -804,45 +838,6 @@
             this.tableModulos_Herramientas_tabInventario_inventario.RowTemplate.Height = 31;
             this.tableModulos_Herramientas_tabInventario_inventario.Size = new System.Drawing.Size(751, 289);
             this.tableModulos_Herramientas_tabInventario_inventario.TabIndex = 1;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // marcaDataGridViewTextBoxColumn
-            // 
-            this.marcaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "marca";
-            this.marcaDataGridViewTextBoxColumn.HeaderText = "marca";
-            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
-            // 
-            // codigoHDataGridViewTextBoxColumn1
-            // 
-            this.codigoHDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.codigoHDataGridViewTextBoxColumn1.DataPropertyName = "codigoH";
-            this.codigoHDataGridViewTextBoxColumn1.HeaderText = "codigoH";
-            this.codigoHDataGridViewTextBoxColumn1.Name = "codigoHDataGridViewTextBoxColumn1";
-            // 
-            // periodoDataGridViewTextBoxColumn
-            // 
-            this.periodoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.periodoDataGridViewTextBoxColumn.DataPropertyName = "periodo";
-            this.periodoDataGridViewTextBoxColumn.HeaderText = "periodo";
-            this.periodoDataGridViewTextBoxColumn.Name = "periodoDataGridViewTextBoxColumn";
-            // 
-            // herramientaBindingSource
-            // 
-            this.herramientaBindingSource.DataMember = "herramienta";
-            this.herramientaBindingSource.DataSource = this.protankDataSet1;
-            // 
-            // protankDataSet1
-            // 
-            this.protankDataSet1.DataSetName = "protankDataSet1";
-            this.protankDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel4
             // 
@@ -944,6 +939,17 @@
             this.label10.TabIndex = 16;
             this.label10.Text = "Nuevo Cliente";
             // 
+            // button10
+            // 
+            this.button10.Image = global::ProTank_v1.Properties.Resources.LogIn;
+            this.button10.Location = new System.Drawing.Point(823, 6);
+            this.button10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(53, 45);
+            this.button10.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.button10, "Permite crear un nuevo cliente");
+            this.button10.UseVisualStyleBackColor = true;
+            // 
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1032,11 +1038,6 @@
             // 
             this.toolTip1.IsBalloon = true;
             // 
-            // prestamoBindingSource
-            // 
-            this.prestamoBindingSource.DataMember = "prestamo";
-            this.prestamoBindingSource.DataSource = this.protankDataSet1;
-            // 
             // prestamoTableAdapter
             // 
             this.prestamoTableAdapter.ClearBeforeFill = true;
@@ -1045,115 +1046,58 @@
             // 
             this.herramientaTableAdapter.ClearBeforeFill = true;
             // 
+            // protankDataSet1
+            // 
+            this.protankDataSet1.DataSetName = "protankDataSet1";
+            this.protankDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // prestamosHBindingSource
+            // 
+            this.prestamosHBindingSource.DataMember = "prestamosH";
+            this.prestamosHBindingSource.DataSource = this.protankDataSet1;
+            // 
             // prestamosHTableAdapter
             // 
             this.prestamosHTableAdapter.ClearBeforeFill = true;
             // 
-            // panel10
+            // códigoHerramientaDataGridViewTextBoxColumn
             // 
-            this.panel10.Controls.Add(this.btnModulos_Herramientas_refresh);
-            this.panel10.Controls.Add(this.radioButton3);
-            this.panel10.Controls.Add(this.radioButton1);
-            this.panel10.Controls.Add(this.radioButton2);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(591, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(160, 85);
-            this.panel10.TabIndex = 6;
+            this.códigoHerramientaDataGridViewTextBoxColumn.DataPropertyName = "Código Herramienta";
+            this.códigoHerramientaDataGridViewTextBoxColumn.HeaderText = "Código Herramienta";
+            this.códigoHerramientaDataGridViewTextBoxColumn.Name = "códigoHerramientaDataGridViewTextBoxColumn";
             // 
-            // btnModulos_Herramientas_editarPrestamo
+            // herramientaDataGridViewTextBoxColumn
             // 
-            this.btnModulos_Herramientas_editarPrestamo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnModulos_Herramientas_editarPrestamo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModulos_Herramientas_editarPrestamo.ForeColor = System.Drawing.Color.White;
-            this.btnModulos_Herramientas_editarPrestamo.Location = new System.Drawing.Point(416, 10);
-            this.btnModulos_Herramientas_editarPrestamo.Name = "btnModulos_Herramientas_editarPrestamo";
-            this.btnModulos_Herramientas_editarPrestamo.Size = new System.Drawing.Size(153, 30);
-            this.btnModulos_Herramientas_editarPrestamo.TabIndex = 7;
-            this.btnModulos_Herramientas_editarPrestamo.Text = "Editar Prestamo";
-            this.toolTip1.SetToolTip(this.btnModulos_Herramientas_editarPrestamo, "Permite editar la información de un préstamo");
-            this.btnModulos_Herramientas_editarPrestamo.UseVisualStyleBackColor = false;
+            this.herramientaDataGridViewTextBoxColumn.DataPropertyName = "Herramienta";
+            this.herramientaDataGridViewTextBoxColumn.HeaderText = "Herramienta";
+            this.herramientaDataGridViewTextBoxColumn.Name = "herramientaDataGridViewTextBoxColumn";
             // 
-            // btnModulos_Herramientas_eliminarPrestamo
+            // responsableDataGridViewTextBoxColumn
             // 
-            this.btnModulos_Herramientas_eliminarPrestamo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnModulos_Herramientas_eliminarPrestamo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModulos_Herramientas_eliminarPrestamo.ForeColor = System.Drawing.Color.White;
-            this.btnModulos_Herramientas_eliminarPrestamo.Location = new System.Drawing.Point(416, 45);
-            this.btnModulos_Herramientas_eliminarPrestamo.Name = "btnModulos_Herramientas_eliminarPrestamo";
-            this.btnModulos_Herramientas_eliminarPrestamo.Size = new System.Drawing.Size(153, 30);
-            this.btnModulos_Herramientas_eliminarPrestamo.TabIndex = 8;
-            this.btnModulos_Herramientas_eliminarPrestamo.Text = "Eliminar Prestamo";
-            this.toolTip1.SetToolTip(this.btnModulos_Herramientas_eliminarPrestamo, "Permite eliminar un préstamo de la lista\r\n");
-            this.btnModulos_Herramientas_eliminarPrestamo.UseVisualStyleBackColor = false;
+            this.responsableDataGridViewTextBoxColumn.DataPropertyName = "Responsable";
+            this.responsableDataGridViewTextBoxColumn.HeaderText = "Responsable";
+            this.responsableDataGridViewTextBoxColumn.Name = "responsableDataGridViewTextBoxColumn";
+            this.responsableDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // btnModulos_Herramientas_tabInventario_editarHerramientav
+            // fechaSalidaDataGridViewTextBoxColumn
             // 
-            this.btnModulos_Herramientas_tabInventario_editarHerramientav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnModulos_Herramientas_tabInventario_editarHerramientav.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModulos_Herramientas_tabInventario_editarHerramientav.ForeColor = System.Drawing.Color.White;
-            this.btnModulos_Herramientas_tabInventario_editarHerramientav.Location = new System.Drawing.Point(388, 14);
-            this.btnModulos_Herramientas_tabInventario_editarHerramientav.Name = "btnModulos_Herramientas_tabInventario_editarHerramientav";
-            this.btnModulos_Herramientas_tabInventario_editarHerramientav.Size = new System.Drawing.Size(173, 30);
-            this.btnModulos_Herramientas_tabInventario_editarHerramientav.TabIndex = 8;
-            this.btnModulos_Herramientas_tabInventario_editarHerramientav.Text = "Editar Herramienta";
-            this.toolTip1.SetToolTip(this.btnModulos_Herramientas_tabInventario_editarHerramientav, "Permite editar la información de una herramienta existente");
-            this.btnModulos_Herramientas_tabInventario_editarHerramientav.UseVisualStyleBackColor = false;
+            this.fechaSalidaDataGridViewTextBoxColumn.DataPropertyName = "Fecha Salida";
+            this.fechaSalidaDataGridViewTextBoxColumn.HeaderText = "Fecha Salida";
+            this.fechaSalidaDataGridViewTextBoxColumn.Name = "fechaSalidaDataGridViewTextBoxColumn";
+            this.fechaSalidaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // btnModulos_NuevoUsuario_nuevaPersona
+            // horaSalidaDataGridViewTextBoxColumn
             // 
-            this.btnModulos_NuevoUsuario_nuevaPersona.Image = global::ProTank_v1.Properties.Resources.LogIn;
-            this.btnModulos_NuevoUsuario_nuevaPersona.Location = new System.Drawing.Point(490, 19);
-            this.btnModulos_NuevoUsuario_nuevaPersona.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnModulos_NuevoUsuario_nuevaPersona.Name = "btnModulos_NuevoUsuario_nuevaPersona";
-            this.btnModulos_NuevoUsuario_nuevaPersona.Size = new System.Drawing.Size(53, 45);
-            this.btnModulos_NuevoUsuario_nuevaPersona.TabIndex = 14;
-            this.toolTip1.SetToolTip(this.btnModulos_NuevoUsuario_nuevaPersona, "Crea un nuevo empleado");
-            this.btnModulos_NuevoUsuario_nuevaPersona.UseVisualStyleBackColor = true;
+            this.horaSalidaDataGridViewTextBoxColumn.DataPropertyName = "Hora Salida";
+            this.horaSalidaDataGridViewTextBoxColumn.HeaderText = "Hora Salida";
+            this.horaSalidaDataGridViewTextBoxColumn.Name = "horaSalidaDataGridViewTextBoxColumn";
+            this.horaSalidaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // btnModulos_Herramientas_refresh
+            // retornoDataGridViewTextBoxColumn
             // 
-            this.btnModulos_Herramientas_refresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnModulos_Herramientas_refresh.Image = global::ProTank_v1.Properties.Resources.update;
-            this.btnModulos_Herramientas_refresh.Location = new System.Drawing.Point(109, 25);
-            this.btnModulos_Herramientas_refresh.Name = "btnModulos_Herramientas_refresh";
-            this.btnModulos_Herramientas_refresh.Size = new System.Drawing.Size(38, 30);
-            this.btnModulos_Herramientas_refresh.TabIndex = 6;
-            this.btnModulos_Herramientas_refresh.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            this.button10.Image = global::ProTank_v1.Properties.Resources.LogIn;
-            this.button10.Location = new System.Drawing.Point(823, 6);
-            this.button10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(53, 45);
-            this.button10.TabIndex = 15;
-            this.toolTip1.SetToolTip(this.button10, "Permite crear un nuevo cliente");
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // txtModulos_Herramientas_tabInventario_refresh
-            // 
-            this.txtModulos_Herramientas_tabInventario_refresh.BackColor = System.Drawing.Color.Transparent;
-            this.txtModulos_Herramientas_tabInventario_refresh.Image = global::ProTank_v1.Properties.Resources.update;
-            this.txtModulos_Herramientas_tabInventario_refresh.Location = new System.Drawing.Point(113, 34);
-            this.txtModulos_Herramientas_tabInventario_refresh.Name = "txtModulos_Herramientas_tabInventario_refresh";
-            this.txtModulos_Herramientas_tabInventario_refresh.Size = new System.Drawing.Size(38, 30);
-            this.txtModulos_Herramientas_tabInventario_refresh.TabIndex = 7;
-            this.txtModulos_Herramientas_tabInventario_refresh.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(388, 50);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(173, 30);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Eliminar Herramienta";
-            this.toolTip1.SetToolTip(this.button5, "Permite ingresar la información de un nuevo préstamo");
-            this.button5.UseVisualStyleBackColor = false;
+            this.retornoDataGridViewTextBoxColumn.DataPropertyName = "Retorno";
+            this.retornoDataGridViewTextBoxColumn.HeaderText = "Retorno";
+            this.retornoDataGridViewTextBoxColumn.Name = "retornoDataGridViewTextBoxColumn";
             // 
             // Modulos
             // 
@@ -1179,18 +1123,16 @@
             this.tabModulos_Control_Herramientas.ResumeLayout(false);
             this.tabModulos_Herramientas_Prestamos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tableModulos_Herramientas_tabPrestamos_prestamos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prestamosHBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet11)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.tabModulos_Herramientas_Inventario.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableModulos_Herramientas_tabInventario_inventario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.herramientaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.tabModulos_Contratos.ResumeLayout(false);
@@ -1200,9 +1142,8 @@
             this.panel8.PerformLayout();
             this.panContratos_header.ResumeLayout(false);
             this.panContratos_header.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.prestamoBindingSource)).EndInit();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prestamosHBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1270,23 +1211,8 @@
         private System.Windows.Forms.Label lblModulos_NuevoUsuario_nuevaPersona;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label label10;
-        private protankDataSet1 protankDataSet1;
-        private System.Windows.Forms.BindingSource prestamoBindingSource;
         private protankDataSet1TableAdapters.prestamoTableAdapter prestamoTableAdapter;
-        private System.Windows.Forms.BindingSource herramientaBindingSource;
         private protankDataSet1TableAdapters.herramientaTableAdapter herramientaTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoHDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn periodoDataGridViewTextBoxColumn;
-        private protankDataSet1 protankDataSet11;
-        private System.Windows.Forms.BindingSource prestamosHBindingSource;
-        private protankDataSet1TableAdapters.prestamosHTableAdapter prestamosHTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn códigoHerramientaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn herramientaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn responsableDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salidaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn retornoDataGridViewTextBoxColumn;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton3;
@@ -1297,5 +1223,14 @@
         private System.Windows.Forms.Button btnModulos_Herramientas_refresh;
         private System.Windows.Forms.Button txtModulos_Herramientas_tabInventario_refresh;
         private System.Windows.Forms.Button button5;
+        private protankDataSet1 protankDataSet1;
+        private System.Windows.Forms.BindingSource prestamosHBindingSource;
+        private protankDataSet1TableAdapters.prestamosHTableAdapter prestamosHTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn códigoHerramientaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn herramientaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn responsableDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaSalidaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaSalidaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn retornoDataGridViewTextBoxColumn;
     }
 }
