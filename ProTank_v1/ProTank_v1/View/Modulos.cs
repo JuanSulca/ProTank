@@ -20,6 +20,8 @@ namespace ProTank_v1.View
 
         private void Modulos_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'protankDataSet1.person' table. You can move, or remove it, as needed.
+            this.personTableAdapter.Fill(this.protankDataSet1.person);
             // TODO: This line of code loads data into the 'protankDataSet1.mantenimientoH_todo' table. You can move, or remove it, as needed.
             this.mantenimientoH_todoTableAdapter.Fill(this.protankDataSet1.mantenimientoH_todo);
             // TODO: This line of code loads data into the 'protankDataSet1.prestamosH_todo' table. You can move, or remove it, as needed.
@@ -57,6 +59,11 @@ namespace ProTank_v1.View
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }
