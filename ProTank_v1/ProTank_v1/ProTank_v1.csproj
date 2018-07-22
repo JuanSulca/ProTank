@@ -77,6 +77,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>protankDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="View\Desing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Desing.Designer.cs">
+      <DependentUpon>Desing.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\EntradaModulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\Desing.resx">
+      <DependentUpon>Desing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\EntradaModulos.resx">
       <DependentUpon>EntradaModulos.cs</DependentUpon>
     </EmbeddedResource>

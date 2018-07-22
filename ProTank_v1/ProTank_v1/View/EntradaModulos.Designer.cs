@@ -179,7 +179,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(272, 126);
             this.button4.TabIndex = 2;
-            this.button4.Text = "Contratos";
+            this.button4.Text = "Control de Contratos";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // panel7
