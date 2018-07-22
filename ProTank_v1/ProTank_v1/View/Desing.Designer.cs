@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabModulos_Aforo = new System.Windows.Forms.TabPage();
+            this.tabAforo = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.panel17 = new System.Windows.Forms.Panel();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -54,10 +54,14 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.lblModulos_Aforo_aforo = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabDesign = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblModulos_NuevoUsuario_nuevoUsuario = new System.Windows.Forms.Label();
+            this.lblModulos_NuevoUsuario_protank = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabModulos_Aforo.SuspendLayout();
+            this.tabAforo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -65,6 +69,8 @@
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel15.SuspendLayout();
+            this.tabDesign.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,8 +84,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabModulos_Aforo);
-            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabAforo);
+            this.tabControl1.Controls.Add(this.tabDesign);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -87,21 +93,21 @@
             this.tabControl1.Size = new System.Drawing.Size(1713, 857);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabModulos_Aforo
+            // tabAforo
             // 
-            this.tabModulos_Aforo.Controls.Add(this.dataGridView4);
-            this.tabModulos_Aforo.Controls.Add(this.panel17);
-            this.tabModulos_Aforo.Controls.Add(this.panel16);
-            this.tabModulos_Aforo.Controls.Add(this.dataGridView3);
-            this.tabModulos_Aforo.Controls.Add(this.panel15);
-            this.tabModulos_Aforo.Location = new System.Drawing.Point(4, 33);
-            this.tabModulos_Aforo.Margin = new System.Windows.Forms.Padding(6);
-            this.tabModulos_Aforo.Name = "tabModulos_Aforo";
-            this.tabModulos_Aforo.Padding = new System.Windows.Forms.Padding(6);
-            this.tabModulos_Aforo.Size = new System.Drawing.Size(1705, 820);
-            this.tabModulos_Aforo.TabIndex = 7;
-            this.tabModulos_Aforo.Text = "Tabla de Aforo";
-            this.tabModulos_Aforo.UseVisualStyleBackColor = true;
+            this.tabAforo.Controls.Add(this.dataGridView4);
+            this.tabAforo.Controls.Add(this.panel17);
+            this.tabAforo.Controls.Add(this.panel16);
+            this.tabAforo.Controls.Add(this.dataGridView3);
+            this.tabAforo.Controls.Add(this.panel15);
+            this.tabAforo.Location = new System.Drawing.Point(4, 33);
+            this.tabAforo.Margin = new System.Windows.Forms.Padding(6);
+            this.tabAforo.Name = "tabAforo";
+            this.tabAforo.Padding = new System.Windows.Forms.Padding(6);
+            this.tabAforo.Size = new System.Drawing.Size(1705, 820);
+            this.tabAforo.TabIndex = 7;
+            this.tabAforo.Text = "Tabla de Aforo";
+            this.tabAforo.UseVisualStyleBackColor = true;
             // 
             // dataGridView4
             // 
@@ -370,14 +376,67 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "ProTank";
             // 
-            // tabPage1
+            // tabDesign
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 33);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1705, 820);
-            this.tabPage1.TabIndex = 8;
-            this.tabPage1.Text = "Medidas";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabDesign.Controls.Add(this.panel2);
+            this.tabDesign.Controls.Add(this.panel3);
+            this.tabDesign.Location = new System.Drawing.Point(4, 33);
+            this.tabDesign.Name = "tabDesign";
+            this.tabDesign.Size = new System.Drawing.Size(1705, 820);
+            this.tabDesign.TabIndex = 8;
+            this.tabDesign.Text = "Diseño";
+            this.tabDesign.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 127);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1705, 693);
+            this.panel2.TabIndex = 7;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel3.Controls.Add(this.lblModulos_NuevoUsuario_nuevoUsuario);
+            this.panel3.Controls.Add(this.lblModulos_NuevoUsuario_protank);
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1705, 127);
+            this.panel3.TabIndex = 6;
+            // 
+            // lblModulos_NuevoUsuario_nuevoUsuario
+            // 
+            this.lblModulos_NuevoUsuario_nuevoUsuario.AutoSize = true;
+            this.lblModulos_NuevoUsuario_nuevoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblModulos_NuevoUsuario_nuevoUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModulos_NuevoUsuario_nuevoUsuario.ForeColor = System.Drawing.Color.Lavender;
+            this.lblModulos_NuevoUsuario_nuevoUsuario.Location = new System.Drawing.Point(1398, 44);
+            this.lblModulos_NuevoUsuario_nuevoUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModulos_NuevoUsuario_nuevoUsuario.Name = "lblModulos_NuevoUsuario_nuevoUsuario";
+            this.lblModulos_NuevoUsuario_nuevoUsuario.Size = new System.Drawing.Size(131, 39);
+            this.lblModulos_NuevoUsuario_nuevoUsuario.TabIndex = 1;
+            this.lblModulos_NuevoUsuario_nuevoUsuario.Text = "Diseño";
+            // 
+            // lblModulos_NuevoUsuario_protank
+            // 
+            this.lblModulos_NuevoUsuario_protank.AutoSize = true;
+            this.lblModulos_NuevoUsuario_protank.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblModulos_NuevoUsuario_protank.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblModulos_NuevoUsuario_protank.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModulos_NuevoUsuario_protank.ForeColor = System.Drawing.Color.White;
+            this.lblModulos_NuevoUsuario_protank.Location = new System.Drawing.Point(139, 17);
+            this.lblModulos_NuevoUsuario_protank.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModulos_NuevoUsuario_protank.Name = "lblModulos_NuevoUsuario_protank";
+            this.lblModulos_NuevoUsuario_protank.Size = new System.Drawing.Size(255, 78);
+            this.lblModulos_NuevoUsuario_protank.TabIndex = 0;
+            this.lblModulos_NuevoUsuario_protank.Text = "ProTank";
             // 
             // Desing
             // 
@@ -389,7 +448,7 @@
             this.Text = "Desing";
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.tabModulos_Aforo.ResumeLayout(false);
+            this.tabAforo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
@@ -400,6 +459,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
+            this.tabDesign.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -408,7 +470,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabModulos_Aforo;
+        private System.Windows.Forms.TabPage tabAforo;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.TextBox textBox9;
@@ -432,6 +494,10 @@
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label lblModulos_Aforo_aforo;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabDesign;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblModulos_NuevoUsuario_nuevoUsuario;
+        private System.Windows.Forms.Label lblModulos_NuevoUsuario_protank;
     }
 }
