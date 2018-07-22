@@ -159,7 +159,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(272, 126);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Control de Herramientas";
+            this.button3.Text = "Ventas y Servicios";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // panel6
@@ -179,7 +179,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(272, 126);
             this.button4.TabIndex = 2;
-            this.button4.Text = "Control de Herramientas";
+            this.button4.Text = "Contratos";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // panel7
@@ -205,7 +205,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox5.Image = global::ProTank_v1.Properties.Resources.if_openofficeorg_draw_24201;
+            this.pictureBox5.Image = global::ProTank_v1.Properties.Resources.graphic_designer_tools;
             this.pictureBox5.Location = new System.Drawing.Point(0, 0);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(131, 126);
@@ -216,7 +216,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox4.Image = global::ProTank_v1.Properties.Resources.if_tool_kit_44892;
+            this.pictureBox4.Image = global::ProTank_v1.Properties.Resources.if_content_form_contract_article_paper_3209382;
             this.pictureBox4.Location = new System.Drawing.Point(0, 0);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(131, 126);
@@ -227,7 +227,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Image = global::ProTank_v1.Properties.Resources.if_tool_kit_44892;
+            this.pictureBox3.Image = global::ProTank_v1.Properties.Resources.if_digital_product_service_hand_circuit_3209316;
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(131, 126);
@@ -238,7 +238,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::ProTank_v1.Properties.Resources.if_tool_kit_44892;
+            this.pictureBox2.Image = global::ProTank_v1.Properties.Resources.technical_support;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(131, 126);
@@ -249,7 +249,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ProTank_v1.Properties.Resources.users;
+            this.pictureBox1.Image = global::ProTank_v1.Properties.Resources.networking;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(131, 126);

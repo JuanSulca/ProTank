@@ -190,13 +190,22 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Icons\graphic-designer-tools.png" />
+    <Content Include="Icons\handyman-tools.png" />
+    <Content Include="Icons\if_content-form-contract-article-paper_3209382.png" />
+    <Content Include="Icons\if_digital-product-service-hand-circuit_3209316.ico" />
+    <Content Include="Icons\if_digital-product-service-hand-circuit_3209316.png" />
     <Content Include="Icons\if_openofficeorg-draw_24201.ico" />
     <Content Include="Icons\if_openofficeorg-draw_24201.png" />
+    <Content Include="Icons\if_Register_33993.ico" />
+    <Content Include="Icons\if_Register_33993.png" />
     <Content Include="Icons\if_Scetchbook_by_Artdesigner_60881.ico" />
     <Content Include="Icons\if_Scetchbook_by_Artdesigner_60881.png" />
     <Content Include="Icons\if_tool_kit_44892.ico" />
     <Content Include="Icons\if_tool_kit_44892.png" />
     <Content Include="Icons\LogIn.ico" />
+    <Content Include="Icons\networking.png" />
+    <Content Include="Icons\technical-support.png" />
     <Content Include="Icons\ULLOA.ico" />
     <Content Include="Icons\update.ico" />
     <Content Include="Icons\users.ico" />
