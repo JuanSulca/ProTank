@@ -19,26 +19,13 @@ namespace ProTank_v1.View
 
         private void Modulos_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'protankDataSet1.person' table. You can move, or remove it, as needed.
-            this.personTableAdapter.Fill(this.protankDataSet1.person);
-            // TODO: This line of code loads data into the 'protankDataSet1.mantenimientoH_todo' table. You can move, or remove it, as needed.
-            this.mantenimientoH_todoTableAdapter.Fill(this.protankDataSet1.mantenimientoH_todo);
-            // TODO: This line of code loads data into the 'protankDataSet1.prestamosH_todo' table. You can move, or remove it, as needed.
-            this.prestamosH_todoTableAdapter.Fill(this.protankDataSet1.prestamosH_todo);
-            // TODO: This line of code loads data into the 'protankDataSet1.empleados_apellidos_nombres' table. You can move, or remove it, as needed.
-            this.empleados_apellidos_nombresTableAdapter.Fill(this.protankDataSet1.empleados_apellidos_nombres);
-            // TODO: This line of code loads data into the 'protankDataSet1.empleado' table. You can move, or remove it, as needed.
-            this.empleadoTableAdapter.Fill(this.protankDataSet1.empleado);
-            // TODO: This line of code loads data into the 'protankDataSet1.contrato' table. You can move, or remove it, as needed.
-            this.contratoTableAdapter.Fill(this.protankDataSet1.contrato);
-            // TODO: This line of code loads data into the 'protankDataSet1.empleado' table. You can move, or remove it, as needed.
-            this.empleadoTableAdapter.Fill(this.protankDataSet1.empleado);
-            
+                        
         }
 
         private void Modulos_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
+            this.Dispose();
         }
 
         private void dateModulos_Herramientas_tabPrestamos_horaFecha_ValueChanged(object sender, EventArgs e)

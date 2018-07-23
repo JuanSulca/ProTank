@@ -228,6 +228,7 @@
   <ItemGroup>
     <Content Include="Icons\graphic-designer-tools.png" />
     <Content Include="Icons\handyman-tools.png" />
+    <None Include="Icons\if_Close_1891023.png" />
     <Content Include="Icons\if_content-form-contract-article-paper_3209382.png" />
     <Content Include="Icons\if_digital-product-service-hand-circuit_3209316.ico" />
     <Content Include="Icons\if_digital-product-service-hand-circuit_3209316.png" />

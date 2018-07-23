@@ -16,5 +16,11 @@ namespace ProTank_v1.View
         {
             InitializeComponent();
         }
+
+        private void Desing_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
+            //this.Close();
+        }
     }
 }

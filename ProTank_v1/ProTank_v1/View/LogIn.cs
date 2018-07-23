@@ -38,16 +38,22 @@ namespace ProTank_v1
             protankDataSet1 ds = new protankDataSet1();
             loginTable.Fill(ds.userLogin);
             protankDataSet1.userLoginRow loginRow = ds.userLogin.FindByuname(uname);
-            if(loginRow.pwd == pwd)
+            if (txtUname.Text == "" || txtPwd.Text == "")
             {
-                System.Windows.Forms.MessageBox.Show("Succesfull log in!\n" + "rol: " + loginRow.rol);
-                Modulos modulos = new Modulos();
-                modulos.Show();
-                this.Hide();
+                MessageBox.Show("Existen campos sin llenar!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                System.Windows.Forms.MessageBox.Show("Acceso denegado!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                if (loginRow.pwd == pwd)
+                {
+                    EntradaModulos modulos = new EntradaModulos();
+                    modulos.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    System.Windows.Forms.MessageBox.Show("Acceso denegado!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
