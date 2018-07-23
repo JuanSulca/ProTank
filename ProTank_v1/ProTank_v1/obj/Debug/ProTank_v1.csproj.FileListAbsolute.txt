@@ -74,3 +74,5 @@ D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.EntradaM
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.Ventas.resources
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewContract.resources
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewPrestamo.resources
+D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.Administracion.resources
+D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.Contratos.resources
