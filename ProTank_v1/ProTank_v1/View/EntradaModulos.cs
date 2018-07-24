@@ -49,7 +49,8 @@ namespace ProTank_v1.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //llamar a herramientass
+            Herramientas h = new Herramientas();
+            h.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

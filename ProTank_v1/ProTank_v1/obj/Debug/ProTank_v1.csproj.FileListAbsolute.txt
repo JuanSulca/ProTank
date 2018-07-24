@@ -24,7 +24,6 @@ C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.ex
 C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.pdb
 C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.csprojResolveAssemblyReference.cache
 C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewPerson.resources
-C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewPerstamo.resources
 C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewTool.resources
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\bin\Debug\ProTank_v1.exe.config
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.exe
@@ -76,3 +75,11 @@ D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewContr
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewPrestamo.resources
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.Administracion.resources
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.Contratos.resources
+C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.Administracion.resources
+C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.Contratos.resources
+C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.Desing.resources
+C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.EntradaModulos.resources
+C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.Herramientas.resources
+C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.Ventas.resources
+C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewContract.resources
+C:\Users\Juan\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewPrestamo.resources
