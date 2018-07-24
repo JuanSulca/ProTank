@@ -33,6 +33,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblModulos_NuevoUsuario_ayuda = new System.Windows.Forms.Label();
             this.lblModulos_NuevoUsuario_nuevaPersona = new System.Windows.Forms.Label();
+            this.btnModulos_NuevoUsuario_nuevaPersona = new System.Windows.Forms.Button();
             this.checkModulos_NuevoUsuario_servicios = new System.Windows.Forms.CheckBox();
             this.checkModulos_NuevoUsuario_bodega = new System.Windows.Forms.CheckBox();
             this.checkModulos_NuevoUsuario_contratos = new System.Windows.Forms.CheckBox();
@@ -50,9 +51,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblModulos_NuevoUsuario_nuevoUsuario = new System.Windows.Forms.Label();
             this.lblModulos_NuevoUsuario_protank = new System.Windows.Forms.Label();
-            this.btnModulos_NuevoUsuario_nuevaPersona = new System.Windows.Forms.Button();
             this.tabModulos_Empleados = new System.Windows.Forms.TabPage();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.btn_Modulos_Empleados_editarEmpleado = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -94,9 +95,10 @@
             this.tabControl1.Controls.Add(this.tabModulos_ListaPersonas);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1572, 840);
+            this.tabControl1.Size = new System.Drawing.Size(912, 455);
             this.tabControl1.TabIndex = 0;
             // 
             // tabModulos_NuevoUsuario
@@ -108,11 +110,11 @@
             this.tabModulos_NuevoUsuario.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabModulos_NuevoUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabModulos_NuevoUsuario.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabModulos_NuevoUsuario.Location = new System.Drawing.Point(4, 33);
-            this.tabModulos_NuevoUsuario.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.tabModulos_NuevoUsuario.Location = new System.Drawing.Point(4, 22);
+            this.tabModulos_NuevoUsuario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabModulos_NuevoUsuario.Name = "tabModulos_NuevoUsuario";
-            this.tabModulos_NuevoUsuario.Padding = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.tabModulos_NuevoUsuario.Size = new System.Drawing.Size(1490, 806);
+            this.tabModulos_NuevoUsuario.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tabModulos_NuevoUsuario.Size = new System.Drawing.Size(904, 429);
             this.tabModulos_NuevoUsuario.TabIndex = 2;
             this.tabModulos_NuevoUsuario.Text = "Nuevo Usuario";
             this.tabModulos_NuevoUsuario.ToolTipText = "Crear nuevos usuarios";
@@ -139,41 +141,52 @@
             this.panel2.Controls.Add(this.lblModulos_NuevoUsuario_username);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(4, 133);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.panel2.Location = new System.Drawing.Point(2, 72);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1482, 667);
+            this.panel2.Size = new System.Drawing.Size(900, 354);
             this.panel2.TabIndex = 5;
             // 
             // lblModulos_NuevoUsuario_ayuda
             // 
             this.lblModulos_NuevoUsuario_ayuda.AutoSize = true;
             this.lblModulos_NuevoUsuario_ayuda.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.142858F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModulos_NuevoUsuario_ayuda.Location = new System.Drawing.Point(856, 351);
-            this.lblModulos_NuevoUsuario_ayuda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModulos_NuevoUsuario_ayuda.Location = new System.Drawing.Point(467, 190);
+            this.lblModulos_NuevoUsuario_ayuda.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModulos_NuevoUsuario_ayuda.Name = "lblModulos_NuevoUsuario_ayuda";
-            this.lblModulos_NuevoUsuario_ayuda.Size = new System.Drawing.Size(21, 23);
+            this.lblModulos_NuevoUsuario_ayuda.Size = new System.Drawing.Size(11, 12);
             this.lblModulos_NuevoUsuario_ayuda.TabIndex = 16;
             this.lblModulos_NuevoUsuario_ayuda.Text = "?";
             // 
             // lblModulos_NuevoUsuario_nuevaPersona
             // 
             this.lblModulos_NuevoUsuario_nuevaPersona.AutoSize = true;
-            this.lblModulos_NuevoUsuario_nuevaPersona.Location = new System.Drawing.Point(865, 135);
-            this.lblModulos_NuevoUsuario_nuevaPersona.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModulos_NuevoUsuario_nuevaPersona.Location = new System.Drawing.Point(472, 73);
+            this.lblModulos_NuevoUsuario_nuevaPersona.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModulos_NuevoUsuario_nuevaPersona.Name = "lblModulos_NuevoUsuario_nuevaPersona";
-            this.lblModulos_NuevoUsuario_nuevaPersona.Size = new System.Drawing.Size(158, 23);
+            this.lblModulos_NuevoUsuario_nuevaPersona.Size = new System.Drawing.Size(89, 12);
             this.lblModulos_NuevoUsuario_nuevaPersona.TabIndex = 15;
             this.lblModulos_NuevoUsuario_nuevaPersona.Text = "Nueva Persona";
+            // 
+            // btnModulos_NuevoUsuario_nuevaPersona
+            // 
+            this.btnModulos_NuevoUsuario_nuevaPersona.Image = global::ProTank_v1.Properties.Resources.LogIn;
+            this.btnModulos_NuevoUsuario_nuevaPersona.Location = new System.Drawing.Point(490, 19);
+            this.btnModulos_NuevoUsuario_nuevaPersona.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnModulos_NuevoUsuario_nuevaPersona.Name = "btnModulos_NuevoUsuario_nuevaPersona";
+            this.btnModulos_NuevoUsuario_nuevaPersona.Size = new System.Drawing.Size(53, 45);
+            this.btnModulos_NuevoUsuario_nuevaPersona.TabIndex = 14;
+            this.btnModulos_NuevoUsuario_nuevaPersona.UseVisualStyleBackColor = true;
+            this.btnModulos_NuevoUsuario_nuevaPersona.Click += new System.EventHandler(this.btnModulos_NuevoUsuario_nuevaPersona_Click);
             // 
             // checkModulos_NuevoUsuario_servicios
             // 
             this.checkModulos_NuevoUsuario_servicios.AutoSize = true;
             this.checkModulos_NuevoUsuario_servicios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkModulos_NuevoUsuario_servicios.Location = new System.Drawing.Point(675, 338);
-            this.checkModulos_NuevoUsuario_servicios.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.checkModulos_NuevoUsuario_servicios.Location = new System.Drawing.Point(368, 183);
+            this.checkModulos_NuevoUsuario_servicios.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.checkModulos_NuevoUsuario_servicios.Name = "checkModulos_NuevoUsuario_servicios";
-            this.checkModulos_NuevoUsuario_servicios.Size = new System.Drawing.Size(159, 38);
+            this.checkModulos_NuevoUsuario_servicios.Size = new System.Drawing.Size(94, 25);
             this.checkModulos_NuevoUsuario_servicios.TabIndex = 13;
             this.checkModulos_NuevoUsuario_servicios.Text = "Servicios";
             this.checkModulos_NuevoUsuario_servicios.UseVisualStyleBackColor = true;
@@ -182,10 +195,10 @@
             // 
             this.checkModulos_NuevoUsuario_bodega.AutoSize = true;
             this.checkModulos_NuevoUsuario_bodega.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkModulos_NuevoUsuario_bodega.Location = new System.Drawing.Point(499, 338);
-            this.checkModulos_NuevoUsuario_bodega.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.checkModulos_NuevoUsuario_bodega.Location = new System.Drawing.Point(272, 183);
+            this.checkModulos_NuevoUsuario_bodega.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.checkModulos_NuevoUsuario_bodega.Name = "checkModulos_NuevoUsuario_bodega";
-            this.checkModulos_NuevoUsuario_bodega.Size = new System.Drawing.Size(150, 38);
+            this.checkModulos_NuevoUsuario_bodega.Size = new System.Drawing.Size(91, 25);
             this.checkModulos_NuevoUsuario_bodega.TabIndex = 12;
             this.checkModulos_NuevoUsuario_bodega.Text = "Bodega";
             this.checkModulos_NuevoUsuario_bodega.UseVisualStyleBackColor = true;
@@ -194,10 +207,10 @@
             // 
             this.checkModulos_NuevoUsuario_contratos.AutoSize = true;
             this.checkModulos_NuevoUsuario_contratos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkModulos_NuevoUsuario_contratos.Location = new System.Drawing.Point(290, 338);
-            this.checkModulos_NuevoUsuario_contratos.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.checkModulos_NuevoUsuario_contratos.Location = new System.Drawing.Point(158, 183);
+            this.checkModulos_NuevoUsuario_contratos.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.checkModulos_NuevoUsuario_contratos.Name = "checkModulos_NuevoUsuario_contratos";
-            this.checkModulos_NuevoUsuario_contratos.Size = new System.Drawing.Size(175, 38);
+            this.checkModulos_NuevoUsuario_contratos.Size = new System.Drawing.Size(108, 25);
             this.checkModulos_NuevoUsuario_contratos.TabIndex = 11;
             this.checkModulos_NuevoUsuario_contratos.Text = "Contratos";
             this.checkModulos_NuevoUsuario_contratos.UseVisualStyleBackColor = true;
@@ -206,31 +219,31 @@
             // 
             this.checkModulos_NuevoUsuario_design.AutoSize = true;
             this.checkModulos_NuevoUsuario_design.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkModulos_NuevoUsuario_design.Location = new System.Drawing.Point(132, 338);
-            this.checkModulos_NuevoUsuario_design.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.checkModulos_NuevoUsuario_design.Location = new System.Drawing.Point(72, 183);
+            this.checkModulos_NuevoUsuario_design.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.checkModulos_NuevoUsuario_design.Name = "checkModulos_NuevoUsuario_design";
-            this.checkModulos_NuevoUsuario_design.Size = new System.Drawing.Size(133, 38);
+            this.checkModulos_NuevoUsuario_design.Size = new System.Drawing.Size(80, 25);
             this.checkModulos_NuevoUsuario_design.TabIndex = 10;
             this.checkModulos_NuevoUsuario_design.Text = "Diseño";
             this.checkModulos_NuevoUsuario_design.UseVisualStyleBackColor = true;
             // 
             // txtModulos_NuevoUsuario_passsword1
             // 
-            this.txtModulos_NuevoUsuario_passsword1.Location = new System.Drawing.Point(374, 203);
-            this.txtModulos_NuevoUsuario_passsword1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtModulos_NuevoUsuario_passsword1.Location = new System.Drawing.Point(204, 110);
+            this.txtModulos_NuevoUsuario_passsword1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtModulos_NuevoUsuario_passsword1.Name = "txtModulos_NuevoUsuario_passsword1";
             this.txtModulos_NuevoUsuario_passsword1.PasswordChar = '•';
-            this.txtModulos_NuevoUsuario_passsword1.Size = new System.Drawing.Size(334, 30);
+            this.txtModulos_NuevoUsuario_passsword1.Size = new System.Drawing.Size(184, 20);
             this.txtModulos_NuevoUsuario_passsword1.TabIndex = 9;
             // 
             // lblModulos_NuevoUsuario_password1
             // 
             this.lblModulos_NuevoUsuario_password1.AutoSize = true;
             this.lblModulos_NuevoUsuario_password1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModulos_NuevoUsuario_password1.Location = new System.Drawing.Point(125, 198);
-            this.lblModulos_NuevoUsuario_password1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModulos_NuevoUsuario_password1.Location = new System.Drawing.Point(68, 107);
+            this.lblModulos_NuevoUsuario_password1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModulos_NuevoUsuario_password1.Name = "lblModulos_NuevoUsuario_password1";
-            this.lblModulos_NuevoUsuario_password1.Size = new System.Drawing.Size(182, 34);
+            this.lblModulos_NuevoUsuario_password1.Size = new System.Drawing.Size(107, 21);
             this.lblModulos_NuevoUsuario_password1.TabIndex = 8;
             this.lblModulos_NuevoUsuario_password1.Text = "Contraseña:";
             // 
@@ -238,10 +251,10 @@
             // 
             this.comboModulos_NuevoUsuario_nombre.DisplayMember = "Empleados";
             this.comboModulos_NuevoUsuario_nombre.FormattingEnabled = true;
-            this.comboModulos_NuevoUsuario_nombre.Location = new System.Drawing.Point(374, 52);
-            this.comboModulos_NuevoUsuario_nombre.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.comboModulos_NuevoUsuario_nombre.Location = new System.Drawing.Point(204, 28);
+            this.comboModulos_NuevoUsuario_nombre.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboModulos_NuevoUsuario_nombre.Name = "comboModulos_NuevoUsuario_nombre";
-            this.comboModulos_NuevoUsuario_nombre.Size = new System.Drawing.Size(334, 30);
+            this.comboModulos_NuevoUsuario_nombre.Size = new System.Drawing.Size(184, 20);
             this.comboModulos_NuevoUsuario_nombre.TabIndex = 7;
             this.comboModulos_NuevoUsuario_nombre.ValueMember = "Empleados";
             // 
@@ -249,28 +262,28 @@
             // 
             this.lblModulos_NuevoUsuario_nombre.AutoSize = true;
             this.lblModulos_NuevoUsuario_nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModulos_NuevoUsuario_nombre.Location = new System.Drawing.Point(125, 54);
-            this.lblModulos_NuevoUsuario_nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModulos_NuevoUsuario_nombre.Location = new System.Drawing.Point(68, 29);
+            this.lblModulos_NuevoUsuario_nombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModulos_NuevoUsuario_nombre.Name = "lblModulos_NuevoUsuario_nombre";
-            this.lblModulos_NuevoUsuario_nombre.Size = new System.Drawing.Size(132, 34);
+            this.lblModulos_NuevoUsuario_nombre.Size = new System.Drawing.Size(77, 21);
             this.lblModulos_NuevoUsuario_nombre.TabIndex = 6;
             this.lblModulos_NuevoUsuario_nombre.Text = "Nombre:";
             // 
             // txtModulos_NuevoUsuario_passsword2
             // 
-            this.txtModulos_NuevoUsuario_passsword2.Location = new System.Drawing.Point(374, 270);
-            this.txtModulos_NuevoUsuario_passsword2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtModulos_NuevoUsuario_passsword2.Location = new System.Drawing.Point(204, 146);
+            this.txtModulos_NuevoUsuario_passsword2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtModulos_NuevoUsuario_passsword2.Name = "txtModulos_NuevoUsuario_passsword2";
             this.txtModulos_NuevoUsuario_passsword2.PasswordChar = '•';
-            this.txtModulos_NuevoUsuario_passsword2.Size = new System.Drawing.Size(334, 30);
+            this.txtModulos_NuevoUsuario_passsword2.Size = new System.Drawing.Size(184, 20);
             this.txtModulos_NuevoUsuario_passsword2.TabIndex = 5;
             // 
             // txtModulos_NuevoUsuario_username
             // 
-            this.txtModulos_NuevoUsuario_username.Location = new System.Drawing.Point(374, 131);
-            this.txtModulos_NuevoUsuario_username.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtModulos_NuevoUsuario_username.Location = new System.Drawing.Point(204, 71);
+            this.txtModulos_NuevoUsuario_username.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtModulos_NuevoUsuario_username.Name = "txtModulos_NuevoUsuario_username";
-            this.txtModulos_NuevoUsuario_username.Size = new System.Drawing.Size(334, 30);
+            this.txtModulos_NuevoUsuario_username.Size = new System.Drawing.Size(184, 20);
             this.txtModulos_NuevoUsuario_username.TabIndex = 4;
             // 
             // btnModulos_NuevoUsuario_limpiar
@@ -278,10 +291,10 @@
             this.btnModulos_NuevoUsuario_limpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnModulos_NuevoUsuario_limpiar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModulos_NuevoUsuario_limpiar.ForeColor = System.Drawing.Color.White;
-            this.btnModulos_NuevoUsuario_limpiar.Location = new System.Drawing.Point(172, 425);
-            this.btnModulos_NuevoUsuario_limpiar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnModulos_NuevoUsuario_limpiar.Location = new System.Drawing.Point(94, 230);
+            this.btnModulos_NuevoUsuario_limpiar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnModulos_NuevoUsuario_limpiar.Name = "btnModulos_NuevoUsuario_limpiar";
-            this.btnModulos_NuevoUsuario_limpiar.Size = new System.Drawing.Size(176, 70);
+            this.btnModulos_NuevoUsuario_limpiar.Size = new System.Drawing.Size(96, 38);
             this.btnModulos_NuevoUsuario_limpiar.TabIndex = 3;
             this.btnModulos_NuevoUsuario_limpiar.Text = "Limpiar";
             this.btnModulos_NuevoUsuario_limpiar.UseVisualStyleBackColor = false;
@@ -291,10 +304,10 @@
             this.btnModulos_NuevoUsuario_crearUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnModulos_NuevoUsuario_crearUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModulos_NuevoUsuario_crearUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnModulos_NuevoUsuario_crearUsuario.Location = new System.Drawing.Point(598, 425);
-            this.btnModulos_NuevoUsuario_crearUsuario.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnModulos_NuevoUsuario_crearUsuario.Location = new System.Drawing.Point(326, 230);
+            this.btnModulos_NuevoUsuario_crearUsuario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnModulos_NuevoUsuario_crearUsuario.Name = "btnModulos_NuevoUsuario_crearUsuario";
-            this.btnModulos_NuevoUsuario_crearUsuario.Size = new System.Drawing.Size(207, 70);
+            this.btnModulos_NuevoUsuario_crearUsuario.Size = new System.Drawing.Size(113, 38);
             this.btnModulos_NuevoUsuario_crearUsuario.TabIndex = 2;
             this.btnModulos_NuevoUsuario_crearUsuario.Text = "Crear usuario";
             this.btnModulos_NuevoUsuario_crearUsuario.UseVisualStyleBackColor = false;
@@ -303,10 +316,10 @@
             // 
             this.lblModulos_NuevoUsuario_password2.AutoSize = true;
             this.lblModulos_NuevoUsuario_password2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModulos_NuevoUsuario_password2.Location = new System.Drawing.Point(125, 264);
-            this.lblModulos_NuevoUsuario_password2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModulos_NuevoUsuario_password2.Location = new System.Drawing.Point(68, 143);
+            this.lblModulos_NuevoUsuario_password2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModulos_NuevoUsuario_password2.Name = "lblModulos_NuevoUsuario_password2";
-            this.lblModulos_NuevoUsuario_password2.Size = new System.Drawing.Size(194, 34);
+            this.lblModulos_NuevoUsuario_password2.Size = new System.Drawing.Size(113, 21);
             this.lblModulos_NuevoUsuario_password2.TabIndex = 1;
             this.lblModulos_NuevoUsuario_password2.Text = "*Contraseña:";
             // 
@@ -314,10 +327,10 @@
             // 
             this.lblModulos_NuevoUsuario_username.AutoSize = true;
             this.lblModulos_NuevoUsuario_username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModulos_NuevoUsuario_username.Location = new System.Drawing.Point(125, 126);
-            this.lblModulos_NuevoUsuario_username.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModulos_NuevoUsuario_username.Location = new System.Drawing.Point(68, 68);
+            this.lblModulos_NuevoUsuario_username.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModulos_NuevoUsuario_username.Name = "lblModulos_NuevoUsuario_username";
-            this.lblModulos_NuevoUsuario_username.Size = new System.Drawing.Size(156, 34);
+            this.lblModulos_NuevoUsuario_username.Size = new System.Drawing.Size(92, 21);
             this.lblModulos_NuevoUsuario_username.TabIndex = 0;
             this.lblModulos_NuevoUsuario_username.Text = "Username:";
             // 
@@ -328,10 +341,10 @@
             this.panel1.Controls.Add(this.lblModulos_NuevoUsuario_protank);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(4, 6);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.panel1.Location = new System.Drawing.Point(2, 3);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1482, 127);
+            this.panel1.Size = new System.Drawing.Size(900, 69);
             this.panel1.TabIndex = 4;
             // 
             // lblModulos_NuevoUsuario_nuevoUsuario
@@ -340,10 +353,10 @@
             this.lblModulos_NuevoUsuario_nuevoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblModulos_NuevoUsuario_nuevoUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModulos_NuevoUsuario_nuevoUsuario.ForeColor = System.Drawing.Color.Lavender;
-            this.lblModulos_NuevoUsuario_nuevoUsuario.Location = new System.Drawing.Point(735, 44);
-            this.lblModulos_NuevoUsuario_nuevoUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModulos_NuevoUsuario_nuevoUsuario.Location = new System.Drawing.Point(401, 24);
+            this.lblModulos_NuevoUsuario_nuevoUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModulos_NuevoUsuario_nuevoUsuario.Name = "lblModulos_NuevoUsuario_nuevoUsuario";
-            this.lblModulos_NuevoUsuario_nuevoUsuario.Size = new System.Drawing.Size(262, 39);
+            this.lblModulos_NuevoUsuario_nuevoUsuario.Size = new System.Drawing.Size(142, 22);
             this.lblModulos_NuevoUsuario_nuevoUsuario.TabIndex = 1;
             this.lblModulos_NuevoUsuario_nuevoUsuario.Text = "Nuevo Usuario";
             // 
@@ -354,33 +367,22 @@
             this.lblModulos_NuevoUsuario_protank.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblModulos_NuevoUsuario_protank.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModulos_NuevoUsuario_protank.ForeColor = System.Drawing.Color.White;
-            this.lblModulos_NuevoUsuario_protank.Location = new System.Drawing.Point(139, 17);
-            this.lblModulos_NuevoUsuario_protank.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModulos_NuevoUsuario_protank.Location = new System.Drawing.Point(76, 9);
+            this.lblModulos_NuevoUsuario_protank.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModulos_NuevoUsuario_protank.Name = "lblModulos_NuevoUsuario_protank";
-            this.lblModulos_NuevoUsuario_protank.Size = new System.Drawing.Size(255, 78);
+            this.lblModulos_NuevoUsuario_protank.Size = new System.Drawing.Size(143, 44);
             this.lblModulos_NuevoUsuario_protank.TabIndex = 0;
             this.lblModulos_NuevoUsuario_protank.Text = "ProTank";
-            // 
-            // btnModulos_NuevoUsuario_nuevaPersona
-            // 
-            this.btnModulos_NuevoUsuario_nuevaPersona.Image = global::ProTank_v1.Properties.Resources.LogIn;
-            this.btnModulos_NuevoUsuario_nuevaPersona.Location = new System.Drawing.Point(898, 35);
-            this.btnModulos_NuevoUsuario_nuevaPersona.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnModulos_NuevoUsuario_nuevaPersona.Name = "btnModulos_NuevoUsuario_nuevaPersona";
-            this.btnModulos_NuevoUsuario_nuevaPersona.Size = new System.Drawing.Size(97, 83);
-            this.btnModulos_NuevoUsuario_nuevaPersona.TabIndex = 14;
-            this.btnModulos_NuevoUsuario_nuevaPersona.UseVisualStyleBackColor = true;
             // 
             // tabModulos_Empleados
             // 
             this.tabModulos_Empleados.Controls.Add(this.panel13);
             this.tabModulos_Empleados.Controls.Add(this.dataGridView2);
             this.tabModulos_Empleados.Controls.Add(this.panel14);
-            this.tabModulos_Empleados.Location = new System.Drawing.Point(4, 33);
-            this.tabModulos_Empleados.Margin = new System.Windows.Forms.Padding(6);
+            this.tabModulos_Empleados.Location = new System.Drawing.Point(4, 22);
             this.tabModulos_Empleados.Name = "tabModulos_Empleados";
-            this.tabModulos_Empleados.Padding = new System.Windows.Forms.Padding(6);
-            this.tabModulos_Empleados.Size = new System.Drawing.Size(1647, 803);
+            this.tabModulos_Empleados.Padding = new System.Windows.Forms.Padding(3);
+            this.tabModulos_Empleados.Size = new System.Drawing.Size(904, 429);
             this.tabModulos_Empleados.TabIndex = 6;
             this.tabModulos_Empleados.Text = "Empleados";
             this.tabModulos_Empleados.UseVisualStyleBackColor = true;
@@ -388,26 +390,38 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.DarkGray;
+            this.panel13.Controls.Add(this.button1);
             this.panel13.Controls.Add(this.button7);
             this.panel13.Controls.Add(this.btn_Modulos_Empleados_editarEmpleado);
             this.panel13.Controls.Add(this.button12);
             this.panel13.Controls.Add(this.textBox6);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel13.Location = new System.Drawing.Point(6, 695);
-            this.panel13.Margin = new System.Windows.Forms.Padding(6);
+            this.panel13.Location = new System.Drawing.Point(3, 371);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1635, 102);
+            this.panel13.Size = new System.Drawing.Size(898, 55);
             this.panel13.TabIndex = 12;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(347, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(147, 30);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Nuevo Empleado";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(568, 24);
-            this.button7.Margin = new System.Windows.Forms.Padding(6);
+            this.button7.Location = new System.Drawing.Point(168, 13);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(292, 55);
+            this.button7.Size = new System.Drawing.Size(159, 30);
             this.button7.TabIndex = 4;
             this.button7.Text = "Eliminar Empleado";
             this.button7.UseVisualStyleBackColor = false;
@@ -417,23 +431,22 @@
             this.btn_Modulos_Empleados_editarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_Modulos_Empleados_editarEmpleado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Modulos_Empleados_editarEmpleado.ForeColor = System.Drawing.Color.White;
-            this.btn_Modulos_Empleados_editarEmpleado.Location = new System.Drawing.Point(139, 24);
-            this.btn_Modulos_Empleados_editarEmpleado.Margin = new System.Windows.Forms.Padding(6);
+            this.btn_Modulos_Empleados_editarEmpleado.Location = new System.Drawing.Point(15, 13);
             this.btn_Modulos_Empleados_editarEmpleado.Name = "btn_Modulos_Empleados_editarEmpleado";
-            this.btn_Modulos_Empleados_editarEmpleado.Size = new System.Drawing.Size(270, 55);
+            this.btn_Modulos_Empleados_editarEmpleado.Size = new System.Drawing.Size(147, 30);
             this.btn_Modulos_Empleados_editarEmpleado.TabIndex = 3;
             this.btn_Modulos_Empleados_editarEmpleado.Text = "Editar Empleado";
             this.btn_Modulos_Empleados_editarEmpleado.UseVisualStyleBackColor = false;
+            this.btn_Modulos_Empleados_editarEmpleado.Click += new System.EventHandler(this.btn_Modulos_Empleados_editarEmpleado_Click);
             // 
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(1304, 24);
-            this.button12.Margin = new System.Windows.Forms.Padding(6);
+            this.button12.Location = new System.Drawing.Point(739, 13);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(270, 55);
+            this.button12.Size = new System.Drawing.Size(147, 30);
             this.button12.TabIndex = 2;
             this.button12.Text = "Buscar Empleado";
             this.button12.UseVisualStyleBackColor = false;
@@ -441,10 +454,9 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(994, 31);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(6);
+            this.textBox6.Location = new System.Drawing.Point(570, 17);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(296, 38);
+            this.textBox6.Size = new System.Drawing.Size(163, 25);
             this.textBox6.TabIndex = 1;
             // 
             // dataGridView2
@@ -454,12 +466,12 @@
             this.dataGridView2.AllowUserToResizeRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 133);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 72);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowTemplate.Height = 31;
-            this.dataGridView2.Size = new System.Drawing.Size(1635, 664);
+            this.dataGridView2.Size = new System.Drawing.Size(898, 354);
             this.dataGridView2.TabIndex = 10;
             // 
             // panel14
@@ -469,10 +481,10 @@
             this.panel14.Controls.Add(this.lblModulos_Empleados_protank);
             this.panel14.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(6, 6);
-            this.panel14.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.panel14.Location = new System.Drawing.Point(3, 3);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1635, 127);
+            this.panel14.Size = new System.Drawing.Size(898, 69);
             this.panel14.TabIndex = 11;
             // 
             // lblModulos_Empleados_empleados
@@ -481,10 +493,10 @@
             this.lblModulos_Empleados_empleados.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblModulos_Empleados_empleados.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModulos_Empleados_empleados.ForeColor = System.Drawing.Color.Lavender;
-            this.lblModulos_Empleados_empleados.Location = new System.Drawing.Point(1419, 44);
-            this.lblModulos_Empleados_empleados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModulos_Empleados_empleados.Location = new System.Drawing.Point(774, 24);
+            this.lblModulos_Empleados_empleados.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModulos_Empleados_empleados.Name = "lblModulos_Empleados_empleados";
-            this.lblModulos_Empleados_empleados.Size = new System.Drawing.Size(200, 39);
+            this.lblModulos_Empleados_empleados.Size = new System.Drawing.Size(112, 22);
             this.lblModulos_Empleados_empleados.TabIndex = 1;
             this.lblModulos_Empleados_empleados.Text = "Empleados";
             // 
@@ -495,10 +507,10 @@
             this.lblModulos_Empleados_protank.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblModulos_Empleados_protank.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModulos_Empleados_protank.ForeColor = System.Drawing.Color.White;
-            this.lblModulos_Empleados_protank.Location = new System.Drawing.Point(139, 17);
-            this.lblModulos_Empleados_protank.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModulos_Empleados_protank.Location = new System.Drawing.Point(76, 9);
+            this.lblModulos_Empleados_protank.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModulos_Empleados_protank.Name = "lblModulos_Empleados_protank";
-            this.lblModulos_Empleados_protank.Size = new System.Drawing.Size(255, 78);
+            this.lblModulos_Empleados_protank.Size = new System.Drawing.Size(143, 44);
             this.lblModulos_Empleados_protank.TabIndex = 0;
             this.lblModulos_Empleados_protank.Text = "ProTank";
             // 
@@ -507,11 +519,10 @@
             this.tabModulos_ListaPersonas.Controls.Add(this.panel12);
             this.tabModulos_ListaPersonas.Controls.Add(this.dataGridView1);
             this.tabModulos_ListaPersonas.Controls.Add(this.panel11);
-            this.tabModulos_ListaPersonas.Location = new System.Drawing.Point(4, 33);
-            this.tabModulos_ListaPersonas.Margin = new System.Windows.Forms.Padding(6);
+            this.tabModulos_ListaPersonas.Location = new System.Drawing.Point(4, 22);
             this.tabModulos_ListaPersonas.Name = "tabModulos_ListaPersonas";
-            this.tabModulos_ListaPersonas.Padding = new System.Windows.Forms.Padding(6);
-            this.tabModulos_ListaPersonas.Size = new System.Drawing.Size(1564, 803);
+            this.tabModulos_ListaPersonas.Padding = new System.Windows.Forms.Padding(3);
+            this.tabModulos_ListaPersonas.Size = new System.Drawing.Size(904, 429);
             this.tabModulos_ListaPersonas.TabIndex = 7;
             this.tabModulos_ListaPersonas.Text = "Clientes";
             this.tabModulos_ListaPersonas.UseVisualStyleBackColor = true;
@@ -526,19 +537,18 @@
             this.panel12.Controls.Add(this.button4);
             this.panel12.Controls.Add(this.textBox4);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel12.Location = new System.Drawing.Point(6, 695);
-            this.panel12.Margin = new System.Windows.Forms.Padding(6);
+            this.panel12.Location = new System.Drawing.Point(3, 371);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1552, 102);
+            this.panel12.Size = new System.Drawing.Size(898, 55);
             this.panel12.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1399, 42);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(763, 23);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(135, 25);
+            this.label5.Size = new System.Drawing.Size(74, 13);
             this.label5.TabIndex = 18;
             this.label5.Text = "Nuevo Cliente";
             // 
@@ -547,10 +557,9 @@
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(326, 24);
-            this.button6.Margin = new System.Windows.Forms.Padding(6);
+            this.button6.Location = new System.Drawing.Point(178, 13);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(270, 55);
+            this.button6.Size = new System.Drawing.Size(147, 30);
             this.button6.TabIndex = 4;
             this.button6.Text = "Eliminar Cliente";
             this.button6.UseVisualStyleBackColor = false;
@@ -558,35 +567,35 @@
             // button8
             // 
             this.button8.Image = global::ProTank_v1.Properties.Resources.LogIn;
-            this.button8.Location = new System.Drawing.Point(1294, 13);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.button8.Location = new System.Drawing.Point(706, 7);
+            this.button8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(97, 83);
+            this.button8.Size = new System.Drawing.Size(53, 45);
             this.button8.TabIndex = 17;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(46, 24);
-            this.button3.Margin = new System.Windows.Forms.Padding(6);
+            this.button3.Location = new System.Drawing.Point(25, 13);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(270, 55);
+            this.button3.Size = new System.Drawing.Size(147, 30);
             this.button3.TabIndex = 3;
             this.button3.Text = "Editar Cliente";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(947, 24);
-            this.button4.Margin = new System.Windows.Forms.Padding(6);
+            this.button4.Location = new System.Drawing.Point(517, 13);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(270, 55);
+            this.button4.Size = new System.Drawing.Size(147, 30);
             this.button4.TabIndex = 2;
             this.button4.Text = "Buscar Cliente";
             this.button4.UseVisualStyleBackColor = false;
@@ -594,10 +603,9 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(639, 31);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(6);
+            this.textBox4.Location = new System.Drawing.Point(349, 17);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(296, 38);
+            this.textBox4.Size = new System.Drawing.Size(163, 25);
             this.textBox4.TabIndex = 1;
             // 
             // dataGridView1
@@ -607,12 +615,12 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 133);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 72);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 31;
-            this.dataGridView1.Size = new System.Drawing.Size(1552, 664);
+            this.dataGridView1.Size = new System.Drawing.Size(898, 354);
             this.dataGridView1.TabIndex = 7;
             // 
             // panel11
@@ -622,10 +630,10 @@
             this.panel11.Controls.Add(this.label2);
             this.panel11.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(6, 6);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.panel11.Location = new System.Drawing.Point(3, 3);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1552, 127);
+            this.panel11.Size = new System.Drawing.Size(898, 69);
             this.panel11.TabIndex = 8;
             // 
             // label1
@@ -634,10 +642,10 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Lavender;
-            this.label1.Location = new System.Drawing.Point(1383, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(754, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 39);
+            this.label1.Size = new System.Drawing.Size(84, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "Clientes";
             // 
@@ -648,19 +656,20 @@
             this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(139, 17);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(76, 9);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(255, 78);
+            this.label2.Size = new System.Drawing.Size(143, 44);
             this.label2.TabIndex = 0;
             this.label2.Text = "ProTank";
             // 
             // Administracion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1572, 840);
+            this.ClientSize = new System.Drawing.Size(912, 455);
             this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Administracion";
             this.Text = "Administracion";
             this.tabControl1.ResumeLayout(false);
@@ -732,5 +741,6 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }

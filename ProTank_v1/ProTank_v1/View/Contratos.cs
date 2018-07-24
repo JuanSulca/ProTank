@@ -16,5 +16,23 @@ namespace ProTank_v1.View
         {
             InitializeComponent();
         }
+
+        private void btnModulos_NuevoUsuario_nuevaPersona_Click(object sender, EventArgs e)
+        {
+            NewPerson p = new NewPerson();
+            p.ShowDialog();
+        }
+
+        private void btnModulos_Contratos_ingresarContrato_Click(object sender, EventArgs e)
+        {
+            NewContract c = new NewContract();
+            c.ShowDialog();
+        }
+
+        private void btnModulos_Contratos_editarContrato_Click(object sender, EventArgs e)
+        {
+            NewContract c = new NewContract();
+            c.ShowDialog();
+        }
     }
 }
