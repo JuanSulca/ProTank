@@ -101,6 +101,12 @@
     <Compile Include="View\EntradaModulos.Designer.cs">
       <DependentUpon>EntradaModulos.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Herramientas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Herramientas.Designer.cs">
+      <DependentUpon>Herramientas.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EntradaModulos.resx">
       <DependentUpon>EntradaModulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Herramientas.resx">
+      <DependentUpon>Herramientas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
