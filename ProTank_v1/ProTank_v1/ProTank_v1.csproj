@@ -77,6 +77,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>protankDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="View2\Design.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View2\Design.Designer.cs">
+      <DependentUpon>Design.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View2\EntradaModulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View2\EntradaModulos.Designer.cs">
+      <DependentUpon>EntradaModulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View2\GenerarAforo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View2\GenerarAforo.Designer.cs">
+      <DependentUpon>GenerarAforo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View2\LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View2\LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Administracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +185,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View2\Design.resx">
+      <DependentUpon>Design.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View2\EntradaModulos.resx">
+      <DependentUpon>EntradaModulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View2\GenerarAforo.resx">
+      <DependentUpon>GenerarAforo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View2\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Administracion.resx">
       <DependentUpon>Administracion.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +274,7 @@
     <Content Include="Icons\graphic-designer-tools.png" />
     <Content Include="Icons\handyman-tools.png" />
     <None Include="Icons\if_Close_1891023.png" />
+    <None Include="Icons\if_circle-close-delete-remove-outline-stroke_763468.png" />
     <Content Include="Icons\if_content-form-contract-article-paper_3209382.png" />
     <Content Include="Icons\if_digital-product-service-hand-circuit_3209316.ico" />
     <Content Include="Icons\if_digital-product-service-hand-circuit_3209316.png" />
@@ -249,6 +286,7 @@
     <Content Include="Icons\if_Scetchbook_by_Artdesigner_60881.png" />
     <Content Include="Icons\if_tool_kit_44892.ico" />
     <Content Include="Icons\if_tool_kit_44892.png" />
+    <Content Include="Icons\if_x_alt_118584.png" />
     <Content Include="Icons\LogIn.ico" />
     <Content Include="Icons\networking.png" />
     <Content Include="Icons\technical-support.png" />
