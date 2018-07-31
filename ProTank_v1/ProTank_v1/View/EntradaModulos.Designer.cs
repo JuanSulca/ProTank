@@ -126,7 +126,6 @@
             this.button5.TabIndex = 2;
             this.button5.Text = "Diseño";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel6
             // 
@@ -149,7 +148,6 @@
             this.button4.TabIndex = 2;
             this.button4.Text = "Control de Contratos";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel5
             // 
@@ -172,7 +170,6 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Ventas y Servicios";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel4
             // 
@@ -195,7 +192,6 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Control de Herramientas";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel3
             // 

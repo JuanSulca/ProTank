@@ -1,4 +1,5 @@
 ﻿using ProTank_v1.View;
+using ProTank_v1.View2;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace ProTank_v1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new ControlDeHerramientas());
         }
     }
 }

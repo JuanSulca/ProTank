@@ -8,19 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProTank_v1.View
+namespace ProTank_v1.View2
 {
-    public partial class Desing : Form
+    public partial class ControlDeHerramientas : Form
     {
-        public Desing()
+        public ControlDeHerramientas()
         {
             InitializeComponent();
         }
 
-        private void Desing_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Dispose();
-            //this.Close();
-        }
     }
 }

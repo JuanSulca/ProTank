@@ -27,31 +27,13 @@ namespace ProTank_v1.View
             this.Close();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Desing d = new Desing();
-            d.Show();
-            //this.Hide();
-        }
+        
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            //llamar a contratos
-            Contratos c = new Contratos();
-            c.Show();
-        }
+        
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Ventas v = new Ventas();
-            v.Show();
-        }
+       
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Herramientas h = new Herramientas();
-            h.Show();
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {

@@ -59,7 +59,6 @@ C:\Users\aleja\Desktop\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.csproj
 C:\Users\aleja\Desktop\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.Properties.Resources.resources
 C:\Users\aleja\Desktop\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.EntradaModulos.resources
 C:\Users\aleja\Desktop\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.Login.resources
-C:\Users\aleja\Desktop\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.Modulos.resources
 C:\Users\aleja\Desktop\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewContract.resources
 C:\Users\aleja\Desktop\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewPerson.resources
 C:\Users\aleja\Desktop\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.NewPrestamo.resources
@@ -89,3 +88,9 @@ C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTa
 C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.EntradaModulos.resources
 C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.Herramientas.resources
 C:\Users\aleja\Desktop\EPN\ProTank\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.Ventas.resources
+C:\Users\aleja\Desktop\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View2.Contratos.resources
+C:\Users\aleja\Desktop\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View2.Design.resources
+C:\Users\aleja\Desktop\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View2.GenerarAforo.resources
+C:\Users\aleja\Desktop\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View.Administracion.resources
+C:\Users\aleja\Desktop\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View2.ControlDeHerramientas.resources
+C:\Users\aleja\Desktop\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View2.VentasYContratos.resources
