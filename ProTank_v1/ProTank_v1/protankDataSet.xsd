@@ -708,7 +708,7 @@ SELECT uname, pwd, rol FROM userLogin WHERE (uname = @uname)</CommandText>
               <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.empleados_apellidos_nombres" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Empleados FROM dbo.empleados_apellidos_nombres</CommandText>
+                    <CommandText>SELECT Empleados, idE FROM dbo.empleados_apellidos_nombres</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -716,6 +716,7 @@ SELECT uname, pwd, rol FROM userLogin WHERE (uname = @uname)</CommandText>
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="Empleados" DataSetColumn="Empleados" />
+              <Mapping SourceColumn="idE" DataSetColumn="idE" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -1329,6 +1330,13 @@ SELECT uname, pwd, rol FROM userLogin WHERE (uname = @uname)</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="idE" msprop:Generator_ColumnVarNameInTable="columnidE" msprop:Generator_ColumnPropNameInRow="idE" msprop:Generator_ColumnPropNameInTable="idEColumn" msprop:Generator_UserColumnName="idE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1743,6 +1751,10 @@ SELECT uname, pwd, rol FROM userLogin WHERE (uname = @uname)</CommandText>
     <xs:unique name="userLogin_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:userLogin" />
       <xs:field xpath="mstns:uname" />
+    </xs:unique>
+    <xs:unique name="empleados_apellidos_nombres_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:empleados_apellidos_nombres" />
+      <xs:field xpath="mstns:idE" />
     </xs:unique>
     <xs:unique name="nuevo_prestamo_Constraint1" msdata:ConstraintName="Constraint1">
       <xs:selector xpath=".//mstns:nuevo_prestamo" />

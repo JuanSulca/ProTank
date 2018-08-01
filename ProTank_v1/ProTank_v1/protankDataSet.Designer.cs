@@ -5155,6 +5155,8 @@ namespace ProTank_v1 {
             
             private global::System.Data.DataColumn columnEmpleados;
             
+            private global::System.Data.DataColumn columnidE;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public empleados_apellidos_nombresDataTable() {
@@ -5198,6 +5200,14 @@ namespace ProTank_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn idEColumn {
+                get {
+                    return this.columnidE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5233,13 +5243,21 @@ namespace ProTank_v1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public empleados_apellidos_nombresRow Addempleados_apellidos_nombresRow(string Empleados) {
+            public empleados_apellidos_nombresRow Addempleados_apellidos_nombresRow(string Empleados, string idE) {
                 empleados_apellidos_nombresRow rowempleados_apellidos_nombresRow = ((empleados_apellidos_nombresRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Empleados};
+                        Empleados,
+                        idE};
                 rowempleados_apellidos_nombresRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowempleados_apellidos_nombresRow);
                 return rowempleados_apellidos_nombresRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public empleados_apellidos_nombresRow FindByidE(string idE) {
+                return ((empleados_apellidos_nombresRow)(this.Rows.Find(new object[] {
+                            idE})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5260,6 +5278,7 @@ namespace ProTank_v1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnEmpleados = base.Columns["Empleados"];
+                this.columnidE = base.Columns["idE"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5267,8 +5286,15 @@ namespace ProTank_v1 {
             private void InitClass() {
                 this.columnEmpleados = new global::System.Data.DataColumn("Empleados", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmpleados);
+                this.columnidE = new global::System.Data.DataColumn("idE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidE);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidE}, true));
                 this.columnEmpleados.ReadOnly = true;
                 this.columnEmpleados.MaxLength = 121;
+                this.columnidE.AllowDBNull = false;
+                this.columnidE.Unique = true;
+                this.columnidE.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11010,6 +11036,17 @@ namespace ProTank_v1 {
                 }
                 set {
                     this[this.tableempleados_apellidos_nombres.EmpleadosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string idE {
+                get {
+                    return ((string)(this[this.tableempleados_apellidos_nombres.idEColumn]));
+                }
+                set {
+                    this[this.tableempleados_apellidos_nombres.idEColumn] = value;
                 }
             }
             
@@ -18629,6 +18666,7 @@ SELECT prod, id_sale, cantidad FROM saleLine WHERE (id_sale = @id_sale) AND (pro
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "empleados_apellidos_nombres";
             tableMapping.ColumnMappings.Add("Empleados", "Empleados");
+            tableMapping.ColumnMappings.Add("idE", "idE");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -18645,7 +18683,7 @@ SELECT prod, id_sale, cantidad FROM saleLine WHERE (id_sale = @id_sale) AND (pro
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Empleados FROM dbo.empleados_apellidos_nombres";
+            this._commandCollection[0].CommandText = "SELECT Empleados, idE FROM dbo.empleados_apellidos_nombres";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

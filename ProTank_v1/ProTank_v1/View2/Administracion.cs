@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProTank_v1.View2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,6 +66,17 @@ namespace ProTank_v1.View
         private void Administracion_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void nuevoUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewUser n = new NewUser();
+            n.ShowDialog();
         }
     }
 }

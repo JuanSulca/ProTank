@@ -53,6 +53,10 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.buscarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabModulos_Empleados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -71,7 +75,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 26);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1216, 534);
+            this.tabControl1.Size = new System.Drawing.Size(1205, 550);
             this.tabControl1.TabIndex = 0;
             // 
             // tabModulos_Empleados
@@ -79,10 +83,10 @@
             this.tabModulos_Empleados.Controls.Add(this.dataGridView2);
             this.tabModulos_Empleados.Controls.Add(this.panel14);
             this.tabModulos_Empleados.Location = new System.Drawing.Point(4, 25);
-            this.tabModulos_Empleados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabModulos_Empleados.Margin = new System.Windows.Forms.Padding(4);
             this.tabModulos_Empleados.Name = "tabModulos_Empleados";
-            this.tabModulos_Empleados.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabModulos_Empleados.Size = new System.Drawing.Size(1208, 505);
+            this.tabModulos_Empleados.Padding = new System.Windows.Forms.Padding(4);
+            this.tabModulos_Empleados.Size = new System.Drawing.Size(1197, 521);
             this.tabModulos_Empleados.TabIndex = 6;
             this.tabModulos_Empleados.Text = "Empleados";
             this.tabModulos_Empleados.UseVisualStyleBackColor = true;
@@ -98,7 +102,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowTemplate.Height = 31;
-            this.dataGridView2.Size = new System.Drawing.Size(1200, 412);
+            this.dataGridView2.Size = new System.Drawing.Size(1189, 428);
             this.dataGridView2.TabIndex = 10;
             // 
             // panel14
@@ -111,7 +115,7 @@
             this.panel14.Location = new System.Drawing.Point(4, 4);
             this.panel14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1200, 85);
+            this.panel14.Size = new System.Drawing.Size(1189, 85);
             this.panel14.TabIndex = 11;
             // 
             // lblModulos_Empleados_empleados
@@ -144,10 +148,10 @@
             this.tabModulos_ListaPersonas.Controls.Add(this.dataGridView1);
             this.tabModulos_ListaPersonas.Controls.Add(this.panel11);
             this.tabModulos_ListaPersonas.Location = new System.Drawing.Point(4, 25);
-            this.tabModulos_ListaPersonas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabModulos_ListaPersonas.Margin = new System.Windows.Forms.Padding(4);
             this.tabModulos_ListaPersonas.Name = "tabModulos_ListaPersonas";
-            this.tabModulos_ListaPersonas.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabModulos_ListaPersonas.Size = new System.Drawing.Size(1208, 506);
+            this.tabModulos_ListaPersonas.Padding = new System.Windows.Forms.Padding(4);
+            this.tabModulos_ListaPersonas.Size = new System.Drawing.Size(1197, 521);
             this.tabModulos_ListaPersonas.TabIndex = 7;
             this.tabModulos_ListaPersonas.Text = "Clientes";
             this.tabModulos_ListaPersonas.UseVisualStyleBackColor = true;
@@ -163,8 +167,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 31;
-            this.dataGridView1.Size = new System.Drawing.Size(1200, 413);
+            this.dataGridView1.Size = new System.Drawing.Size(1189, 428);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel11
             // 
@@ -176,7 +181,7 @@
             this.panel11.Location = new System.Drawing.Point(4, 4);
             this.panel11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1200, 85);
+            this.panel11.Size = new System.Drawing.Size(1189, 85);
             this.panel11.TabIndex = 8;
             // 
             // label1
@@ -209,11 +214,12 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.empleadosToolStripMenuItem,
-            this.clienteToolStripMenuItem});
+            this.clienteToolStripMenuItem,
+            this.usuariosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1216, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(1205, 26);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -305,11 +311,40 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(193, 6);
             // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevoUsuarioToolStripMenuItem,
+            this.eliminarUsuarioToolStripMenuItem,
+            this.modificarContraseñaToolStripMenuItem});
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            // 
+            // nuevoUsuarioToolStripMenuItem
+            // 
+            this.nuevoUsuarioToolStripMenuItem.Name = "nuevoUsuarioToolStripMenuItem";
+            this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.nuevoUsuarioToolStripMenuItem.Text = "Nuevo Usuario";
+            this.nuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.nuevoUsuarioToolStripMenuItem_Click);
+            // 
+            // eliminarUsuarioToolStripMenuItem
+            // 
+            this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
+            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.eliminarUsuarioToolStripMenuItem.Text = "Remover Usuario";
+            // 
+            // modificarContraseñaToolStripMenuItem
+            // 
+            this.modificarContraseñaToolStripMenuItem.Name = "modificarContraseñaToolStripMenuItem";
+            this.modificarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.modificarContraseñaToolStripMenuItem.Text = "Modificar Datos de Usuario";
+            // 
             // Administracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1216, 560);
+            this.ClientSize = new System.Drawing.Size(1205, 576);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Administracion";
@@ -358,5 +393,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem buscarClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nuevoUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarContraseñaToolStripMenuItem;
     }
 }

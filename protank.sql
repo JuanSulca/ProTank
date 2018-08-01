@@ -1,8 +1,8 @@
 use master
 go
 
-drop database protank
-go
+--drop database protank
+--go
 
 create database protank
 go
@@ -60,7 +60,7 @@ create table herramienta(
 	nombre varchar(60),
 	cantidad smallint,
 	codigoH char(12) primary key not null,
-	periodo smallint, --periodo de mantenimiento en meses
+	periodo smallint --periodo de mantenimiento en meses
 )
 
 create table mantenimiento(
@@ -195,7 +195,7 @@ select * from mantenimientoH_proximo
 go
 
 create view empleados_apellidos_nombres as 
-select (e.lname + ' ' + e.fname) [Empleados]
+select (e.lname + ' ' + e.fname) [Empleados], idE
 from empleado e
 go
 
@@ -224,5 +224,4 @@ create view ventaPersonas as
 select s.id_sale, p.id, CONCAT(fname, ' ', lname) as Nombre, Total from venta v join sale s on (v.id_sale = s.id_sale) join person p on (p.id = s.id_person)
 go
 
-select * from prestamosH_prestadas
-select * from prestamosH_retornadas
+select * from empleados_apellidos_nombres
