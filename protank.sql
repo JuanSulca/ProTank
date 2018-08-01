@@ -84,9 +84,9 @@ delete from herramienta where codigoH = 'Mar_315'
 
 insert into mantenimiento values ('TAL_123_1', GETDATE(), 'reemplazo mandril'), ('TAL_123_1', convert(date,'2018-06-13'),'reemplazo ventilador')
 
-select * from contrato
+/*select * from contrato
 select * from herramienta
-select * from mantenimiento
+select * from mantenimiento*/
 
 create table prodServ(
 	codigo char(10) not null primary key,
@@ -97,7 +97,7 @@ create table prodServ(
 
 insert into prodServ values ('COR', 'Corte CNC', 3.5,'m'), ('MET', 'Plancha metal', 5.65, 'm2')
 
-select * from prodServ
+--select * from prodServ
 
 create table prestamo(
 	codigoH char(15) not null foreign key references herramienta(codigoH),
@@ -112,4 +112,131 @@ insert into prestamo values ('TAL_123_1', '4444444444', getdate(), convert(datet
 print convert(datetime,'2018/07/15 5:32:00:00',120)
 print convert(datetime, getdate())
 
-select * from prestamo
+create table sale (
+	id_person char(10) foreign key references person(id),
+	id_sale int identity(1,1) primary key
+)
+
+create table saleLine (
+	prod char(10) not null foreign key references prodServ(codigo),
+	id_sale int not null foreign key references sale(id_sale),
+	cantidad decimal(4,2) not null,
+	primary key(prod, id_sale)
+)
+
+
+insert into sale values ('2222222222')
+insert into saleLine values ('COR', 1, 2.5)
+insert into saleLine values ('MET', 1, 5)
+
+--select * from prestamo
+go
+
+create view prestamosH_todo as
+select p.codigoH as [Código Herramienta], h.nombre as Herramienta, (e.lname + ' ' + e.fname) 
+		as Responsable, convert(date,p.fechaP) [Fecha Salida], 
+		format(p.fechaP,'HH:mm') [Hora Salida] , format(p.fechaD,'HH:mm') as Retorno
+from herramienta h join prestamo p on (h.codigoH=p.codigoH) join empleado e on (e.idE=p.idE)
+go
+
+create view prestamosH_retornadas as
+select p.codigoH as [Código Herramienta], h.nombre as Herramienta, (e.lname + ' ' + e.fname) 
+		as Responsable, convert(date,p.fechaP) [Fecha Salida], 
+		format(p.fechaP,'HH:mm') [Hora Salida] , format(p.fechaD,'HH:mm') as Retorno
+from herramienta h join prestamo p on (h.codigoH=p.codigoH) join empleado e on (e.idE=p.idE)
+where p.fechaD is null
+go
+
+create view prestamosH_prestadas as
+select p.codigoH as [Código Herramienta], h.nombre as Herramienta, (e.lname + ' ' + e.fname) 
+		as Responsable, convert(date,p.fechaP) [Fecha Salida], 
+		format(p.fechaP,'HH:mm') [Hora Salida] , format(p.fechaD,'HH:mm') as Retorno
+from herramienta h join prestamo p on (h.codigoH=p.codigoH) join empleado e on (e.idE=p.idE)
+where p.fechaD is not null
+go
+
+--select * from prestamo
+--select * from herramienta
+--select * from empleado 
+--insert into prestamo values('DES_123','0000000000',GETDATE(),null)
+
+create  view viewFecha as
+select top 1 fecha, codigoH from mantenimiento order by fecha desc
+go
+create view mantenimientoH_todo as
+select h.nombre [Herramienta], h.marca [Marca], h.codigoH [Código], aux.fecha 
+		[Último mantenimiento], h.periodo [Periodo]
+from herramienta h join viewFecha
+		aux on (aux.codigoH = h.codigoH)
+go
+
+create view mantenimientoH_proximo as
+select h.nombre [Herramienta], h.marca [Marca], h.codigoH [Código], aux.fecha 
+		[Último mantenimiento], h.periodo [Periodo], (h.periodo - datediff(day,aux.fecha, getdate())) [Días para mantenimiento]
+from herramienta h join (select top 1 fecha, codigoH from mantenimiento order by fecha desc) 
+		aux on (aux.codigoH = h.codigoH)
+where datediff(day,aux.fecha, getdate())< 15 and datediff(day,aux.fecha, getdate())> 5
+go
+
+create view mantenimientoH_urgente as
+select h.nombre [Herramienta], h.marca [Marca], h.codigoH [Código], aux.fecha 
+		[Último mantenimiento], h.periodo [Periodo], (h.periodo - datediff(day,aux.fecha, getdate())) [Días para mantenimiento]
+from herramienta h join (select top 1 fecha, codigoH from mantenimiento order by fecha desc) 
+		aux on (aux.codigoH = h.codigoH)
+where datediff(day,aux.fecha, getdate())< 5
+go
+
+create view mantenimientoH_no as
+select h.nombre [Herramienta], h.marca [Marca], h.codigoH [Código], aux.fecha 
+		[Último mantenimiento], h.periodo [Periodo], (h.periodo - datediff(day,aux.fecha, getdate())) [Días para mantenimiento]
+from herramienta h join (select top 1 fecha, codigoH from mantenimiento order by fecha desc) 
+		aux on (aux.codigoH = h.codigoH)
+where datediff(day,aux.fecha, getdate())> 15
+go
+
+create view mantenimientoH_urgente_proximo as
+select * from mantenimientoH_urgente union
+select * from mantenimientoH_proximo
+go
+
+create view mantenimientoH_urgete_no as
+select * from mantenimientoH_no union
+select * from mantenimientoH_urgente
+go
+
+create view mantenimientoH_proximo_no as
+select * from mantenimientoH_no union
+select * from mantenimientoH_proximo
+go
+
+create view empleados_apellidos_nombres as 
+select (e.lname + ' ' + e.fname) [Empleados]
+from empleado e
+go
+
+create view clientes_apellidos_nombres as
+select (p.lname + ' ' + p.fname) [Clientes]
+from person p
+go
+
+create view nuevo_prestamo as
+select h.nombre [Nombre], h.marca [Marca], h.codigoH [Código] 
+from herramienta h full join prestamo p on (p.codigoH = h.codigoH)
+where p.fechaD is not null
+go
+
+create view crearUsuario as
+select e.lname+' '+e.fname as Empleado
+from empleado e, userEmpleado u
+where u.idE != e.idE
+go
+
+create view ventas as
+select s.id_sale, cast(sum(cantidad*precio)as money) as Total from sale s join saleLine sl on s.id_sale = sl.id_sale join prodServ p on prod = p.codigo group by s.id_sale
+go
+
+create view ventaPersonas as
+select s.id_sale, p.id, CONCAT(fname, ' ', lname) as Nombre, Total from ventas v join sale s on (v.id_sale = s.id_sale) join person p on (p.id = s.id_person)
+go
+
+select * from ventaPersonas
