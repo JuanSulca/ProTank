@@ -17,12 +17,12 @@ namespace ProTank_v1
         public Login()
         {
             InitializeComponent();
-            DialogResult res = MessageBox.Show("Desea eliminar el resgistro?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (res.Equals(DialogResult.Yes))
-            {
-                MessageBox.Show("Registro eliminado exitosamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show("No se puede conectar con la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //DialogResult res = MessageBox.Show("Desea eliminar el resgistro?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //if (res.Equals(DialogResult.Yes))
+            //{
+            //    MessageBox.Show("Registro eliminado exitosamente", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    MessageBox.Show("No se puede conectar con la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void button2_Click(object sender, EventArgs e)
