@@ -40,13 +40,22 @@ namespace ProTank_v1.View2
                 String pass = new Hash().md5(txtModulos_NuevoUsuario_passsword1.Text);
                 String uname = txtModulos_NuevoUsuario_username.Text;
                 String rol = "";
+                if (checkModulos_NuevoUsuario_bodega.Checked)
+                    rol += "H";
+                if (checkModulos_NuevoUsuario_contratos.Checked)
+                    rol += "C";
+                if (checkModulos_NuevoUsuario_design.Checked)
+                    rol += "D";
+                if (checkModulos_NuevoUsuario_servicios.Checked)
+                    rol += "V";
+                if (checkBox1.Checked)
+                    rol += "A";
                 if (pass != new Hash().md5(txtModulos_NuevoUsuario_passsword2.Text))
                 {
                     MessageBox.Show("Contraseñas no coinsiden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    //MessageBox.Show("Datos: " + pass + comboModulos_NuevoUsuario_nombre.SelectedValue.ToString() + txtModulos_NuevoUsuario_username.Text, "Inform", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     String id = comboModulos_NuevoUsuario_nombre.SelectedValue.ToString();
                     protankDataSetTableAdapters.userLoginTableAdapter ta = new protankDataSetTableAdapters.userLoginTableAdapter();
                     ta.Insert(uname, pass, rol);
@@ -54,6 +63,18 @@ namespace ProTank_v1.View2
                     tba.Insert(id, uname);
                 }
             }
+        }
+
+        private void btnModulos_NuevoUsuario_limpiar_Click(object sender, EventArgs e)
+        {
+            txtModulos_NuevoUsuario_passsword1.Text = "";
+            txtModulos_NuevoUsuario_passsword2.Text = "";
+            txtModulos_NuevoUsuario_username.Text = "";
+            checkModulos_NuevoUsuario_bodega.Checked = false;
+            checkModulos_NuevoUsuario_contratos.Checked = false;
+            checkModulos_NuevoUsuario_design.Checked = false;
+            checkModulos_NuevoUsuario_servicios.Checked = false;
+            checkBox1.Checked = false;
         }
     }
 }

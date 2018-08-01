@@ -56,6 +56,7 @@
             this.empleados_apellidos_nombresTableAdapter = new ProTank_v1.protankDataSetTableAdapters.empleados_apellidos_nombresTableAdapter();
             this.protankDataSet1 = new ProTank_v1.protankDataSet();
             this.empleadosapellidosnombresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -80,6 +81,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Controls.Add(this.checkBox1);
             this.panel2.Controls.Add(this.lblModulos_NuevoUsuario_ayuda);
             this.panel2.Controls.Add(this.checkModulos_NuevoUsuario_servicios);
             this.panel2.Controls.Add(this.checkModulos_NuevoUsuario_bodega);
@@ -107,7 +109,7 @@
             // 
             this.lblModulos_NuevoUsuario_ayuda.AutoSize = true;
             this.lblModulos_NuevoUsuario_ayuda.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.142858F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModulos_NuevoUsuario_ayuda.Location = new System.Drawing.Point(623, 234);
+            this.lblModulos_NuevoUsuario_ayuda.Location = new System.Drawing.Point(701, 234);
             this.lblModulos_NuevoUsuario_ayuda.Name = "lblModulos_NuevoUsuario_ayuda";
             this.lblModulos_NuevoUsuario_ayuda.Size = new System.Drawing.Size(16, 16);
             this.lblModulos_NuevoUsuario_ayuda.TabIndex = 16;
@@ -117,7 +119,7 @@
             // 
             this.checkModulos_NuevoUsuario_servicios.AutoSize = true;
             this.checkModulos_NuevoUsuario_servicios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkModulos_NuevoUsuario_servicios.Location = new System.Drawing.Point(491, 225);
+            this.checkModulos_NuevoUsuario_servicios.Location = new System.Drawing.Point(416, 227);
             this.checkModulos_NuevoUsuario_servicios.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkModulos_NuevoUsuario_servicios.Name = "checkModulos_NuevoUsuario_servicios";
             this.checkModulos_NuevoUsuario_servicios.Size = new System.Drawing.Size(114, 27);
@@ -129,7 +131,7 @@
             // 
             this.checkModulos_NuevoUsuario_bodega.AutoSize = true;
             this.checkModulos_NuevoUsuario_bodega.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkModulos_NuevoUsuario_bodega.Location = new System.Drawing.Point(363, 225);
+            this.checkModulos_NuevoUsuario_bodega.Location = new System.Drawing.Point(288, 227);
             this.checkModulos_NuevoUsuario_bodega.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkModulos_NuevoUsuario_bodega.Name = "checkModulos_NuevoUsuario_bodega";
             this.checkModulos_NuevoUsuario_bodega.Size = new System.Drawing.Size(110, 27);
@@ -141,7 +143,7 @@
             // 
             this.checkModulos_NuevoUsuario_contratos.AutoSize = true;
             this.checkModulos_NuevoUsuario_contratos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkModulos_NuevoUsuario_contratos.Location = new System.Drawing.Point(211, 225);
+            this.checkModulos_NuevoUsuario_contratos.Location = new System.Drawing.Point(136, 227);
             this.checkModulos_NuevoUsuario_contratos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkModulos_NuevoUsuario_contratos.Name = "checkModulos_NuevoUsuario_contratos";
             this.checkModulos_NuevoUsuario_contratos.Size = new System.Drawing.Size(128, 27);
@@ -153,7 +155,7 @@
             // 
             this.checkModulos_NuevoUsuario_design.AutoSize = true;
             this.checkModulos_NuevoUsuario_design.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkModulos_NuevoUsuario_design.Location = new System.Drawing.Point(96, 225);
+            this.checkModulos_NuevoUsuario_design.Location = new System.Drawing.Point(21, 227);
             this.checkModulos_NuevoUsuario_design.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkModulos_NuevoUsuario_design.Name = "checkModulos_NuevoUsuario_design";
             this.checkModulos_NuevoUsuario_design.Size = new System.Drawing.Size(96, 27);
@@ -231,6 +233,7 @@
             this.btnModulos_NuevoUsuario_limpiar.TabIndex = 3;
             this.btnModulos_NuevoUsuario_limpiar.Text = "Limpiar";
             this.btnModulos_NuevoUsuario_limpiar.UseVisualStyleBackColor = false;
+            this.btnModulos_NuevoUsuario_limpiar.Click += new System.EventHandler(this.btnModulos_NuevoUsuario_limpiar_Click);
             // 
             // btnModulos_NuevoUsuario_crearUsuario
             // 
@@ -337,6 +340,18 @@
             this.empleadosapellidosnombresBindingSource1.DataMember = "empleados_apellidos_nombres";
             this.empleadosapellidosnombresBindingSource1.DataSource = this.protankDataSet1;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(551, 227);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(174, 27);
+            this.checkBox1.TabIndex = 17;
+            this.checkBox1.Text = "Administracion";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // NewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -390,5 +405,6 @@
         private protankDataSetTableAdapters.empleados_apellidos_nombresTableAdapter empleados_apellidos_nombresTableAdapter;
         private protankDataSet protankDataSet1;
         private System.Windows.Forms.BindingSource empleadosapellidosnombresBindingSource1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

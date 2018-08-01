@@ -78,5 +78,19 @@ namespace ProTank_v1.View
             NewUser n = new NewUser();
             n.ShowDialog();
         }
+
+        private void Administracion_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'protankDataSet.person' table. You can move, or remove it, as needed.
+            this.personTableAdapter.Fill(this.protankDataSet.person);
+            // TODO: This line of code loads data into the 'protankDataSet.empleado' table. You can move, or remove it, as needed.
+            this.empleadoTableAdapter.Fill(this.protankDataSet.empleado);
+
+        }
+
+        private void registrarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
