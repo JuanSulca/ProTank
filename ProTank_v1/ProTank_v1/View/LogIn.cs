@@ -34,19 +34,19 @@ namespace ProTank_v1
         {
             String uname = txtUname.Text;
             String pwd = new Hash().md5(txtPwd.Text);
-            protankDataSet1TableAdapters.userLoginTableAdapter loginTable = new protankDataSet1TableAdapters.userLoginTableAdapter();
-            protankDataSet1 ds = new protankDataSet1();
-            loginTable.Fill(ds.userLogin);
-            protankDataSet1.userLoginRow loginRow = ds.userLogin.FindByuname(uname);
             if (txtUname.Text == "" || txtPwd.Text == "")
             {
                 MessageBox.Show("Existen campos sin llenar!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                protankDataSetTableAdapters.userLoginTableAdapter loginTable = new protankDataSetTableAdapters.userLoginTableAdapter();
+                protankDataSet ds = new protankDataSet();
+                loginTable.Fill(ds.userLogin);
+                protankDataSet.userLoginRow loginRow = ds.userLogin.FindByuname(uname);
                 if (loginRow.pwd == pwd)
                 {
-                    EntradaModulos modulos = new EntradaModulos();
+                    EntradaModulos modulos = new EntradaModulos(loginRow.rol);
                     modulos.Show();
                     this.Hide();
                 }

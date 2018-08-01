@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection ConnectionStringObject="Data Source=JUANSULCA;Initial Catalog=protank;User ID=sa;Password=P@ssw0rd" IsAppSettingsProperty="false" Modifier="Assembly" Name="juansulca.protank.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+          <Connection ConnectionStringObject="Data Source=JUANSULCA;Initial Catalog=protank;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="juansulca.protank.dbo1" ParameterPrefix="@" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="contratoTableAdapter" GeneratorDataComponentClassName="contratoTableAdapter" Name="contrato" UserDataComponentName="contratoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="juansulca.protank.dbo" DbObjectName="protank.dbo.contrato" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.contrato" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[contrato] WHERE (([idPer] = @Original_idPer) AND ([monto] = @Original_monto) AND ((@IsNull_calificacion = 1 AND [calificacion] IS NULL) OR ([calificacion] = @Original_calificacion)) AND ([idCon] = @Original_idCon) AND ((@IsNull_descrip = 1 AND [descrip] IS NULL) OR ([descrip] = @Original_descrip)) AND ((@IsNull_fechaI = 1 AND [fechaI] IS NULL) OR ([fechaI] = @Original_fechaI)) AND ((@IsNull_fechaE = 1 AND [fechaE] IS NULL) OR ([fechaE] = @Original_fechaE)))</CommandText>
@@ -90,7 +90,7 @@ SELECT idPer, monto, calificacion, idCon, descrip, fechaI, fechaE FROM contrato 
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="empleadoTableAdapter" GeneratorDataComponentClassName="empleadoTableAdapter" Name="empleado" UserDataComponentName="empleadoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="juansulca.protank.dbo" DbObjectName="protank.dbo.empleado" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.empleado" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[empleado] WHERE (([fname] = @Original_fname) AND ([lname] = @Original_lname) AND ([idE] = @Original_idE) AND ((@IsNull_telef = 1 AND [telef] IS NULL) OR ([telef] = @Original_telef)) AND ((@IsNull_cel = 1 AND [cel] IS NULL) OR ([cel] = @Original_cel)))</CommandText>
@@ -157,7 +157,7 @@ SELECT fname, lname, idE, telef, cel FROM empleado WHERE (idE = @idE)</CommandTe
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="herramientaTableAdapter" GeneratorDataComponentClassName="herramientaTableAdapter" Name="herramienta" UserDataComponentName="herramientaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="juansulca.protank.dbo" DbObjectName="protank.dbo.herramienta" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.herramienta" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[herramienta] WHERE (((@IsNull_nombre = 1 AND [nombre] IS NULL) OR ([nombre] = @Original_nombre)) AND ((@IsNull_marca = 1 AND [marca] IS NULL) OR ([marca] = @Original_marca)) AND ([codigoH] = @Original_codigoH) AND ((@IsNull_periodo = 1 AND [periodo] IS NULL) OR ([periodo] = @Original_periodo)))</CommandText>
@@ -221,7 +221,7 @@ SELECT nombre, marca, codigoH, periodo FROM herramienta WHERE (codigoH = @codigo
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mantenimientoTableAdapter" GeneratorDataComponentClassName="mantenimientoTableAdapter" Name="mantenimiento" UserDataComponentName="mantenimientoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="juansulca.protank.dbo" DbObjectName="protank.dbo.mantenimiento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.mantenimiento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[mantenimiento] WHERE (([codigoH] = @Original_codigoH) AND ([fecha] = @Original_fecha) AND ((@IsNull_notas = 1 AND [notas] IS NULL) OR ([notas] = @Original_notas)))</CommandText>
@@ -276,7 +276,7 @@ SELECT codigoH, fecha, notas FROM mantenimiento WHERE (codigoH = @codigoH) AND (
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="personTableAdapter" GeneratorDataComponentClassName="personTableAdapter" Name="person" UserDataComponentName="personTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="juansulca.protank.dbo" DbObjectName="protank.dbo.person" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.person" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[person] WHERE (([fname] = @Original_fname) AND ([lname] = @Original_lname) AND ([id] = @Original_id) AND ((@IsNull_telef = 1 AND [telef] IS NULL) OR ([telef] = @Original_telef)) AND ((@IsNull_cel = 1 AND [cel] IS NULL) OR ([cel] = @Original_cel)))</CommandText>
@@ -343,7 +343,7 @@ SELECT fname, lname, id, telef, cel FROM person WHERE (id = @id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="prestamoTableAdapter" GeneratorDataComponentClassName="prestamoTableAdapter" Name="prestamo" UserDataComponentName="prestamoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="juansulca.protank.dbo" DbObjectName="protank.dbo.prestamo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.prestamo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[prestamo] WHERE (([codigoH] = @Original_codigoH) AND ([idE] = @Original_idE) AND ([fechaP] = @Original_fechaP) AND ((@IsNull_fechaD = 1 AND [fechaD] IS NULL) OR ([fechaD] = @Original_fechaD)))</CommandText>
@@ -403,7 +403,7 @@ SELECT codigoH, idE, fechaP, fechaD FROM prestamo WHERE (codigoH = @codigoH) AND
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="prodServTableAdapter" GeneratorDataComponentClassName="prodServTableAdapter" Name="prodServ" UserDataComponentName="prodServTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="juansulca.protank.dbo" DbObjectName="protank.dbo.prodServ" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.prodServ" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[prodServ] WHERE (([codigo] = @Original_codigo) AND ([nombre] = @Original_nombre) AND ([precio] = @Original_precio) AND ((@IsNull_unidad = 1 AND [unidad] IS NULL) OR ([unidad] = @Original_unidad)))</CommandText>
@@ -461,9 +461,111 @@ SELECT codigo, nombre, precio, unidad FROM prodServ WHERE (codigo = @codigo)</Co
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="saleTableAdapter" GeneratorDataComponentClassName="saleTableAdapter" Name="sale" UserDataComponentName="saleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.sale" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[sale] WHERE (((@IsNull_id_person = 1 AND [id_person] IS NULL) OR ([id_person] = @Original_id_person)) AND ([id_sale] = @Original_id_sale))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_id_person" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_person" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_id_person" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="id_person" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_sale" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_sale" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[sale] ([id_person]) VALUES (@id_person);
+SELECT id_person, id_sale FROM sale WHERE (id_sale = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@id_person" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="id_person" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_person, id_sale FROM dbo.sale</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[sale] SET [id_person] = @id_person WHERE (((@IsNull_id_person = 1 AND [id_person] IS NULL) OR ([id_person] = @Original_id_person)) AND ([id_sale] = @Original_id_sale));
+SELECT id_person, id_sale FROM sale WHERE (id_sale = @id_sale)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@id_person" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="id_person" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_id_person" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_person" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_id_person" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="id_person" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_sale" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_sale" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="id_sale" ColumnName="id_sale" DataSourceName="protank.dbo.sale" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id_sale" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id_sale" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_person" DataSetColumn="id_person" />
+              <Mapping SourceColumn="id_sale" DataSetColumn="id_sale" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="saleLineTableAdapter" GeneratorDataComponentClassName="saleLineTableAdapter" Name="saleLine" UserDataComponentName="saleLineTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.saleLine" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[saleLine] WHERE (([prod] = @Original_prod) AND ([id_sale] = @Original_id_sale) AND ([cantidad] = @Original_cantidad))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_prod" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="prod" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_sale" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_sale" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_cantidad" Precision="4" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="cantidad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[saleLine] ([prod], [id_sale], [cantidad]) VALUES (@prod, @id_sale, @cantidad);
+SELECT prod, id_sale, cantidad FROM saleLine WHERE (id_sale = @id_sale) AND (prod = @prod)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@prod" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="prod" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id_sale" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_sale" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@cantidad" Precision="4" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="cantidad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT prod, id_sale, cantidad FROM dbo.saleLine</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[saleLine] SET [prod] = @prod, [id_sale] = @id_sale, [cantidad] = @cantidad WHERE (([prod] = @Original_prod) AND ([id_sale] = @Original_id_sale) AND ([cantidad] = @Original_cantidad));
+SELECT prod, id_sale, cantidad FROM saleLine WHERE (id_sale = @id_sale) AND (prod = @prod)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@prod" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="prod" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@id_sale" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_sale" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@cantidad" Precision="4" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="cantidad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_prod" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="prod" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_sale" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_sale" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_cantidad" Precision="4" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="cantidad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="prod" DataSetColumn="prod" />
+              <Mapping SourceColumn="id_sale" DataSetColumn="id_sale" />
+              <Mapping SourceColumn="cantidad" DataSetColumn="cantidad" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="userEmpleadoTableAdapter" GeneratorDataComponentClassName="userEmpleadoTableAdapter" Name="userEmpleado" UserDataComponentName="userEmpleadoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="juansulca.protank.dbo" DbObjectName="protank.dbo.userEmpleado" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.userEmpleado" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[userEmpleado] WHERE (([idE] = @Original_idE) AND ([uname] = @Original_uname))</CommandText>
@@ -511,7 +613,7 @@ SELECT idE, uname FROM userEmpleado WHERE (idE = @idE) AND (uname = @uname)</Com
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="userLoginTableAdapter" GeneratorDataComponentClassName="userLoginTableAdapter" Name="userLogin" UserDataComponentName="userLoginTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="juansulca.protank.dbo" DbObjectName="protank.dbo.userLogin" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.userLogin" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[userLogin] WHERE (([uname] = @Original_uname) AND ([pwd] = @Original_pwd) AND ([rol] = @Original_rol))</CommandText>
@@ -559,6 +661,334 @@ SELECT uname, pwd, rol FROM userLogin WHERE (uname = @uname)</CommandText>
               <Mapping SourceColumn="uname" DataSetColumn="uname" />
               <Mapping SourceColumn="pwd" DataSetColumn="pwd" />
               <Mapping SourceColumn="rol" DataSetColumn="rol" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="clientes_apellidos_nombresTableAdapter" GeneratorDataComponentClassName="clientes_apellidos_nombresTableAdapter" Name="clientes_apellidos_nombres" UserDataComponentName="clientes_apellidos_nombresTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.clientes_apellidos_nombres" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Clientes FROM dbo.clientes_apellidos_nombres</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Clientes" DataSetColumn="Clientes" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="crearUsuarioTableAdapter" GeneratorDataComponentClassName="crearUsuarioTableAdapter" Name="crearUsuario" UserDataComponentName="crearUsuarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.crearUsuario" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Empleado FROM dbo.crearUsuario</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Empleado" DataSetColumn="Empleado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="empleados_apellidos_nombresTableAdapter" GeneratorDataComponentClassName="empleados_apellidos_nombresTableAdapter" Name="empleados_apellidos_nombres" UserDataComponentName="empleados_apellidos_nombresTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.empleados_apellidos_nombres" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Empleados FROM dbo.empleados_apellidos_nombres</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Empleados" DataSetColumn="Empleados" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mantenimientoH_noTableAdapter" GeneratorDataComponentClassName="mantenimientoH_noTableAdapter" Name="mantenimientoH_no" UserDataComponentName="mantenimientoH_noTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.mantenimientoH_no" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Herramienta, Marca, Código, [Último mantenimiento], Periodo, [Días para mantenimiento] FROM dbo.mantenimientoH_no</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Herramienta" DataSetColumn="Herramienta" />
+              <Mapping SourceColumn="Marca" DataSetColumn="Marca" />
+              <Mapping SourceColumn="Código" DataSetColumn="Código" />
+              <Mapping SourceColumn="Último mantenimiento" DataSetColumn="Último mantenimiento" />
+              <Mapping SourceColumn="Periodo" DataSetColumn="Periodo" />
+              <Mapping SourceColumn="Días para mantenimiento" DataSetColumn="Días para mantenimiento" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mantenimientoH_proximoTableAdapter" GeneratorDataComponentClassName="mantenimientoH_proximoTableAdapter" Name="mantenimientoH_proximo" UserDataComponentName="mantenimientoH_proximoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.mantenimientoH_proximo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Herramienta, Marca, Código, [Último mantenimiento], Periodo, [Días para mantenimiento] FROM dbo.mantenimientoH_proximo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Herramienta" DataSetColumn="Herramienta" />
+              <Mapping SourceColumn="Marca" DataSetColumn="Marca" />
+              <Mapping SourceColumn="Código" DataSetColumn="Código" />
+              <Mapping SourceColumn="Último mantenimiento" DataSetColumn="Último mantenimiento" />
+              <Mapping SourceColumn="Periodo" DataSetColumn="Periodo" />
+              <Mapping SourceColumn="Días para mantenimiento" DataSetColumn="Días para mantenimiento" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mantenimientoH_proximo_noTableAdapter" GeneratorDataComponentClassName="mantenimientoH_proximo_noTableAdapter" Name="mantenimientoH_proximo_no" UserDataComponentName="mantenimientoH_proximo_noTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.mantenimientoH_proximo_no" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Herramienta, Marca, Código, [Último mantenimiento], Periodo, [Días para mantenimiento] FROM dbo.mantenimientoH_proximo_no</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Herramienta" DataSetColumn="Herramienta" />
+              <Mapping SourceColumn="Marca" DataSetColumn="Marca" />
+              <Mapping SourceColumn="Código" DataSetColumn="Código" />
+              <Mapping SourceColumn="Último mantenimiento" DataSetColumn="Último mantenimiento" />
+              <Mapping SourceColumn="Periodo" DataSetColumn="Periodo" />
+              <Mapping SourceColumn="Días para mantenimiento" DataSetColumn="Días para mantenimiento" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mantenimientoH_todoTableAdapter" GeneratorDataComponentClassName="mantenimientoH_todoTableAdapter" Name="mantenimientoH_todo" UserDataComponentName="mantenimientoH_todoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.mantenimientoH_todo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Herramienta, Marca, Código, [Último mantenimiento], Periodo FROM dbo.mantenimientoH_todo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Herramienta" DataSetColumn="Herramienta" />
+              <Mapping SourceColumn="Marca" DataSetColumn="Marca" />
+              <Mapping SourceColumn="Código" DataSetColumn="Código" />
+              <Mapping SourceColumn="Último mantenimiento" DataSetColumn="Último mantenimiento" />
+              <Mapping SourceColumn="Periodo" DataSetColumn="Periodo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mantenimientoH_urgenteTableAdapter" GeneratorDataComponentClassName="mantenimientoH_urgenteTableAdapter" Name="mantenimientoH_urgente" UserDataComponentName="mantenimientoH_urgenteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.mantenimientoH_urgente" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Herramienta, Marca, Código, [Último mantenimiento], Periodo, [Días para mantenimiento] FROM dbo.mantenimientoH_urgente</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Herramienta" DataSetColumn="Herramienta" />
+              <Mapping SourceColumn="Marca" DataSetColumn="Marca" />
+              <Mapping SourceColumn="Código" DataSetColumn="Código" />
+              <Mapping SourceColumn="Último mantenimiento" DataSetColumn="Último mantenimiento" />
+              <Mapping SourceColumn="Periodo" DataSetColumn="Periodo" />
+              <Mapping SourceColumn="Días para mantenimiento" DataSetColumn="Días para mantenimiento" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mantenimientoH_urgente_proximoTableAdapter" GeneratorDataComponentClassName="mantenimientoH_urgente_proximoTableAdapter" Name="mantenimientoH_urgente_proximo" UserDataComponentName="mantenimientoH_urgente_proximoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.mantenimientoH_urgente_proximo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Herramienta, Marca, Código, [Último mantenimiento], Periodo, [Días para mantenimiento] FROM dbo.mantenimientoH_urgente_proximo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Herramienta" DataSetColumn="Herramienta" />
+              <Mapping SourceColumn="Marca" DataSetColumn="Marca" />
+              <Mapping SourceColumn="Código" DataSetColumn="Código" />
+              <Mapping SourceColumn="Último mantenimiento" DataSetColumn="Último mantenimiento" />
+              <Mapping SourceColumn="Periodo" DataSetColumn="Periodo" />
+              <Mapping SourceColumn="Días para mantenimiento" DataSetColumn="Días para mantenimiento" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="mantenimientoH_urgete_noTableAdapter" GeneratorDataComponentClassName="mantenimientoH_urgete_noTableAdapter" Name="mantenimientoH_urgete_no" UserDataComponentName="mantenimientoH_urgete_noTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.mantenimientoH_urgete_no" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Herramienta, Marca, Código, [Último mantenimiento], Periodo, [Días para mantenimiento] FROM dbo.mantenimientoH_urgete_no</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Herramienta" DataSetColumn="Herramienta" />
+              <Mapping SourceColumn="Marca" DataSetColumn="Marca" />
+              <Mapping SourceColumn="Código" DataSetColumn="Código" />
+              <Mapping SourceColumn="Último mantenimiento" DataSetColumn="Último mantenimiento" />
+              <Mapping SourceColumn="Periodo" DataSetColumn="Periodo" />
+              <Mapping SourceColumn="Días para mantenimiento" DataSetColumn="Días para mantenimiento" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="nuevo_prestamoTableAdapter" GeneratorDataComponentClassName="nuevo_prestamoTableAdapter" Name="nuevo_prestamo" UserDataComponentName="nuevo_prestamoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.nuevo_prestamo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Nombre, Marca, Código FROM dbo.nuevo_prestamo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Marca" DataSetColumn="Marca" />
+              <Mapping SourceColumn="Código" DataSetColumn="Código" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="prestamosH_prestadasTableAdapter" GeneratorDataComponentClassName="prestamosH_prestadasTableAdapter" Name="prestamosH_prestadas" UserDataComponentName="prestamosH_prestadasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.prestamosH_prestadas" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Código Herramienta], Herramienta, Responsable, [Fecha Salida], [Hora Salida], Retorno FROM dbo.prestamosH_prestadas</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Código Herramienta" DataSetColumn="Código Herramienta" />
+              <Mapping SourceColumn="Herramienta" DataSetColumn="Herramienta" />
+              <Mapping SourceColumn="Responsable" DataSetColumn="Responsable" />
+              <Mapping SourceColumn="Fecha Salida" DataSetColumn="Fecha Salida" />
+              <Mapping SourceColumn="Hora Salida" DataSetColumn="Hora Salida" />
+              <Mapping SourceColumn="Retorno" DataSetColumn="Retorno" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="prestamosH_retornadasTableAdapter" GeneratorDataComponentClassName="prestamosH_retornadasTableAdapter" Name="prestamosH_retornadas" UserDataComponentName="prestamosH_retornadasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.prestamosH_retornadas" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Código Herramienta], Herramienta, Responsable, [Fecha Salida], [Hora Salida], Retorno FROM dbo.prestamosH_retornadas</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Código Herramienta" DataSetColumn="Código Herramienta" />
+              <Mapping SourceColumn="Herramienta" DataSetColumn="Herramienta" />
+              <Mapping SourceColumn="Responsable" DataSetColumn="Responsable" />
+              <Mapping SourceColumn="Fecha Salida" DataSetColumn="Fecha Salida" />
+              <Mapping SourceColumn="Hora Salida" DataSetColumn="Hora Salida" />
+              <Mapping SourceColumn="Retorno" DataSetColumn="Retorno" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="prestamosH_todoTableAdapter" GeneratorDataComponentClassName="prestamosH_todoTableAdapter" Name="prestamosH_todo" UserDataComponentName="prestamosH_todoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.prestamosH_todo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Código Herramienta], Herramienta, Responsable, [Fecha Salida], [Hora Salida], Retorno FROM dbo.prestamosH_todo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Código Herramienta" DataSetColumn="Código Herramienta" />
+              <Mapping SourceColumn="Herramienta" DataSetColumn="Herramienta" />
+              <Mapping SourceColumn="Responsable" DataSetColumn="Responsable" />
+              <Mapping SourceColumn="Fecha Salida" DataSetColumn="Fecha Salida" />
+              <Mapping SourceColumn="Hora Salida" DataSetColumn="Hora Salida" />
+              <Mapping SourceColumn="Retorno" DataSetColumn="Retorno" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ventaPersonasTableAdapter" GeneratorDataComponentClassName="ventaPersonasTableAdapter" Name="ventaPersonas" UserDataComponentName="ventaPersonasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.ventaPersonas" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_sale, id, Nombre, Total FROM dbo.ventaPersonas</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_sale" DataSetColumn="id_sale" />
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ventasTableAdapter" GeneratorDataComponentClassName="ventasTableAdapter" Name="ventas" UserDataComponentName="ventasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.ventas" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_sale, Total FROM dbo.ventas</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_sale" DataSetColumn="id_sale" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="viewFechaTableAdapter" GeneratorDataComponentClassName="viewFechaTableAdapter" Name="viewFecha" UserDataComponentName="viewFechaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="juansulca.protank.dbo1" DbObjectName="protank.dbo.viewFecha" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT fecha, codigoH FROM dbo.viewFecha</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
+              <Mapping SourceColumn="codigoH" DataSetColumn="codigoH" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -782,6 +1212,35 @@ SELECT uname, pwd, rol FROM userLogin WHERE (uname = @uname)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="sale" msprop:Generator_TableClassName="saleDataTable" msprop:Generator_TableVarName="tablesale" msprop:Generator_TablePropName="sale" msprop:Generator_RowDeletingName="saleRowDeleting" msprop:Generator_RowChangingName="saleRowChanging" msprop:Generator_RowEvHandlerName="saleRowChangeEventHandler" msprop:Generator_RowDeletedName="saleRowDeleted" msprop:Generator_UserTableName="sale" msprop:Generator_RowChangedName="saleRowChanged" msprop:Generator_RowEvArgName="saleRowChangeEvent" msprop:Generator_RowClassName="saleRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_person" msprop:Generator_ColumnVarNameInTable="columnid_person" msprop:Generator_ColumnPropNameInRow="id_person" msprop:Generator_ColumnPropNameInTable="id_personColumn" msprop:Generator_UserColumnName="id_person" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_sale" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_sale" msprop:Generator_ColumnPropNameInRow="id_sale" msprop:Generator_ColumnPropNameInTable="id_saleColumn" msprop:Generator_UserColumnName="id_sale" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="saleLine" msprop:Generator_TableClassName="saleLineDataTable" msprop:Generator_TableVarName="tablesaleLine" msprop:Generator_TablePropName="saleLine" msprop:Generator_RowDeletingName="saleLineRowDeleting" msprop:Generator_RowChangingName="saleLineRowChanging" msprop:Generator_RowEvHandlerName="saleLineRowChangeEventHandler" msprop:Generator_RowDeletedName="saleLineRowDeleted" msprop:Generator_UserTableName="saleLine" msprop:Generator_RowChangedName="saleLineRowChanged" msprop:Generator_RowEvArgName="saleLineRowChangeEvent" msprop:Generator_RowClassName="saleLineRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="prod" msprop:Generator_ColumnVarNameInTable="columnprod" msprop:Generator_ColumnPropNameInRow="prod" msprop:Generator_ColumnPropNameInTable="prodColumn" msprop:Generator_UserColumnName="prod">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_sale" msprop:Generator_ColumnVarNameInTable="columnid_sale" msprop:Generator_ColumnPropNameInRow="id_sale" msprop:Generator_ColumnPropNameInTable="id_saleColumn" msprop:Generator_UserColumnName="id_sale" type="xs:int" />
+              <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="userEmpleado" msprop:Generator_TableClassName="userEmpleadoDataTable" msprop:Generator_TableVarName="tableuserEmpleado" msprop:Generator_TablePropName="userEmpleado" msprop:Generator_RowDeletingName="userEmpleadoRowDeleting" msprop:Generator_RowChangingName="userEmpleadoRowChanging" msprop:Generator_RowEvHandlerName="userEmpleadoRowChangeEventHandler" msprop:Generator_RowDeletedName="userEmpleadoRowDeleted" msprop:Generator_UserTableName="userEmpleado" msprop:Generator_RowChangedName="userEmpleadoRowChanged" msprop:Generator_RowEvArgName="userEmpleadoRowChangeEvent" msprop:Generator_RowClassName="userEmpleadoRow">
           <xs:complexType>
             <xs:sequence>
@@ -829,6 +1288,451 @@ SELECT uname, pwd, rol FROM userLogin WHERE (uname = @uname)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="clientes_apellidos_nombres" msprop:Generator_TableClassName="clientes_apellidos_nombresDataTable" msprop:Generator_TableVarName="tableclientes_apellidos_nombres" msprop:Generator_TablePropName="clientes_apellidos_nombres" msprop:Generator_RowDeletingName="clientes_apellidos_nombresRowDeleting" msprop:Generator_RowChangingName="clientes_apellidos_nombresRowChanging" msprop:Generator_RowEvHandlerName="clientes_apellidos_nombresRowChangeEventHandler" msprop:Generator_RowDeletedName="clientes_apellidos_nombresRowDeleted" msprop:Generator_UserTableName="clientes_apellidos_nombres" msprop:Generator_RowChangedName="clientes_apellidos_nombresRowChanged" msprop:Generator_RowEvArgName="clientes_apellidos_nombresRowChangeEvent" msprop:Generator_RowClassName="clientes_apellidos_nombresRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Clientes" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnClientes" msprop:Generator_ColumnPropNameInRow="Clientes" msprop:Generator_ColumnPropNameInTable="ClientesColumn" msprop:Generator_UserColumnName="Clientes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="121" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="crearUsuario" msprop:Generator_TableClassName="crearUsuarioDataTable" msprop:Generator_TableVarName="tablecrearUsuario" msprop:Generator_TablePropName="crearUsuario" msprop:Generator_RowDeletingName="crearUsuarioRowDeleting" msprop:Generator_RowChangingName="crearUsuarioRowChanging" msprop:Generator_RowEvHandlerName="crearUsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="crearUsuarioRowDeleted" msprop:Generator_UserTableName="crearUsuario" msprop:Generator_RowChangedName="crearUsuarioRowChanged" msprop:Generator_RowEvArgName="crearUsuarioRowChangeEvent" msprop:Generator_RowClassName="crearUsuarioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Empleado" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEmpleado" msprop:Generator_ColumnPropNameInRow="Empleado" msprop:Generator_ColumnPropNameInTable="EmpleadoColumn" msprop:Generator_UserColumnName="Empleado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="121" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="empleados_apellidos_nombres" msprop:Generator_TableClassName="empleados_apellidos_nombresDataTable" msprop:Generator_TableVarName="tableempleados_apellidos_nombres" msprop:Generator_TablePropName="empleados_apellidos_nombres" msprop:Generator_RowDeletingName="empleados_apellidos_nombresRowDeleting" msprop:Generator_RowChangingName="empleados_apellidos_nombresRowChanging" msprop:Generator_RowEvHandlerName="empleados_apellidos_nombresRowChangeEventHandler" msprop:Generator_RowDeletedName="empleados_apellidos_nombresRowDeleted" msprop:Generator_UserTableName="empleados_apellidos_nombres" msprop:Generator_RowChangedName="empleados_apellidos_nombresRowChanged" msprop:Generator_RowEvArgName="empleados_apellidos_nombresRowChangeEvent" msprop:Generator_RowClassName="empleados_apellidos_nombresRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Empleados" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEmpleados" msprop:Generator_ColumnPropNameInRow="Empleados" msprop:Generator_ColumnPropNameInTable="EmpleadosColumn" msprop:Generator_UserColumnName="Empleados" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="121" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mantenimientoH_no" msprop:Generator_TableClassName="mantenimientoH_noDataTable" msprop:Generator_TableVarName="tablemantenimientoH_no" msprop:Generator_TablePropName="mantenimientoH_no" msprop:Generator_RowDeletingName="mantenimientoH_noRowDeleting" msprop:Generator_RowChangingName="mantenimientoH_noRowChanging" msprop:Generator_RowEvHandlerName="mantenimientoH_noRowChangeEventHandler" msprop:Generator_RowDeletedName="mantenimientoH_noRowDeleted" msprop:Generator_UserTableName="mantenimientoH_no" msprop:Generator_RowChangedName="mantenimientoH_noRowChanged" msprop:Generator_RowEvArgName="mantenimientoH_noRowChangeEvent" msprop:Generator_RowClassName="mantenimientoH_noRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Herramienta" msprop:Generator_ColumnVarNameInTable="columnHerramienta" msprop:Generator_ColumnPropNameInRow="Herramienta" msprop:Generator_ColumnPropNameInTable="HerramientaColumn" msprop:Generator_UserColumnName="Herramienta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_UserColumnName="Marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Código" msprop:Generator_ColumnVarNameInTable="columnCódigo" msprop:Generator_ColumnPropNameInRow="Código" msprop:Generator_ColumnPropNameInTable="CódigoColumn" msprop:Generator_UserColumnName="Código">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Último_x0020_mantenimiento" msprop:Generator_ColumnVarNameInTable="columnÚltimo_mantenimiento" msprop:Generator_ColumnPropNameInRow="Último_mantenimiento" msprop:Generator_ColumnPropNameInTable="Último_mantenimientoColumn" msprop:Generator_UserColumnName="Último mantenimiento" type="xs:dateTime" />
+              <xs:element name="Periodo" msprop:Generator_ColumnVarNameInTable="columnPeriodo" msprop:Generator_ColumnPropNameInRow="Periodo" msprop:Generator_ColumnPropNameInTable="PeriodoColumn" msprop:Generator_UserColumnName="Periodo" type="xs:short" minOccurs="0" />
+              <xs:element name="Días_x0020_para_x0020_mantenimiento" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDías_para_mantenimiento" msprop:Generator_ColumnPropNameInRow="Días_para_mantenimiento" msprop:Generator_ColumnPropNameInTable="Días_para_mantenimientoColumn" msprop:Generator_UserColumnName="Días para mantenimiento" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mantenimientoH_proximo" msprop:Generator_TableClassName="mantenimientoH_proximoDataTable" msprop:Generator_TableVarName="tablemantenimientoH_proximo" msprop:Generator_TablePropName="mantenimientoH_proximo" msprop:Generator_RowDeletingName="mantenimientoH_proximoRowDeleting" msprop:Generator_RowChangingName="mantenimientoH_proximoRowChanging" msprop:Generator_RowEvHandlerName="mantenimientoH_proximoRowChangeEventHandler" msprop:Generator_RowDeletedName="mantenimientoH_proximoRowDeleted" msprop:Generator_UserTableName="mantenimientoH_proximo" msprop:Generator_RowChangedName="mantenimientoH_proximoRowChanged" msprop:Generator_RowEvArgName="mantenimientoH_proximoRowChangeEvent" msprop:Generator_RowClassName="mantenimientoH_proximoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Herramienta" msprop:Generator_ColumnVarNameInTable="columnHerramienta" msprop:Generator_ColumnPropNameInRow="Herramienta" msprop:Generator_ColumnPropNameInTable="HerramientaColumn" msprop:Generator_UserColumnName="Herramienta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_UserColumnName="Marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Código" msprop:Generator_ColumnVarNameInTable="columnCódigo" msprop:Generator_ColumnPropNameInRow="Código" msprop:Generator_ColumnPropNameInTable="CódigoColumn" msprop:Generator_UserColumnName="Código">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Último_x0020_mantenimiento" msprop:Generator_ColumnVarNameInTable="columnÚltimo_mantenimiento" msprop:Generator_ColumnPropNameInRow="Último_mantenimiento" msprop:Generator_ColumnPropNameInTable="Último_mantenimientoColumn" msprop:Generator_UserColumnName="Último mantenimiento" type="xs:dateTime" />
+              <xs:element name="Periodo" msprop:Generator_ColumnVarNameInTable="columnPeriodo" msprop:Generator_ColumnPropNameInRow="Periodo" msprop:Generator_ColumnPropNameInTable="PeriodoColumn" msprop:Generator_UserColumnName="Periodo" type="xs:short" minOccurs="0" />
+              <xs:element name="Días_x0020_para_x0020_mantenimiento" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDías_para_mantenimiento" msprop:Generator_ColumnPropNameInRow="Días_para_mantenimiento" msprop:Generator_ColumnPropNameInTable="Días_para_mantenimientoColumn" msprop:Generator_UserColumnName="Días para mantenimiento" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mantenimientoH_proximo_no" msprop:Generator_TableClassName="mantenimientoH_proximo_noDataTable" msprop:Generator_TableVarName="tablemantenimientoH_proximo_no" msprop:Generator_TablePropName="mantenimientoH_proximo_no" msprop:Generator_RowDeletingName="mantenimientoH_proximo_noRowDeleting" msprop:Generator_RowChangingName="mantenimientoH_proximo_noRowChanging" msprop:Generator_RowEvHandlerName="mantenimientoH_proximo_noRowChangeEventHandler" msprop:Generator_RowDeletedName="mantenimientoH_proximo_noRowDeleted" msprop:Generator_UserTableName="mantenimientoH_proximo_no" msprop:Generator_RowChangedName="mantenimientoH_proximo_noRowChanged" msprop:Generator_RowEvArgName="mantenimientoH_proximo_noRowChangeEvent" msprop:Generator_RowClassName="mantenimientoH_proximo_noRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Herramienta" msprop:Generator_ColumnVarNameInTable="columnHerramienta" msprop:Generator_ColumnPropNameInRow="Herramienta" msprop:Generator_ColumnPropNameInTable="HerramientaColumn" msprop:Generator_UserColumnName="Herramienta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_UserColumnName="Marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Código" msprop:Generator_ColumnVarNameInTable="columnCódigo" msprop:Generator_ColumnPropNameInRow="Código" msprop:Generator_ColumnPropNameInTable="CódigoColumn" msprop:Generator_UserColumnName="Código">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Último_x0020_mantenimiento" msprop:Generator_ColumnVarNameInTable="columnÚltimo_mantenimiento" msprop:Generator_ColumnPropNameInRow="Último_mantenimiento" msprop:Generator_ColumnPropNameInTable="Último_mantenimientoColumn" msprop:Generator_UserColumnName="Último mantenimiento" type="xs:dateTime" />
+              <xs:element name="Periodo" msprop:Generator_ColumnVarNameInTable="columnPeriodo" msprop:Generator_ColumnPropNameInRow="Periodo" msprop:Generator_ColumnPropNameInTable="PeriodoColumn" msprop:Generator_UserColumnName="Periodo" type="xs:short" minOccurs="0" />
+              <xs:element name="Días_x0020_para_x0020_mantenimiento" msprop:Generator_ColumnVarNameInTable="columnDías_para_mantenimiento" msprop:Generator_ColumnPropNameInRow="Días_para_mantenimiento" msprop:Generator_ColumnPropNameInTable="Días_para_mantenimientoColumn" msprop:Generator_UserColumnName="Días para mantenimiento" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mantenimientoH_todo" msprop:Generator_TableClassName="mantenimientoH_todoDataTable" msprop:Generator_TableVarName="tablemantenimientoH_todo" msprop:Generator_TablePropName="mantenimientoH_todo" msprop:Generator_RowDeletingName="mantenimientoH_todoRowDeleting" msprop:Generator_RowChangingName="mantenimientoH_todoRowChanging" msprop:Generator_RowEvHandlerName="mantenimientoH_todoRowChangeEventHandler" msprop:Generator_RowDeletedName="mantenimientoH_todoRowDeleted" msprop:Generator_UserTableName="mantenimientoH_todo" msprop:Generator_RowChangedName="mantenimientoH_todoRowChanged" msprop:Generator_RowEvArgName="mantenimientoH_todoRowChangeEvent" msprop:Generator_RowClassName="mantenimientoH_todoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Herramienta" msprop:Generator_ColumnVarNameInTable="columnHerramienta" msprop:Generator_ColumnPropNameInRow="Herramienta" msprop:Generator_ColumnPropNameInTable="HerramientaColumn" msprop:Generator_UserColumnName="Herramienta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_UserColumnName="Marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Código" msprop:Generator_ColumnVarNameInTable="columnCódigo" msprop:Generator_ColumnPropNameInRow="Código" msprop:Generator_ColumnPropNameInTable="CódigoColumn" msprop:Generator_UserColumnName="Código">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Último_x0020_mantenimiento" msprop:Generator_ColumnVarNameInTable="columnÚltimo_mantenimiento" msprop:Generator_ColumnPropNameInRow="Último_mantenimiento" msprop:Generator_ColumnPropNameInTable="Último_mantenimientoColumn" msprop:Generator_UserColumnName="Último mantenimiento" type="xs:dateTime" />
+              <xs:element name="Periodo" msprop:Generator_ColumnVarNameInTable="columnPeriodo" msprop:Generator_ColumnPropNameInRow="Periodo" msprop:Generator_ColumnPropNameInTable="PeriodoColumn" msprop:Generator_UserColumnName="Periodo" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mantenimientoH_urgente" msprop:Generator_TableClassName="mantenimientoH_urgenteDataTable" msprop:Generator_TableVarName="tablemantenimientoH_urgente" msprop:Generator_TablePropName="mantenimientoH_urgente" msprop:Generator_RowDeletingName="mantenimientoH_urgenteRowDeleting" msprop:Generator_RowChangingName="mantenimientoH_urgenteRowChanging" msprop:Generator_RowEvHandlerName="mantenimientoH_urgenteRowChangeEventHandler" msprop:Generator_RowDeletedName="mantenimientoH_urgenteRowDeleted" msprop:Generator_UserTableName="mantenimientoH_urgente" msprop:Generator_RowChangedName="mantenimientoH_urgenteRowChanged" msprop:Generator_RowEvArgName="mantenimientoH_urgenteRowChangeEvent" msprop:Generator_RowClassName="mantenimientoH_urgenteRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Herramienta" msprop:Generator_ColumnVarNameInTable="columnHerramienta" msprop:Generator_ColumnPropNameInRow="Herramienta" msprop:Generator_ColumnPropNameInTable="HerramientaColumn" msprop:Generator_UserColumnName="Herramienta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_UserColumnName="Marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Código" msprop:Generator_ColumnVarNameInTable="columnCódigo" msprop:Generator_ColumnPropNameInRow="Código" msprop:Generator_ColumnPropNameInTable="CódigoColumn" msprop:Generator_UserColumnName="Código">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Último_x0020_mantenimiento" msprop:Generator_ColumnVarNameInTable="columnÚltimo_mantenimiento" msprop:Generator_ColumnPropNameInRow="Último_mantenimiento" msprop:Generator_ColumnPropNameInTable="Último_mantenimientoColumn" msprop:Generator_UserColumnName="Último mantenimiento" type="xs:dateTime" />
+              <xs:element name="Periodo" msprop:Generator_ColumnVarNameInTable="columnPeriodo" msprop:Generator_ColumnPropNameInRow="Periodo" msprop:Generator_ColumnPropNameInTable="PeriodoColumn" msprop:Generator_UserColumnName="Periodo" type="xs:short" minOccurs="0" />
+              <xs:element name="Días_x0020_para_x0020_mantenimiento" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDías_para_mantenimiento" msprop:Generator_ColumnPropNameInRow="Días_para_mantenimiento" msprop:Generator_ColumnPropNameInTable="Días_para_mantenimientoColumn" msprop:Generator_UserColumnName="Días para mantenimiento" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mantenimientoH_urgente_proximo" msprop:Generator_TableClassName="mantenimientoH_urgente_proximoDataTable" msprop:Generator_TableVarName="tablemantenimientoH_urgente_proximo" msprop:Generator_TablePropName="mantenimientoH_urgente_proximo" msprop:Generator_RowDeletingName="mantenimientoH_urgente_proximoRowDeleting" msprop:Generator_RowChangingName="mantenimientoH_urgente_proximoRowChanging" msprop:Generator_RowEvHandlerName="mantenimientoH_urgente_proximoRowChangeEventHandler" msprop:Generator_RowDeletedName="mantenimientoH_urgente_proximoRowDeleted" msprop:Generator_UserTableName="mantenimientoH_urgente_proximo" msprop:Generator_RowChangedName="mantenimientoH_urgente_proximoRowChanged" msprop:Generator_RowEvArgName="mantenimientoH_urgente_proximoRowChangeEvent" msprop:Generator_RowClassName="mantenimientoH_urgente_proximoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Herramienta" msprop:Generator_ColumnVarNameInTable="columnHerramienta" msprop:Generator_ColumnPropNameInRow="Herramienta" msprop:Generator_ColumnPropNameInTable="HerramientaColumn" msprop:Generator_UserColumnName="Herramienta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_UserColumnName="Marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Código" msprop:Generator_ColumnVarNameInTable="columnCódigo" msprop:Generator_ColumnPropNameInRow="Código" msprop:Generator_ColumnPropNameInTable="CódigoColumn" msprop:Generator_UserColumnName="Código">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Último_x0020_mantenimiento" msprop:Generator_ColumnVarNameInTable="columnÚltimo_mantenimiento" msprop:Generator_ColumnPropNameInRow="Último_mantenimiento" msprop:Generator_ColumnPropNameInTable="Último_mantenimientoColumn" msprop:Generator_UserColumnName="Último mantenimiento" type="xs:dateTime" />
+              <xs:element name="Periodo" msprop:Generator_ColumnVarNameInTable="columnPeriodo" msprop:Generator_ColumnPropNameInRow="Periodo" msprop:Generator_ColumnPropNameInTable="PeriodoColumn" msprop:Generator_UserColumnName="Periodo" type="xs:short" minOccurs="0" />
+              <xs:element name="Días_x0020_para_x0020_mantenimiento" msprop:Generator_ColumnVarNameInTable="columnDías_para_mantenimiento" msprop:Generator_ColumnPropNameInRow="Días_para_mantenimiento" msprop:Generator_ColumnPropNameInTable="Días_para_mantenimientoColumn" msprop:Generator_UserColumnName="Días para mantenimiento" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mantenimientoH_urgete_no" msprop:Generator_TableClassName="mantenimientoH_urgete_noDataTable" msprop:Generator_TableVarName="tablemantenimientoH_urgete_no" msprop:Generator_TablePropName="mantenimientoH_urgete_no" msprop:Generator_RowDeletingName="mantenimientoH_urgete_noRowDeleting" msprop:Generator_RowChangingName="mantenimientoH_urgete_noRowChanging" msprop:Generator_RowEvHandlerName="mantenimientoH_urgete_noRowChangeEventHandler" msprop:Generator_RowDeletedName="mantenimientoH_urgete_noRowDeleted" msprop:Generator_UserTableName="mantenimientoH_urgete_no" msprop:Generator_RowChangedName="mantenimientoH_urgete_noRowChanged" msprop:Generator_RowEvArgName="mantenimientoH_urgete_noRowChangeEvent" msprop:Generator_RowClassName="mantenimientoH_urgete_noRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Herramienta" msprop:Generator_ColumnVarNameInTable="columnHerramienta" msprop:Generator_ColumnPropNameInRow="Herramienta" msprop:Generator_ColumnPropNameInTable="HerramientaColumn" msprop:Generator_UserColumnName="Herramienta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_UserColumnName="Marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Código" msprop:Generator_ColumnVarNameInTable="columnCódigo" msprop:Generator_ColumnPropNameInRow="Código" msprop:Generator_ColumnPropNameInTable="CódigoColumn" msprop:Generator_UserColumnName="Código">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Último_x0020_mantenimiento" msprop:Generator_ColumnVarNameInTable="columnÚltimo_mantenimiento" msprop:Generator_ColumnPropNameInRow="Último_mantenimiento" msprop:Generator_ColumnPropNameInTable="Último_mantenimientoColumn" msprop:Generator_UserColumnName="Último mantenimiento" type="xs:dateTime" />
+              <xs:element name="Periodo" msprop:Generator_ColumnVarNameInTable="columnPeriodo" msprop:Generator_ColumnPropNameInRow="Periodo" msprop:Generator_ColumnPropNameInTable="PeriodoColumn" msprop:Generator_UserColumnName="Periodo" type="xs:short" minOccurs="0" />
+              <xs:element name="Días_x0020_para_x0020_mantenimiento" msprop:Generator_ColumnVarNameInTable="columnDías_para_mantenimiento" msprop:Generator_ColumnPropNameInRow="Días_para_mantenimiento" msprop:Generator_ColumnPropNameInTable="Días_para_mantenimientoColumn" msprop:Generator_UserColumnName="Días para mantenimiento" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="nuevo_prestamo" msprop:Generator_TableClassName="nuevo_prestamoDataTable" msprop:Generator_TableVarName="tablenuevo_prestamo" msprop:Generator_TablePropName="nuevo_prestamo" msprop:Generator_RowDeletingName="nuevo_prestamoRowDeleting" msprop:Generator_RowChangingName="nuevo_prestamoRowChanging" msprop:Generator_RowEvHandlerName="nuevo_prestamoRowChangeEventHandler" msprop:Generator_RowDeletedName="nuevo_prestamoRowDeleted" msprop:Generator_UserTableName="nuevo_prestamo" msprop:Generator_RowChangedName="nuevo_prestamoRowChanged" msprop:Generator_RowEvArgName="nuevo_prestamoRowChangeEvent" msprop:Generator_RowClassName="nuevo_prestamoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_UserColumnName="Marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Código" msprop:Generator_ColumnVarNameInTable="columnCódigo" msprop:Generator_ColumnPropNameInRow="Código" msprop:Generator_ColumnPropNameInTable="CódigoColumn" msprop:Generator_UserColumnName="Código" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="prestamosH_prestadas" msprop:Generator_TableClassName="prestamosH_prestadasDataTable" msprop:Generator_TableVarName="tableprestamosH_prestadas" msprop:Generator_TablePropName="prestamosH_prestadas" msprop:Generator_RowDeletingName="prestamosH_prestadasRowDeleting" msprop:Generator_RowChangingName="prestamosH_prestadasRowChanging" msprop:Generator_RowEvHandlerName="prestamosH_prestadasRowChangeEventHandler" msprop:Generator_RowDeletedName="prestamosH_prestadasRowDeleted" msprop:Generator_UserTableName="prestamosH_prestadas" msprop:Generator_RowChangedName="prestamosH_prestadasRowChanged" msprop:Generator_RowEvArgName="prestamosH_prestadasRowChangeEvent" msprop:Generator_RowClassName="prestamosH_prestadasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Código_x0020_Herramienta" msprop:Generator_ColumnVarNameInTable="columnCódigo_Herramienta" msprop:Generator_ColumnPropNameInRow="Código_Herramienta" msprop:Generator_ColumnPropNameInTable="Código_HerramientaColumn" msprop:Generator_UserColumnName="Código Herramienta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Herramienta" msprop:Generator_ColumnVarNameInTable="columnHerramienta" msprop:Generator_ColumnPropNameInRow="Herramienta" msprop:Generator_ColumnPropNameInTable="HerramientaColumn" msprop:Generator_UserColumnName="Herramienta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Responsable" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnResponsable" msprop:Generator_ColumnPropNameInRow="Responsable" msprop:Generator_ColumnPropNameInTable="ResponsableColumn" msprop:Generator_UserColumnName="Responsable" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="121" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha_x0020_Salida" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFecha_Salida" msprop:Generator_ColumnPropNameInRow="Fecha_Salida" msprop:Generator_ColumnPropNameInTable="Fecha_SalidaColumn" msprop:Generator_UserColumnName="Fecha Salida" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Hora_x0020_Salida" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHora_Salida" msprop:Generator_ColumnPropNameInRow="Hora_Salida" msprop:Generator_ColumnPropNameInTable="Hora_SalidaColumn" msprop:Generator_UserColumnName="Hora Salida" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Retorno" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRetorno" msprop:Generator_ColumnPropNameInRow="Retorno" msprop:Generator_ColumnPropNameInTable="RetornoColumn" msprop:Generator_UserColumnName="Retorno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="prestamosH_retornadas" msprop:Generator_TableClassName="prestamosH_retornadasDataTable" msprop:Generator_TableVarName="tableprestamosH_retornadas" msprop:Generator_TablePropName="prestamosH_retornadas" msprop:Generator_RowDeletingName="prestamosH_retornadasRowDeleting" msprop:Generator_RowChangingName="prestamosH_retornadasRowChanging" msprop:Generator_RowEvHandlerName="prestamosH_retornadasRowChangeEventHandler" msprop:Generator_RowDeletedName="prestamosH_retornadasRowDeleted" msprop:Generator_UserTableName="prestamosH_retornadas" msprop:Generator_RowChangedName="prestamosH_retornadasRowChanged" msprop:Generator_RowEvArgName="prestamosH_retornadasRowChangeEvent" msprop:Generator_RowClassName="prestamosH_retornadasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Código_x0020_Herramienta" msprop:Generator_ColumnVarNameInTable="columnCódigo_Herramienta" msprop:Generator_ColumnPropNameInRow="Código_Herramienta" msprop:Generator_ColumnPropNameInTable="Código_HerramientaColumn" msprop:Generator_UserColumnName="Código Herramienta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Herramienta" msprop:Generator_ColumnVarNameInTable="columnHerramienta" msprop:Generator_ColumnPropNameInRow="Herramienta" msprop:Generator_ColumnPropNameInTable="HerramientaColumn" msprop:Generator_UserColumnName="Herramienta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Responsable" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnResponsable" msprop:Generator_ColumnPropNameInRow="Responsable" msprop:Generator_ColumnPropNameInTable="ResponsableColumn" msprop:Generator_UserColumnName="Responsable" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="121" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha_x0020_Salida" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFecha_Salida" msprop:Generator_ColumnPropNameInRow="Fecha_Salida" msprop:Generator_ColumnPropNameInTable="Fecha_SalidaColumn" msprop:Generator_UserColumnName="Fecha Salida" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Hora_x0020_Salida" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHora_Salida" msprop:Generator_ColumnPropNameInRow="Hora_Salida" msprop:Generator_ColumnPropNameInTable="Hora_SalidaColumn" msprop:Generator_UserColumnName="Hora Salida" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Retorno" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRetorno" msprop:Generator_ColumnPropNameInRow="Retorno" msprop:Generator_ColumnPropNameInTable="RetornoColumn" msprop:Generator_UserColumnName="Retorno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="prestamosH_todo" msprop:Generator_TableClassName="prestamosH_todoDataTable" msprop:Generator_TableVarName="tableprestamosH_todo" msprop:Generator_TablePropName="prestamosH_todo" msprop:Generator_RowDeletingName="prestamosH_todoRowDeleting" msprop:Generator_RowChangingName="prestamosH_todoRowChanging" msprop:Generator_RowEvHandlerName="prestamosH_todoRowChangeEventHandler" msprop:Generator_RowDeletedName="prestamosH_todoRowDeleted" msprop:Generator_UserTableName="prestamosH_todo" msprop:Generator_RowChangedName="prestamosH_todoRowChanged" msprop:Generator_RowEvArgName="prestamosH_todoRowChangeEvent" msprop:Generator_RowClassName="prestamosH_todoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Código_x0020_Herramienta" msprop:Generator_ColumnVarNameInTable="columnCódigo_Herramienta" msprop:Generator_ColumnPropNameInRow="Código_Herramienta" msprop:Generator_ColumnPropNameInTable="Código_HerramientaColumn" msprop:Generator_UserColumnName="Código Herramienta">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Herramienta" msprop:Generator_ColumnVarNameInTable="columnHerramienta" msprop:Generator_ColumnPropNameInRow="Herramienta" msprop:Generator_ColumnPropNameInTable="HerramientaColumn" msprop:Generator_UserColumnName="Herramienta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Responsable" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnResponsable" msprop:Generator_ColumnPropNameInRow="Responsable" msprop:Generator_ColumnPropNameInTable="ResponsableColumn" msprop:Generator_UserColumnName="Responsable" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="121" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha_x0020_Salida" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFecha_Salida" msprop:Generator_ColumnPropNameInRow="Fecha_Salida" msprop:Generator_ColumnPropNameInTable="Fecha_SalidaColumn" msprop:Generator_UserColumnName="Fecha Salida" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Hora_x0020_Salida" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHora_Salida" msprop:Generator_ColumnPropNameInRow="Hora_Salida" msprop:Generator_ColumnPropNameInTable="Hora_SalidaColumn" msprop:Generator_UserColumnName="Hora Salida" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Retorno" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRetorno" msprop:Generator_ColumnPropNameInRow="Retorno" msprop:Generator_ColumnPropNameInTable="RetornoColumn" msprop:Generator_UserColumnName="Retorno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ventaPersonas" msprop:Generator_TableClassName="ventaPersonasDataTable" msprop:Generator_TableVarName="tableventaPersonas" msprop:Generator_TablePropName="ventaPersonas" msprop:Generator_RowDeletingName="ventaPersonasRowDeleting" msprop:Generator_RowChangingName="ventaPersonasRowChanging" msprop:Generator_RowEvHandlerName="ventaPersonasRowChangeEventHandler" msprop:Generator_RowDeletedName="ventaPersonasRowDeleted" msprop:Generator_UserTableName="ventaPersonas" msprop:Generator_RowChangedName="ventaPersonasRowChanged" msprop:Generator_RowEvArgName="ventaPersonasRowChangeEvent" msprop:Generator_RowClassName="ventaPersonasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_sale" msprop:Generator_ColumnVarNameInTable="columnid_sale" msprop:Generator_ColumnPropNameInRow="id_sale" msprop:Generator_ColumnPropNameInTable="id_saleColumn" msprop:Generator_UserColumnName="id_sale" type="xs:int" />
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="121" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Total" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ventas" msprop:Generator_TableClassName="ventasDataTable" msprop:Generator_TableVarName="tableventas" msprop:Generator_TablePropName="ventas" msprop:Generator_RowDeletingName="ventasRowDeleting" msprop:Generator_RowChangingName="ventasRowChanging" msprop:Generator_RowEvHandlerName="ventasRowChangeEventHandler" msprop:Generator_RowDeletedName="ventasRowDeleted" msprop:Generator_UserTableName="ventas" msprop:Generator_RowChangedName="ventasRowChanged" msprop:Generator_RowEvArgName="ventasRowChangeEvent" msprop:Generator_RowClassName="ventasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_sale" msprop:Generator_ColumnVarNameInTable="columnid_sale" msprop:Generator_ColumnPropNameInRow="id_sale" msprop:Generator_ColumnPropNameInTable="id_saleColumn" msprop:Generator_UserColumnName="id_sale" type="xs:int" />
+              <xs:element name="Total" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="viewFecha" msprop:Generator_TableClassName="viewFechaDataTable" msprop:Generator_TableVarName="tableviewFecha" msprop:Generator_TablePropName="viewFecha" msprop:Generator_RowDeletingName="viewFechaRowDeleting" msprop:Generator_RowChangingName="viewFechaRowChanging" msprop:Generator_RowEvHandlerName="viewFechaRowChangeEventHandler" msprop:Generator_RowDeletedName="viewFechaRowDeleted" msprop:Generator_UserTableName="viewFecha" msprop:Generator_RowChangedName="viewFechaRowChanged" msprop:Generator_RowEvArgName="viewFechaRowChangeEvent" msprop:Generator_RowClassName="viewFechaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" />
+              <xs:element name="codigoH" msprop:Generator_ColumnVarNameInTable="columncodigoH" msprop:Generator_ColumnPropNameInRow="codigoH" msprop:Generator_ColumnPropNameInTable="codigoHColumn" msprop:Generator_UserColumnName="codigoH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -862,6 +1766,15 @@ SELECT uname, pwd, rol FROM userLogin WHERE (uname = @uname)</CommandText>
       <xs:selector xpath=".//mstns:prodServ" />
       <xs:field xpath="mstns:codigo" />
     </xs:unique>
+    <xs:unique name="sale_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:sale" />
+      <xs:field xpath="mstns:id_sale" />
+    </xs:unique>
+    <xs:unique name="saleLine_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:saleLine" />
+      <xs:field xpath="mstns:prod" />
+      <xs:field xpath="mstns:id_sale" />
+    </xs:unique>
     <xs:unique name="userEmpleado_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:userEmpleado" />
       <xs:field xpath="mstns:idE" />
@@ -871,6 +1784,24 @@ SELECT uname, pwd, rol FROM userLogin WHERE (uname = @uname)</CommandText>
       <xs:selector xpath=".//mstns:userLogin" />
       <xs:field xpath="mstns:uname" />
     </xs:unique>
+    <xs:unique name="nuevo_prestamo_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:nuevo_prestamo" />
+      <xs:field xpath="mstns:Código" />
+    </xs:unique>
+    <xs:unique name="ventaPersonas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ventaPersonas" />
+      <xs:field xpath="mstns:id_sale" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="ventas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ventas" />
+      <xs:field xpath="mstns:id_sale" />
+    </xs:unique>
+    <xs:unique name="viewFecha_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:viewFecha" />
+      <xs:field xpath="mstns:fecha" />
+      <xs:field xpath="mstns:codigoH" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
@@ -878,6 +1809,9 @@ SELECT uname, pwd, rol FROM userLogin WHERE (uname = @uname)</CommandText>
       <msdata:Relationship name="FK__mantenimi__codig__45F365D3" msdata:parent="herramienta" msdata:child="mantenimiento" msdata:parentkey="codigoH" msdata:childkey="codigoH" msprop:Generator_UserChildTable="mantenimiento" msprop:Generator_ChildPropName="GetmantenimientoRows" msprop:Generator_UserRelationName="FK__mantenimi__codig__45F365D3" msprop:Generator_ParentPropName="herramientaRow" msprop:Generator_RelationVarName="relationFK__mantenimi__codig__45F365D3" msprop:Generator_UserParentTable="herramienta" />
       <msdata:Relationship name="FK__prestamo__codigo__4AB81AF0" msdata:parent="herramienta" msdata:child="prestamo" msdata:parentkey="codigoH" msdata:childkey="codigoH" msprop:Generator_UserChildTable="prestamo" msprop:Generator_ChildPropName="GetprestamoRows" msprop:Generator_UserRelationName="FK__prestamo__codigo__4AB81AF0" msprop:Generator_ParentPropName="herramientaRow" msprop:Generator_RelationVarName="relationFK__prestamo__codigo__4AB81AF0" msprop:Generator_UserParentTable="herramienta" />
       <msdata:Relationship name="FK__prestamo__idE__4BAC3F29" msdata:parent="empleado" msdata:child="prestamo" msdata:parentkey="idE" msdata:childkey="idE" msprop:Generator_UserChildTable="prestamo" msprop:Generator_ChildPropName="GetprestamoRows" msprop:Generator_UserRelationName="FK__prestamo__idE__4BAC3F29" msprop:Generator_ParentPropName="empleadoRow" msprop:Generator_RelationVarName="relationFK__prestamo__idE__4BAC3F29" msprop:Generator_UserParentTable="empleado" />
+      <msdata:Relationship name="FK__sale__id_person__60A75C0F" msdata:parent="person" msdata:child="sale" msdata:parentkey="id" msdata:childkey="id_person" msprop:Generator_UserChildTable="sale" msprop:Generator_ChildPropName="GetsaleRows" msprop:Generator_UserRelationName="FK__sale__id_person__60A75C0F" msprop:Generator_ParentPropName="personRow" msprop:Generator_RelationVarName="relationFK__sale__id_person__60A75C0F" msprop:Generator_UserParentTable="person" />
+      <msdata:Relationship name="FK__saleLine__id_sal__68487DD7" msdata:parent="sale" msdata:child="saleLine" msdata:parentkey="id_sale" msdata:childkey="id_sale" msprop:Generator_UserChildTable="saleLine" msprop:Generator_ChildPropName="GetsaleLineRows" msprop:Generator_UserRelationName="FK__saleLine__id_sal__68487DD7" msprop:Generator_ParentPropName="saleRow" msprop:Generator_RelationVarName="relationFK__saleLine__id_sal__68487DD7" msprop:Generator_UserParentTable="sale" />
+      <msdata:Relationship name="FK__saleLine__prod__6754599E" msdata:parent="prodServ" msdata:child="saleLine" msdata:parentkey="codigo" msdata:childkey="prod" msprop:Generator_UserChildTable="saleLine" msprop:Generator_ChildPropName="GetsaleLineRows" msprop:Generator_UserRelationName="FK__saleLine__prod__6754599E" msprop:Generator_ParentPropName="prodServRow" msprop:Generator_RelationVarName="relationFK__saleLine__prod__6754599E" msprop:Generator_UserParentTable="prodServ" />
       <msdata:Relationship name="FK__userEmple__uname__3E52440B" msdata:parent="userLogin" msdata:child="userEmpleado" msdata:parentkey="uname" msdata:childkey="uname" msprop:Generator_UserChildTable="userEmpleado" msprop:Generator_ChildPropName="GetuserEmpleadoRows" msprop:Generator_UserRelationName="FK__userEmple__uname__3E52440B" msprop:Generator_RelationVarName="relationFK__userEmple__uname__3E52440B" msprop:Generator_UserParentTable="userLogin" msprop:Generator_ParentPropName="userLoginRow" />
       <msdata:Relationship name="FK__userEmplead__idE__3D5E1FD2" msdata:parent="empleado" msdata:child="userEmpleado" msdata:parentkey="idE" msdata:childkey="idE" msprop:Generator_UserChildTable="userEmpleado" msprop:Generator_ChildPropName="GetuserEmpleadoRows" msprop:Generator_UserRelationName="FK__userEmplead__idE__3D5E1FD2" msprop:Generator_ParentPropName="empleadoRow" msprop:Generator_RelationVarName="relationFK__userEmplead__idE__3D5E1FD2" msprop:Generator_UserParentTable="empleado" />
     </xs:appinfo>

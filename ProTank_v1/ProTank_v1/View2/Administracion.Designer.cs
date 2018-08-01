@@ -68,22 +68,21 @@
             this.tabControl1.Controls.Add(this.tabModulos_Empleados);
             this.tabControl1.Controls.Add(this.tabModulos_ListaPersonas);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 38);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Location = new System.Drawing.Point(0, 26);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1672, 802);
+            this.tabControl1.Size = new System.Drawing.Size(1216, 534);
             this.tabControl1.TabIndex = 0;
             // 
             // tabModulos_Empleados
             // 
             this.tabModulos_Empleados.Controls.Add(this.dataGridView2);
             this.tabModulos_Empleados.Controls.Add(this.panel14);
-            this.tabModulos_Empleados.Location = new System.Drawing.Point(4, 33);
-            this.tabModulos_Empleados.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabModulos_Empleados.Location = new System.Drawing.Point(4, 25);
+            this.tabModulos_Empleados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabModulos_Empleados.Name = "tabModulos_Empleados";
-            this.tabModulos_Empleados.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.tabModulos_Empleados.Size = new System.Drawing.Size(1664, 765);
+            this.tabModulos_Empleados.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabModulos_Empleados.Size = new System.Drawing.Size(1208, 505);
             this.tabModulos_Empleados.TabIndex = 6;
             this.tabModulos_Empleados.Text = "Empleados";
             this.tabModulos_Empleados.UseVisualStyleBackColor = true;
@@ -95,12 +94,11 @@
             this.dataGridView2.AllowUserToResizeRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 133);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Location = new System.Drawing.Point(4, 89);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowTemplate.Height = 31;
-            this.dataGridView2.Size = new System.Drawing.Size(1652, 626);
+            this.dataGridView2.Size = new System.Drawing.Size(1200, 412);
             this.dataGridView2.TabIndex = 10;
             // 
             // panel14
@@ -110,10 +108,10 @@
             this.panel14.Controls.Add(this.lblModulos_Empleados_protank);
             this.panel14.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(6, 6);
-            this.panel14.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.panel14.Location = new System.Drawing.Point(4, 4);
+            this.panel14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1652, 127);
+            this.panel14.Size = new System.Drawing.Size(1200, 85);
             this.panel14.TabIndex = 11;
             // 
             // lblModulos_Empleados_empleados
@@ -122,10 +120,9 @@
             this.lblModulos_Empleados_empleados.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblModulos_Empleados_empleados.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModulos_Empleados_empleados.ForeColor = System.Drawing.Color.Lavender;
-            this.lblModulos_Empleados_empleados.Location = new System.Drawing.Point(1419, 44);
-            this.lblModulos_Empleados_empleados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModulos_Empleados_empleados.Location = new System.Drawing.Point(1032, 29);
             this.lblModulos_Empleados_empleados.Name = "lblModulos_Empleados_empleados";
-            this.lblModulos_Empleados_empleados.Size = new System.Drawing.Size(200, 39);
+            this.lblModulos_Empleados_empleados.Size = new System.Drawing.Size(141, 28);
             this.lblModulos_Empleados_empleados.TabIndex = 1;
             this.lblModulos_Empleados_empleados.Text = "Empleados";
             // 
@@ -136,10 +133,9 @@
             this.lblModulos_Empleados_protank.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblModulos_Empleados_protank.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModulos_Empleados_protank.ForeColor = System.Drawing.Color.White;
-            this.lblModulos_Empleados_protank.Location = new System.Drawing.Point(139, 17);
-            this.lblModulos_Empleados_protank.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModulos_Empleados_protank.Location = new System.Drawing.Point(101, 11);
             this.lblModulos_Empleados_protank.Name = "lblModulos_Empleados_protank";
-            this.lblModulos_Empleados_protank.Size = new System.Drawing.Size(255, 78);
+            this.lblModulos_Empleados_protank.Size = new System.Drawing.Size(180, 56);
             this.lblModulos_Empleados_protank.TabIndex = 0;
             this.lblModulos_Empleados_protank.Text = "ProTank";
             // 
@@ -147,11 +143,11 @@
             // 
             this.tabModulos_ListaPersonas.Controls.Add(this.dataGridView1);
             this.tabModulos_ListaPersonas.Controls.Add(this.panel11);
-            this.tabModulos_ListaPersonas.Location = new System.Drawing.Point(4, 33);
-            this.tabModulos_ListaPersonas.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabModulos_ListaPersonas.Location = new System.Drawing.Point(4, 25);
+            this.tabModulos_ListaPersonas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabModulos_ListaPersonas.Name = "tabModulos_ListaPersonas";
-            this.tabModulos_ListaPersonas.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.tabModulos_ListaPersonas.Size = new System.Drawing.Size(1664, 765);
+            this.tabModulos_ListaPersonas.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabModulos_ListaPersonas.Size = new System.Drawing.Size(1208, 506);
             this.tabModulos_ListaPersonas.TabIndex = 7;
             this.tabModulos_ListaPersonas.Text = "Clientes";
             this.tabModulos_ListaPersonas.UseVisualStyleBackColor = true;
@@ -163,12 +159,11 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 133);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 89);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 31;
-            this.dataGridView1.Size = new System.Drawing.Size(1652, 626);
+            this.dataGridView1.Size = new System.Drawing.Size(1200, 413);
             this.dataGridView1.TabIndex = 7;
             // 
             // panel11
@@ -178,10 +173,10 @@
             this.panel11.Controls.Add(this.label2);
             this.panel11.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(6, 6);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.panel11.Location = new System.Drawing.Point(4, 4);
+            this.panel11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1652, 127);
+            this.panel11.Size = new System.Drawing.Size(1200, 85);
             this.panel11.TabIndex = 8;
             // 
             // label1
@@ -190,10 +185,9 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Lavender;
-            this.label1.Location = new System.Drawing.Point(1382, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(1005, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 39);
+            this.label1.Size = new System.Drawing.Size(107, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "Clientes";
             // 
@@ -204,10 +198,9 @@
             this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(139, 17);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(101, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(255, 78);
+            this.label2.Size = new System.Drawing.Size(180, 56);
             this.label2.TabIndex = 0;
             this.label2.Text = "ProTank";
             // 
@@ -219,7 +212,8 @@
             this.clienteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1672, 38);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(1216, 26);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -232,36 +226,36 @@
             this.toolStripSeparator1,
             this.buscarEmpleadoToolStripMenuItem});
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(126, 34);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
             this.empleadosToolStripMenuItem.Text = "Empleados";
             // 
             // registrarEmpleadoToolStripMenuItem
             // 
             this.registrarEmpleadoToolStripMenuItem.Name = "registrarEmpleadoToolStripMenuItem";
-            this.registrarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(326, 34);
+            this.registrarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.registrarEmpleadoToolStripMenuItem.Text = "Registrar empleado";
             // 
             // modificarEmpleadoToolStripMenuItem
             // 
             this.modificarEmpleadoToolStripMenuItem.Name = "modificarEmpleadoToolStripMenuItem";
-            this.modificarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(326, 34);
+            this.modificarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.modificarEmpleadoToolStripMenuItem.Text = "Modificar empleado";
             // 
             // darDeBajaAEmpleadoToolStripMenuItem
             // 
             this.darDeBajaAEmpleadoToolStripMenuItem.Name = "darDeBajaAEmpleadoToolStripMenuItem";
-            this.darDeBajaAEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(326, 34);
+            this.darDeBajaAEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.darDeBajaAEmpleadoToolStripMenuItem.Text = "Dar de baja a empleado";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(323, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(243, 6);
             // 
             // buscarEmpleadoToolStripMenuItem
             // 
             this.buscarEmpleadoToolStripMenuItem.Name = "buscarEmpleadoToolStripMenuItem";
-            this.buscarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(326, 34);
+            this.buscarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.buscarEmpleadoToolStripMenuItem.Text = "Buscar empleado";
             // 
             // clienteToolStripMenuItem
@@ -274,53 +268,53 @@
             this.buscarClienteToolStripMenuItem,
             this.toolStripSeparator3});
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(89, 34);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
             this.clienteToolStripMenuItem.Text = "Cliente";
             // 
             // registrarClienteToolStripMenuItem
             // 
             this.registrarClienteToolStripMenuItem.Name = "registrarClienteToolStripMenuItem";
-            this.registrarClienteToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
+            this.registrarClienteToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.registrarClienteToolStripMenuItem.Text = "Registrar cliente";
             // 
             // modificarClienteToolStripMenuItem
             // 
             this.modificarClienteToolStripMenuItem.Name = "modificarClienteToolStripMenuItem";
-            this.modificarClienteToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
+            this.modificarClienteToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.modificarClienteToolStripMenuItem.Text = "Modificar cliente";
             // 
             // removerClienteToolStripMenuItem
             // 
             this.removerClienteToolStripMenuItem.Name = "removerClienteToolStripMenuItem";
-            this.removerClienteToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
+            this.removerClienteToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.removerClienteToolStripMenuItem.Text = "Remover cliente";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(285, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(193, 6);
             // 
             // buscarClienteToolStripMenuItem
             // 
             this.buscarClienteToolStripMenuItem.Name = "buscarClienteToolStripMenuItem";
-            this.buscarClienteToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
+            this.buscarClienteToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.buscarClienteToolStripMenuItem.Text = "Buscar Cliente";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(285, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(193, 6);
             // 
             // Administracion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1672, 840);
+            this.ClientSize = new System.Drawing.Size(1216, 560);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Administracion";
             this.Text = "Administracion";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Administracion_FormClosed);
             this.tabControl1.ResumeLayout(false);
             this.tabModulos_Empleados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

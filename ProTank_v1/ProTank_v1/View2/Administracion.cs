@@ -61,5 +61,10 @@ namespace ProTank_v1.View
             NewPerson p = new NewPerson();
             p.ShowDialog();
         }
+
+        private void Administracion_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
