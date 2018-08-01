@@ -32,11 +32,24 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabModulos_Empleados = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.fnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.protankDataSet = new ProTank_v1.protankDataSet();
             this.panel14 = new System.Windows.Forms.Panel();
             this.lblModulos_Empleados_empleados = new System.Windows.Forms.Label();
             this.lblModulos_Empleados_protank = new System.Windows.Forms.Label();
             this.tabModulos_ListaPersonas = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.fnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel11 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,32 +71,19 @@
             this.nuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.protankDataSet = new ProTank_v1.protankDataSet();
-            this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.empleadoTableAdapter = new ProTank_v1.protankDataSetTableAdapters.empleadoTableAdapter();
-            this.fnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.personTableAdapter = new ProTank_v1.protankDataSetTableAdapters.personTableAdapter();
-            this.fnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabModulos_Empleados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet)).BeginInit();
             this.panel14.SuspendLayout();
             this.tabModulos_ListaPersonas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             this.panel11.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -132,6 +132,56 @@
             this.dataGridView2.RowTemplate.Height = 31;
             this.dataGridView2.Size = new System.Drawing.Size(1189, 428);
             this.dataGridView2.TabIndex = 10;
+            // 
+            // fnameDataGridViewTextBoxColumn
+            // 
+            this.fnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fnameDataGridViewTextBoxColumn.DataPropertyName = "fname";
+            this.fnameDataGridViewTextBoxColumn.HeaderText = "Nombres";
+            this.fnameDataGridViewTextBoxColumn.Name = "fnameDataGridViewTextBoxColumn";
+            this.fnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lnameDataGridViewTextBoxColumn
+            // 
+            this.lnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lnameDataGridViewTextBoxColumn.DataPropertyName = "lname";
+            this.lnameDataGridViewTextBoxColumn.HeaderText = "Apellidos";
+            this.lnameDataGridViewTextBoxColumn.Name = "lnameDataGridViewTextBoxColumn";
+            this.lnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idEDataGridViewTextBoxColumn
+            // 
+            this.idEDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idEDataGridViewTextBoxColumn.DataPropertyName = "idE";
+            this.idEDataGridViewTextBoxColumn.HeaderText = "Cedula";
+            this.idEDataGridViewTextBoxColumn.Name = "idEDataGridViewTextBoxColumn";
+            this.idEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefDataGridViewTextBoxColumn
+            // 
+            this.telefDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.telefDataGridViewTextBoxColumn.DataPropertyName = "telef";
+            this.telefDataGridViewTextBoxColumn.HeaderText = "Telefono";
+            this.telefDataGridViewTextBoxColumn.Name = "telefDataGridViewTextBoxColumn";
+            this.telefDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // celDataGridViewTextBoxColumn
+            // 
+            this.celDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.celDataGridViewTextBoxColumn.DataPropertyName = "cel";
+            this.celDataGridViewTextBoxColumn.HeaderText = "Celular";
+            this.celDataGridViewTextBoxColumn.Name = "celDataGridViewTextBoxColumn";
+            this.celDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // empleadoBindingSource
+            // 
+            this.empleadoBindingSource.DataMember = "empleado";
+            this.empleadoBindingSource.DataSource = this.protankDataSet;
+            // 
+            // protankDataSet
+            // 
+            this.protankDataSet.DataSetName = "protankDataSet";
+            this.protankDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel14
             // 
@@ -207,6 +257,51 @@
             this.dataGridView1.Size = new System.Drawing.Size(1189, 428);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // fnameDataGridViewTextBoxColumn1
+            // 
+            this.fnameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fnameDataGridViewTextBoxColumn1.DataPropertyName = "fname";
+            this.fnameDataGridViewTextBoxColumn1.HeaderText = "Nombres";
+            this.fnameDataGridViewTextBoxColumn1.Name = "fnameDataGridViewTextBoxColumn1";
+            this.fnameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // lnameDataGridViewTextBoxColumn1
+            // 
+            this.lnameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lnameDataGridViewTextBoxColumn1.DataPropertyName = "lname";
+            this.lnameDataGridViewTextBoxColumn1.HeaderText = "Apellidos";
+            this.lnameDataGridViewTextBoxColumn1.Name = "lnameDataGridViewTextBoxColumn1";
+            this.lnameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Cedula";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefDataGridViewTextBoxColumn1
+            // 
+            this.telefDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.telefDataGridViewTextBoxColumn1.DataPropertyName = "telef";
+            this.telefDataGridViewTextBoxColumn1.HeaderText = "Telefono";
+            this.telefDataGridViewTextBoxColumn1.Name = "telefDataGridViewTextBoxColumn1";
+            this.telefDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // celDataGridViewTextBoxColumn1
+            // 
+            this.celDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.celDataGridViewTextBoxColumn1.DataPropertyName = "cel";
+            this.celDataGridViewTextBoxColumn1.HeaderText = "Celular";
+            this.celDataGridViewTextBoxColumn1.Name = "celDataGridViewTextBoxColumn1";
+            this.celDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // personBindingSource
+            // 
+            this.personBindingSource.DataMember = "person";
+            this.personBindingSource.DataSource = this.protankDataSet;
             // 
             // panel11
             // 
@@ -290,6 +385,7 @@
             this.darDeBajaAEmpleadoToolStripMenuItem.Name = "darDeBajaAEmpleadoToolStripMenuItem";
             this.darDeBajaAEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.darDeBajaAEmpleadoToolStripMenuItem.Text = "Dar de baja a empleado";
+            this.darDeBajaAEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.darDeBajaAEmpleadoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -320,6 +416,7 @@
             this.registrarClienteToolStripMenuItem.Name = "registrarClienteToolStripMenuItem";
             this.registrarClienteToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.registrarClienteToolStripMenuItem.Text = "Registrar cliente";
+            this.registrarClienteToolStripMenuItem.Click += new System.EventHandler(this.registrarClienteToolStripMenuItem_Click);
             // 
             // modificarClienteToolStripMenuItem
             // 
@@ -362,14 +459,14 @@
             // nuevoUsuarioToolStripMenuItem
             // 
             this.nuevoUsuarioToolStripMenuItem.Name = "nuevoUsuarioToolStripMenuItem";
-            this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
             this.nuevoUsuarioToolStripMenuItem.Text = "Nuevo Usuario";
             this.nuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.nuevoUsuarioToolStripMenuItem_Click);
             // 
             // eliminarUsuarioToolStripMenuItem
             // 
             this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
-            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
             this.eliminarUsuarioToolStripMenuItem.Text = "Remover Usuario";
             // 
             // modificarContraseñaToolStripMenuItem
@@ -378,108 +475,13 @@
             this.modificarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
             this.modificarContraseñaToolStripMenuItem.Text = "Modificar Datos de Usuario";
             // 
-            // protankDataSet
-            // 
-            this.protankDataSet.DataSetName = "protankDataSet";
-            this.protankDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // empleadoBindingSource
-            // 
-            this.empleadoBindingSource.DataMember = "empleado";
-            this.empleadoBindingSource.DataSource = this.protankDataSet;
-            // 
             // empleadoTableAdapter
             // 
             this.empleadoTableAdapter.ClearBeforeFill = true;
             // 
-            // fnameDataGridViewTextBoxColumn
-            // 
-            this.fnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fnameDataGridViewTextBoxColumn.DataPropertyName = "fname";
-            this.fnameDataGridViewTextBoxColumn.HeaderText = "Nombres";
-            this.fnameDataGridViewTextBoxColumn.Name = "fnameDataGridViewTextBoxColumn";
-            this.fnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lnameDataGridViewTextBoxColumn
-            // 
-            this.lnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.lnameDataGridViewTextBoxColumn.DataPropertyName = "lname";
-            this.lnameDataGridViewTextBoxColumn.HeaderText = "Apellidos";
-            this.lnameDataGridViewTextBoxColumn.Name = "lnameDataGridViewTextBoxColumn";
-            this.lnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idEDataGridViewTextBoxColumn
-            // 
-            this.idEDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idEDataGridViewTextBoxColumn.DataPropertyName = "idE";
-            this.idEDataGridViewTextBoxColumn.HeaderText = "Cedula";
-            this.idEDataGridViewTextBoxColumn.Name = "idEDataGridViewTextBoxColumn";
-            this.idEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefDataGridViewTextBoxColumn
-            // 
-            this.telefDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.telefDataGridViewTextBoxColumn.DataPropertyName = "telef";
-            this.telefDataGridViewTextBoxColumn.HeaderText = "Telefono";
-            this.telefDataGridViewTextBoxColumn.Name = "telefDataGridViewTextBoxColumn";
-            this.telefDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // celDataGridViewTextBoxColumn
-            // 
-            this.celDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.celDataGridViewTextBoxColumn.DataPropertyName = "cel";
-            this.celDataGridViewTextBoxColumn.HeaderText = "Celular";
-            this.celDataGridViewTextBoxColumn.Name = "celDataGridViewTextBoxColumn";
-            this.celDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // personBindingSource
-            // 
-            this.personBindingSource.DataMember = "person";
-            this.personBindingSource.DataSource = this.protankDataSet;
-            // 
             // personTableAdapter
             // 
             this.personTableAdapter.ClearBeforeFill = true;
-            // 
-            // fnameDataGridViewTextBoxColumn1
-            // 
-            this.fnameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fnameDataGridViewTextBoxColumn1.DataPropertyName = "fname";
-            this.fnameDataGridViewTextBoxColumn1.HeaderText = "Nombres";
-            this.fnameDataGridViewTextBoxColumn1.Name = "fnameDataGridViewTextBoxColumn1";
-            this.fnameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // lnameDataGridViewTextBoxColumn1
-            // 
-            this.lnameDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.lnameDataGridViewTextBoxColumn1.DataPropertyName = "lname";
-            this.lnameDataGridViewTextBoxColumn1.HeaderText = "Apellidos";
-            this.lnameDataGridViewTextBoxColumn1.Name = "lnameDataGridViewTextBoxColumn1";
-            this.lnameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Cedula";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefDataGridViewTextBoxColumn1
-            // 
-            this.telefDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.telefDataGridViewTextBoxColumn1.DataPropertyName = "telef";
-            this.telefDataGridViewTextBoxColumn1.HeaderText = "Telefono";
-            this.telefDataGridViewTextBoxColumn1.Name = "telefDataGridViewTextBoxColumn1";
-            this.telefDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // celDataGridViewTextBoxColumn1
-            // 
-            this.celDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.celDataGridViewTextBoxColumn1.DataPropertyName = "cel";
-            this.celDataGridViewTextBoxColumn1.HeaderText = "Celular";
-            this.celDataGridViewTextBoxColumn1.Name = "celDataGridViewTextBoxColumn1";
-            this.celDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // Administracion
             // 
@@ -495,17 +497,17 @@
             this.tabControl1.ResumeLayout(false);
             this.tabModulos_Empleados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.tabModulos_ListaPersonas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -35,31 +35,31 @@ namespace ProTank_v1.View
 
         private void btnModulos_NuevoUsuario_nuevaPersona_Click(object sender, EventArgs e)
         {
-            NewPerson p = new NewPerson();
+            NewPerson p = new NewPerson(true);
             p.ShowDialog();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            NewPerson p = new NewPerson();
+            NewPerson p = new NewPerson(true);
             p.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            NewPerson p = new NewPerson();
+            NewPerson p = new NewPerson(true);
             p.ShowDialog();
         }
 
         private void btn_Modulos_Empleados_editarEmpleado_Click(object sender, EventArgs e)
         {
-            NewPerson p = new NewPerson();
+            NewPerson p = new NewPerson(true);
             p.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            NewPerson p = new NewPerson();
+            NewPerson p = new NewPerson(false);
             p.ShowDialog();
         }
 
@@ -90,7 +90,20 @@ namespace ProTank_v1.View
 
         private void registrarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            NewPerson p = new NewPerson(true);
+            p.ShowDialog();
+        }
 
+        private void registrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewPerson p = new NewPerson(false);
+            p.ShowDialog();
+        }
+
+        private void darDeBajaAEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String id = dataGridView2.SelectedRows.ToString();
+            MessageBox.Show(id, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
