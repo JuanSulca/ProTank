@@ -92,18 +92,79 @@ namespace ProTank_v1.View
         {
             NewPerson p = new NewPerson(true);
             p.ShowDialog();
+            this.empleadoTableAdapter.Fill(this.protankDataSet.empleado);
         }
 
         private void registrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NewPerson p = new NewPerson(false);
             p.ShowDialog();
+            this.personTableAdapter.Fill(this.protankDataSet.person);
         }
 
         private void darDeBajaAEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String id = dataGridView2.SelectedRows.ToString();
-            MessageBox.Show(id, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            String fname = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
+            String lname = dataGridView2.SelectedRows[0].Cells[1].Value.ToString();
+            String id = dataGridView2.SelectedRows[0].Cells[2].Value.ToString();
+            String tel = dataGridView2.SelectedRows[0].Cells[3].Value.ToString();
+            String cel = dataGridView2.SelectedRows[0].Cells[4].Value.ToString();
+            protankDataSetTableAdapters.empleadoTableAdapter tba = new protankDataSetTableAdapters.empleadoTableAdapter();
+            try
+            {
+                tba.Delete(fname, lname, id, tel, cel);
+                MessageBox.Show("Empleado eliminado exitosamente", "Eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.empleadoTableAdapter.Fill(this.protankDataSet.empleado);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Empleado posee conecciones con otra tablas", "Eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void removerClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String fname = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            String lname = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            String id = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            String tel = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            String cel = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            protankDataSetTableAdapters.personTableAdapter tba = new protankDataSetTableAdapters.personTableAdapter();
+            try
+            {
+                tba.Delete(fname, lname, id, tel, cel);
+                MessageBox.Show("Cliente eliminado exitosamente", "Eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.personTableAdapter.Fill(this.protankDataSet.person);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cliente posee conecciones con otra tablas", "Eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void modificarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String fname = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();
+            String lname = dataGridView2.SelectedRows[0].Cells[1].Value.ToString();
+            String id = dataGridView2.SelectedRows[0].Cells[2].Value.ToString();
+            String tel = dataGridView2.SelectedRows[0].Cells[3].Value.ToString();
+            String cel = dataGridView2.SelectedRows[0].Cells[4].Value.ToString();
+            MessageBox.Show(fname + lname + id + tel + cel);
+            NewPerson p = new NewPerson(true, fname, lname, id, tel, cel);
+            p.ShowDialog();
+            this.empleadoTableAdapter.Fill(this.protankDataSet.empleado);
+        }
+
+        private void modificarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String fname = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            String lname = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            String id = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            String tel = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            String cel = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            NewPerson p = new NewPerson(false, fname, lname, id, tel, cel);
+            p.ShowDialog();
+            this.personTableAdapter.Fill(this.protankDataSet.person);
         }
     }
 }

@@ -67,6 +67,9 @@
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\Prestamo.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="protankDataSet.cs">
+      <DependentUpon>protankDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="protankDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

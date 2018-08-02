@@ -126,10 +126,12 @@
             this.dataGridView2.DataSource = this.empleadoBindingSource;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(4, 89);
+            this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowTemplate.Height = 31;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(1189, 428);
             this.dataGridView2.TabIndex = 10;
             // 
@@ -250,10 +252,12 @@
             this.dataGridView1.DataSource = this.personBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(4, 89);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 31;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1189, 428);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -379,6 +383,7 @@
             this.modificarEmpleadoToolStripMenuItem.Name = "modificarEmpleadoToolStripMenuItem";
             this.modificarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.modificarEmpleadoToolStripMenuItem.Text = "Modificar empleado";
+            this.modificarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.modificarEmpleadoToolStripMenuItem_Click);
             // 
             // darDeBajaAEmpleadoToolStripMenuItem
             // 
@@ -423,12 +428,14 @@
             this.modificarClienteToolStripMenuItem.Name = "modificarClienteToolStripMenuItem";
             this.modificarClienteToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.modificarClienteToolStripMenuItem.Text = "Modificar cliente";
+            this.modificarClienteToolStripMenuItem.Click += new System.EventHandler(this.modificarClienteToolStripMenuItem_Click);
             // 
             // removerClienteToolStripMenuItem
             // 
             this.removerClienteToolStripMenuItem.Name = "removerClienteToolStripMenuItem";
             this.removerClienteToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.removerClienteToolStripMenuItem.Text = "Remover cliente";
+            this.removerClienteToolStripMenuItem.Click += new System.EventHandler(this.removerClienteToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
