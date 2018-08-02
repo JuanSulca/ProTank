@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,35 @@ namespace ProTank_v1.View2
 {
     public partial class NewUser : Form
     {
+
+        Boolean edit = false;
+
         public NewUser()
         {
             InitializeComponent();
+        }
+
+        public NewUser(String uname, String rol)
+        {
+            InitializeComponent();
+            txtModulos_NuevoUsuario_username.Text = uname;
+            if (rol.Contains("H"))
+                checkModulos_NuevoUsuario_bodega.Checked = true;
+            if (rol.Contains("C"))
+                checkModulos_NuevoUsuario_contratos.Checked = true;
+            if (rol.Contains("D"))
+                checkModulos_NuevoUsuario_design.Checked = true;
+            if (rol.Contains("V"))
+                checkModulos_NuevoUsuario_servicios.Checked = true;
+            if (rol.Contains("A"))
+                checkBox1.Checked = true;
+            edit = true;
+            txtModulos_NuevoUsuario_username.Enabled = false;
+            protankDataSetTableAdapters.userEmpleadoTableAdapter loginTable = new protankDataSetTableAdapters.userEmpleadoTableAdapter();
+            protankDataSet ds = new protankDataSet();
+            loginTable.Fill(ds.userEmpleado);
+            //protankDataSet.userLoginRow loginRow = ds..FindByuname(uname);
+            //comboModulos_NuevoUsuario_nombre.SelectedValue = loginRow.idE;
         }
 
         private void NewUser_Load(object sender, EventArgs e)
@@ -56,11 +83,38 @@ namespace ProTank_v1.View2
                 }
                 else
                 {
-                    String id = comboModulos_NuevoUsuario_nombre.SelectedValue.ToString();
-                    protankDataSetTableAdapters.userLoginTableAdapter ta = new protankDataSetTableAdapters.userLoginTableAdapter();
-                    ta.Insert(uname, pass, rol);
-                    protankDataSetTableAdapters.userEmpleadoTableAdapter tba = new protankDataSetTableAdapters.userEmpleadoTableAdapter();
-                    tba.Insert(id, uname);
+                    if (edit)
+                    {
+                        protankDataSetTableAdapters.userLoginTableAdapter tb = new protankDataSetTableAdapters.userLoginTableAdapter();
+                        SqlConnection cnx = tb.Connection;
+                        cnx.Open();
+                        SqlCommand cmd = new SqlCommand("UPDATE userLogin SET pwd = @pwd, rol = @rol WHERE uname = @uname", cnx);
+                        cmd.Parameters.AddWithValue("@pwd", pass);
+                        cmd.Parameters.AddWithValue("@rol", rol);
+                        cmd.Parameters.AddWithValue("@uname", uname);
+                        int i = cmd.ExecuteNonQuery();
+                        cnx.Close();
+                        if (i > 0)
+                        {
+                            MessageBox.Show("Actualizacion exitosa", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo actualizar el registro", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            this.Close();
+                        }
+                    }
+                    else
+                    {
+                        String id = comboModulos_NuevoUsuario_nombre.SelectedValue.ToString();
+                        protankDataSetTableAdapters.userLoginTableAdapter ta = new protankDataSetTableAdapters.userLoginTableAdapter();
+                        ta.Insert(uname, pass, rol);
+                        protankDataSetTableAdapters.userEmpleadoTableAdapter tba = new protankDataSetTableAdapters.userEmpleadoTableAdapter();
+                        tba.Insert(id, uname);
+                    }
+                    MessageBox.Show("Registro exitoso", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
             }
         }

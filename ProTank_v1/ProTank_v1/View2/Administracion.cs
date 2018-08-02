@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -77,10 +78,17 @@ namespace ProTank_v1.View
         {
             NewUser n = new NewUser();
             n.ShowDialog();
+            this.userLoginTableAdapter.Fill(this.protankDataSet.userLogin);
         }
 
         private void Administracion_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'protankDataSet.userLogin' table. You can move, or remove it, as needed.
+            this.userLoginTableAdapter.Fill(this.protankDataSet.userLogin);
+            // TODO: This line of code loads data into the 'protankDataSet.userEmpleado' table. You can move, or remove it, as needed.
+            this.userEmpleadoTableAdapter.Fill(this.protankDataSet.userEmpleado);
+            // TODO: This line of code loads data into the 'protankDataSet.crearUsuario' table. You can move, or remove it, as needed.
+            this.crearUsuarioTableAdapter.Fill(this.protankDataSet.crearUsuario);
             // TODO: This line of code loads data into the 'protankDataSet.person' table. You can move, or remove it, as needed.
             this.personTableAdapter.Fill(this.protankDataSet.person);
             // TODO: This line of code loads data into the 'protankDataSet.empleado' table. You can move, or remove it, as needed.
@@ -165,6 +173,52 @@ namespace ProTank_v1.View
             NewPerson p = new NewPerson(false, fname, lname, id, tel, cel);
             p.ShowDialog();
             this.personTableAdapter.Fill(this.protankDataSet.person);
+        }
+
+        private void eliminarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String uname = dataGridView3.SelectedRows[0].Cells[0].Value.ToString();
+            DialogResult res = MessageBox.Show("Desea eliminar el resgistro?" + uname, "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res.Equals(DialogResult.Yes))
+            {
+                protankDataSetTableAdapters.userLoginTableAdapter tb = new protankDataSetTableAdapters.userLoginTableAdapter();
+                SqlConnection cnx = tb.Connection;
+                cnx.Open();
+                SqlCommand cmd = new SqlCommand("DELETE FROM userLogin WHERE uname = @uname", cnx);
+                cmd.Parameters.AddWithValue("@fname", uname);
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    MessageBox.Show("Usuario eliminado exitosamente", "Eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Usuario eliminado exitosamente", "Eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                this.userLoginTableAdapter.Fill(this.protankDataSet.userLogin);
+            }
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.userLoginTableAdapter.FillBy(this.protankDataSet.userLogin);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void modificarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String uname = dataGridView3.SelectedRows[0].Cells[0].Value.ToString();
+            String rol = dataGridView3.SelectedRows[0].Cells[1].Value.ToString();
+            NewUser n = new NewUser(uname, rol);
+            n.ShowDialog();
+            this.userLoginTableAdapter.Fill(this.protankDataSet.userLogin);
         }
     }
 }

@@ -85,6 +85,7 @@ namespace ProTank_v1.View
                         if (i > 0)
                         {
                             MessageBox.Show("Actualizacion exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
                         }
                         else
                         {
@@ -115,12 +116,15 @@ namespace ProTank_v1.View
                         if (i > 0)
                         {
                             MessageBox.Show("Actualizacion exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
                         }
                         else
                         {
                             MessageBox.Show("Actualizacion fallida!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         cnx.Close();
+                        MessageBox.Show("Registro exitoso!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
                     }
                     else
                     {
