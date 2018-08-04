@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +17,8 @@ namespace ProTank_v1
         public String descrip { set; get; }
         public DateTime fechaI { set; get; }
         public DateTime fechaE { set; get; }
+
+        private SqlConnection DB = new SqlConnection(ConfigurationManager.ConnectionStrings["protankDB"].ConnectionString);
 
         public Contrato(String idPer, decimal monto, String idCon, DateTime fechaI)
         {
@@ -39,6 +43,9 @@ namespace ProTank_v1
         {
 
         }
+
+
+
 
     }
 }
