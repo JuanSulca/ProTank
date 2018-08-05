@@ -149,5 +149,18 @@ namespace ProTank_v1
             return dataTable;
         }
 
+        /*-----------------------------------------------------------------------------------
+        -----------------------------------Listar Herramienta--------------------------------
+        -----------------------------------------------------------------------------------*/
+
+        public DataTable tableHerramienta()
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM herramienta");
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            return dataTable;
+        }
+
     }
 }

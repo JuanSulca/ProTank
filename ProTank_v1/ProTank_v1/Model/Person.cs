@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
 
 namespace ProTank_v1
 {
@@ -13,6 +16,8 @@ namespace ProTank_v1
         public String id { set; get; }
         public String tel { set; get; }
         public String cel { set; get; }
+
+        private SqlConnection DB = new SqlConnection(ConfigurationManager.ConnectionStrings["protankDB"].ConnectionString);
 
         public Person(String fname, String lname, String id)
         {
@@ -34,6 +39,8 @@ namespace ProTank_v1
         {
 
         }
+
+
 
     }
 }
