@@ -1,4 +1,5 @@
 ﻿using ProTank_v1.View;
+using ProTank_v1.View3;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,7 +41,7 @@ namespace ProTank_v1
                 protankDataSet.userLoginRow loginRow = ds.userLogin.FindByuname(uname);
                 if (loginRow.pwd == pwd)
                 {
-                    EntradaModulos modulos = new EntradaModulos(loginRow.rol);
+                    VentanaPrincipal modulos = new VentanaPrincipal(loginRow.rol);
                     modulos.Show();
                     this.Hide();
                 }

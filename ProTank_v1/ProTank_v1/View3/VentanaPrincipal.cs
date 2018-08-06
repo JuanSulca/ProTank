@@ -16,5 +16,20 @@ namespace ProTank_v1.View3
         {
             InitializeComponent();
         }
+
+        public VentanaPrincipal(String rol)
+        {
+            InitializeComponent();
+        }
+
+        private void VentanaPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VentanaPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
