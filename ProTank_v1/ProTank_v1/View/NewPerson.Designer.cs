@@ -165,7 +165,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(151, 47);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Crear Persona";
+            this.button1.Text = "Registrar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -234,7 +234,7 @@
             this.ClientSize = new System.Drawing.Size(623, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NewPerson";
             this.Text = "NewPerson";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NewPerson_FormClosed);

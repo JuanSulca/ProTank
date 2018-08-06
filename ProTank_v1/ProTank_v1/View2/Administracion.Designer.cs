@@ -301,7 +301,6 @@
             this.registrarEmpleadoToolStripMenuItem.Name = "registrarEmpleadoToolStripMenuItem";
             this.registrarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.registrarEmpleadoToolStripMenuItem.Text = "Registrar empleado";
-            this.registrarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.registrarEmpleadoToolStripMenuItem_Click);
             // 
             // modificarEmpleadoToolStripMenuItem
             // 
@@ -346,7 +345,6 @@
             this.registrarClienteToolStripMenuItem.Name = "registrarClienteToolStripMenuItem";
             this.registrarClienteToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.registrarClienteToolStripMenuItem.Text = "Registrar cliente";
-            this.registrarClienteToolStripMenuItem.Click += new System.EventHandler(this.registrarClienteToolStripMenuItem_Click);
             // 
             // modificarClienteToolStripMenuItem
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProTank_v1.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,13 +48,25 @@ namespace ProTank_v1.View2
         private void NewUser_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'protankDataSet1.empleados_apellidos_nombres' table. You can move, or remove it, as needed.
-            this.empleados_apellidos_nombresTableAdapter.Fill(this.protankDataSet1.empleados_apellidos_nombres);
+            //this.empleados_apellidos_nombresTableAdapter.Fill(this.protankDataSet1.empleados_apellidos_nombres);
             // TODO: This line of code loads data into the 'protankDataSet.empleados_apellidos_nombres' table. You can move, or remove it, as needed.
-            this.empleados_apellidos_nombresTableAdapter.Fill(this.protankDataSet.empleados_apellidos_nombres);
+            //this.empleados_apellidos_nombresTableAdapter.Fill(this.protankDataSet.empleados_apellidos_nombres);
             // TODO: This line of code loads data into the 'protankDataSet.empleado' table. You can move, or remove it, as needed.
-            this.empleadoTableAdapter.Fill(this.protankDataSet.empleado);
+            //this.empleadoTableAdapter.Fill(this.protankDataSet.empleado);
+            auxNombres();
 
         }
+
+        private void auxNombres()
+        {
+            DataTable dataTable = new Empleado().tableEmpleado();
+            comboModulos_NuevoUsuario_nombre.Items.Clear();
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                comboModulos_NuevoUsuario_nombre.Items.Add(dr["fname"]+" "+dr["lname"]);
+            }
+        }
+
 
         private void btnModulos_NuevoUsuario_crearUsuario_Click(object sender, EventArgs e)
         {

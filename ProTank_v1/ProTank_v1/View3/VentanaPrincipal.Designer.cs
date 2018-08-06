@@ -105,9 +105,9 @@
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calcularNuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblModulos_NuevoUsuario_protank = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -193,36 +193,38 @@
             // registrarClienteToolStripMenuItem
             // 
             this.registrarClienteToolStripMenuItem.Name = "registrarClienteToolStripMenuItem";
-            this.registrarClienteToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.registrarClienteToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.registrarClienteToolStripMenuItem.Text = "Registrar cliente";
+            this.registrarClienteToolStripMenuItem.Click += new System.EventHandler(this.registrarClienteToolStripMenuItem_Click);
             // 
             // modificarClienteToolStripMenuItem
             // 
             this.modificarClienteToolStripMenuItem.Name = "modificarClienteToolStripMenuItem";
-            this.modificarClienteToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.modificarClienteToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.modificarClienteToolStripMenuItem.Text = "Modificar cliente";
+            this.modificarClienteToolStripMenuItem.Click += new System.EventHandler(this.modificarClienteToolStripMenuItem_Click);
             // 
             // removerClienteToolStripMenuItem
             // 
             this.removerClienteToolStripMenuItem.Name = "removerClienteToolStripMenuItem";
-            this.removerClienteToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.removerClienteToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.removerClienteToolStripMenuItem.Text = "Remover cliente";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(193, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(213, 6);
             // 
             // buscarClienteToolStripMenuItem
             // 
             this.buscarClienteToolStripMenuItem.Name = "buscarClienteToolStripMenuItem";
-            this.buscarClienteToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.buscarClienteToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.buscarClienteToolStripMenuItem.Text = "Buscar cliente";
             // 
             // mostrarClientesToolStripMenuItem
             // 
             this.mostrarClientesToolStripMenuItem.Name = "mostrarClientesToolStripMenuItem";
-            this.mostrarClientesToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.mostrarClientesToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.mostrarClientesToolStripMenuItem.Text = "Mostrar clientes";
             // 
             // empleadosToolStripMenuItem
@@ -243,12 +245,14 @@
             this.registrarEmpleadoToolStripMenuItem.Name = "registrarEmpleadoToolStripMenuItem";
             this.registrarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.registrarEmpleadoToolStripMenuItem.Text = "Registrar empleado";
+            this.registrarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.registrarEmpleadoToolStripMenuItem_Click);
             // 
             // modificarEmpleadoToolStripMenuItem
             // 
             this.modificarEmpleadoToolStripMenuItem.Name = "modificarEmpleadoToolStripMenuItem";
             this.modificarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.modificarEmpleadoToolStripMenuItem.Text = "Modificar empleado";
+            this.modificarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.modificarEmpleadoToolStripMenuItem_Click);
             // 
             // darDeBajaAEmpleadoToolStripMenuItem
             // 
@@ -341,6 +345,7 @@
             this.registrarHerramientaToolStripMenuItem.Name = "registrarHerramientaToolStripMenuItem";
             this.registrarHerramientaToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
             this.registrarHerramientaToolStripMenuItem.Text = "Registrar herramienta";
+            this.registrarHerramientaToolStripMenuItem.Click += new System.EventHandler(this.registrarHerramientaToolStripMenuItem_Click);
             // 
             // modificarHerramientaToolStripMenuItem
             // 
@@ -417,8 +422,9 @@
             // ragistrarPrestamoToolStripMenuItem
             // 
             this.ragistrarPrestamoToolStripMenuItem.Name = "ragistrarPrestamoToolStripMenuItem";
-            this.ragistrarPrestamoToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.ragistrarPrestamoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.ragistrarPrestamoToolStripMenuItem.Text = "Ragistrar Prestamo";
+            this.ragistrarPrestamoToolStripMenuItem.Click += new System.EventHandler(this.ragistrarPrestamoToolStripMenuItem_Click);
             // 
             // modificarPrestamoToolStripMenuItem
             // 
@@ -508,19 +514,19 @@
             // generarTablaToolStripMenuItem
             // 
             this.generarTablaToolStripMenuItem.Name = "generarTablaToolStripMenuItem";
-            this.generarTablaToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
+            this.generarTablaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.generarTablaToolStripMenuItem.Text = "Generar Tabla";
             // 
             // vistaPreliminarToolStripMenuItem
             // 
             this.vistaPreliminarToolStripMenuItem.Name = "vistaPreliminarToolStripMenuItem";
-            this.vistaPreliminarToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
+            this.vistaPreliminarToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.vistaPreliminarToolStripMenuItem.Text = "Vista preliminar";
             // 
             // guardarTablaToolStripMenuItem
             // 
             this.guardarTablaToolStripMenuItem.Name = "guardarTablaToolStripMenuItem";
-            this.guardarTablaToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
+            this.guardarTablaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.guardarTablaToolStripMenuItem.Text = "Guardar Tabla";
             // 
             // diseñoToolStripMenuItem
@@ -537,12 +543,14 @@
             this.calcularPesoDeTanqueToolStripMenuItem.Name = "calcularPesoDeTanqueToolStripMenuItem";
             this.calcularPesoDeTanqueToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
             this.calcularPesoDeTanqueToolStripMenuItem.Text = "Calcular Peso de tanque";
+            this.calcularPesoDeTanqueToolStripMenuItem.Click += new System.EventHandler(this.calcularPesoDeTanqueToolStripMenuItem_Click);
             // 
             // calcularPosiciónDeTapasToolStripMenuItem
             // 
             this.calcularPosiciónDeTapasToolStripMenuItem.Name = "calcularPosiciónDeTapasToolStripMenuItem";
             this.calcularPosiciónDeTapasToolStripMenuItem.Size = new System.Drawing.Size(256, 26);
             this.calcularPosiciónDeTapasToolStripMenuItem.Text = "Calcular Posición de tapas";
+            this.calcularPosiciónDeTapasToolStripMenuItem.Click += new System.EventHandler(this.calcularPosiciónDeTapasToolStripMenuItem_Click);
             // 
             // serviciosToolStripMenuItem
             // 
@@ -665,6 +673,17 @@
             this.panel1.Size = new System.Drawing.Size(982, 527);
             this.panel1.TabIndex = 1;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 58);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(982, 469);
+            this.panel3.TabIndex = 8;
+            // 
             // panel2
             // 
             this.panel2.AutoSize = true;
@@ -690,17 +709,6 @@
             this.lblModulos_NuevoUsuario_protank.Size = new System.Drawing.Size(191, 56);
             this.lblModulos_NuevoUsuario_protank.TabIndex = 0;
             this.lblModulos_NuevoUsuario_protank.Text = "ProTank";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Silver;
-            this.panel3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 58);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(982, 469);
-            this.panel3.TabIndex = 8;
             // 
             // VentanaPrincipal
             // 

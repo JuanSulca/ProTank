@@ -195,15 +195,12 @@
             // 
             // comboModulos_NuevoUsuario_nombre
             // 
-            this.comboModulos_NuevoUsuario_nombre.DataSource = this.empleadosapellidosnombresBindingSource1;
-            this.comboModulos_NuevoUsuario_nombre.DisplayMember = "Empleados";
             this.comboModulos_NuevoUsuario_nombre.FormattingEnabled = true;
             this.comboModulos_NuevoUsuario_nombre.Location = new System.Drawing.Point(272, 35);
             this.comboModulos_NuevoUsuario_nombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboModulos_NuevoUsuario_nombre.Name = "comboModulos_NuevoUsuario_nombre";
             this.comboModulos_NuevoUsuario_nombre.Size = new System.Drawing.Size(244, 24);
             this.comboModulos_NuevoUsuario_nombre.TabIndex = 7;
-            this.comboModulos_NuevoUsuario_nombre.ValueMember = "idE";
             // 
             // empleadosapellidosnombresBindingSource1
             // 

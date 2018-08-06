@@ -29,40 +29,6 @@ namespace ProTank_v1.View
 
         }
 
-        private void txtModulos_Herramientas_tabInventario_buscar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnModulos_NuevoUsuario_nuevaPersona_Click(object sender, EventArgs e)
-        {
-            NewPerson p = new NewPerson(true);
-            p.ShowDialog();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            NewPerson p = new NewPerson(true);
-            p.ShowDialog();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            NewPerson p = new NewPerson(true);
-            p.ShowDialog();
-        }
-
-        private void btn_Modulos_Empleados_editarEmpleado_Click(object sender, EventArgs e)
-        {
-            NewPerson p = new NewPerson(true);
-            p.ShowDialog();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            NewPerson p = new NewPerson(false);
-            p.ShowDialog();
-        }
 
         private void Administracion_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -94,20 +60,6 @@ namespace ProTank_v1.View
             // TODO: This line of code loads data into the 'protankDataSet.empleado' table. You can move, or remove it, as needed.
             this.empleadoTableAdapter.Fill(this.protankDataSet.empleado);
 
-        }
-
-        private void registrarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            NewPerson p = new NewPerson(true);
-            p.ShowDialog();
-            this.empleadoTableAdapter.Fill(this.protankDataSet.empleado);
-        }
-
-        private void registrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            NewPerson p = new NewPerson(false);
-            p.ShowDialog();
-            this.personTableAdapter.Fill(this.protankDataSet.person);
         }
 
         private void darDeBajaAEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -158,8 +110,6 @@ namespace ProTank_v1.View
             String tel = dataGridView2.SelectedRows[0].Cells[3].Value.ToString();
             String cel = dataGridView2.SelectedRows[0].Cells[4].Value.ToString();
             MessageBox.Show(fname + lname + id + tel + cel);
-            NewPerson p = new NewPerson(true, fname, lname, id, tel, cel);
-            p.ShowDialog();
             this.empleadoTableAdapter.Fill(this.protankDataSet.empleado);
         }
 
@@ -170,8 +120,6 @@ namespace ProTank_v1.View
             String id = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             String tel = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
             String cel = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
-            NewPerson p = new NewPerson(false, fname, lname, id, tel, cel);
-            p.ShowDialog();
             this.personTableAdapter.Fill(this.protankDataSet.person);
         }
 

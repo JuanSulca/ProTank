@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Contrato.cs" />
+    <Compile Include="Model\Empleado.cs" />
     <Compile Include="Model\Hash.cs" />
     <Compile Include="Model\Herramienta.cs" />
     <Compile Include="Model\Mantenimiento.cs" />
