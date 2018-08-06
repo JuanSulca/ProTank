@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.lblModulos_NuevoUsuario_ayuda = new System.Windows.Forms.Label();
             this.checkModulos_NuevoUsuario_servicios = new System.Windows.Forms.CheckBox();
             this.checkModulos_NuevoUsuario_bodega = new System.Windows.Forms.CheckBox();
@@ -39,6 +40,8 @@
             this.txtModulos_NuevoUsuario_passsword1 = new System.Windows.Forms.TextBox();
             this.lblModulos_NuevoUsuario_password1 = new System.Windows.Forms.Label();
             this.comboModulos_NuevoUsuario_nombre = new System.Windows.Forms.ComboBox();
+            this.empleadosapellidosnombresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.protankDataSet1 = new ProTank_v1.protankDataSet();
             this.lblModulos_NuevoUsuario_nombre = new System.Windows.Forms.Label();
             this.txtModulos_NuevoUsuario_passsword2 = new System.Windows.Forms.TextBox();
             this.txtModulos_NuevoUsuario_username = new System.Windows.Forms.TextBox();
@@ -48,23 +51,19 @@
             this.lblModulos_NuevoUsuario_username = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblModulos_NuevoUsuario_nuevoUsuario = new System.Windows.Forms.Label();
-            this.lblModulos_NuevoUsuario_protank = new System.Windows.Forms.Label();
             this.protankDataSet = new ProTank_v1.protankDataSet();
             this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.empleadoTableAdapter = new ProTank_v1.protankDataSetTableAdapters.empleadoTableAdapter();
             this.empleadosapellidosnombresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.empleados_apellidos_nombresTableAdapter = new ProTank_v1.protankDataSetTableAdapters.empleados_apellidos_nombresTableAdapter();
-            this.protankDataSet1 = new ProTank_v1.protankDataSet();
-            this.empleadosapellidosnombresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadosapellidosnombresBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.protankDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosapellidosnombresBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadosapellidosnombresBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,7 +72,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(751, 461);
             this.panel1.TabIndex = 0;
@@ -104,6 +103,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(751, 376);
             this.panel2.TabIndex = 7;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(551, 227);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(174, 27);
+            this.checkBox1.TabIndex = 17;
+            this.checkBox1.Text = "Administracion";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // lblModulos_NuevoUsuario_ayuda
             // 
@@ -194,6 +205,16 @@
             this.comboModulos_NuevoUsuario_nombre.TabIndex = 7;
             this.comboModulos_NuevoUsuario_nombre.ValueMember = "idE";
             // 
+            // empleadosapellidosnombresBindingSource1
+            // 
+            this.empleadosapellidosnombresBindingSource1.DataMember = "empleados_apellidos_nombres";
+            this.empleadosapellidosnombresBindingSource1.DataSource = this.protankDataSet1;
+            // 
+            // protankDataSet1
+            // 
+            this.protankDataSet1.DataSetName = "protankDataSet";
+            this.protankDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // lblModulos_NuevoUsuario_nombre
             // 
             this.lblModulos_NuevoUsuario_nombre.AutoSize = true;
@@ -273,7 +294,6 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel3.Controls.Add(this.lblModulos_NuevoUsuario_nuevoUsuario);
-            this.panel3.Controls.Add(this.lblModulos_NuevoUsuario_protank);
             this.panel3.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -288,24 +308,11 @@
             this.lblModulos_NuevoUsuario_nuevoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblModulos_NuevoUsuario_nuevoUsuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModulos_NuevoUsuario_nuevoUsuario.ForeColor = System.Drawing.Color.Lavender;
-            this.lblModulos_NuevoUsuario_nuevoUsuario.Location = new System.Drawing.Point(535, 29);
+            this.lblModulos_NuevoUsuario_nuevoUsuario.Location = new System.Drawing.Point(16, 24);
             this.lblModulos_NuevoUsuario_nuevoUsuario.Name = "lblModulos_NuevoUsuario_nuevoUsuario";
             this.lblModulos_NuevoUsuario_nuevoUsuario.Size = new System.Drawing.Size(182, 28);
             this.lblModulos_NuevoUsuario_nuevoUsuario.TabIndex = 1;
             this.lblModulos_NuevoUsuario_nuevoUsuario.Text = "Nuevo Usuario";
-            // 
-            // lblModulos_NuevoUsuario_protank
-            // 
-            this.lblModulos_NuevoUsuario_protank.AutoSize = true;
-            this.lblModulos_NuevoUsuario_protank.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblModulos_NuevoUsuario_protank.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblModulos_NuevoUsuario_protank.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModulos_NuevoUsuario_protank.ForeColor = System.Drawing.Color.White;
-            this.lblModulos_NuevoUsuario_protank.Location = new System.Drawing.Point(101, 11);
-            this.lblModulos_NuevoUsuario_protank.Name = "lblModulos_NuevoUsuario_protank";
-            this.lblModulos_NuevoUsuario_protank.Size = new System.Drawing.Size(180, 56);
-            this.lblModulos_NuevoUsuario_protank.TabIndex = 0;
-            this.lblModulos_NuevoUsuario_protank.Text = "ProTank";
             // 
             // protankDataSet
             // 
@@ -330,48 +337,27 @@
             // 
             this.empleados_apellidos_nombresTableAdapter.ClearBeforeFill = true;
             // 
-            // protankDataSet1
-            // 
-            this.protankDataSet1.DataSetName = "protankDataSet";
-            this.protankDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // empleadosapellidosnombresBindingSource1
-            // 
-            this.empleadosapellidosnombresBindingSource1.DataMember = "empleados_apellidos_nombres";
-            this.empleadosapellidosnombresBindingSource1.DataSource = this.protankDataSet1;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(551, 227);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(174, 27);
-            this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = "Administracion";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // NewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(751, 461);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NewUser";
             this.Text = "NewUser";
             this.Load += new System.EventHandler(this.NewUser_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadosapellidosnombresBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.protankDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosapellidosnombresBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadosapellidosnombresBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -397,7 +383,6 @@
         private System.Windows.Forms.Label lblModulos_NuevoUsuario_username;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblModulos_NuevoUsuario_nuevoUsuario;
-        private System.Windows.Forms.Label lblModulos_NuevoUsuario_protank;
         private protankDataSet protankDataSet;
         private System.Windows.Forms.BindingSource empleadoBindingSource;
         private protankDataSetTableAdapters.empleadoTableAdapter empleadoTableAdapter;

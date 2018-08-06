@@ -35,13 +35,14 @@ namespace ProTank_v1
             }
             else
             {
-                protankDataSetTableAdapters.userLoginTableAdapter loginTable = new protankDataSetTableAdapters.userLoginTableAdapter();
-                protankDataSet ds = new protankDataSet();
-                loginTable.Fill(ds.userLogin);
-                protankDataSet.userLoginRow loginRow = ds.userLogin.FindByuname(uname);
-                if (loginRow.pwd == pwd)
+                //protankDataSetTableAdapters.userLoginTableAdapter loginTable = new protankDataSetTableAdapters.userLoginTableAdapter();
+                //protankDataSet ds = new protankDataSet();
+                //loginTable.Fill(ds.userLogin);
+                //protankDataSet.userLoginRow loginRow = ds.userLogin.FindByuname(uname);
+                User u = new User().getUser(uname);
+                if (u.pass(pwd))
                 {
-                    VentanaPrincipal modulos = new VentanaPrincipal(loginRow.rol);
+                    VentanaPrincipal modulos = new VentanaPrincipal(u.rol);
                     modulos.Show();
                     this.Hide();
                 }

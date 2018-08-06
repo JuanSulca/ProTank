@@ -107,6 +107,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblModulos_NuevoUsuario_protank = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -130,7 +131,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(911, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(982, 26);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -151,6 +152,7 @@
             this.nuevoUsuarioToolStripMenuItem.Name = "nuevoUsuarioToolStripMenuItem";
             this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
             this.nuevoUsuarioToolStripMenuItem.Text = "Nuevo Usuario";
+            this.nuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.nuevoUsuarioToolStripMenuItem_Click);
             // 
             // eliminarUsuarioToolStripMenuItem
             // 
@@ -362,6 +364,7 @@
             this.buscarHerramientaToolStripMenuItem.Name = "buscarHerramientaToolStripMenuItem";
             this.buscarHerramientaToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
             this.buscarHerramientaToolStripMenuItem.Text = "Buscar herramienta";
+            this.buscarHerramientaToolStripMenuItem.Click += new System.EventHandler(this.buscarHerramientaToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
@@ -653,12 +656,13 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 26);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(911, 103);
+            this.panel1.Size = new System.Drawing.Size(982, 527);
             this.panel1.TabIndex = 1;
             // 
             // panel2
@@ -671,32 +675,41 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(911, 84);
+            this.panel2.Size = new System.Drawing.Size(982, 58);
             this.panel2.TabIndex = 7;
             // 
             // lblModulos_NuevoUsuario_protank
             // 
             this.lblModulos_NuevoUsuario_protank.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblModulos_NuevoUsuario_protank.AutoSize = true;
             this.lblModulos_NuevoUsuario_protank.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblModulos_NuevoUsuario_protank.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblModulos_NuevoUsuario_protank.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModulos_NuevoUsuario_protank.ForeColor = System.Drawing.Color.White;
-            this.lblModulos_NuevoUsuario_protank.Location = new System.Drawing.Point(357, 12);
+            this.lblModulos_NuevoUsuario_protank.Location = new System.Drawing.Point(396, 2);
             this.lblModulos_NuevoUsuario_protank.Name = "lblModulos_NuevoUsuario_protank";
-            this.lblModulos_NuevoUsuario_protank.Size = new System.Drawing.Size(180, 56);
+            this.lblModulos_NuevoUsuario_protank.Size = new System.Drawing.Size(191, 56);
             this.lblModulos_NuevoUsuario_protank.TabIndex = 0;
             this.lblModulos_NuevoUsuario_protank.Text = "ProTank";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 58);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(982, 469);
+            this.panel3.TabIndex = 8;
             // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 129);
+            this.ClientSize = new System.Drawing.Size(982, 553);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "VentanaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventana Principal";
@@ -707,7 +720,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -794,5 +806,6 @@
         private System.Windows.Forms.ToolStripMenuItem activosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarServiciosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarMaterialesToolStripMenuItem;
+        private System.Windows.Forms.Panel panel3;
     }
 }

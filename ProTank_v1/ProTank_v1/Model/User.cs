@@ -17,11 +17,21 @@ namespace ProTank_v1
 
         private SqlConnection cnx = new SqlConnection(ConfigurationManager.ConnectionStrings["protankDB"].ConnectionString);
 
+        public User()
+        {
+
+        }
+
         public User(String uname, String pwd, String rol)
         {
             this.uname = uname;
             this.pwd = pwd;
             this.rol = rol;
+        }
+
+        public Boolean pass(String pwd2)
+        {
+            return (pwd == pwd2);
         }
 
         public User getUser(String uname)
@@ -31,8 +41,9 @@ namespace ProTank_v1
             cmd.Parameters.AddWithValue("@uname", uname);
             SqlDataReader reader = cmd.ExecuteReader();
             reader.Read();
+            User u = new User(reader.GetValue(0).ToString(), reader.GetValue(1).ToString(), reader.GetValue(2).ToString());
             cnx.Close();
-            return new User(reader.GetValue(0).ToString(), reader.GetValue(0).ToString(), reader.GetValue(0).ToString());
+            return u;
         }
 
         public Boolean insUser(User u)

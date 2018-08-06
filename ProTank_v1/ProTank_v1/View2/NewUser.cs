@@ -121,14 +121,15 @@ namespace ProTank_v1.View2
 
         private void btnModulos_NuevoUsuario_limpiar_Click(object sender, EventArgs e)
         {
-            txtModulos_NuevoUsuario_passsword1.Text = "";
-            txtModulos_NuevoUsuario_passsword2.Text = "";
-            txtModulos_NuevoUsuario_username.Text = "";
-            checkModulos_NuevoUsuario_bodega.Checked = false;
-            checkModulos_NuevoUsuario_contratos.Checked = false;
-            checkModulos_NuevoUsuario_design.Checked = false;
-            checkModulos_NuevoUsuario_servicios.Checked = false;
-            checkBox1.Checked = false;
+            this.Dispose();
+            //txtModulos_NuevoUsuario_passsword1.Text = "";
+            //txtModulos_NuevoUsuario_passsword2.Text = "";
+            //txtModulos_NuevoUsuario_username.Text = "";
+            //checkModulos_NuevoUsuario_bodega.Checked = false;
+            //checkModulos_NuevoUsuario_contratos.Checked = false;
+            //checkModulos_NuevoUsuario_design.Checked = false;
+            //checkModulos_NuevoUsuario_servicios.Checked = false;
+            //checkBox1.Checked = false;
         }
     }
 }
