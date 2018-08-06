@@ -111,6 +111,12 @@
     <Compile Include="View2\NewUser.Designer.cs">
       <DependentUpon>NewUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="View2\PosicionTapas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View2\PosicionTapas.Designer.cs">
+      <DependentUpon>PosicionTapas.cs</DependentUpon>
+    </Compile>
     <Compile Include="View2\VentasYContratos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,11 +129,17 @@
     <Compile Include="View2\Administracion.Designer.cs">
       <DependentUpon>Administracion.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\EntradaModulos.cs">
+    <Compile Include="View3\PesoTanques.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\EntradaModulos.Designer.cs">
-      <DependentUpon>EntradaModulos.cs</DependentUpon>
+    <Compile Include="View3\PesoTanques.Designer.cs">
+      <DependentUpon>PesoTanques.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View3\VentanaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View3\VentanaPrincipal.Designer.cs">
+      <DependentUpon>VentanaPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="View\LogIn.cs">
       <SubType>Form</SubType>
@@ -186,14 +198,20 @@
     <EmbeddedResource Include="View2\NewUser.resx">
       <DependentUpon>NewUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View2\PosicionTapas.resx">
+      <DependentUpon>PosicionTapas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View2\VentasYContratos.resx">
       <DependentUpon>VentasYContratos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View2\Administracion.resx">
       <DependentUpon>Administracion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\EntradaModulos.resx">
-      <DependentUpon>EntradaModulos.cs</DependentUpon>
+    <EmbeddedResource Include="View3\PesoTanques.resx">
+      <DependentUpon>PesoTanques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View3\VentanaPrincipal.resx">
+      <DependentUpon>VentanaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
@@ -252,7 +270,11 @@
     <Content Include="Icons\handyman-tools.png" />
     <None Include="Icons\if_Close_1891023.png" />
     <None Include="Icons\if_circle-close-delete-remove-outline-stroke_763468.png" />
+    <Content Include="Icons\if_44-web_essential_3401862.png" />
+    <Content Include="Icons\if_box_1291775.png" />
     <Content Include="Icons\if_content-form-contract-article-paper_3209382.png" />
+    <Content Include="Icons\if_customer_service_1954195.png" />
+    <Content Include="Icons\if_delivery-cart-1_3338971.png" />
     <Content Include="Icons\if_digital-product-service-hand-circuit_3209316.ico" />
     <Content Include="Icons\if_digital-product-service-hand-circuit_3209316.png" />
     <Content Include="Icons\if_openofficeorg-draw_24201.ico" />
@@ -261,6 +283,7 @@
     <Content Include="Icons\if_Register_33993.png" />
     <Content Include="Icons\if_Scetchbook_by_Artdesigner_60881.ico" />
     <Content Include="Icons\if_Scetchbook_by_Artdesigner_60881.png" />
+    <Content Include="Icons\if_Surveryor-avatar-occupation-profession-man-human_3319959.png" />
     <Content Include="Icons\if_tool_kit_44892.ico" />
     <Content Include="Icons\if_tool_kit_44892.png" />
     <Content Include="Icons\if_x_alt_118584.png" />

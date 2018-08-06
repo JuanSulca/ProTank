@@ -96,3 +96,5 @@ D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View2.Design.
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View2.GenerarAforo.resources
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View2.NewUser.resources
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View2.VentasYContratos.resources
+C:\Users\aleja\Desktop\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View2.NewUser.resources
+C:\Users\aleja\Desktop\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View2.Servicios.resources

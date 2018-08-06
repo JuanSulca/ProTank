@@ -83,6 +83,26 @@ namespace ProTank_v1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_44_web_essential_3401862 {
+            get {
+                object obj = ResourceManager.GetObject("if_44-web_essential_3401862", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_box_1291775 {
+            get {
+                object obj = ResourceManager.GetObject("if_box_1291775", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_circle_close_delete_remove_outline_stroke_763468 {
             get {
                 object obj = ResourceManager.GetObject("if_circle-close-delete-remove-outline-stroke_763468", resourceCulture);
@@ -113,6 +133,26 @@ namespace ProTank_v1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_customer_service_1954195 {
+            get {
+                object obj = ResourceManager.GetObject("if_customer_service_1954195", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_delivery_cart_1_3338971 {
+            get {
+                object obj = ResourceManager.GetObject("if_delivery-cart-1_3338971", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_digital_product_service_hand_circuit_3209316 {
             get {
                 object obj = ResourceManager.GetObject("if_digital-product-service-hand-circuit_3209316", resourceCulture);
@@ -136,6 +176,16 @@ namespace ProTank_v1.Properties {
         internal static System.Drawing.Bitmap if_Register_33993 {
             get {
                 object obj = ResourceManager.GetObject("if_Register_33993", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_Surveryor_avatar_occupation_profession_man_human_3319959 {
+            get {
+                object obj = ResourceManager.GetObject("if_Surveryor-avatar-occupation-profession-man-human_3319959", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
