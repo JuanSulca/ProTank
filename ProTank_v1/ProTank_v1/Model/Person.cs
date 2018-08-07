@@ -40,6 +40,18 @@ namespace ProTank_v1
 
         }
 
+        public Person getPerson(String id)
+        {
+            DB.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM person WHERE id = @id", DB);
+            cmd.Parameters.AddWithValue("@id", id);
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Read();
+            Person u = new Person(reader.GetValue(0).ToString(), reader.GetValue(1).ToString(), reader.GetValue(2).ToString(), reader.GetValue(3).ToString(), reader.GetValue(4).ToString());
+            DB.Close();
+            return u;
+        }
+
         public DataTable tablePerson()
         {
             SqlCommand command = new SqlCommand("SELECT * FROM person", DB);
@@ -54,7 +66,7 @@ namespace ProTank_v1
             bool isSuccess = false;
             try
             {
-                SqlCommand command = new SqlCommand("UPDATE empleado SET fname = @fname, lname = @lname, telef = @telef, cel = @cel WHERE id = @id", DB);
+                SqlCommand command = new SqlCommand("UPDATE person SET fname = @fname, lname = @lname, telef = @telef, cel = @cel WHERE id = @id", DB);
                 command.Parameters.AddWithValue("@fname", nombre);
                 command.Parameters.AddWithValue("@lname", apellido);
                 command.Parameters.AddWithValue("@telef", telefono);
@@ -83,7 +95,7 @@ namespace ProTank_v1
             bool isSuccess = false;
             try
             {
-                SqlCommand command = new SqlCommand("INSERT INTO empleado VALUES(@fname, @lname, @id, @telef, @cel)", DB);
+                SqlCommand command = new SqlCommand("INSERT INTO person VALUES(@fname, @lname, @id, @telef, @cel)", DB);
                 command.Parameters.AddWithValue("@fname", nombre);
                 command.Parameters.AddWithValue("@lname", apellido);
                 command.Parameters.AddWithValue("@telef", telefono);

@@ -40,6 +40,18 @@ namespace ProTank_v1.Model
 
         }
 
+        public Empleado getEmpleado(String id)
+        {
+            DB.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM empleado WHERE idE = @id", DB);
+            cmd.Parameters.AddWithValue("@id", id);
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Read();
+            Empleado u = new Empleado(reader.GetValue(0).ToString(), reader.GetValue(1).ToString(), reader.GetValue(2).ToString(), reader.GetValue(3).ToString(), reader.GetValue(4).ToString());
+            DB.Close();
+            return u;
+        }
+
         public DataTable tableEmpleado()
         {
             SqlCommand command = new SqlCommand("SELECT * FROM empleado", DB);

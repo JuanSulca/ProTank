@@ -70,6 +70,16 @@ namespace ProTank_v1
             return (i == 1);
         }
 
+        public Boolean delUser(String uname)
+        {
+            cnx.Open();
+            SqlCommand cmd = new SqlCommand("DELETE FROM userLogin WHERE uname = @uname", cnx);
+            cmd.Parameters.AddWithValue("@uname", uname);
+            int i = cmd.ExecuteNonQuery();
+            cnx.Close();
+            return (i == 1);
+        }
+
         public DataTable tableUser()
         {
             SqlCommand cmd = new SqlCommand("SELECT * FROM userLogin", cnx);

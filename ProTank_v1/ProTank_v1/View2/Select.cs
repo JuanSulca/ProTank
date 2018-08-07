@@ -20,7 +20,7 @@ namespace ProTank_v1.View2
 
         public int tipo;
         public Boolean ac;
-        public String data;
+        public String data = "";
 
         public Select(int tipo, Boolean ac)
         {
@@ -39,9 +39,21 @@ namespace ProTank_v1.View2
                     button10.Text = "Eliminar";
                 }
             }
-            else if(tipo ==1)
+            else if(tipo == 1)
             {
                 label8.Text = "Persona:";
+                if (ac)
+                {
+                    button10.Text = "Modificar";
+                }
+                else
+                {
+                    button10.Text = "Eliminar";
+                }
+            }
+            else if(tipo == 2)
+            {
+                label8.Text = "Usuario:";
                 if (ac)
                 {
                     button10.Text = "Modificar";
@@ -55,33 +67,13 @@ namespace ProTank_v1.View2
 
         public String getData()
         {
-            return "";
+            return data;
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            if (tipo == 0)
-            {
-                if (ac)
-                {
-                    
-                }
-                else
-                {
-                    
-                }
-            }
-            else if(tipo == 1)
-            {
-                if (ac)
-                {
-                    MessageBox.Show((comboBox2.SelectedItem as ComItem).value);
-                }
-                else
-                {
-                    
-                }
-            }
+            data = (comboBox2.SelectedItem as ComItem).value;
+            this.Close();
         }
 
         private void Select_Load(object sender, EventArgs e)
@@ -103,6 +95,15 @@ namespace ProTank_v1.View2
                 foreach (DataRow dr in dataTable.Rows)
                 {
                     comboBox2.Items.Add(new ComItem(dr["fname"] + " " + dr["lname"], dr["id"] + ""));
+                }
+            }
+            else if (tipo == 2)
+            {
+                dataTable = new User().tableUser();
+                comboBox2.Items.Clear();
+                foreach (DataRow dr in dataTable.Rows)
+                {
+                    comboBox2.Items.Add(new ComItem(dr["uname"] + " " + dr["rol"], dr["uname"] + ""));
                 }
             }
         }

@@ -129,10 +129,10 @@ namespace ProTank_v1.View3
         {
             Select s = new Select(1, true);
             s.ShowDialog();
-
+            String data = s.getData();
             if (this.panel3.Controls.Count > 0)
                 this.panel3.Controls.RemoveAt(0);
-            NewPerson fh = new NewPerson(false, true);
+            NewPerson fh = new NewPerson(false, data);
             fh.TopLevel = false;
             fh.FormBorderStyle = FormBorderStyle.None;
             fh.Dock = DockStyle.Fill;
@@ -165,6 +165,22 @@ namespace ProTank_v1.View3
             this.panel3.Controls.Add(fh);
             this.panel3.Tag = fh;
             fh.Show();
+        }
+
+        private void eliminarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(2, false);
+            s.ShowDialog();
+            String data = s.getData();
+            MessageBox.Show(data);
+            if(new User().delUser(data))
+            {
+                MessageBox.Show("Eliminacion de usuario exitosa!");
+            }
+            else
+            {
+                MessageBox.Show("Eliminacion de usuario fallida!");
+            }
         }
     }
 }
