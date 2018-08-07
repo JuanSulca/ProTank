@@ -90,6 +90,34 @@ namespace ProTank_v1.Model
             return isSuccess;
         }
 
+        public bool delEmpleado(string ci)
+        {
+            bool isSuccess = false;
+            try
+            {
+                SqlCommand command = new SqlCommand("DELETE FROM userEmpleado WHERE idE = @idE", DB);
+                command.Parameters.AddWithValue("@idE", ci);
+                DB.Open();
+                int rows = command.ExecuteNonQuery();
+                command = new SqlCommand("DELETE FROM empleado WHERE idE = @idE", DB);
+                command.Parameters.AddWithValue("@idE", ci);
+                rows = command.ExecuteNonQuery();
+                if (rows > 0)
+                {
+                    isSuccess = true;
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                DB.Close();
+            }
+            return isSuccess;
+        }
+
         public bool insEmpleado(string nombre, string apellido, string ci, string telefono, string celular)
         {
             bool isSuccess = false;

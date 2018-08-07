@@ -38,10 +38,12 @@ namespace ProTank_v1.View2
                 checkBox1.Checked = true;
             edit = true;
             txtModulos_NuevoUsuario_username.Enabled = false;
-            protankDataSetTableAdapters.userEmpleadoTableAdapter loginTable = new protankDataSetTableAdapters.userEmpleadoTableAdapter();
-            protankDataSet ds = new protankDataSet();
-            loginTable.Fill(ds.userEmpleado);
-            //protankDataSet.userLoginRow loginRow = ds..FindByuname(uname);
+            auxNombres();
+            btnModulos_NuevoUsuario_crearUsuario.Text = "Modificar";
+            //protankDataSetTableAdapters.userEmpleadoTableAdapter loginTable = new protankDataSetTableAdapters.userEmpleadoTableAdapter();
+            //protankDataSet ds = new protankDataSet();
+            //loginTable.Fill(ds.userEmpleado);
+            //protankDataSet.userLoginRow loginRow = ds.FindByuname(uname);
             //comboModulos_NuevoUsuario_nombre.SelectedValue = loginRow.idE;
         }
 

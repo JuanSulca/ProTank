@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+using System.Windows.Forms;
 
 namespace ProTank_v1
 {
@@ -72,11 +73,22 @@ namespace ProTank_v1
 
         public Boolean delUser(String uname)
         {
+            int i = 0;
             cnx.Open();
             SqlCommand cmd = new SqlCommand("DELETE FROM userLogin WHERE uname = @uname", cnx);
             cmd.Parameters.AddWithValue("@uname", uname);
-            int i = cmd.ExecuteNonQuery();
-            cnx.Close();
+            try
+            {
+                i = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Eliminacion de usuario fallida!");
+            }
+            finally
+            {
+                cnx.Close();
+            }
             return (i == 1);
         }
 

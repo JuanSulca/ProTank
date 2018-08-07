@@ -1,4 +1,5 @@
-﻿using ProTank_v1.View;
+﻿using ProTank_v1.Model;
+using ProTank_v1.View;
 using ProTank_v1.View2;
 using System;
 using System.Collections.Generic;
@@ -156,9 +157,12 @@ namespace ProTank_v1.View3
 
         private void modificarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Select s = new Select(0, false);
+            s.ShowDialog();
+            String data = s.getData();
             if (this.panel3.Controls.Count > 0)
                 this.panel3.Controls.RemoveAt(0);
-            NewPerson fh = new NewPerson(true, true);
+            NewPerson fh = new NewPerson(true, data);
             fh.TopLevel = false;
             fh.FormBorderStyle = FormBorderStyle.None;
             fh.Dock = DockStyle.Fill;
@@ -172,15 +176,95 @@ namespace ProTank_v1.View3
             Select s = new Select(2, false);
             s.ShowDialog();
             String data = s.getData();
-            MessageBox.Show(data);
-            if(new User().delUser(data))
+            if (data == "")
             {
-                MessageBox.Show("Eliminacion de usuario exitosa!");
+                MessageBox.Show("Eliminacion de usuario cancelada!");
             }
             else
             {
-                MessageBox.Show("Eliminacion de usuario fallida!");
+                if (new User().delUser(data))
+                {
+                    MessageBox.Show("Eliminacion de usuario exitosa!");
+                }
+                else
+                {
+                    MessageBox.Show("Eliminacion de usuario fallida!");
+                }
             }
+        }
+
+        private void modificarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(2, true);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                User us = new User().getUser(data);
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                NewUser fh = new NewUser(us.uname, us.rol);
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
+            }
+        }
+
+        private void removerClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(1, false);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                MessageBox.Show("Eliminacion de cliente cancelada!");
+            }
+            else
+            {
+                if (new Person().delPerson(data))
+                {
+                    MessageBox.Show("Eliminacion de cliente exitosa!");
+                }
+                else
+                {
+                    MessageBox.Show("Eliminacion de cliente fallida!");
+                }
+            }
+        }
+
+        private void darDeBajaAEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(0, false);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                MessageBox.Show("Eliminacion de empleado cancelada!");
+            }
+            else
+            {
+                if (new Empleado().delEmpleado(data))
+                {
+                    MessageBox.Show("Eliminacion de empleado exitosa!");
+                }
+                else
+                {
+                    MessageBox.Show("Eliminacion de empleado fallida!");
+                }
+            }
+        }
+
+        private void VentanaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
         }
     }
 }

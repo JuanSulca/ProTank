@@ -107,6 +107,12 @@ namespace ProTank_v1.View2
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            data = "";
+            this.Close();
+        }
     }
 
     public class ComItem

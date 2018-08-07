@@ -126,3 +126,10 @@ C:\Users\JoseLuis\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v
 C:\Users\JoseLuis\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.pdb
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View2.Select.resources
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View3.MostrarUsuarios.resources
+D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View3.MostrarClientes.resources
+D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View3.MostrarEmpleados.resources
+D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View3.MostrarHerramientas.resources
+D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View3.MostrarMateriales.resources
+D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View3.MostrarPrestamos.resources
+D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View3.MostrarServicios.resources
+D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View3.NuevaVenta.resources

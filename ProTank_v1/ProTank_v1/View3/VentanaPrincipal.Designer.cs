@@ -166,6 +166,7 @@
             this.modificarContraseñaToolStripMenuItem.Name = "modificarContraseñaToolStripMenuItem";
             this.modificarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
             this.modificarContraseñaToolStripMenuItem.Text = "Modificar Datos de Usuario";
+            this.modificarContraseñaToolStripMenuItem.Click += new System.EventHandler(this.modificarContraseñaToolStripMenuItem_Click);
             // 
             // toolStripSeparator12
             // 
@@ -210,6 +211,7 @@
             this.removerClienteToolStripMenuItem.Name = "removerClienteToolStripMenuItem";
             this.removerClienteToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.removerClienteToolStripMenuItem.Text = "Remover cliente";
+            this.removerClienteToolStripMenuItem.Click += new System.EventHandler(this.removerClienteToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -260,6 +262,7 @@
             this.darDeBajaAEmpleadoToolStripMenuItem.Name = "darDeBajaAEmpleadoToolStripMenuItem";
             this.darDeBajaAEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.darDeBajaAEmpleadoToolStripMenuItem.Text = "Dar de baja a empleado";
+            this.darDeBajaAEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.darDeBajaAEmpleadoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -722,6 +725,7 @@
             this.Name = "VentanaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventana Principal";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VentanaPrincipal_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VentanaPrincipal_FormClosed);
             this.Load += new System.EventHandler(this.VentanaPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);

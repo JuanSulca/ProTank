@@ -90,6 +90,31 @@ namespace ProTank_v1
             return isSuccess;
         }
 
+        public bool delPerson(string ci)
+        {
+            bool isSuccess = false;
+            try
+            {
+                SqlCommand command = new SqlCommand("DELETE FROM person WHERE id = @id", DB);
+                command.Parameters.AddWithValue("@id", ci);
+                DB.Open();
+                int rows = command.ExecuteNonQuery();
+                if (rows > 0)
+                {
+                    isSuccess = true;
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                DB.Close();
+            }
+            return isSuccess;
+        }
+
         public bool insPerson(string nombre, string apellido, string ci, string telefono, string celular)
         {
             bool isSuccess = false;
