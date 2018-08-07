@@ -157,7 +157,7 @@ namespace ProTank_v1.View3
 
         private void modificarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Select s = new Select(0, false);
+            Select s = new Select(0, true);
             s.ShowDialog();
             String data = s.getData();
             if (this.panel3.Controls.Count > 0)
