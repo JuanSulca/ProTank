@@ -24,7 +24,7 @@ namespace ProTank_v1.View2
 
         private void listarContratos()
         {
-            DataTable dataTable = new Contrato().tableContrato2();
+            DataTable dataTable = new Contrato().tableContrato();
             tableModulos_Contratos_tabla.DataSource = dataTable;
         }
     }
