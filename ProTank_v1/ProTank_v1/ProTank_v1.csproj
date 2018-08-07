@@ -118,6 +118,12 @@
     <Compile Include="View2\PosicionTapas.Designer.cs">
       <DependentUpon>PosicionTapas.cs</DependentUpon>
     </Compile>
+    <Compile Include="View2\Select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View2\Select.Designer.cs">
+      <DependentUpon>Select.cs</DependentUpon>
+    </Compile>
     <Compile Include="View2\VentasYContratos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View2\PosicionTapas.resx">
       <DependentUpon>PosicionTapas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View2\Select.resx">
+      <DependentUpon>Select.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View2\VentasYContratos.resx">
       <DependentUpon>VentasYContratos.cs</DependentUpon>

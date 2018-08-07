@@ -124,3 +124,4 @@ C:\Users\JoseLuis\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v
 C:\Users\JoseLuis\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.csproj.CoreCompileInputs.cache
 C:\Users\JoseLuis\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.exe
 C:\Users\JoseLuis\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.pdb
+D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View2.Select.resources

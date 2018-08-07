@@ -127,6 +127,9 @@ namespace ProTank_v1.View3
 
         private void modificarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Select s = new Select(1, true);
+            s.ShowDialog();
+
             if (this.panel3.Controls.Count > 0)
                 this.panel3.Controls.RemoveAt(0);
             NewPerson fh = new NewPerson(false, true);
