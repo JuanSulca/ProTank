@@ -123,17 +123,19 @@ namespace ProTank_v1
             return isSuccess;
         }
 
-        public bool insEmpleado(string nombre, string apellido, string ci, string telefono, string celular)
+        public bool insEmpleado(string idPer, decimal monto, int calificacion, string idCon, string descrip, DateTime fechaI, DateTime fechaE)
         {
             bool isSuccess = false;
             try
             {
-                SqlCommand command = new SqlCommand("INSERT INTO empleado VALUES(@fname, @lname, @idE, @telef, @cel)", DB);
-                command.Parameters.AddWithValue("@fname", nombre);
-                command.Parameters.AddWithValue("@lname", apellido);
-                command.Parameters.AddWithValue("@telef", telefono);
-                command.Parameters.AddWithValue("@cel", celular);
-                command.Parameters.AddWithValue("@idE", ci);
+                SqlCommand command = new SqlCommand("INSERT INTO contrato VALUES (@idPer, @monto, @calificacion, @idCon, @descrip, @fechaI, @fechaE)", DB);
+                command.Parameters.AddWithValue("@idPer", idPer);
+                command.Parameters.AddWithValue("@monto", monto);
+                command.Parameters.AddWithValue("@calificacion", calificacion);
+                command.Parameters.AddWithValue("@idCon", idCon);
+                command.Parameters.AddWithValue("@descrip", descrip);
+                command.Parameters.AddWithValue("@fechaI", fechaI);
+                command.Parameters.AddWithValue("@fechaE", fechaE);
                 DB.Open();
                 int rows = command.ExecuteNonQuery();
                 if (rows > 0)
