@@ -136,11 +136,53 @@
     <Compile Include="View2\Administracion.Designer.cs">
       <DependentUpon>Administracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="View3\MostrarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View3\MostrarClientes.Designer.cs">
+      <DependentUpon>MostrarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View3\MostrarEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View3\MostrarEmpleados.Designer.cs">
+      <DependentUpon>MostrarEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View3\MostrarHerramientas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View3\MostrarHerramientas.Designer.cs">
+      <DependentUpon>MostrarHerramientas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View3\MostrarMateriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View3\MostrarMateriales.Designer.cs">
+      <DependentUpon>MostrarMateriales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View3\MostrarPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View3\MostrarPrestamos.Designer.cs">
+      <DependentUpon>MostrarPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View3\MostrarServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View3\MostrarServicios.Designer.cs">
+      <DependentUpon>MostrarServicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="View3\MostrarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View3\MostrarUsuarios.Designer.cs">
       <DependentUpon>MostrarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View3\NuevaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View3\NuevaVenta.Designer.cs">
+      <DependentUpon>NuevaVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="View3\PesoTanques.cs">
       <SubType>Form</SubType>
@@ -223,8 +265,29 @@
     <EmbeddedResource Include="View2\Administracion.resx">
       <DependentUpon>Administracion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View3\MostrarClientes.resx">
+      <DependentUpon>MostrarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View3\MostrarEmpleados.resx">
+      <DependentUpon>MostrarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View3\MostrarHerramientas.resx">
+      <DependentUpon>MostrarHerramientas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View3\MostrarMateriales.resx">
+      <DependentUpon>MostrarMateriales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View3\MostrarPrestamos.resx">
+      <DependentUpon>MostrarPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View3\MostrarServicios.resx">
+      <DependentUpon>MostrarServicios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View3\MostrarUsuarios.resx">
       <DependentUpon>MostrarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View3\NuevaVenta.resx">
+      <DependentUpon>NuevaVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View3\PesoTanques.resx">
       <DependentUpon>PesoTanques.cs</DependentUpon>
