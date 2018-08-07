@@ -16,5 +16,16 @@ namespace ProTank_v1.View3
         {
             InitializeComponent();
         }
+
+        private void MostrarClientes_Load(object sender, EventArgs e)
+        {
+            listarClientes();
+        }
+
+        private void listarClientes()
+        {
+            DataTable dataTable = new Person().tablePerson();
+            tableModulos_Contratos_tabla.DataSource = dataTable;
+        }
     }
 }

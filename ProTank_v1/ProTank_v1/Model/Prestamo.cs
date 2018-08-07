@@ -194,7 +194,7 @@ namespace ProTank_v1.Model
 
         public DataTable tablePrestamo()
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM prestamo", DB);
+            SqlCommand command = new SqlCommand("SELECT codigoH [Herramienta], idE [Empleado], fechaP [Fecha de préstamo], fechaD [Fecha de devolución], cantidad [Cantidad] FROM prestamo", DB);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);

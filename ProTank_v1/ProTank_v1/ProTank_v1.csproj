@@ -68,6 +68,7 @@
     <Compile Include="Model\Mantenimiento.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\Prestamo.cs" />
+    <Compile Include="Model\Servicio.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="protankDataSet.cs">
       <DependentUpon>protankDataSet.xsd</DependentUpon>

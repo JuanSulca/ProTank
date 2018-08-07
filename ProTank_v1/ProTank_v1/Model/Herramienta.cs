@@ -155,7 +155,7 @@ namespace ProTank_v1
 
         public DataTable tableHerramienta()
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM herramienta");
+            SqlCommand command = new SqlCommand("SELECT nombre [Nombre], cantidad [Cantidad], codigoH [Código de la herramienta], periodo [Periodo] FROM herramienta");
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProTank_v1.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace ProTank_v1.View3
         public MostrarEmpleados()
         {
             InitializeComponent();
+        }
+
+        private void MostrarEmpleados_Load(object sender, EventArgs e)
+        {
+            listarEmpleados();
+        }
+
+        private void listarEmpleados()
+        {
+            DataTable dataTable = new Empleado().tableEmpleado();
+            tableModulos_Contratos_tabla.DataSource = dataTable;
         }
     }
 }

@@ -54,7 +54,7 @@ namespace ProTank_v1.Model
 
         public DataTable tableEmpleado()
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM empleado", DB);
+            SqlCommand command = new SqlCommand("SELECT fname [Nombres], lname [Apellidos], idE [Cédula de Identidad], telef [Teléfono], cel [Celular] FROM person", DB);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);

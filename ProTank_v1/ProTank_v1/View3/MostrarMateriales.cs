@@ -16,5 +16,16 @@ namespace ProTank_v1.View3
         {
             InitializeComponent();
         }
+
+        private void MostrarMateriales_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listarMateriales()
+        {
+            //DataTable dataTable = 
+        }
+
     }
 }
