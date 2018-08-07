@@ -94,6 +94,15 @@ namespace ProTank_v1
 
         public DataTable tableUser()
         {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM userLogin", cnx);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            da.Fill(table);
+            return table;
+        }
+
+        public DataTable tableUser2()
+        {
             SqlCommand cmd = new SqlCommand("SELECT uname [Nombre de Usuario], pwd [Contraseña], rol [Rol de Usuario] FROM userLogin", cnx);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable table = new DataTable();
