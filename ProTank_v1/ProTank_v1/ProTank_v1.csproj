@@ -66,6 +66,7 @@
     <Compile Include="Model\Hash.cs" />
     <Compile Include="Model\Herramienta.cs" />
     <Compile Include="Model\Mantenimiento.cs" />
+    <Compile Include="Model\Material.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\Prestamo.cs" />
     <Compile Include="Model\Servicio.cs" />

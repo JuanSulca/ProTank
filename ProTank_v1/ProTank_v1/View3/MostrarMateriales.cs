@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProTank_v1.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,12 +20,13 @@ namespace ProTank_v1.View3
 
         private void MostrarMateriales_Load(object sender, EventArgs e)
         {
-
+            listarMateriales();
         }
 
         private void listarMateriales()
         {
-            //DataTable dataTable = 
+            DataTable dataTable = new Material().tableMaterial();
+            tableModulos_Contratos_tabla.DataSource = dataTable;
         }
 
     }

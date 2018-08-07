@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Data;
-using System.Configuration;
 
 namespace ProTank_v1.Model
 {
-    class Servicio
+    class Material
     {
         public string codigo { get; set; }
         public string nombre { get; set; }
@@ -18,19 +18,18 @@ namespace ProTank_v1.Model
 
         private SqlConnection DB = new SqlConnection(ConfigurationManager.ConnectionStrings["protankDB"].ConnectionString);
 
-        public Servicio()
+        public Material()
         {
 
         }
 
-        public DataTable tableServicio()
+        public DataTable tableMaterial()
         {
-            SqlCommand command = new SqlCommand("SELECT codigo [Código del servicio], nombre [Nombre], precio [Precio], unidad [Unidad de medida] FROM prodServ WHERE tipo = 'S'", DB);
+            SqlCommand command = new SqlCommand("SELECT codigo [Código del servicio], nombre [Nombre], precio [Precio], unidad [Unidad de medida] FROM prodServ WHERE tipo = 'P'", DB);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
             return dataTable;
         }
-
     }
 }
