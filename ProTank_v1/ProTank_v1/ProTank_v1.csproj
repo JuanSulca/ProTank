@@ -136,6 +136,12 @@
     <Compile Include="View2\Administracion.Designer.cs">
       <DependentUpon>Administracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="View3\MostrarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View3\MostrarUsuarios.Designer.cs">
+      <DependentUpon>MostrarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="View3\PesoTanques.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View2\Administracion.resx">
       <DependentUpon>Administracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View3\MostrarUsuarios.resx">
+      <DependentUpon>MostrarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View3\PesoTanques.resx">
       <DependentUpon>PesoTanques.cs</DependentUpon>

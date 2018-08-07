@@ -1,6 +1,6 @@
-﻿namespace ProTank_v1.View2
+﻿namespace ProTank_v1.View3
 {
-    partial class Contratos
+    partial class MostrarUsuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -28,40 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.tableModulos_Contratos_tabla = new System.Windows.Forms.DataGridView();
             this.panContratos_header = new System.Windows.Forms.Panel();
             this.lblContratos_contratos = new System.Windows.Forms.Label();
             this.lblContratos_protank = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableModulos_Contratos_tabla)).BeginInit();
             this.panContratos_header.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panContratos_header);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(876, 406);
-            this.panel1.TabIndex = 1;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Silver;
-            this.panel7.Controls.Add(this.tableModulos_Contratos_tabla);
-            this.panel7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(0, 69);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(876, 337);
-            this.panel7.TabIndex = 9;
             // 
             // tableModulos_Contratos_tabla
             // 
@@ -70,14 +43,14 @@
             this.tableModulos_Contratos_tabla.AllowUserToResizeRows = false;
             this.tableModulos_Contratos_tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableModulos_Contratos_tabla.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableModulos_Contratos_tabla.Location = new System.Drawing.Point(0, 0);
-            this.tableModulos_Contratos_tabla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableModulos_Contratos_tabla.Location = new System.Drawing.Point(0, 69);
+            this.tableModulos_Contratos_tabla.Margin = new System.Windows.Forms.Padding(2);
             this.tableModulos_Contratos_tabla.Name = "tableModulos_Contratos_tabla";
             this.tableModulos_Contratos_tabla.ReadOnly = true;
             this.tableModulos_Contratos_tabla.RowHeadersVisible = false;
             this.tableModulos_Contratos_tabla.RowTemplate.Height = 31;
-            this.tableModulos_Contratos_tabla.Size = new System.Drawing.Size(876, 337);
-            this.tableModulos_Contratos_tabla.TabIndex = 3;
+            this.tableModulos_Contratos_tabla.Size = new System.Drawing.Size(884, 381);
+            this.tableModulos_Contratos_tabla.TabIndex = 9;
             // 
             // panContratos_header
             // 
@@ -89,8 +62,8 @@
             this.panContratos_header.Location = new System.Drawing.Point(0, 0);
             this.panContratos_header.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panContratos_header.Name = "panContratos_header";
-            this.panContratos_header.Size = new System.Drawing.Size(876, 69);
-            this.panContratos_header.TabIndex = 8;
+            this.panContratos_header.Size = new System.Drawing.Size(884, 69);
+            this.panContratos_header.TabIndex = 10;
             // 
             // lblContratos_contratos
             // 
@@ -101,9 +74,9 @@
             this.lblContratos_contratos.Location = new System.Drawing.Point(760, 24);
             this.lblContratos_contratos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblContratos_contratos.Name = "lblContratos_contratos";
-            this.lblContratos_contratos.Size = new System.Drawing.Size(100, 22);
+            this.lblContratos_contratos.Size = new System.Drawing.Size(90, 22);
             this.lblContratos_contratos.TabIndex = 1;
-            this.lblContratos_contratos.Text = "Contratos";
+            this.lblContratos_contratos.Text = "Usuarios";
             // 
             // lblContratos_protank
             // 
@@ -119,17 +92,15 @@
             this.lblContratos_protank.TabIndex = 0;
             this.lblContratos_protank.Text = "ProTank";
             // 
-            // Contratos
+            // MostrarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 406);
-            this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Contratos";
-            this.Text = "Contratos";
-            this.panel1.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
+            this.ClientSize = new System.Drawing.Size(884, 450);
+            this.Controls.Add(this.tableModulos_Contratos_tabla);
+            this.Controls.Add(this.panContratos_header);
+            this.Name = "MostrarUsuarios";
+            this.Text = "MostrarUsuarios";
             ((System.ComponentModel.ISupportInitialize)(this.tableModulos_Contratos_tabla)).EndInit();
             this.panContratos_header.ResumeLayout(false);
             this.panContratos_header.PerformLayout();
@@ -139,8 +110,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.DataGridView tableModulos_Contratos_tabla;
         private System.Windows.Forms.Panel panContratos_header;
         private System.Windows.Forms.Label lblContratos_contratos;
