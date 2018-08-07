@@ -118,14 +118,14 @@ insert into saleLine values ('MET', 1, 5)
 go
 
 create view prestamosH_todo as
-select p.cantidad as [Cantidad], p.codigoH as [C骴igo Herramienta], h.nombre as Herramienta, (e.lname + ' ' + e.fname) 
+select p.cantidad as [Cantidad], p.codigoH as [C贸digo Herramienta], h.nombre as Herramienta, (e.lname + ' ' + e.fname) 
 		as Responsable, convert(date,p.fechaP) [Fecha Salida], 
 		format(p.fechaP,'HH:mm') [Hora Salida] , format(p.fechaD,'HH:mm') as Retorno
 from herramienta h join prestamo p on (h.codigoH=p.codigoH) join empleado e on (e.idE=p.idE)
 go
 
 create view prestamosH_prestadas as
-select p.cantidad as [Cantidad],p.codigoH as [C骴igo Herramienta], h.nombre as Herramienta, (e.lname + ' ' + e.fname) 
+select p.cantidad as [Cantidad],p.codigoH as [C贸digo Herramienta], h.nombre as Herramienta, (e.lname + ' ' + e.fname) 
 		as Responsable, convert(date,p.fechaP) [Fecha Salida], 
 		format(p.fechaP,'HH:mm') [Hora Salida] , format(p.fechaD,'HH:mm') as Retorno
 from herramienta h join prestamo p on (h.codigoH=p.codigoH) join empleado e on (e.idE=p.idE)
@@ -133,7 +133,7 @@ where p.fechaD is null
 go
 
 create view prestamosH_retornadas as
-select p.cantidad as [Cantidad],p.codigoH as [C骴igo Herramienta], h.nombre as Herramienta, (e.lname + ' ' + e.fname) 
+select p.cantidad as [Cantidad],p.codigoH as [C贸digo Herramienta], h.nombre as Herramienta, (e.lname + ' ' + e.fname) 
 		as Responsable, convert(date,p.fechaP) [Fecha Salida], 
 		format(p.fechaP,'HH:mm') [Hora Salida] , format(p.fechaD,'HH:mm') as Retorno
 from herramienta h join prestamo p on (h.codigoH=p.codigoH) join empleado e on (e.idE=p.idE)
@@ -149,31 +149,31 @@ create  view viewFecha as
 select top 1 fecha, codigoH from mantenimiento order by fecha desc
 go
 create view mantenimientoH_todo as
-select h.nombre [Herramienta], h.cantidad [Cantidad], h.codigoH [C骴igo], aux.fecha 
-		[趌timo mantenimiento], h.periodo [Periodo]
+select h.nombre [Herramienta], h.cantidad [Cantidad], h.codigoH [C贸digo], aux.fecha 
+		[脷ltimo mantenimiento], h.periodo [Periodo]
 from herramienta h join viewFecha
 		aux on (aux.codigoH = h.codigoH)
 go
 
 create view mantenimientoH_proximo as
-select h.nombre [Herramienta], h.cantidad [Cantidad], h.codigoH [C骴igo], aux.fecha 
-		[趌timo mantenimiento], h.periodo [Periodo], (h.periodo - datediff(day,aux.fecha, getdate())) [D韆s para mantenimiento]
+select h.nombre [Herramienta], h.cantidad [Cantidad], h.codigoH [C贸digo], aux.fecha 
+		[脷ltimo mantenimiento], h.periodo [Periodo], (h.periodo - datediff(day,aux.fecha, getdate())) [D铆as para mantenimiento]
 from herramienta h join (select top 1 fecha, codigoH from mantenimiento order by fecha desc) 
 		aux on (aux.codigoH = h.codigoH)
 where datediff(day,aux.fecha, getdate())< 15 and datediff(day,aux.fecha, getdate())> 5
 go
 
 create view mantenimientoH_urgente as
-select h.nombre [Herramienta], h.cantidad [Cantidad], h.codigoH [C骴igo], aux.fecha 
-		[趌timo mantenimiento], h.periodo [Periodo], (h.periodo - datediff(day,aux.fecha, getdate())) [D韆s para mantenimiento]
+select h.nombre [Herramienta], h.cantidad [Cantidad], h.codigoH [C贸digo], aux.fecha 
+		[脷ltimo mantenimiento], h.periodo [Periodo], (h.periodo - datediff(day,aux.fecha, getdate())) [D铆as para mantenimiento]
 from herramienta h join (select top 1 fecha, codigoH from mantenimiento order by fecha desc) 
 		aux on (aux.codigoH = h.codigoH)
 where datediff(day,aux.fecha, getdate())< 5
 go
 
 create view mantenimientoH_no as
-select h.nombre [Herramienta], h.cantidad [Cantidad], h.codigoH [C骴igo], aux.fecha 
-		[趌timo mantenimiento], h.periodo [Periodo], (h.periodo - datediff(day,aux.fecha, getdate())) [D韆s para mantenimiento]
+select h.nombre [Herramienta], h.cantidad [Cantidad], h.codigoH [C贸digo], aux.fecha 
+		[脷ltimo mantenimiento], h.periodo [Periodo], (h.periodo - datediff(day,aux.fecha, getdate())) [D铆as para mantenimiento]
 from herramienta h join (select top 1 fecha, codigoH from mantenimiento order by fecha desc) 
 		aux on (aux.codigoH = h.codigoH)
 where datediff(day,aux.fecha, getdate())> 15
@@ -205,7 +205,7 @@ from person p
 go
 
 create view nuevo_prestamo as
-select h.nombre [Nombre], h.cantidad [Cantidad], h.codigoH [C骴igo] 
+select h.nombre [Nombre], h.cantidad [Cantidad], h.codigoH [C贸digo] 
 from herramienta h full join prestamo p on (p.codigoH = h.codigoH)
 where p.fechaD is not null
 go
@@ -225,3 +225,7 @@ select s.id_sale, p.id, CONCAT(fname, ' ', lname) as Nombre, Total from venta v 
 go
 
 select * from empleados_apellidos_nombres
+
+
+alter table prodServ
+add tipo char(1)
