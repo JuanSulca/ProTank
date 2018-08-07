@@ -22,6 +22,40 @@ namespace ProTank_v1.View2
             InitializeComponent();
         }
 
+        public NewUser(String uname, String rol, Boolean mos)
+        {
+            InitializeComponent();
+            txtModulos_NuevoUsuario_username.Text = uname;
+            if (rol.Contains("H"))
+                checkModulos_NuevoUsuario_bodega.Checked = true;
+            if (rol.Contains("C"))
+                checkModulos_NuevoUsuario_contratos.Checked = true;
+            if (rol.Contains("D"))
+                checkModulos_NuevoUsuario_design.Checked = true;
+            if (rol.Contains("V"))
+                checkModulos_NuevoUsuario_servicios.Checked = true;
+            if (rol.Contains("A"))
+                checkBox1.Checked = true;
+            //edit = true;
+            txtModulos_NuevoUsuario_username.Enabled = false;
+            auxNombres();
+            btnModulos_NuevoUsuario_crearUsuario.Visible = false;
+            checkModulos_NuevoUsuario_bodega.Enabled = false;
+            checkModulos_NuevoUsuario_contratos.Enabled = false;
+            checkModulos_NuevoUsuario_design.Enabled = false;
+            checkModulos_NuevoUsuario_servicios.Enabled = false;
+            checkBox1.Enabled = false;
+            txtModulos_NuevoUsuario_passsword1.Visible = false;
+            txtModulos_NuevoUsuario_passsword2.Visible = false;
+            lblModulos_NuevoUsuario_password1.Visible = false;
+            lblModulos_NuevoUsuario_password2.Visible = false;
+            //protankDataSetTableAdapters.userEmpleadoTableAdapter loginTable = new protankDataSetTableAdapters.userEmpleadoTableAdapter();
+            //protankDataSet ds = new protankDataSet();
+            //loginTable.Fill(ds.userEmpleado);
+            //protankDataSet.userLoginRow loginRow = ds.FindByuname(uname);
+            //comboModulos_NuevoUsuario_nombre.SelectedValue = loginRow.idE;
+        }
+
         public NewUser(String uname, String rol)
         {
             InitializeComponent();

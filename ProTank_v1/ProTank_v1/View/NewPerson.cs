@@ -17,6 +17,37 @@ namespace ProTank_v1.View
         Boolean empleado = false;
         Boolean ac = false;
 
+        public NewPerson(int mod, String id)
+        {
+            InitializeComponent();
+            if (mod == 0)
+            {
+                Empleado e = new Empleado().getEmpleado(id);
+                textBox4.Text = e.fname;
+                textBox1.Text = e.lname;
+                textBox2.Text = e.id;
+                textBox3.Text = e.tel;
+                textBox5.Text = e.cel;
+                empleado = true;
+            }
+            else if(mod == 1)
+            {
+                Person e = new Person().getPerson(id);
+                textBox4.Text = e.fname;
+                textBox1.Text = e.lname;
+                textBox2.Text = e.id;
+                textBox3.Text = e.tel;
+                textBox5.Text = e.cel;
+                empleado = false;
+            }
+            textBox1.Enabled = false;
+            textBox2.Enabled = false;
+            textBox3.Enabled = false;
+            textBox4.Enabled = false;
+            textBox5.Enabled = false;
+            button1.Visible = false;
+        }
+
         public NewPerson(bool empleado, String id)
         {
             InitializeComponent();

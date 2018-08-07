@@ -40,8 +40,6 @@
             this.txtModulos_NuevoUsuario_passsword1 = new System.Windows.Forms.TextBox();
             this.lblModulos_NuevoUsuario_password1 = new System.Windows.Forms.Label();
             this.comboModulos_NuevoUsuario_nombre = new System.Windows.Forms.ComboBox();
-            this.empleadosapellidosnombresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.protankDataSet1 = new ProTank_v1.protankDataSet();
             this.lblModulos_NuevoUsuario_nombre = new System.Windows.Forms.Label();
             this.txtModulos_NuevoUsuario_passsword2 = new System.Windows.Forms.TextBox();
             this.txtModulos_NuevoUsuario_username = new System.Windows.Forms.TextBox();
@@ -51,6 +49,8 @@
             this.lblModulos_NuevoUsuario_username = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblModulos_NuevoUsuario_nuevoUsuario = new System.Windows.Forms.Label();
+            this.empleadosapellidosnombresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.protankDataSet1 = new ProTank_v1.protankDataSet();
             this.protankDataSet = new ProTank_v1.protankDataSet();
             this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.empleadoTableAdapter = new ProTank_v1.protankDataSetTableAdapters.empleadoTableAdapter();
@@ -58,9 +58,9 @@
             this.empleados_apellidos_nombresTableAdapter = new ProTank_v1.protankDataSetTableAdapters.empleados_apellidos_nombresTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosapellidosnombresBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.protankDataSet1)).BeginInit();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.protankDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosapellidosnombresBindingSource)).BeginInit();
@@ -202,16 +202,6 @@
             this.comboModulos_NuevoUsuario_nombre.Size = new System.Drawing.Size(244, 24);
             this.comboModulos_NuevoUsuario_nombre.TabIndex = 7;
             // 
-            // empleadosapellidosnombresBindingSource1
-            // 
-            this.empleadosapellidosnombresBindingSource1.DataMember = "empleados_apellidos_nombres";
-            this.empleadosapellidosnombresBindingSource1.DataSource = this.protankDataSet1;
-            // 
-            // protankDataSet1
-            // 
-            this.protankDataSet1.DataSetName = "protankDataSet";
-            this.protankDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // lblModulos_NuevoUsuario_nombre
             // 
             this.lblModulos_NuevoUsuario_nombre.AutoSize = true;
@@ -249,7 +239,7 @@
             this.btnModulos_NuevoUsuario_limpiar.Name = "btnModulos_NuevoUsuario_limpiar";
             this.btnModulos_NuevoUsuario_limpiar.Size = new System.Drawing.Size(128, 47);
             this.btnModulos_NuevoUsuario_limpiar.TabIndex = 3;
-            this.btnModulos_NuevoUsuario_limpiar.Text = "Limpiar";
+            this.btnModulos_NuevoUsuario_limpiar.Text = "Cancelar";
             this.btnModulos_NuevoUsuario_limpiar.UseVisualStyleBackColor = false;
             this.btnModulos_NuevoUsuario_limpiar.Click += new System.EventHandler(this.btnModulos_NuevoUsuario_limpiar_Click);
             // 
@@ -311,6 +301,16 @@
             this.lblModulos_NuevoUsuario_nuevoUsuario.TabIndex = 1;
             this.lblModulos_NuevoUsuario_nuevoUsuario.Text = "Nuevo Usuario";
             // 
+            // empleadosapellidosnombresBindingSource1
+            // 
+            this.empleadosapellidosnombresBindingSource1.DataMember = "empleados_apellidos_nombres";
+            this.empleadosapellidosnombresBindingSource1.DataSource = this.protankDataSet1;
+            // 
+            // protankDataSet1
+            // 
+            this.protankDataSet1.DataSetName = "protankDataSet";
+            this.protankDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // protankDataSet
             // 
             this.protankDataSet.DataSetName = "protankDataSet";
@@ -348,10 +348,10 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadosapellidosnombresBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.empleadosapellidosnombresBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.protankDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.protankDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosapellidosnombresBindingSource)).EndInit();

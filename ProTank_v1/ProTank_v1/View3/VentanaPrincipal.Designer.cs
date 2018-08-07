@@ -131,7 +131,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(982, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(1309, 26);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -178,6 +178,7 @@
             this.mostrarUsuariosToolStripMenuItem.Name = "mostrarUsuariosToolStripMenuItem";
             this.mostrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
             this.mostrarUsuariosToolStripMenuItem.Text = "Mostrar Usuarios";
+            this.mostrarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.mostrarUsuariosToolStripMenuItem_Click);
             // 
             // clienteToolStripMenuItem
             // 
@@ -223,6 +224,7 @@
             this.buscarClienteToolStripMenuItem.Name = "buscarClienteToolStripMenuItem";
             this.buscarClienteToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.buscarClienteToolStripMenuItem.Text = "Buscar cliente";
+            this.buscarClienteToolStripMenuItem.Click += new System.EventHandler(this.buscarClienteToolStripMenuItem_Click);
             // 
             // mostrarClientesToolStripMenuItem
             // 
@@ -280,6 +282,7 @@
             this.mostrarEmpleadosToolStripMenuItem.Name = "mostrarEmpleadosToolStripMenuItem";
             this.mostrarEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.mostrarEmpleadosToolStripMenuItem.Text = "Mostrar Empleados";
+            this.mostrarEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.mostrarEmpleadosToolStripMenuItem_Click);
             // 
             // contratosToolStripMenuItem
             // 
@@ -299,18 +302,21 @@
             this.registrarNuevoContratoToolStripMenuItem.Name = "registrarNuevoContratoToolStripMenuItem";
             this.registrarNuevoContratoToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.registrarNuevoContratoToolStripMenuItem.Text = "Registrar contrato";
+            this.registrarNuevoContratoToolStripMenuItem.Click += new System.EventHandler(this.registrarNuevoContratoToolStripMenuItem_Click);
             // 
             // editarContratoExistenteToolStripMenuItem
             // 
             this.editarContratoExistenteToolStripMenuItem.Name = "editarContratoExistenteToolStripMenuItem";
             this.editarContratoExistenteToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.editarContratoExistenteToolStripMenuItem.Text = "Editar contrato existente";
+            this.editarContratoExistenteToolStripMenuItem.Click += new System.EventHandler(this.editarContratoExistenteToolStripMenuItem_Click);
             // 
             // removerContratoDelRegistroToolStripMenuItem
             // 
             this.removerContratoDelRegistroToolStripMenuItem.Name = "removerContratoDelRegistroToolStripMenuItem";
             this.removerContratoDelRegistroToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.removerContratoDelRegistroToolStripMenuItem.Text = "Anular contrato";
+            this.removerContratoDelRegistroToolStripMenuItem.Click += new System.EventHandler(this.removerContratoDelRegistroToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
@@ -322,12 +328,14 @@
             this.buscarContratoToolStripMenuItem.Name = "buscarContratoToolStripMenuItem";
             this.buscarContratoToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.buscarContratoToolStripMenuItem.Text = "Buscar contrato";
+            this.buscarContratoToolStripMenuItem.Click += new System.EventHandler(this.buscarContratoToolStripMenuItem_Click);
             // 
             // mostrarContratosToolStripMenuItem
             // 
             this.mostrarContratosToolStripMenuItem.Name = "mostrarContratosToolStripMenuItem";
             this.mostrarContratosToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.mostrarContratosToolStripMenuItem.Text = "Mostrar contratos";
+            this.mostrarContratosToolStripMenuItem.Click += new System.EventHandler(this.mostrarContratosToolStripMenuItem_Click);
             // 
             // inventarioToolStripMenuItem
             // 
@@ -674,7 +682,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 26);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(982, 527);
+            this.panel1.Size = new System.Drawing.Size(1309, 664);
             this.panel1.TabIndex = 1;
             // 
             // panel3
@@ -685,7 +693,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 58);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(982, 469);
+            this.panel3.Size = new System.Drawing.Size(1309, 606);
             this.panel3.TabIndex = 8;
             // 
             // panel2
@@ -698,7 +706,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(982, 58);
+            this.panel2.Size = new System.Drawing.Size(1309, 58);
             this.panel2.TabIndex = 7;
             // 
             // lblModulos_NuevoUsuario_protank
@@ -708,7 +716,7 @@
             this.lblModulos_NuevoUsuario_protank.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblModulos_NuevoUsuario_protank.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModulos_NuevoUsuario_protank.ForeColor = System.Drawing.Color.White;
-            this.lblModulos_NuevoUsuario_protank.Location = new System.Drawing.Point(396, 2);
+            this.lblModulos_NuevoUsuario_protank.Location = new System.Drawing.Point(559, 2);
             this.lblModulos_NuevoUsuario_protank.Name = "lblModulos_NuevoUsuario_protank";
             this.lblModulos_NuevoUsuario_protank.Size = new System.Drawing.Size(191, 56);
             this.lblModulos_NuevoUsuario_protank.TabIndex = 0;
@@ -718,7 +726,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 553);
+            this.ClientSize = new System.Drawing.Size(1309, 690);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Margin = new System.Windows.Forms.Padding(2);

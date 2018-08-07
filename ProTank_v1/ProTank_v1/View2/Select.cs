@@ -21,6 +21,35 @@ namespace ProTank_v1.View2
         public int tipo;
         public Boolean ac;
         public String data = "";
+        public int mod;
+
+        public Select(int mod)
+        {
+            tipo = mod;
+            InitializeComponent();
+            this.mod = mod;
+            if(mod == 0)
+            {
+                label8.Text = "Empleado:";
+                button10.Text = "Mostrar";
+            }
+            else if(mod == 1)
+            {
+                label8.Text = "Cliente:";
+                button10.Text = "Mostrar";
+            }
+            else if(mod == 2)
+            {
+                label8.Text = "Usuario:";
+                button10.Text = "Mostrar";
+            }
+            else if (mod == 3)
+            {
+                label8.Text = "Contrato:";
+                button10.Text = "Mostrar";
+            }
+            tipo = mod;
+        }
 
         public Select(int tipo, Boolean ac)
         {
@@ -41,7 +70,7 @@ namespace ProTank_v1.View2
             }
             else if(tipo == 1)
             {
-                label8.Text = "Persona:";
+                label8.Text = "Cliente:";
                 if (ac)
                 {
                     button10.Text = "Modificar";
@@ -54,6 +83,18 @@ namespace ProTank_v1.View2
             else if(tipo == 2)
             {
                 label8.Text = "Usuario:";
+                if (ac)
+                {
+                    button10.Text = "Modificar";
+                }
+                else
+                {
+                    button10.Text = "Eliminar";
+                }
+            }
+            else if (tipo == 3)
+            {
+                label8.Text = "Contrato:";
                 if (ac)
                 {
                     button10.Text = "Modificar";
@@ -104,6 +145,15 @@ namespace ProTank_v1.View2
                 foreach (DataRow dr in dataTable.Rows)
                 {
                     comboBox2.Items.Add(new ComItem(dr["uname"] + " " + dr["rol"], dr["uname"] + ""));
+                }
+            }
+            else if (tipo == 3)
+            {
+                dataTable = new Contrato().tableContrato();
+                comboBox2.Items.Clear();
+                foreach (DataRow dr in dataTable.Rows)
+                {
+                    comboBox2.Items.Add(new ComItem(dr["idPer"] + " $" + dr["monto"] + " " + dr["idCon"], dr["idCon"] + ""));
                 }
             }
         }

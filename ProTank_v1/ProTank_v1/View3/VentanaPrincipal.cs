@@ -133,7 +133,7 @@ namespace ProTank_v1.View3
             String data = s.getData();
             if (data == "")
             {
-                MessageBox.Show("Eliminacion de usuario cancelada!");
+                MessageBox.Show("Modificacion de usuario cancelada!");
             }
             else
             {
@@ -272,6 +272,155 @@ namespace ProTank_v1.View3
         {
             if (this.panel3.Controls.Count > 0)
                 this.panel3.Controls.RemoveAt(0);
+        }
+
+        private void mostrarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(2);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                User us = new User().getUser(data);
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                NewUser fh = new NewUser(us.uname, us.rol, true);
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
+            }
+        }
+
+        private void buscarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(1);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                Person us = new Person().getPerson(data);
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                NewPerson fh = new NewPerson(1, us.id);
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
+            }
+        }
+
+        private void mostrarEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(0);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                Empleado us = new Empleado().getEmpleado(data);
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                NewPerson fh = new NewPerson(0, us.id);
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
+            }
+        }
+
+        private void registrarNuevoContratoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            NewContract fh = new NewContract();
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
+        }
+
+        private void editarContratoExistenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(3, true);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                NewContract fh = new NewContract(data);
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
+            }
+        }
+
+        private void removerContratoDelRegistroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(3, true);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                if (new Contrato().delContrato(data))
+                {
+                    MessageBox.Show("Eliminacion de contrato exitosa!");
+                }
+                else
+                {
+                    MessageBox.Show("Eliminacion de contrato fallida!");
+                }
+            }
+        }
+
+        private void mostrarContratosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buscarContratoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(3, true);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+            }
         }
     }
 }
