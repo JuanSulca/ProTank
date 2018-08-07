@@ -16,5 +16,16 @@ namespace ProTank_v1.View2
         {
             InitializeComponent();
         }
+
+        private void Contratos_Load(object sender, EventArgs e)
+        {
+            listarContratos();
+        }
+
+        private void listarContratos()
+        {
+            DataTable dataTable = new Contrato().tableContrato2();
+            tableModulos_Contratos_tabla.DataSource = dataTable;
+        }
     }
 }

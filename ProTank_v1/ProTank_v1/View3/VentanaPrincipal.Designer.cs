@@ -276,6 +276,7 @@
             this.buscarEmpleadoToolStripMenuItem.Name = "buscarEmpleadoToolStripMenuItem";
             this.buscarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.buscarEmpleadoToolStripMenuItem.Text = "Buscar empleado";
+            this.buscarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.buscarEmpleadoToolStripMenuItem_Click);
             // 
             // mostrarEmpleadosToolStripMenuItem
             // 

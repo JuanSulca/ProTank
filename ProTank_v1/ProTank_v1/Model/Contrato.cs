@@ -66,6 +66,15 @@ namespace ProTank_v1
             return dataTable;
         }
 
+        public DataTable tableContrato2()
+        {
+            SqlCommand command = new SqlCommand("SELECT idPer [CedulaCliente], monto [Monto], calificacion [Calificacion], idCon [Codigo Contrato], descrip [Descripcion], fechaI [Fecha inicio], fechaE [Fecha de terminacion] FROM contrato", DB);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            return dataTable;
+        }
+
         public bool upContrato(string nombre, string apellido, string ci, string telefono, string celular)
         {
             bool isSuccess = false;
@@ -123,7 +132,7 @@ namespace ProTank_v1
             return isSuccess;
         }
 
-        public bool insEmpleado(string idPer, decimal monto, int calificacion, string idCon, string descrip, DateTime fechaI, DateTime fechaE)
+        public bool insContrato(string idPer, decimal monto, int calificacion, string idCon, string descrip, DateTime fechaI, DateTime fechaE)
         {
             bool isSuccess = false;
             try

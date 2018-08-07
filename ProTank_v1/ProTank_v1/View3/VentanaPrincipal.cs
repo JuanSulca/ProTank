@@ -324,26 +324,7 @@ namespace ProTank_v1.View3
 
         private void mostrarEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Select s = new Select(0);
-            s.ShowDialog();
-            String data = s.getData();
-            if (data == "")
-            {
-                //MessageBox.Show("Modificacion de cliente cancelada!");
-            }
-            else
-            {
-                Empleado us = new Empleado().getEmpleado(data);
-                if (this.panel3.Controls.Count > 0)
-                    this.panel3.Controls.RemoveAt(0);
-                NewPerson fh = new NewPerson(0, us.id);
-                fh.TopLevel = false;
-                fh.FormBorderStyle = FormBorderStyle.None;
-                fh.Dock = DockStyle.Fill;
-                this.panel3.Controls.Add(fh);
-                this.panel3.Tag = fh;
-                fh.Show();
-            }
+            /*Mostrar tabla*/
         }
 
         private void registrarNuevoContratoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -406,7 +387,15 @@ namespace ProTank_v1.View3
 
         private void mostrarContratosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            Contratos fh = new Contratos();
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
         }
 
         private void buscarContratoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -420,6 +409,30 @@ namespace ProTank_v1.View3
             }
             else
             {
+            }
+        }
+
+        private void buscarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(0);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                Empleado us = new Empleado().getEmpleado(data);
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                NewPerson fh = new NewPerson(0, us.id);
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
             }
         }
     }
