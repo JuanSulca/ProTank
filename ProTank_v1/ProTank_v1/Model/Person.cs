@@ -52,9 +52,18 @@ namespace ProTank_v1
             return u;
         }
 
-        public DataTable tablePerson()
+        public DataTable tablePerson2()
         {
             SqlCommand command = new SqlCommand("SELECT fname [Nombres], lname [Apellidos], id [Cédula de Identidad], telef [Teléfono], cel [Celular] FROM person", DB);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            return dataTable;
+        }
+
+        public DataTable tablePerson()
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM person", DB);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);

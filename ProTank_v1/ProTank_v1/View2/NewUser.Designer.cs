@@ -113,7 +113,7 @@
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(174, 27);
             this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = "Administracion";
+            this.checkBox1.Text = "Administración";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // lblModulos_NuevoUsuario_ayuda
@@ -201,6 +201,7 @@
             this.comboModulos_NuevoUsuario_nombre.Name = "comboModulos_NuevoUsuario_nombre";
             this.comboModulos_NuevoUsuario_nombre.Size = new System.Drawing.Size(244, 24);
             this.comboModulos_NuevoUsuario_nombre.TabIndex = 7;
+            this.comboModulos_NuevoUsuario_nombre.SelectedIndexChanged += new System.EventHandler(this.comboModulos_NuevoUsuario_nombre_SelectedIndexChanged);
             // 
             // lblModulos_NuevoUsuario_nombre
             // 
@@ -273,9 +274,9 @@
             this.lblModulos_NuevoUsuario_username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModulos_NuevoUsuario_username.Location = new System.Drawing.Point(91, 84);
             this.lblModulos_NuevoUsuario_username.Name = "lblModulos_NuevoUsuario_username";
-            this.lblModulos_NuevoUsuario_username.Size = new System.Drawing.Size(113, 23);
+            this.lblModulos_NuevoUsuario_username.Size = new System.Drawing.Size(84, 23);
             this.lblModulos_NuevoUsuario_username.TabIndex = 0;
-            this.lblModulos_NuevoUsuario_username.Text = "Username:";
+            this.lblModulos_NuevoUsuario_username.Text = "Usuario:";
             // 
             // panel3
             // 

@@ -42,7 +42,7 @@ namespace ProTank_v1
             bool isSuccess = false;
             try
             {
-                SqlCommand command = new SqlCommand("UPDATE herramienta SET " + columna + " = @nombre WHERE codigoH = @codHerramienta");
+                SqlCommand command = new SqlCommand("UPDATE herramienta SET " + columna + " = @nombre WHERE codigoH = @codHerramienta",DB);
                 command.Parameters.AddWithValue("@nombre",nombre);
                 command.Parameters.AddWithValue("@codHerramienta", codHerramienta);
                 DB.Open();
@@ -69,7 +69,7 @@ namespace ProTank_v1
             bool isSuccess = false;
             try
             {
-                SqlCommand command = new SqlCommand("UPDATE herramienta SET " + columna + " = @value WHERE codigoH = @codHerramienta");
+                SqlCommand command = new SqlCommand("UPDATE herramienta SET " + columna + " = @value WHERE codigoH = @codHerramienta",DB);
                 command.Parameters.AddWithValue("@value", value);
                 command.Parameters.AddWithValue("@codHerramienta", codHerramienta);
                 DB.Open();
@@ -99,7 +99,7 @@ namespace ProTank_v1
             bool isSuccess = false;
             try
             {
-                SqlCommand command = new SqlCommand("INSERT INTO herramienta VALUES (@nombre, @cantidad, @codigoH, @periodo)");
+                SqlCommand command = new SqlCommand("INSERT INTO herramienta VALUES (@nombre, @cantidad, @codigoH, @periodo)",DB);
                 command.Parameters.AddWithValue("@nombre", nombre);
                 command.Parameters.AddWithValue("@cantidad", cantidad);
                 command.Parameters.AddWithValue("@codigoH", codigoH);
@@ -131,7 +131,7 @@ namespace ProTank_v1
         //columna pasaría a ser el criterio de busqueda
         public DataTable tableHerramienta(string columna, int value)
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM herramienta WHERE " + columna + " = @value");
+            SqlCommand command = new SqlCommand("SELECT * FROM herramienta WHERE " + columna + " = @value",DB);
             command.Parameters.AddWithValue("@value", value);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
@@ -141,7 +141,7 @@ namespace ProTank_v1
 
         public DataTable tableHerramienta(string columna, string value)
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM herramienta WHERE " + columna + " = @value");
+            SqlCommand command = new SqlCommand("SELECT * FROM herramienta WHERE " + columna + " = @value",DB);
             command.Parameters.AddWithValue("@value", value);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
@@ -153,9 +153,19 @@ namespace ProTank_v1
         -----------------------------------Listar Herramienta--------------------------------
         -----------------------------------------------------------------------------------*/
 
+        public DataTable tableHerramienta2()
+        {
+
+            SqlCommand command = new SqlCommand("SELECT nombre [Nombre], cantidad [Cantidad], codigoH [Código de la herramienta], periodo [Periodo] FROM herramienta",DB);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            return dataTable;
+        }
+
         public DataTable tableHerramienta()
         {
-            SqlCommand command = new SqlCommand("SELECT nombre [Nombre], cantidad [Cantidad], codigoH [Código de la herramienta], periodo [Periodo] FROM herramienta");
+            SqlCommand command = new SqlCommand("SELECT * FROM herramienta",DB);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);

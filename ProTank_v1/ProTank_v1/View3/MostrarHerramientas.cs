@@ -24,7 +24,7 @@ namespace ProTank_v1.View3
 
         private void listarHerramientas()
         {
-            DataTable dataTable = new Herramienta().tableHerramienta();
+            DataTable dataTable = new Herramienta().tableHerramienta2();
             tableModulos_Contratos_tabla.DataSource = dataTable;
         }
     }

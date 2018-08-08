@@ -167,15 +167,22 @@ namespace ProTank_v1.View3
             Select s = new Select(0, true);
             s.ShowDialog();
             String data = s.getData();
-            if (this.panel3.Controls.Count > 0)
-                this.panel3.Controls.RemoveAt(0);
-            NewPerson fh = new NewPerson(true, data);
-            fh.TopLevel = false;
-            fh.FormBorderStyle = FormBorderStyle.None;
-            fh.Dock = DockStyle.Fill;
-            this.panel3.Controls.Add(fh);
-            this.panel3.Tag = fh;
-            fh.Show();
+            if (data == "")
+            {
+
+            }
+            else
+            {
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                NewPerson fh = new NewPerson(true, data);
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
+            }
         }
 
         private void eliminarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -185,17 +192,17 @@ namespace ProTank_v1.View3
             String data = s.getData();
             if (data == "")
             {
-                MessageBox.Show("Eliminacion de usuario cancelada!");
+                MessageBox.Show("Eliminación de usuario cancelada!");
             }
             else
             {
                 if (new User().delUser(data))
                 {
-                    MessageBox.Show("Eliminacion de usuario exitosa!");
+                    MessageBox.Show("Eliminación de usuario exitosa!");
                 }
                 else
                 {
-                    MessageBox.Show("Eliminacion de usuario fallida!");
+                    MessageBox.Show("Eliminación de usuario fallida!");
                 }
             }
         }
@@ -207,7 +214,7 @@ namespace ProTank_v1.View3
             String data = s.getData();
             if (data == "")
             {
-                MessageBox.Show("Modificacion de cliente cancelada!");
+                MessageBox.Show("Modificación de cliente cancelada!");
             }
             else
             {
@@ -231,17 +238,17 @@ namespace ProTank_v1.View3
             String data = s.getData();
             if (data == "")
             {
-                MessageBox.Show("Eliminacion de cliente cancelada!");
+                MessageBox.Show("Eliminación de cliente cancelada!");
             }
             else
             {
                 if (new Person().delPerson(data))
                 {
-                    MessageBox.Show("Eliminacion de cliente exitosa!");
+                    MessageBox.Show("Eliminación de cliente exitosa!");
                 }
                 else
                 {
-                    MessageBox.Show("Eliminacion de cliente fallida!");
+                    MessageBox.Show("Eliminación de cliente fallida!");
                 }
             }
         }
@@ -253,17 +260,17 @@ namespace ProTank_v1.View3
             String data = s.getData();
             if (data == "")
             {
-                MessageBox.Show("Eliminacion de empleado cancelada!");
+                MessageBox.Show("Eliminación de empleado cancelada!");
             }
             else
             {
                 if (new Empleado().delEmpleado(data))
                 {
-                    MessageBox.Show("Eliminacion de empleado exitosa!");
+                    MessageBox.Show("Eliminación de empleado exitosa!");
                 }
                 else
                 {
-                    MessageBox.Show("Eliminacion de empleado fallida!");
+                    MessageBox.Show("Eliminación de empleado fallida!");
                 }
             }
         }
@@ -276,7 +283,7 @@ namespace ProTank_v1.View3
 
         private void mostrarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Select s = new Select(2);
+            /*Select s = new Select(2);
             s.ShowDialog();
             String data = s.getData();
             if (data == "")
@@ -295,7 +302,16 @@ namespace ProTank_v1.View3
                 this.panel3.Controls.Add(fh);
                 this.panel3.Tag = fh;
                 fh.Show();
-            }
+            }*/
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            MostrarUsuarios fh = new MostrarUsuarios();
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
         }
 
         private void buscarClienteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -324,7 +340,15 @@ namespace ProTank_v1.View3
 
         private void mostrarEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*Mostrar tabla*/
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            MostrarEmpleados fh = new MostrarEmpleados();
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
         }
 
         private void registrarNuevoContratoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -376,11 +400,11 @@ namespace ProTank_v1.View3
             {
                 if (new Contrato().delContrato(data))
                 {
-                    MessageBox.Show("Eliminacion de contrato exitosa!");
+                    MessageBox.Show("Eliminación de contrato exitosa!");
                 }
                 else
                 {
-                    MessageBox.Show("Eliminacion de contrato fallida!");
+                    MessageBox.Show("Eliminación de contrato fallida!");
                 }
             }
         }
@@ -434,6 +458,81 @@ namespace ProTank_v1.View3
                 this.panel3.Tag = fh;
                 fh.Show();
             }
+        }
+
+        private void mostrarClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            MostrarClientes fh = new MostrarClientes();
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
+        }
+
+        private void mostrarHerramientasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            MostrarHerramientas fh = new MostrarHerramientas();
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
+        }
+
+        private void mostrarMantenimientosUrgentesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void todosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            MostrarPrestamos fh = new MostrarPrestamos();
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
+        }
+
+        private void vistaPreliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mostrarServiciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            MostrarServicios fh = new MostrarServicios();
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
+        }
+
+        private void mostrarMaterialesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            MostrarMateriales fh = new MostrarMateriales();
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
         }
     }
 }

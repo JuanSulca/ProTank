@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -99,7 +100,7 @@ namespace ProTank_v1.View2
             comboModulos_NuevoUsuario_nombre.Items.Clear();
             foreach (DataRow dr in dataTable.Rows)
             {
-                comboModulos_NuevoUsuario_nombre.Items.Add(dr["fname"]+" "+dr["lname"]);
+                comboModulos_NuevoUsuario_nombre.Items.Add(new ComItem2(dr["fname"]+" "+dr["lname"], dr["idE"] + ""));
             }
         }
 
@@ -134,8 +135,8 @@ namespace ProTank_v1.View2
                 {
                     if (edit)
                     {
-                        protankDataSetTableAdapters.userLoginTableAdapter tb = new protankDataSetTableAdapters.userLoginTableAdapter();
-                        SqlConnection cnx = tb.Connection;
+                        //cambiar por la función de actualizacion de USer :"v
+                        SqlConnection cnx = new SqlConnection(ConfigurationManager.ConnectionStrings["protankDB"].ConnectionString);
                         cnx.Open();
                         SqlCommand cmd = new SqlCommand("UPDATE userLogin SET pwd = @pwd, rol = @rol WHERE uname = @uname", cnx);
                         cmd.Parameters.AddWithValue("@pwd", pass);
@@ -156,11 +157,9 @@ namespace ProTank_v1.View2
                     }
                     else
                     {
-                        String id = comboModulos_NuevoUsuario_nombre.SelectedValue.ToString();
-                        protankDataSetTableAdapters.userLoginTableAdapter ta = new protankDataSetTableAdapters.userLoginTableAdapter();
-                        ta.Insert(uname, pass, rol);
-                        protankDataSetTableAdapters.userEmpleadoTableAdapter tba = new protankDataSetTableAdapters.userEmpleadoTableAdapter();
-                        tba.Insert(id, uname);
+                        String id = (comboModulos_NuevoUsuario_nombre.SelectedItem as ComItem2).value;
+                        User u = new User(uname, pass, rol);
+                        u.insUser(u, id);
                     }
                     MessageBox.Show("Registro exitoso", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
@@ -179,6 +178,28 @@ namespace ProTank_v1.View2
             //checkModulos_NuevoUsuario_design.Checked = false;
             //checkModulos_NuevoUsuario_servicios.Checked = false;
             //checkBox1.Checked = false;
+        }
+
+        private void comboModulos_NuevoUsuario_nombre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+
+    public class ComItem2
+    {
+        public String text { set; get; }
+        public String value { set; get; }
+
+        public ComItem2(String text, String value)
+        {
+            this.text = text;
+            this.value = value;
+        }
+
+        public override string ToString()
+        {
+            return text;
         }
     }
 }

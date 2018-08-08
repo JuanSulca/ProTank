@@ -47,7 +47,7 @@ namespace ProTank_v1
             return u;
         }
 
-        public Boolean insUser(User u)
+        public Boolean insUser(User u, String idE)
         {
             cnx.Open();
             SqlCommand cmd = new SqlCommand("INSERT INTO userLogin VALUES (@uname, @pwd, @rol)", cnx);
@@ -55,8 +55,12 @@ namespace ProTank_v1
             cmd.Parameters.AddWithValue("@pwd", u.pwd);
             cmd.Parameters.AddWithValue("@rol", u.rol);
             int i = cmd.ExecuteNonQuery();
+            cmd = new SqlCommand("INSERT INTO userEmpleado VALUES (@idE, @uname)", cnx);
+            cmd.Parameters.AddWithValue("@uname", u.uname);
+            cmd.Parameters.AddWithValue("@idE", idE);
+            i += cmd.ExecuteNonQuery();
             cnx.Close();
-            return (i == 1);
+            return (i == 2);
         }
 
         public Boolean upUser(User u)
@@ -75,11 +79,14 @@ namespace ProTank_v1
         {
             int i = 0;
             cnx.Open();
-            SqlCommand cmd = new SqlCommand("DELETE FROM userLogin WHERE uname = @uname", cnx);
+            SqlCommand cmd = new SqlCommand("DELETE FROM userEmpleado WHERE uname = @uname", cnx);
             cmd.Parameters.AddWithValue("@uname", uname);
             try
             {
                 i = cmd.ExecuteNonQuery();
+                cmd = new SqlCommand("DELETE FROM userLogin WHERE uname = @uname", cnx);
+                cmd.Parameters.AddWithValue("@uname", uname);
+                i += cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -89,7 +96,7 @@ namespace ProTank_v1
             {
                 cnx.Close();
             }
-            return (i == 1);
+            return (i == 2);
         }
 
         public DataTable tableUser()

@@ -24,7 +24,7 @@ namespace ProTank_v1.View3
 
         private void listarClientes()
         {
-            DataTable dataTable = new Person().tablePerson();
+            DataTable dataTable = new Person().tablePerson2();
             tableModulos_Contratos_tabla.DataSource = dataTable;
         }
     }
