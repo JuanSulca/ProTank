@@ -478,6 +478,7 @@
             this.generarTablaToolStripMenuItem.Name = "generarTablaToolStripMenuItem";
             this.generarTablaToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.generarTablaToolStripMenuItem.Text = "Generar Tabla";
+            this.generarTablaToolStripMenuItem.Click += new System.EventHandler(this.generarTablaToolStripMenuItem_Click);
             // 
             // vistaPreliminarToolStripMenuItem
             // 

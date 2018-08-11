@@ -70,6 +70,7 @@
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\Prestamo.cs" />
     <Compile Include="Model\Servicio.cs" />
+    <Compile Include="Model\TablaDeAforo.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\Validacion.cs" />
     <Compile Include="protankDataSet.cs">
