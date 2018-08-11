@@ -118,6 +118,8 @@ namespace ProTank_v1.View
                     numericUpDown1.Enabled = false;
                     numericUpDownMonto.Enabled = false;
                     textBox2.Enabled = false;
+                    button1.Visible = false;
+                    label2.Text = "Contrato";
                 }
             }
             else

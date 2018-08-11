@@ -438,7 +438,15 @@ namespace ProTank_v1.View3
             }
             else
             {
-                NewContract n = new NewContract(data,true);
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                NewContract fh = new NewContract(data,true);
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
             }
         }
 
