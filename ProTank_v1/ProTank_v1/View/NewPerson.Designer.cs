@@ -74,9 +74,11 @@
             // 
             this.textBox5.Location = new System.Drawing.Point(272, 225);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox5.MaxLength = 10;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(244, 22);
             this.textBox5.TabIndex = 19;
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label7
             // 
@@ -92,25 +94,31 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(272, 181);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox3.MaxLength = 9;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(244, 22);
             this.textBox3.TabIndex = 17;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(272, 137);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox2.MaxLength = 10;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(244, 22);
             this.textBox2.TabIndex = 16;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(272, 41);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox4.MaxLength = 60;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(244, 22);
             this.textBox4.TabIndex = 15;
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // label6
             // 
@@ -136,9 +144,11 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(272, 87);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.MaxLength = 60;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(244, 22);
             this.textBox1.TabIndex = 4;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // button2
             // 

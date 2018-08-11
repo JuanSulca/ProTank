@@ -16,6 +16,7 @@ namespace ProTank_v1.View
     {
         Boolean empleado = false;
         Boolean ac = false;
+        Validacion v = new Validacion();
 
         public NewPerson(int mod, String id)
         {
@@ -114,9 +115,21 @@ namespace ProTank_v1.View
             String cedula = textBox2.Text;
             String telefono = textBox3.Text;
             String celular = textBox5.Text;
-            if(nombres == "" || apellido == "" || cedula == "")
+            string mensajeDeError = v.validarCedula(cedula);
+            if(telefono != "")
+            {
+                mensajeDeError += v.validarTelefono(telefono);
+            }
+            if(celular != "")
+            {
+                mensajeDeError += v.validarCelular(celular);
+            }
+            if (nombres == "" || apellido == "" || cedula == "")
             {
                 MessageBox.Show("Campos sin llenar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }else if(mensajeDeError != "")
+            {
+                MessageBox.Show(mensajeDeError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -187,5 +200,20 @@ namespace ProTank_v1.View
             this.Close();
         }
 
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < 65 || e.KeyChar > 90) && (e.KeyChar < 97 || e.KeyChar > 122) && e.KeyChar != 8 && e.KeyChar != 164 && e.KeyChar != 165 && e.KeyChar !=32)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
