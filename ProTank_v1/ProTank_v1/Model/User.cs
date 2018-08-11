@@ -126,7 +126,5 @@ namespace ProTank_v1
             return table;
         }
 
-        /*Coneccion con la base de datos*/
-
     }
 }

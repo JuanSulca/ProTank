@@ -156,5 +156,17 @@ namespace ProTank_v1.Model
             return isSuccess;
         }
 
+        public Empleado getEmp(String uname)
+        {
+            DB.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM userEmpleado WHERE uname = @uname", DB);
+            cmd.Parameters.AddWithValue("@uname", uname);
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Read();
+            String idE = reader.GetValue(0).ToString();
+            DB.Close();
+            return getEmpleado(idE);
+        }
+
     }
 }
