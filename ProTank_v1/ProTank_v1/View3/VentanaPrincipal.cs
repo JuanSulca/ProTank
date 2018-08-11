@@ -380,7 +380,7 @@ namespace ProTank_v1.View3
 
         private void removerContratoDelRegistroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Select s = new Select(3, true);
+            Select s = new Select(3, false);
             s.ShowDialog();
             String data = s.getData();
             if (data == "")

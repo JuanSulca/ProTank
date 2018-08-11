@@ -76,7 +76,7 @@ namespace ProTank_v1.View2
             //auxNombres();
             comboModulos_NuevoUsuario_nombre.Items.Clear();
             Empleado e = new Empleado().getEmp(uname);
-            comboModulos_NuevoUsuario_nombre.Items.Add(new ComItem(e.fname + " " + e.lname, e.id) );
+            comboModulos_NuevoUsuario_nombre.Items.Add(new ComItem(e.fname + " " + e.lname, e.id));
             comboModulos_NuevoUsuario_nombre.SelectedIndex = 0;
             comboModulos_NuevoUsuario_nombre.Enabled = false;
             btnModulos_NuevoUsuario_crearUsuario.Text = "Modificar";
@@ -94,7 +94,7 @@ namespace ProTank_v1.View2
             comboModulos_NuevoUsuario_nombre.Items.Clear();
             foreach (DataRow dr in dataTable.Rows)
             {
-                comboModulos_NuevoUsuario_nombre.Items.Add(new ComItem2(dr["fname"]+" "+dr["lname"], dr["idE"] + ""));
+                comboModulos_NuevoUsuario_nombre.Items.Add(new ComItem(dr["fname"]+" "+dr["lname"], dr["idE"] + ""));
             }
         }
 
@@ -151,7 +151,7 @@ namespace ProTank_v1.View2
                     }
                     else
                     {
-                        String id = (comboModulos_NuevoUsuario_nombre.SelectedItem as ComItem2).value;
+                        String id = (comboModulos_NuevoUsuario_nombre.SelectedItem as ComItem).value;
                         User u = new User(uname, pass, rol);
                         u.insUser(u, id);
                     }
@@ -177,23 +177,6 @@ namespace ProTank_v1.View2
         private void comboModulos_NuevoUsuario_nombre_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-        }
-    }
-
-    public class ComItem2
-    {
-        public String text { set; get; }
-        public String value { set; get; }
-
-        public ComItem2(String text, String value)
-        {
-            this.text = text;
-            this.value = value;
-        }
-
-        public override string ToString()
-        {
-            return text;
         }
     }
 }
