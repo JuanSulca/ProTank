@@ -34,8 +34,40 @@ namespace ProTank_v1
         /*-----------------------------------------------------------------------------------
         ---------------------------------Modificar Herramienta-------------------------------
         -----------------------------------------------------------------------------------*/
-         
-        
+
+        public bool upHerramienta(string nombre, int cantidad, string codigo, int periodo)
+        {
+            bool isSuccess = false;
+            try
+            {
+                SqlCommand command = new SqlCommand("UPDATE herramienta SET nombre = @nombre, cantidad = @cantidad, periodo = @periodo WHERE codigoH = @codigo", DB);
+                command.Parameters.AddWithValue("@nombre", nombre);
+                command.Parameters.AddWithValue("@cantidad", cantidad);
+                command.Parameters.AddWithValue("@periodo", periodo);
+                command.Parameters.AddWithValue("@codigo", codigo);
+                DB.Open();
+                int rows = command.ExecuteNonQuery();
+                if (rows > 0)
+                {
+                    isSuccess = true;
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                DB.Close();
+            }
+            return isSuccess;
+        }
+
+
+
+
+
+
         //Se pasa el nombre de la columna que se quiere modificar :v e.e. nombre,cantidad,periodo
         public bool upHerramienta(string columna, string nombre, string codHerramienta)
         {
@@ -123,6 +155,37 @@ namespace ProTank_v1
             return isSuccess;
         }
 
+        public bool delHerramienta(string codigoH)
+        {
+            bool isSuccess = false;
+            try
+            {
+                SqlCommand command = new SqlCommand("DELETE FROM mantenimiento WHERE codigoH = @codigoH", DB);
+                command.Parameters.AddWithValue("@codigoH", codigoH);
+                DB.Open();
+                int rows = command.ExecuteNonQuery();
+                command = new SqlCommand("DELETE FROM prestamo WHERE codigoH = @codigoH", DB);
+                command.Parameters.AddWithValue("@codigoH", codigoH);
+                rows += command.ExecuteNonQuery();
+                command = new SqlCommand("DELETE FROM herramienta WHERE codigoH = @codigoH", DB);
+                command.Parameters.AddWithValue("@codigoH", codigoH);
+                rows += command.ExecuteNonQuery();
+                if (rows > 0)
+                {
+                    isSuccess = true;
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                DB.Close();
+            }
+            return isSuccess;
+        }
+
 
         /*-----------------------------------------------------------------------------------
         -----------------------------------Buscar Herramienta--------------------------------
@@ -172,5 +235,22 @@ namespace ProTank_v1
             return dataTable;
         }
 
+        public DataTable tableProximos()
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM mantenimientoH_proximo", DB);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            return dataTable;
+        }
+
+        public DataTable tableUrgentes()
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM mantenimientoH_urgente", DB);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            return dataTable;
+        }
     }
 }
