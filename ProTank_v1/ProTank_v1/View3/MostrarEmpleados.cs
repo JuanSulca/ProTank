@@ -21,12 +21,18 @@ namespace ProTank_v1.View3
         private void MostrarEmpleados_Load(object sender, EventArgs e)
         {
             listarEmpleados();
+            tableModulos_Contratos_tabla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void listarEmpleados()
         {
             DataTable dataTable = new Empleado().tableEmpleado();
             tableModulos_Contratos_tabla.DataSource = dataTable;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

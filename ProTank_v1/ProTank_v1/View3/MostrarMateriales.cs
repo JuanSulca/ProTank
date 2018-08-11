@@ -27,7 +27,12 @@ namespace ProTank_v1.View3
         {
             DataTable dataTable = new Material().tableMaterial();
             tableModulos_Contratos_tabla.DataSource = dataTable;
+            tableModulos_Contratos_tabla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
