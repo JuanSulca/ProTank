@@ -30,6 +30,7 @@ namespace ProTank_v1.View
                 textBox3.Text = e.tel;
                 textBox5.Text = e.cel;
                 empleado = true;
+                label2.Text = "Empleado";
             }
             else if(mod == 1)
             {
@@ -40,6 +41,7 @@ namespace ProTank_v1.View
                 textBox3.Text = e.tel;
                 textBox5.Text = e.cel;
                 empleado = false;
+                label2.Text = "Cliente";
             }
             textBox1.Enabled = false;
             textBox2.Enabled = false;
