@@ -97,17 +97,18 @@
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calcularNuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.mostrarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.parámetrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblModulos_NuevoUsuario_protank = new System.Windows.Forms.Label();
+            this.administraciónDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administraciónDeParámetrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removerUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarDatosDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.mostrarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configurarParámetrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -625,60 +626,11 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoUsuarioToolStripMenuItem,
-            this.eliminarUsuarioToolStripMenuItem,
-            this.modificarContraseñaToolStripMenuItem,
-            this.toolStripSeparator12,
-            this.mostrarUsuariosToolStripMenuItem,
-            this.toolStripSeparator3,
-            this.parámetrosToolStripMenuItem});
+            this.administraciónDeUsuariosToolStripMenuItem,
+            this.administraciónDeParámetrosToolStripMenuItem});
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
-            this.usuariosToolStripMenuItem.Text = "Administración";
-            // 
-            // nuevoUsuarioToolStripMenuItem
-            // 
-            this.nuevoUsuarioToolStripMenuItem.Name = "nuevoUsuarioToolStripMenuItem";
-            this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
-            this.nuevoUsuarioToolStripMenuItem.Text = "Registrar Usuario";
-            this.nuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.nuevoUsuarioToolStripMenuItem_Click);
-            // 
-            // eliminarUsuarioToolStripMenuItem
-            // 
-            this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
-            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
-            this.eliminarUsuarioToolStripMenuItem.Text = "Remover Usuario";
-            this.eliminarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.eliminarUsuarioToolStripMenuItem_Click);
-            // 
-            // modificarContraseñaToolStripMenuItem
-            // 
-            this.modificarContraseñaToolStripMenuItem.Name = "modificarContraseñaToolStripMenuItem";
-            this.modificarContraseñaToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
-            this.modificarContraseñaToolStripMenuItem.Text = "Modificar Datos de Usuario";
-            this.modificarContraseñaToolStripMenuItem.Click += new System.EventHandler(this.modificarContraseñaToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator12
-            // 
-            this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(263, 6);
-            // 
-            // mostrarUsuariosToolStripMenuItem
-            // 
-            this.mostrarUsuariosToolStripMenuItem.Name = "mostrarUsuariosToolStripMenuItem";
-            this.mostrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
-            this.mostrarUsuariosToolStripMenuItem.Text = "Mostrar Usuarios";
-            this.mostrarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.mostrarUsuariosToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(263, 6);
-            // 
-            // parámetrosToolStripMenuItem
-            // 
-            this.parámetrosToolStripMenuItem.Name = "parámetrosToolStripMenuItem";
-            this.parámetrosToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
-            this.parámetrosToolStripMenuItem.Text = "Configurar Parámetros";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
+            this.usuariosToolStripMenuItem.Text = "Administración del Sistema";
             // 
             // panel1
             // 
@@ -728,6 +680,65 @@
             this.lblModulos_NuevoUsuario_protank.TabIndex = 0;
             this.lblModulos_NuevoUsuario_protank.Text = "ProTank";
             // 
+            // administraciónDeUsuariosToolStripMenuItem
+            // 
+            this.administraciónDeUsuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarUsuarioToolStripMenuItem,
+            this.removerUsuarioToolStripMenuItem,
+            this.modificarDatosDeUsuarioToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.mostrarUsuariosToolStripMenuItem});
+            this.administraciónDeUsuariosToolStripMenuItem.Name = "administraciónDeUsuariosToolStripMenuItem";
+            this.administraciónDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.administraciónDeUsuariosToolStripMenuItem.Text = "Administración de Usuarios";
+            // 
+            // administraciónDeParámetrosToolStripMenuItem
+            // 
+            this.administraciónDeParámetrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.configurarParámetrosToolStripMenuItem});
+            this.administraciónDeParámetrosToolStripMenuItem.Name = "administraciónDeParámetrosToolStripMenuItem";
+            this.administraciónDeParámetrosToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.administraciónDeParámetrosToolStripMenuItem.Text = "Administración de Parámetros";
+            // 
+            // registrarUsuarioToolStripMenuItem
+            // 
+            this.registrarUsuarioToolStripMenuItem.Name = "registrarUsuarioToolStripMenuItem";
+            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.registrarUsuarioToolStripMenuItem.Text = "Registrar Usuario";
+            this.registrarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.nuevoUsuarioToolStripMenuItem_Click);
+            // 
+            // removerUsuarioToolStripMenuItem
+            // 
+            this.removerUsuarioToolStripMenuItem.Name = "removerUsuarioToolStripMenuItem";
+            this.removerUsuarioToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.removerUsuarioToolStripMenuItem.Text = "Remover Usuario";
+            this.removerUsuarioToolStripMenuItem.Click += new System.EventHandler(this.eliminarUsuarioToolStripMenuItem_Click);
+            // 
+            // modificarDatosDeUsuarioToolStripMenuItem
+            // 
+            this.modificarDatosDeUsuarioToolStripMenuItem.Name = "modificarDatosDeUsuarioToolStripMenuItem";
+            this.modificarDatosDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.modificarDatosDeUsuarioToolStripMenuItem.Text = "Modificar Datos de Usuario";
+            this.modificarDatosDeUsuarioToolStripMenuItem.Click += new System.EventHandler(this.modificarContraseñaToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(263, 6);
+            // 
+            // mostrarUsuariosToolStripMenuItem
+            // 
+            this.mostrarUsuariosToolStripMenuItem.Name = "mostrarUsuariosToolStripMenuItem";
+            this.mostrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.mostrarUsuariosToolStripMenuItem.Text = "Mostrar Usuarios";
+            this.mostrarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.mostrarUsuariosToolStripMenuItem_Click);
+            // 
+            // configurarParámetrosToolStripMenuItem
+            // 
+            this.configurarParámetrosToolStripMenuItem.Name = "configurarParámetrosToolStripMenuItem";
+            this.configurarParámetrosToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.configurarParámetrosToolStripMenuItem.Text = "Configurar Parámetros";
+            // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -759,9 +770,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblModulos_NuevoUsuario_protank;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nuevoUsuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarUsuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarContraseñaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarClienteToolStripMenuItem;
@@ -816,8 +824,6 @@
         private System.Windows.Forms.ToolStripMenuItem buscarMaterialToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calcularNuevaVentaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
-        private System.Windows.Forms.ToolStripMenuItem mostrarUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarEmpleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarContratosToolStripMenuItem;
@@ -832,7 +838,13 @@
         private System.Windows.Forms.ToolStripMenuItem mostrarServiciosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarMaterialesToolStripMenuItem;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ToolStripMenuItem administraciónDeUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removerUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarDatosDeUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem parámetrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mostrarUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administraciónDeParámetrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configurarParámetrosToolStripMenuItem;
     }
 }

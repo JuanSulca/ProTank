@@ -218,7 +218,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "NewTool";
             this.Text = "NewTool";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NewTool_FormClosed);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);

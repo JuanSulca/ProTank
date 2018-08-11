@@ -34,7 +34,7 @@ namespace ProTank_v1.View3
         {
             Application.Exit();
         }
-
+        //Registrar Usuario
         private void nuevoUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (this.panel3.Controls.Count > 0)
@@ -185,6 +185,7 @@ namespace ProTank_v1.View3
             }
         }
 
+        //Remover Usuario
         private void eliminarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Select s = new Select(2, false);
@@ -207,6 +208,7 @@ namespace ProTank_v1.View3
             }
         }
 
+        //Modificar Datos de Usuario
         private void modificarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Select s = new Select(2, true);
@@ -289,6 +291,7 @@ namespace ProTank_v1.View3
                 this.panel3.Controls.RemoveAt(0);
         }
 
+        //Mostrar Usuarios
         private void mostrarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (this.panel3.Controls.Count > 0)
@@ -528,5 +531,9 @@ namespace ProTank_v1.View3
             fh.Show();
         }
 
+        private void parámetrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
