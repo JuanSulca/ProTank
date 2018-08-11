@@ -12,6 +12,8 @@ namespace ProTank_v1.View
 {
     public partial class NewPrestamo : Form
     {
+
+        Boolean ac = false;
         public NewPrestamo()
         {
             InitializeComponent();
@@ -24,11 +26,10 @@ namespace ProTank_v1.View
 
         private void NewPrestamo_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'protankDataSet1.empleado' table. You can move, or remove it, as needed.
-            //this.empleadoTableAdapter.Fill(this.protankDataSet1.empleado);
-            // TODO: This line of code loads data into the 'protankDataSet1.herramienta' table. You can move, or remove it, as needed.
-            //this.herramientaTableAdapter.Fill(this.protankDataSet1.herramienta);
+            if (!ac)
+            {
 
+            }
         }
     }
 }
