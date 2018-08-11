@@ -53,6 +53,7 @@ namespace ProTank_v1.View
         {
             InitializeComponent();
             ac = true;
+            this.empleado = empleado;
             if (empleado)
             {
                 Empleado e = new Empleado().getEmpleado(id);

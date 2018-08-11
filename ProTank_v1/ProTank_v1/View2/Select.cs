@@ -126,7 +126,7 @@ namespace ProTank_v1.View2
                 comboBox2.Items.Clear();
                 foreach (DataRow dr in dataTable.Rows)
                 {
-                    comboBox2.Items.Add(new ComItem(dr["fname"] + " " + dr["lname"], dr["idE"] + ""));
+                    comboBox2.Items.Add(new ComItem(dr["idE"] + " " + dr["fname"] + " " + dr["lname"], dr["idE"] + ""));
                 }
             }
             else if(tipo == 1)
