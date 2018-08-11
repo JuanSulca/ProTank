@@ -322,12 +322,14 @@
             this.modificarHerramientaToolStripMenuItem.Name = "modificarHerramientaToolStripMenuItem";
             this.modificarHerramientaToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
             this.modificarHerramientaToolStripMenuItem.Text = "Modificar herramienta";
+            this.modificarHerramientaToolStripMenuItem.Click += new System.EventHandler(this.modificarHerramientaToolStripMenuItem_Click);
             // 
             // darDeBajaAHerrmientaToolStripMenuItem
             // 
             this.darDeBajaAHerrmientaToolStripMenuItem.Name = "darDeBajaAHerrmientaToolStripMenuItem";
             this.darDeBajaAHerrmientaToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
             this.darDeBajaAHerrmientaToolStripMenuItem.Text = "Dar de baja a herrmienta";
+            this.darDeBajaAHerrmientaToolStripMenuItem.Click += new System.EventHandler(this.darDeBajaAHerrmientaToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
@@ -359,14 +361,16 @@
             // próximosToolStripMenuItem
             // 
             this.próximosToolStripMenuItem.Name = "próximosToolStripMenuItem";
-            this.próximosToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.próximosToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.próximosToolStripMenuItem.Text = "Próximos";
+            this.próximosToolStripMenuItem.Click += new System.EventHandler(this.próximosToolStripMenuItem_Click);
             // 
             // urgentesToolStripMenuItem
             // 
             this.urgentesToolStripMenuItem.Name = "urgentesToolStripMenuItem";
-            this.urgentesToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.urgentesToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.urgentesToolStripMenuItem.Text = "Urgentes";
+            this.urgentesToolStripMenuItem.Click += new System.EventHandler(this.urgentesToolStripMenuItem_Click);
             // 
             // mostrarHerramientasToolStripMenuItem
             // 

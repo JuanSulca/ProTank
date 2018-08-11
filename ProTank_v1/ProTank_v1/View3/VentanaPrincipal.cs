@@ -535,5 +535,25 @@ namespace ProTank_v1.View3
         {
 
         }
+
+        private void modificarHerramientaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void darDeBajaAHerrmientaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void próximosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void urgentesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
