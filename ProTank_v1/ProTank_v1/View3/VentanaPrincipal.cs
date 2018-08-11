@@ -50,15 +50,25 @@ namespace ProTank_v1.View3
 
         private void buscarHerramientaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.panel3.Controls.Count > 0)
-                this.panel3.Controls.RemoveAt(0);
-            ControlDeHerramientas fh = new ControlDeHerramientas();
-            fh.TopLevel = false;
-            fh.FormBorderStyle = FormBorderStyle.None;
-            fh.Dock = DockStyle.Fill;
-            this.panel3.Controls.Add(fh);
-            this.panel3.Tag = fh;
-            fh.Show();
+            Select s = new Select(4);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                NewTool fh = new NewTool(data, true);
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
+            }
         }
 
         private void calcularPesoDeTanqueToolStripMenuItem_Click(object sender, EventArgs e)
@@ -216,7 +226,7 @@ namespace ProTank_v1.View3
             String data = s.getData();
             if (data == "")
             {
-                MessageBox.Show("Modificación de cliente cancelada!");
+                //MessageBox.Show("Modificación de cliente cancelada!");
             }
             else
             {
@@ -538,22 +548,77 @@ namespace ProTank_v1.View3
 
         private void modificarHerramientaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Select s = new Select(4, true);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                NewTool fh = new NewTool(data, false);
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
+            }
         }
 
         private void darDeBajaAHerrmientaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Select s = new Select(4, false);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                DialogResult r = MessageBox.Show("Desea eliminar la herramienta: " + data + "?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (r.Equals(DialogResult.Yes))
+                {
+                    if (new Herramienta().delHerramienta(data))
+                    {
+                        MessageBox.Show("Eliminación de herramienta exitosa!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Eliminación de herramienta fallida!");
+                    }
+                }
+            }
         }
 
         private void próximosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            MostrarHerramientas fh = new MostrarHerramientas(1);
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
         }
 
         private void urgentesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            MostrarHerramientas fh = new MostrarHerramientas(2);
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
         }
     }
 }
