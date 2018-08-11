@@ -73,23 +73,17 @@ namespace ProTank_v1.View2
                 checkBox1.Checked = true;
             edit = true;
             txtModulos_NuevoUsuario_username.Enabled = false;
-            auxNombres();
+            //auxNombres();
+            comboModulos_NuevoUsuario_nombre.Items.Clear();
+            Empleado e = new Empleado().getEmp(uname);
+            comboModulos_NuevoUsuario_nombre.Items.Add(new ComItem(e.fname + " " + e.lname, e.id) );
+            comboModulos_NuevoUsuario_nombre.SelectedIndex = 0;
+            comboModulos_NuevoUsuario_nombre.Enabled = false;
             btnModulos_NuevoUsuario_crearUsuario.Text = "Modificar";
-            //protankDataSetTableAdapters.userEmpleadoTableAdapter loginTable = new protankDataSetTableAdapters.userEmpleadoTableAdapter();
-            //protankDataSet ds = new protankDataSet();
-            //loginTable.Fill(ds.userEmpleado);
-            //protankDataSet.userLoginRow loginRow = ds.FindByuname(uname);
-            //comboModulos_NuevoUsuario_nombre.SelectedValue = loginRow.idE;
         }
 
         private void NewUser_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'protankDataSet1.empleados_apellidos_nombres' table. You can move, or remove it, as needed.
-            //this.empleados_apellidos_nombresTableAdapter.Fill(this.protankDataSet1.empleados_apellidos_nombres);
-            // TODO: This line of code loads data into the 'protankDataSet.empleados_apellidos_nombres' table. You can move, or remove it, as needed.
-            //this.empleados_apellidos_nombresTableAdapter.Fill(this.protankDataSet.empleados_apellidos_nombres);
-            // TODO: This line of code loads data into the 'protankDataSet.empleado' table. You can move, or remove it, as needed.
-            //this.empleadoTableAdapter.Fill(this.protankDataSet.empleado);
             auxNombres();
 
         }
