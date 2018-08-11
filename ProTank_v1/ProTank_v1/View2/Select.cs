@@ -135,7 +135,7 @@ namespace ProTank_v1.View2
                 comboBox2.Items.Clear();
                 foreach (DataRow dr in dataTable.Rows)
                 {
-                    comboBox2.Items.Add(new ComItem(dr["fname"] + " " + dr["lname"], dr["id"] + ""));
+                    comboBox2.Items.Add(new ComItem(dr["id"] + " " + dr["fname"] + " " + dr["lname"], dr["id"] + ""));
                 }
             }
             else if (tipo == 2)
@@ -153,7 +153,7 @@ namespace ProTank_v1.View2
                 comboBox2.Items.Clear();
                 foreach (DataRow dr in dataTable.Rows)
                 {
-                    comboBox2.Items.Add(new ComItem(dr["idPer"] + " $" + dr["monto"] + " " + dr["idCon"], dr["idCon"] + ""));
+                    comboBox2.Items.Add(new ComItem(dr["idCon"] + " " + dr["idPer"] + " $" + dr["monto"], dr["idCon"] + ""));
                 }
             }
         }

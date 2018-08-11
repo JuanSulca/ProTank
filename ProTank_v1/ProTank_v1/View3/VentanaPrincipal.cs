@@ -238,17 +238,21 @@ namespace ProTank_v1.View3
             String data = s.getData();
             if (data == "")
             {
-                MessageBox.Show("Eliminación de cliente cancelada!");
+                //MessageBox.Show("Eliminación de cliente cancelada!");
             }
             else
             {
-                if (new Person().delPerson(data))
+                DialogResult r = MessageBox.Show("Desea eliminar el Cliente: " + data + "?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (r.Equals(DialogResult.Yes))
                 {
-                    MessageBox.Show("Eliminación de cliente exitosa!");
-                }
-                else
-                {
-                    MessageBox.Show("Eliminación de cliente fallida!");
+                    if (new Person().delPerson(data))
+                    {
+                        MessageBox.Show("Eliminación de cliente exitosa!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Eliminación de cliente fallida!");
+                    }
                 }
             }
         }
@@ -260,17 +264,21 @@ namespace ProTank_v1.View3
             String data = s.getData();
             if (data == "")
             {
-                MessageBox.Show("Eliminación de empleado cancelada!");
+                //MessageBox.Show("Eliminación de empleado cancelada!");
             }
             else
             {
-                if (new Empleado().delEmpleado(data))
+                DialogResult r = MessageBox.Show("Desea eliminar el Empleado: " + data + "?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (r.Equals(DialogResult.Yes))
                 {
-                    MessageBox.Show("Eliminación de empleado exitosa!");
-                }
-                else
-                {
-                    MessageBox.Show("Eliminación de empleado fallida!");
+                    if (new Empleado().delEmpleado(data))
+                    {
+                        MessageBox.Show("Eliminación de empleado exitosa!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Eliminación de empleado fallida!");
+                    }
                 }
             }
         }
@@ -283,26 +291,6 @@ namespace ProTank_v1.View3
 
         private void mostrarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*Select s = new Select(2);
-            s.ShowDialog();
-            String data = s.getData();
-            if (data == "")
-            {
-                //MessageBox.Show("Modificacion de cliente cancelada!");
-            }
-            else
-            {
-                User us = new User().getUser(data);
-                if (this.panel3.Controls.Count > 0)
-                    this.panel3.Controls.RemoveAt(0);
-                NewUser fh = new NewUser(us.uname, us.rol, true);
-                fh.TopLevel = false;
-                fh.FormBorderStyle = FormBorderStyle.None;
-                fh.Dock = DockStyle.Fill;
-                this.panel3.Controls.Add(fh);
-                this.panel3.Tag = fh;
-                fh.Show();
-            }*/
             if (this.panel3.Controls.Count > 0)
                 this.panel3.Controls.RemoveAt(0);
             MostrarUsuarios fh = new MostrarUsuarios();
@@ -398,13 +386,17 @@ namespace ProTank_v1.View3
             }
             else
             {
-                if (new Contrato().delContrato(data))
+                DialogResult r = MessageBox.Show("Desea eliminar el Contrato: " + data + "?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (r.Equals(DialogResult.Yes))
                 {
-                    MessageBox.Show("Eliminación de contrato exitosa!");
-                }
-                else
-                {
-                    MessageBox.Show("Eliminación de contrato fallida!");
+                    if (new Contrato().delContrato(data))
+                    {
+                        MessageBox.Show("Eliminación de contrato exitosa!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Eliminación de contrato fallida!");
+                    }
                 }
             }
         }
@@ -433,6 +425,7 @@ namespace ProTank_v1.View3
             }
             else
             {
+
             }
         }
 

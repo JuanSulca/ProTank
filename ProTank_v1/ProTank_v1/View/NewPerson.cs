@@ -56,6 +56,7 @@ namespace ProTank_v1.View
             this.empleado = empleado;
             if (empleado)
             {
+                label2.Text = "Actualizar Empleado";
                 Empleado e = new Empleado().getEmpleado(id);
                 textBox4.Text = e.fname;
                 textBox1.Text = e.lname;
@@ -65,6 +66,7 @@ namespace ProTank_v1.View
             }
             else
             {
+                label2.Text = "Actualizar Cliente";
                 Person e = new Person().getPerson(id);
                 textBox4.Text = e.fname;
                 textBox1.Text = e.lname;
