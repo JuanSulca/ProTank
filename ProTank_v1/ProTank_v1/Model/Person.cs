@@ -70,6 +70,16 @@ namespace ProTank_v1
             return dataTable;
         }
 
+        public DataTable tablePerson(string idP)
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM person where id = @id", DB);
+            command.Parameters.AddWithValue("@id", idP);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            return dataTable;
+        }
+
         public bool upPerson(string nombre, string apellido, string ci, string telefono, string celular)
         {
             bool isSuccess = false;

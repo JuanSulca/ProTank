@@ -368,7 +368,7 @@ namespace ProTank_v1.View3
             {
                 if (this.panel3.Controls.Count > 0)
                     this.panel3.Controls.RemoveAt(0);
-                NewContract fh = new NewContract(data);
+                NewContract fh = new NewContract(data,false);
                 fh.TopLevel = false;
                 fh.FormBorderStyle = FormBorderStyle.None;
                 fh.Dock = DockStyle.Fill;
@@ -419,7 +419,7 @@ namespace ProTank_v1.View3
 
         private void buscarContratoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Select s = new Select(3, true);
+            Select s = new Select(3);
             s.ShowDialog();
             String data = s.getData();
             if (data == "")
@@ -428,7 +428,7 @@ namespace ProTank_v1.View3
             }
             else
             {
-
+                NewContract n = new NewContract(data,true);
             }
         }
 

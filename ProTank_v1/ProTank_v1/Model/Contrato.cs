@@ -75,17 +75,17 @@ namespace ProTank_v1
             return dataTable;
         }
 
-        public bool upContrato(string nombre, string apellido, string ci, string telefono, string celular)
+        public bool upContrato(string idCon, decimal monto, int calificacion, DateTime fechaF, string descrip)
         {
             bool isSuccess = false;
             try
             {
-                SqlCommand command = new SqlCommand("UPDATE contrato SET fname = @fname, lname = @lname, telef = @telef, cel = @cel WHERE idE = @idE", DB);
-                command.Parameters.AddWithValue("@fname", nombre);
-                command.Parameters.AddWithValue("@lname", apellido);
-                command.Parameters.AddWithValue("@telef", telefono);
-                command.Parameters.AddWithValue("@cel", celular);
-                command.Parameters.AddWithValue("@idE", ci);
+                SqlCommand command = new SqlCommand("UPDATE contrato SET monto = @monto, calificacion = @calificacion, FechaE = @fechaF, descrip = @descrip WHERE idCon = @idCon", DB);
+                command.Parameters.AddWithValue("@monto", monto);
+                command.Parameters.AddWithValue("@calificacion", calificacion);
+                command.Parameters.AddWithValue("@fechaF", fechaF);
+                command.Parameters.AddWithValue("@descrip", descrip);
+                command.Parameters.AddWithValue("@idCon", idCon);
                 DB.Open();
                 int rows = command.ExecuteNonQuery();
                 if (rows > 0)
@@ -113,9 +113,6 @@ namespace ProTank_v1
                 command.Parameters.AddWithValue("@idE", ci);
                 DB.Open();
                 int rows = command.ExecuteNonQuery();
-                command = new SqlCommand("DELETE FROM empleado WHERE idE = @idE", DB);
-                command.Parameters.AddWithValue("@idE", ci);
-                rows = command.ExecuteNonQuery();
                 if (rows > 0)
                 {
                     isSuccess = true;
