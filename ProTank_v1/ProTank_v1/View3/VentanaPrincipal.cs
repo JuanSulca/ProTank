@@ -146,7 +146,7 @@ namespace ProTank_v1.View3
             String data = s.getData();
             if (data == "")
             {
-                MessageBox.Show("Modificacion de usuario cancelada!");
+                //MessageBox.Show("Modificacion de usuario cancelada!");
             }
             else
             {
@@ -206,17 +206,17 @@ namespace ProTank_v1.View3
             String data = s.getData();
             if (data == "")
             {
-                MessageBox.Show("Eliminación de usuario cancelada!");
+                //MessageBox.Show("Eliminación de usuario cancelada!");
             }
             else
             {
                 if (new User().delUser(data))
                 {
-                    MessageBox.Show("Eliminación de usuario exitosa!");
+                    MessageBox.Show("Eliminación de usuario exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Eliminación de usuario fallida!");
+                    MessageBox.Show("Eliminación de usuario fallida!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -262,11 +262,11 @@ namespace ProTank_v1.View3
                 {
                     if (new Person().delPerson(data))
                     {
-                        MessageBox.Show("Eliminación de cliente exitosa!");
+                        MessageBox.Show("Eliminación de cliente exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Eliminación de cliente fallida!");
+                        MessageBox.Show("Eliminación de cliente fallida!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -288,11 +288,11 @@ namespace ProTank_v1.View3
                 {
                     if (new Empleado().delEmpleado(data))
                     {
-                        MessageBox.Show("Eliminación de empleado exitosa!");
+                        MessageBox.Show("Eliminación de empleado exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Eliminación de empleado fallida!");
+                        MessageBox.Show("Eliminación de empleado fallida!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -407,11 +407,11 @@ namespace ProTank_v1.View3
                 {
                     if (new Contrato().delContrato(data))
                     {
-                        MessageBox.Show("Eliminación de contrato exitosa!");
+                        MessageBox.Show("Eliminación de contrato exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Eliminación de contrato fallida!");
+                        MessageBox.Show("Eliminación de contrato fallida!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -604,11 +604,11 @@ namespace ProTank_v1.View3
                 {
                     if (new Herramienta().delHerramienta(data))
                     {
-                        MessageBox.Show("Eliminación de herramienta exitosa!");
+                        MessageBox.Show("Eliminación de herramienta exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Eliminación de herramienta fallida!");
+                        MessageBox.Show("Eliminación de herramienta fallida!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -744,6 +744,189 @@ namespace ProTank_v1.View3
             if (this.panel3.Controls.Count > 0)
                 this.panel3.Controls.RemoveAt(0);
             MostrarPrestamos fh = new MostrarPrestamos(2);
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
+        }
+
+        private void ingresarNuevoServicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            Servicios fh = new Servicios(false);
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
+        }
+
+        private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            Servicios fh = new Servicios(true);
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
+        }
+
+        private void modificarServicioExistenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(6, true);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                Servicios fh = new Servicios(false, data);
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
+            }
+        }
+
+        private void modificarMaterialExistenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(7, true);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                Servicios fh = new Servicios(true, data);
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
+            }
+        }
+
+        private void retirarServicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(6, false);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                DialogResult r = MessageBox.Show("Desea eliminar el servicio: " + data.Trim() + "?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (r.Equals(DialogResult.Yes))
+                {
+                    if (new Servicio().delServicio(data))
+                    {
+                        MessageBox.Show("Eliminación de Servicio exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Eliminación de Servicio fallida!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void removerMaterialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(7, false);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                DialogResult r = MessageBox.Show("Desea eliminar el producto: " + data.Trim() + "?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (r.Equals(DialogResult.Yes))
+                {
+                    if (new Material().delMaterial(data))
+                    {
+                        MessageBox.Show("Eliminación de Producto exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Eliminación de Producto fallida!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void buscarServicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(6);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                Servicios fh = new Servicios(false, data, true);
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
+            }
+        }
+
+        private void buscarMaterialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(7);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                Servicios fh = new Servicios(true, data, true);
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
+            }
+        }
+
+        private void calcularNuevaVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            NuevaVenta fh = new NuevaVenta();
             fh.TopLevel = false;
             fh.FormBorderStyle = FormBorderStyle.None;
             fh.Dock = DockStyle.Fill;

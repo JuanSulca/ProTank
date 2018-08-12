@@ -58,6 +58,16 @@ namespace ProTank_v1.View2
                 label8.Text = "Prestamo:";
                 button10.Text = "Mostrar";
             }
+            else if (tipo == 6)
+            {
+                label8.Text = "Servicio:";
+                button10.Text = "Mostrar";
+            }
+            else if (tipo == 7)
+            {
+                label8.Text = "Producto:";
+                button10.Text = "Mostrar";
+            }
             tipo = mod;
         }
 
@@ -138,6 +148,30 @@ namespace ProTank_v1.View2
                     button10.Text = "Eliminar";
                 }
             }
+            else if (tipo == 6)
+            {
+                label8.Text = "Servicio:";
+                if (ac)
+                {
+                    button10.Text = "Modificar";
+                }
+                else
+                {
+                    button10.Text = "Eliminar";
+                }
+            }
+            else if (tipo == 7)
+            {
+                label8.Text = "Producto:";
+                if (ac)
+                {
+                    button10.Text = "Modificar";
+                }
+                else
+                {
+                    button10.Text = "Eliminar";
+                }
+            }
         }
 
         public String getData()
@@ -206,6 +240,24 @@ namespace ProTank_v1.View2
                 foreach (DataRow dr in dataTable.Select("[Devuelto] = false"))
                 {
                     comboBox2.Items.Add(new ComItem(dr["Herramienta"] + " " + dr["Empleado"] + " " + dr["Fecha de préstamo"] + " " + dr["Cantidad"].ToString().Trim(), dr["Herramienta"] + ";" + dr["Empleado"] + ";" + dr["Fecha de préstamo"] + ";" + dr["Devuelto"] + ";" + dr["Cantidad"]));
+                }
+            }
+            else if (tipo == 6)
+            {
+                dataTable = new Servicio().tableServicio2();
+                comboBox2.Items.Clear();
+                foreach (DataRow dr in dataTable.Rows)
+                {
+                    comboBox2.Items.Add(new ComItem(dr["codigo"].ToString().Trim() + " " + dr["nombre"] + " " + dr["unidad"], dr["codigo"] + ""));
+                }
+            }
+            else if (tipo == 7)
+            {
+                dataTable = new Material().tableMaterial2();
+                comboBox2.Items.Clear();
+                foreach (DataRow dr in dataTable.Rows)
+                {
+                    comboBox2.Items.Add(new ComItem(dr["codigo"].ToString().Trim() + " " + dr["nombre"] + " " + dr["unidad"], dr["codigo"] + ""));
                 }
             }
         }

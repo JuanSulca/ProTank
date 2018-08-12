@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProTank_v1.Model;
+using ProTank_v1.View2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,22 @@ namespace ProTank_v1.View3
         public NuevaVenta()
         {
             InitializeComponent();
+        }
+
+        private void NuevaVenta_Load(object sender, EventArgs e)
+        {
+            DataTable dataTable = new Material().tableMaterial2();
+            Item.Items.Clear();
+            Item.ValueType = typeof(ComItem);
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                Item.Items.Add(new ComItem(dr["nombre"] + " " + dr["unidad"], dr["codigo"] + ""));
+            }
+            dataTable = new Servicio().tableServicio2();
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                Item.Items.Add(new ComItem(dr["nombre"] + " " + dr["unidad"], dr["codigo"] + ""));
+            }
         }
     }
 }

@@ -200,6 +200,12 @@
     <Compile Include="View3\PesoTanques.Designer.cs">
       <DependentUpon>PesoTanques.cs</DependentUpon>
     </Compile>
+    <Compile Include="View3\Servicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View3\Servicios.Designer.cs">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="View3\VentanaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View3\PesoTanques.resx">
       <DependentUpon>PesoTanques.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View3\Servicios.resx">
+      <DependentUpon>Servicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View3\VentanaPrincipal.resx">
       <DependentUpon>VentanaPrincipal.cs</DependentUpon>
