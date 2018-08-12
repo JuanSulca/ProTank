@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProTank_v1.Model;
+using ProTank_v1.View3;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,15 +16,34 @@ namespace ProTank_v1.View2
     {
 
         public DataTable tablaDeAforo = new DataTable();
+        private VentanaPrincipal principal;
 
-        public GenerarAforo()
+        public GenerarAforo(VentanaPrincipal p)
         {
             InitializeComponent();
+            this.principal = p;
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-
+            double diametro = (double)numericUpDownDiametro.Value;
+            string unidadL = comboBoxDiametro.SelectedItem.ToString();
+            string unidadV = comboBoxVolumen.SelectedItem.ToString();
+            double longitud = (double)numericUpDownLongitud.Value;
+            double cabeza = (double)numericUpDownCabeza.Value;
+            int paso = (int)numericUpDownPaso.Value;
+            int iteraciones = (int)numericUpDownIteraciones.Value;
+            this.tablaDeAforo = TablaDeAforo.tablaAforo(diametro, unidadL, longitud, unidadL, cabeza, unidadL, unidadV, paso, iteraciones);
+            if (tablaDeAforo.Rows.Count > 0)
+            {
+                MessageBox.Show("Tabla generada exitosamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                principal.tablaDeAforo = this.tablaDeAforo;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un problema al generar la tabla de aforo.\nRevise los parámetros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void GenerarAforo_Load(object sender, EventArgs e)

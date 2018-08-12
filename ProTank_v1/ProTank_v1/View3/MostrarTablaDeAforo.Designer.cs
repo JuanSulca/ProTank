@@ -1,6 +1,6 @@
 ﻿namespace ProTank_v1.View3
 {
-    partial class MostrarHerramientas
+    partial class MostrarTablaDeAforo
     {
         /// <summary>
         /// Required designer variable.
@@ -49,8 +49,8 @@
             this.tableModulos_Contratos_tabla.ReadOnly = true;
             this.tableModulos_Contratos_tabla.RowHeadersVisible = false;
             this.tableModulos_Contratos_tabla.RowTemplate.Height = 31;
-            this.tableModulos_Contratos_tabla.Size = new System.Drawing.Size(1129, 469);
-            this.tableModulos_Contratos_tabla.TabIndex = 9;
+            this.tableModulos_Contratos_tabla.Size = new System.Drawing.Size(942, 411);
+            this.tableModulos_Contratos_tabla.TabIndex = 11;
             // 
             // panContratos_header
             // 
@@ -62,15 +62,15 @@
             this.panContratos_header.Location = new System.Drawing.Point(0, 0);
             this.panContratos_header.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panContratos_header.Name = "panContratos_header";
-            this.panContratos_header.Size = new System.Drawing.Size(1129, 85);
-            this.panContratos_header.TabIndex = 10;
+            this.panContratos_header.Size = new System.Drawing.Size(942, 85);
+            this.panContratos_header.TabIndex = 12;
             // 
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(979, 30);
+            this.button10.Location = new System.Drawing.Point(770, 30);
             this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(137, 37);
@@ -87,21 +87,20 @@
             this.lblContratos_contratos.ForeColor = System.Drawing.Color.Lavender;
             this.lblContratos_contratos.Location = new System.Drawing.Point(117, 32);
             this.lblContratos_contratos.Name = "lblContratos_contratos";
-            this.lblContratos_contratos.Size = new System.Drawing.Size(171, 28);
+            this.lblContratos_contratos.Size = new System.Drawing.Size(182, 28);
             this.lblContratos_contratos.TabIndex = 1;
-            this.lblContratos_contratos.Text = "Herramientas";
+            this.lblContratos_contratos.Text = "Tabla de Aforo";
             // 
-            // MostrarHerramientas
+            // MostrarTablaDeAforo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1129, 554);
+            this.ClientSize = new System.Drawing.Size(942, 496);
             this.Controls.Add(this.tableModulos_Contratos_tabla);
             this.Controls.Add(this.panContratos_header);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "MostrarHerramientas";
-            this.Text = "MostrarHerramientas";
-            this.Load += new System.EventHandler(this.MostrarHerramientas_Load);
+            this.Name = "MostrarTablaDeAforo";
+            this.Text = "MostrarTablaDeAforo";
+            this.Load += new System.EventHandler(this.MostrarTablaDeAforo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tableModulos_Contratos_tabla)).EndInit();
             this.panContratos_header.ResumeLayout(false);
             this.panContratos_header.PerformLayout();
@@ -113,7 +112,7 @@
 
         private System.Windows.Forms.DataGridView tableModulos_Contratos_tabla;
         private System.Windows.Forms.Panel panContratos_header;
-        private System.Windows.Forms.Label lblContratos_contratos;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label lblContratos_contratos;
     }
 }

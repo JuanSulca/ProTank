@@ -176,6 +176,12 @@
     <Compile Include="View3\MostrarServicios.Designer.cs">
       <DependentUpon>MostrarServicios.cs</DependentUpon>
     </Compile>
+    <Compile Include="View3\MostrarTablaDeAforo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View3\MostrarTablaDeAforo.Designer.cs">
+      <DependentUpon>MostrarTablaDeAforo.cs</DependentUpon>
+    </Compile>
     <Compile Include="View3\MostrarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View3\MostrarServicios.resx">
       <DependentUpon>MostrarServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View3\MostrarTablaDeAforo.resx">
+      <DependentUpon>MostrarTablaDeAforo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View3\MostrarUsuarios.resx">
       <DependentUpon>MostrarUsuarios.cs</DependentUpon>

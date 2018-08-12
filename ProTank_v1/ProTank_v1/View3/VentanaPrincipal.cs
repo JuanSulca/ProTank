@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,8 @@ namespace ProTank_v1.View3
 {
     public partial class VentanaPrincipal : Form
     {
+        public DataTable tablaDeAforo { get; set; }
+
         public VentanaPrincipal()
         {
             InitializeComponent();
@@ -520,7 +523,15 @@ namespace ProTank_v1.View3
 
         private void vistaPreliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            MostrarTablaDeAforo fh = new MostrarTablaDeAforo(this.tablaDeAforo);
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
         }
 
         private void mostrarServiciosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -633,7 +644,7 @@ namespace ProTank_v1.View3
         {
             if (this.panel3.Controls.Count > 0)
                 this.panel3.Controls.RemoveAt(0);
-            GenerarAforo fh = new GenerarAforo();
+            GenerarAforo fh = new GenerarAforo(this);
             fh.TopLevel = false;
             fh.FormBorderStyle = FormBorderStyle.None;
             fh.Dock = DockStyle.Fill;
@@ -645,6 +656,26 @@ namespace ProTank_v1.View3
         private void modificarPrestamoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Select s = new Select(5);
+        }
+
+        private void guardarTablaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "XML|*.xml";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    tablaDeAforo.TableName = "tablaDeAforo";
+                    tablaDeAforo.WriteXml(sfd.FileName);
+                    MessageBox.Show("Tabla de aforo exportada con éxito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }   
+            
         }
     }
 }

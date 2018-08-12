@@ -52,16 +52,16 @@ namespace ProTank_v1.Model
             return (valor / 3.78541178);
         }
 
-        static void tablaAforo(double diametro, String uniDiametro, double longitud, String uniLongitud, double cabeza, String uniCabeza, String volumen, int paso, int iteraciones)
+        public static DataTable tablaAforo(double diametro, String uniDiametro, double longitud, String uniLongitud, double cabeza, String uniCabeza, String volumen, int paso, int iteraciones)
         {
             double radio, volActual, resVolumen = 0, volTotal;
             int pasoAux = 0, i = 0;
             DataTable dataTable = new DataTable();
             dataTable.Columns.Add("i");
-            //dataTable.Columns.Add
-
-
-
+            dataTable.Columns.Add("Paso");
+            dataTable.Columns.Add("Volumen");
+            dataTable.Columns.Add("Porcentaje");
+            
             switch (uniDiametro)
             {
                 case "cm":
@@ -111,8 +111,15 @@ namespace ProTank_v1.Model
                         Console.WriteLine("Unidad incorrecta para salida de volumen");
                         break;
                 }
-                Console.WriteLine("{0} \t {1} \t {2} \t {3}", i, pasoAux, Math.Round(resVolumen, 2), Math.Round((resVolumen / volTotal) * 100, 4));
+                DataRow row = dataTable.NewRow();
+                row["i"] = i;
+                row["Paso"] = pasoAux;
+                row["Volumen"] = Math.Round(resVolumen, 2);
+                row["Porcentaje"] = Math.Round((resVolumen / volTotal) * 100, 4);
+                dataTable.Rows.Add(row);
+                //Console.WriteLine("{0} \t {1} \t {2} \t {3}", i, pasoAux, Math.Round(resVolumen, 2), Math.Round((resVolumen / volTotal) * 100, 4));
             }
+            return dataTable;
 
         }
 
