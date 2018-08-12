@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.checkRet = new System.Windows.Forms.CheckBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.empleadoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.protankDataSet1 = new ProTank_v1.protankDataSet1();
@@ -45,17 +48,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.herramientaTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.herramientaTableAdapter();
             this.empleadoTableAdapter = new ProTank_v1.protankDataSet1TableAdapters.empleadoTableAdapter();
-            this.checkRet = new System.Windows.Forms.CheckBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.protankDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.herramientaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.herramientaBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -77,6 +77,47 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(652, 315);
             this.panel2.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(91, 133);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 23);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Cantidad:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(336, 133);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(87, 22);
+            this.numericUpDown1.TabIndex = 19;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // checkRet
+            // 
+            this.checkRet.AutoSize = true;
+            this.checkRet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkRet.Location = new System.Drawing.Point(336, 175);
+            this.checkRet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkRet.Name = "checkRet";
+            this.checkRet.Size = new System.Drawing.Size(124, 27);
+            this.checkRet.TabIndex = 14;
+            this.checkRet.Text = "Devuelta";
+            this.checkRet.UseVisualStyleBackColor = true;
             // 
             // comboBox2
             // 
@@ -107,6 +148,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(208, 24);
             this.comboBox1.TabIndex = 7;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // herramientaBindingSource1
             // 
@@ -203,47 +245,6 @@
             // 
             this.empleadoTableAdapter.ClearBeforeFill = true;
             // 
-            // checkRet
-            // 
-            this.checkRet.AutoSize = true;
-            this.checkRet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkRet.Location = new System.Drawing.Point(336, 175);
-            this.checkRet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkRet.Name = "checkRet";
-            this.checkRet.Size = new System.Drawing.Size(124, 27);
-            this.checkRet.TabIndex = 14;
-            this.checkRet.Text = "Devuelta";
-            this.checkRet.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(336, 133);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(87, 22);
-            this.numericUpDown1.TabIndex = 19;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(91, 133);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 23);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Cantidad:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // NewPrestamo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -258,6 +259,7 @@
             this.Load += new System.EventHandler(this.NewPrestamo_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.protankDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.herramientaBindingSource1)).EndInit();
@@ -265,7 +267,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.herramientaBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }

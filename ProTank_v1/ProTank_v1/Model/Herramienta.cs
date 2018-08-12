@@ -255,7 +255,9 @@ namespace ProTank_v1
 
         public DataTable tableHerramientasPrestar()
         {
-            SqlCommand command = new SqlCommand("select * from herramienta h where h.codigoH not in (select codigoH from prestamo) or (h.cantidad > (select sum(cantidad) from prestamo p where p.codigoH = h.codigoH and returned = 0))", DB);
+            SqlCommand command = new SqlCommand("select h.codigoH, nombre, cantidad-dis[disponibles] " + "from herramienta h join (select p.codigoH, sum(p.cantidad)[dis] " +
+                "from prestamo p where returned = 0 group by p.codigoH) c on (h.codigoH = c.codigoH) where cantidad-dis > 0" + " union " + 
+            "select codigoH, nombre, cantidad[disponibles] from herramienta where codigoH not in (select codigoH from prestamo where returned = 0)", DB);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);

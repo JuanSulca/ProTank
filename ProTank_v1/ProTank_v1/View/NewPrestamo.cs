@@ -40,7 +40,7 @@ namespace ProTank_v1.View
 
         private void NewPerstamo_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Close();
+            
         }
 
         private void NewPrestamo_Load(object sender, EventArgs e)
@@ -67,9 +67,9 @@ namespace ProTank_v1.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String codigoH = comboBox1.SelectedItem.ToString();
-            String idE = comboBox2.SelectedItem.ToString();
-            int cantidad = Convert.ToInt32(numericUpDown1.Value);
+            String codigoH = (comboBox1.SelectedItem as ComItem).value;
+            String idE = (comboBox2.SelectedItem as ComItem).value;
+            int cantidad = (int)numericUpDown1.Value;
             Boolean returned = checkRet.Checked;
             DateTime date = DateTime.Today;
             if (ac)
@@ -78,7 +78,10 @@ namespace ProTank_v1.View
             }
             else
             {
-                new Prestamo().insPrestamo(codigoH, idE, date, cantidad, returned);
+                if (new Prestamo().insPrestamo(codigoH, idE, date, cantidad, returned))
+                    MessageBox.Show("Registro exitoso!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Registro Fallido!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             this.Close();
         }
@@ -86,6 +89,13 @@ namespace ProTank_v1.View
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dt = new Herramienta().tableHerramientasPrestar();
+            DataRow [] r = dt.Select("[codigoH] = '" + (comboBox1.SelectedItem as ComItem).value + "'");
+            numericUpDown1.Maximum = Convert.ToInt32(r[0]["disponibles"]);
         }
     }
 }
