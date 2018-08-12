@@ -58,7 +58,7 @@ namespace ProTank_v1.Model
             int pasoAux = 0, i = 0;
             DataTable dataTable = new DataTable();
             dataTable.Columns.Add("i");
-            dataTable.Columns.Add
+            //dataTable.Columns.Add
 
 
 
