@@ -64,7 +64,6 @@
             this.prestamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ragistrarPrestamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarPrestamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.anularPrestamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.buscarPrestaamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
@@ -97,18 +96,18 @@
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calcularNuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblModulos_NuevoUsuario_protank = new System.Windows.Forms.Label();
             this.administraciónDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administraciónDeParámetrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removerUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarDatosDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.mostrarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administraciónDeParámetrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configurarParámetrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblModulos_NuevoUsuario_protank = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -361,14 +360,14 @@
             // próximosToolStripMenuItem
             // 
             this.próximosToolStripMenuItem.Name = "próximosToolStripMenuItem";
-            this.próximosToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.próximosToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.próximosToolStripMenuItem.Text = "Próximos";
             this.próximosToolStripMenuItem.Click += new System.EventHandler(this.próximosToolStripMenuItem_Click);
             // 
             // urgentesToolStripMenuItem
             // 
             this.urgentesToolStripMenuItem.Name = "urgentesToolStripMenuItem";
-            this.urgentesToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.urgentesToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.urgentesToolStripMenuItem.Text = "Urgentes";
             this.urgentesToolStripMenuItem.Click += new System.EventHandler(this.urgentesToolStripMenuItem_Click);
             // 
@@ -384,7 +383,6 @@
             this.prestamosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ragistrarPrestamoToolStripMenuItem,
             this.modificarPrestamoToolStripMenuItem,
-            this.anularPrestamoToolStripMenuItem,
             this.toolStripSeparator7,
             this.buscarPrestaamoToolStripMenuItem,
             this.toolStripSeparator8,
@@ -406,12 +404,7 @@
             this.modificarPrestamoToolStripMenuItem.Name = "modificarPrestamoToolStripMenuItem";
             this.modificarPrestamoToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.modificarPrestamoToolStripMenuItem.Text = "Modificar Préstamo";
-            // 
-            // anularPrestamoToolStripMenuItem
-            // 
-            this.anularPrestamoToolStripMenuItem.Name = "anularPrestamoToolStripMenuItem";
-            this.anularPrestamoToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.anularPrestamoToolStripMenuItem.Text = "Anular Préstamo";
+            this.modificarPrestamoToolStripMenuItem.Click += new System.EventHandler(this.modificarPrestamoToolStripMenuItem_Click);
             // 
             // toolStripSeparator7
             // 
@@ -442,20 +435,20 @@
             // todosToolStripMenuItem
             // 
             this.todosToolStripMenuItem.Name = "todosToolStripMenuItem";
-            this.todosToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.todosToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.todosToolStripMenuItem.Text = "Todos";
             this.todosToolStripMenuItem.Click += new System.EventHandler(this.todosToolStripMenuItem_Click);
             // 
             // devueltosToolStripMenuItem
             // 
             this.devueltosToolStripMenuItem.Name = "devueltosToolStripMenuItem";
-            this.devueltosToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.devueltosToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.devueltosToolStripMenuItem.Text = "Devueltos";
             // 
             // activosToolStripMenuItem
             // 
             this.activosToolStripMenuItem.Name = "activosToolStripMenuItem";
-            this.activosToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.activosToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.activosToolStripMenuItem.Text = "Activos";
             // 
             // toolStripSeparator9
@@ -637,6 +630,65 @@
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
             this.usuariosToolStripMenuItem.Text = "Administración del Sistema";
             // 
+            // administraciónDeUsuariosToolStripMenuItem
+            // 
+            this.administraciónDeUsuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarUsuarioToolStripMenuItem,
+            this.removerUsuarioToolStripMenuItem,
+            this.modificarDatosDeUsuarioToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.mostrarUsuariosToolStripMenuItem});
+            this.administraciónDeUsuariosToolStripMenuItem.Name = "administraciónDeUsuariosToolStripMenuItem";
+            this.administraciónDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.administraciónDeUsuariosToolStripMenuItem.Text = "Administración de Usuarios";
+            // 
+            // registrarUsuarioToolStripMenuItem
+            // 
+            this.registrarUsuarioToolStripMenuItem.Name = "registrarUsuarioToolStripMenuItem";
+            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.registrarUsuarioToolStripMenuItem.Text = "Registrar Usuario";
+            this.registrarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.nuevoUsuarioToolStripMenuItem_Click);
+            // 
+            // removerUsuarioToolStripMenuItem
+            // 
+            this.removerUsuarioToolStripMenuItem.Name = "removerUsuarioToolStripMenuItem";
+            this.removerUsuarioToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.removerUsuarioToolStripMenuItem.Text = "Remover Usuario";
+            this.removerUsuarioToolStripMenuItem.Click += new System.EventHandler(this.eliminarUsuarioToolStripMenuItem_Click);
+            // 
+            // modificarDatosDeUsuarioToolStripMenuItem
+            // 
+            this.modificarDatosDeUsuarioToolStripMenuItem.Name = "modificarDatosDeUsuarioToolStripMenuItem";
+            this.modificarDatosDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.modificarDatosDeUsuarioToolStripMenuItem.Text = "Modificar Datos de Usuario";
+            this.modificarDatosDeUsuarioToolStripMenuItem.Click += new System.EventHandler(this.modificarContraseñaToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(263, 6);
+            // 
+            // mostrarUsuariosToolStripMenuItem
+            // 
+            this.mostrarUsuariosToolStripMenuItem.Name = "mostrarUsuariosToolStripMenuItem";
+            this.mostrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.mostrarUsuariosToolStripMenuItem.Text = "Mostrar Usuarios";
+            this.mostrarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.mostrarUsuariosToolStripMenuItem_Click);
+            // 
+            // administraciónDeParámetrosToolStripMenuItem
+            // 
+            this.administraciónDeParámetrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.configurarParámetrosToolStripMenuItem});
+            this.administraciónDeParámetrosToolStripMenuItem.Name = "administraciónDeParámetrosToolStripMenuItem";
+            this.administraciónDeParámetrosToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.administraciónDeParámetrosToolStripMenuItem.Text = "Administración de Parámetros";
+            // 
+            // configurarParámetrosToolStripMenuItem
+            // 
+            this.configurarParámetrosToolStripMenuItem.Name = "configurarParámetrosToolStripMenuItem";
+            this.configurarParámetrosToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.configurarParámetrosToolStripMenuItem.Text = "Configurar Parámetros";
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
@@ -684,65 +736,6 @@
             this.lblModulos_NuevoUsuario_protank.Size = new System.Drawing.Size(191, 56);
             this.lblModulos_NuevoUsuario_protank.TabIndex = 0;
             this.lblModulos_NuevoUsuario_protank.Text = "ProTank";
-            // 
-            // administraciónDeUsuariosToolStripMenuItem
-            // 
-            this.administraciónDeUsuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarUsuarioToolStripMenuItem,
-            this.removerUsuarioToolStripMenuItem,
-            this.modificarDatosDeUsuarioToolStripMenuItem,
-            this.toolStripSeparator3,
-            this.mostrarUsuariosToolStripMenuItem});
-            this.administraciónDeUsuariosToolStripMenuItem.Name = "administraciónDeUsuariosToolStripMenuItem";
-            this.administraciónDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
-            this.administraciónDeUsuariosToolStripMenuItem.Text = "Administración de Usuarios";
-            // 
-            // administraciónDeParámetrosToolStripMenuItem
-            // 
-            this.administraciónDeParámetrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.configurarParámetrosToolStripMenuItem});
-            this.administraciónDeParámetrosToolStripMenuItem.Name = "administraciónDeParámetrosToolStripMenuItem";
-            this.administraciónDeParámetrosToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
-            this.administraciónDeParámetrosToolStripMenuItem.Text = "Administración de Parámetros";
-            // 
-            // registrarUsuarioToolStripMenuItem
-            // 
-            this.registrarUsuarioToolStripMenuItem.Name = "registrarUsuarioToolStripMenuItem";
-            this.registrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
-            this.registrarUsuarioToolStripMenuItem.Text = "Registrar Usuario";
-            this.registrarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.nuevoUsuarioToolStripMenuItem_Click);
-            // 
-            // removerUsuarioToolStripMenuItem
-            // 
-            this.removerUsuarioToolStripMenuItem.Name = "removerUsuarioToolStripMenuItem";
-            this.removerUsuarioToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
-            this.removerUsuarioToolStripMenuItem.Text = "Remover Usuario";
-            this.removerUsuarioToolStripMenuItem.Click += new System.EventHandler(this.eliminarUsuarioToolStripMenuItem_Click);
-            // 
-            // modificarDatosDeUsuarioToolStripMenuItem
-            // 
-            this.modificarDatosDeUsuarioToolStripMenuItem.Name = "modificarDatosDeUsuarioToolStripMenuItem";
-            this.modificarDatosDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
-            this.modificarDatosDeUsuarioToolStripMenuItem.Text = "Modificar Datos de Usuario";
-            this.modificarDatosDeUsuarioToolStripMenuItem.Click += new System.EventHandler(this.modificarContraseñaToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(263, 6);
-            // 
-            // mostrarUsuariosToolStripMenuItem
-            // 
-            this.mostrarUsuariosToolStripMenuItem.Name = "mostrarUsuariosToolStripMenuItem";
-            this.mostrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
-            this.mostrarUsuariosToolStripMenuItem.Text = "Mostrar Usuarios";
-            this.mostrarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.mostrarUsuariosToolStripMenuItem_Click);
-            // 
-            // configurarParámetrosToolStripMenuItem
-            // 
-            this.configurarParámetrosToolStripMenuItem.Name = "configurarParámetrosToolStripMenuItem";
-            this.configurarParámetrosToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
-            this.configurarParámetrosToolStripMenuItem.Text = "Configurar Parámetros";
             // 
             // VentanaPrincipal
             // 
@@ -803,7 +796,6 @@
         private System.Windows.Forms.ToolStripMenuItem prestamosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ragistrarPrestamoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarPrestamoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem anularPrestamoToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem buscarPrestaamoToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
