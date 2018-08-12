@@ -39,6 +39,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.numericUpDownLon = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownDia = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLon)).BeginInit();
@@ -48,6 +51,9 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Silver;
+            this.panel17.Controls.Add(this.label4);
+            this.panel17.Controls.Add(this.label3);
+            this.panel17.Controls.Add(this.label2);
             this.panel17.Controls.Add(this.numericUpDownDia);
             this.panel17.Controls.Add(this.numericUpDownLon);
             this.panel17.Controls.Add(this.button1);
@@ -62,7 +68,7 @@
             this.panel17.Location = new System.Drawing.Point(0, 0);
             this.panel17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(343, 277);
+            this.panel17.Size = new System.Drawing.Size(428, 277);
             this.panel17.TabIndex = 17;
             // 
             // label1
@@ -202,11 +208,38 @@
             0,
             0});
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(334, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 17);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "[cm]";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(334, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 17);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "[cm]";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(334, 179);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 17);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "[kg]";
+            // 
             // PesoTanques
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 277);
+            this.ClientSize = new System.Drawing.Size(428, 277);
             this.Controls.Add(this.panel17);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PesoTanques";
@@ -233,5 +266,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.NumericUpDown numericUpDownDia;
         private System.Windows.Forms.NumericUpDown numericUpDownLon;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
