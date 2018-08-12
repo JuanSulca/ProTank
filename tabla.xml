@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <tablaDeAforo>
+    <i>1</i>
+    <Paso>0</Paso>
+    <Volumen>0</Volumen>
+    <Porcentaje>0</Porcentaje>
+  </tablaDeAforo>
+  <tablaDeAforo>
+    <i>2</i>
+    <Paso>1</Paso>
+    <Volumen>0,04</Volumen>
+    <Porcentaje>0,0099</Porcentaje>
+  </tablaDeAforo>
+  <tablaDeAforo>
+    <i>3</i>
+    <Paso>2</Paso>
+    <Volumen>0,11</Volumen>
+    <Porcentaje>0,0282</Porcentaje>
+  </tablaDeAforo>
+  <tablaDeAforo>
+    <i>4</i>
+    <Paso>3</Paso>
+    <Volumen>0,2</Volumen>
+    <Porcentaje>0,05</Porcentaje>
+  </tablaDeAforo>
+  <tablaDeAforo>
+    <i>5</i>
+    <Paso>4</Paso>
+    <Volumen>0,28</Volumen>
+    <Porcentaje>0,0718</Porcentaje>
+  </tablaDeAforo>
+  <tablaDeAforo>
+    <i>6</i>
+    <Paso>5</Paso>
+    <Volumen>0,36</Volumen>
+    <Porcentaje>0,0901</Porcentaje>
+  </tablaDeAforo>
+</DocumentElement>
