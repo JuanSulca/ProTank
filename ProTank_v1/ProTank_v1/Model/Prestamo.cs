@@ -107,6 +107,7 @@ namespace ProTank_v1.Model
                 command.Parameters.AddWithValue("@codigoH", codigoH);
                 command.Parameters.AddWithValue("@empID", empleadoID);
                 command.Parameters.AddWithValue("@fecha", fecha);
+                command.Parameters.AddWithValue("@cantidad", cantidad);
                 command.Parameters.AddWithValue("@ret", ret);
                 DB.Open();
                 int rows = command.ExecuteNonQuery();
