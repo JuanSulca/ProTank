@@ -631,7 +631,15 @@ namespace ProTank_v1.View3
 
         private void generarTablaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            GenerarAforo fh = new GenerarAforo();
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
         }
     }
 }

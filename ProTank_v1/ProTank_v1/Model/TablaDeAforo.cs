@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace ProTank_v1.Model
 {
@@ -55,6 +56,11 @@ namespace ProTank_v1.Model
         {
             double radio, volActual, resVolumen = 0, volTotal;
             int pasoAux = 0, i = 0;
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("i");
+            dataTable.Columns.Add
+
+
 
             switch (uniDiametro)
             {
