@@ -252,5 +252,14 @@ namespace ProTank_v1
             dataAdapter.Fill(dataTable);
             return dataTable;
         }
+
+        public DataTable tableHerramientasPrestar()
+        {
+            SqlCommand command = new SqlCommand("select * from herramienta h where h.codigoH not in (select codigoH from prestamo) or (h.cantidad > (select sum(cantidad) from prestamo p where p.codigoH = h.codigoH and returned = 0))", DB);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            return dataTable;
+        }
     }
 }

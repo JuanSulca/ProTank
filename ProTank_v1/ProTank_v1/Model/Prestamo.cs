@@ -38,7 +38,7 @@ namespace ProTank_v1.Model
         -----------------------------------Modificar Prestamo--------------------------------
         -----------------------------------------------------------------------------------*/
 
-        public bool upContrato(DateTime fechaDevolucion, string codHerramienta, string empleadoID, DateTime fecha)
+        public bool upPrestamo(DateTime fechaDevolucion, string codHerramienta, string empleadoID, DateTime fecha)
         {
             bool isSuccess = false;
             try
@@ -66,7 +66,7 @@ namespace ProTank_v1.Model
             return isSuccess;
         }
 
-        public bool upContrato(int cantidad, string codHerramienta, string empID, DateTime fecha)
+        public bool upPrestamo(int cantidad, string codHerramienta, string empID, DateTime fecha)
         {
             bool isSuccess = false;
             try
@@ -98,15 +98,16 @@ namespace ProTank_v1.Model
         ------------------------------------Agregar Prestamo---------------------------------
         -----------------------------------------------------------------------------------*/
 
-        public bool insContrato(string codigoH, string empleadoID, int cantidad)
+        public bool insPrestamo(string codigoH, string empleadoID, DateTime fecha, int cantidad, Boolean ret)
         {
             bool isSuccess = false;
             try
             {
-                SqlCommand command = new SqlCommand("INSERT INTO prestamo (codigoH, idE, cantidad) VALUES (@codigoH, @empID, @cantidad)", DB);
+                SqlCommand command = new SqlCommand("INSERT INTO prestamo VALUES (@codigoH, @empID, @fecha, @cantidad, @ret)", DB);
                 command.Parameters.AddWithValue("@codigoH", codigoH);
                 command.Parameters.AddWithValue("@empID", empleadoID);
-                command.Parameters.AddWithValue("@cantidad", cantidad);
+                command.Parameters.AddWithValue("@fecha", fecha);
+                command.Parameters.AddWithValue("@ret", ret);
                 DB.Open();
                 int rows = command.ExecuteNonQuery();
                 if (rows > 0)
@@ -156,7 +157,7 @@ namespace ProTank_v1.Model
         //Buscar por rango de fechas (prestamos desde, hasta)
         public DataTable tablePrestamo(DateTime fechaMin, DateTime fechaMax)
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM prestamo WHERE fechaP BETWEEN @fechaMin AND @fechaMax OR fechaD BETWEEN @fechaMin AND @fechaMax", DB);
+            SqlCommand command = new SqlCommand("SELECT * FROM prestamo WHERE fechaP BETWEEN @fechaMin AND @fechaMax", DB);
             command.Parameters.AddWithValue("@fechaMin", fechaMin);
             command.Parameters.AddWithValue("@fechaMax", fechaMax);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
@@ -194,7 +195,7 @@ namespace ProTank_v1.Model
 
         public DataTable tablePrestamo()
         {
-            SqlCommand command = new SqlCommand("SELECT codigoH [Herramienta], idE [Empleado], fechaP [Fecha de préstamo], fechaD [Fecha de devolución], cantidad [Cantidad] FROM prestamo", DB);
+            SqlCommand command = new SqlCommand("SELECT codigoH [Herramienta], idE [Empleado], fechaP [Fecha de préstamo], cantidad [Cantidad], returned [Devuelto] FROM prestamo", DB);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);

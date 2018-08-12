@@ -641,5 +641,10 @@ namespace ProTank_v1.View3
             this.panel3.Tag = fh;
             fh.Show();
         }
+
+        private void modificarPrestamoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(5);
+        }
     }
 }

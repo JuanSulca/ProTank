@@ -53,7 +53,12 @@ namespace ProTank_v1.View2
                 label8.Text = "Herramienta:";
                 button10.Text = "Mostrar";
             }
-                tipo = mod;
+            else if (tipo == 5)
+            {
+                label8.Text = "Prestamo:";
+                button10.Text = "Mostrar";
+            }
+            tipo = mod;
         }
 
         public Select(int tipo, Boolean ac)
@@ -112,6 +117,18 @@ namespace ProTank_v1.View2
             else if (tipo == 4)
             {
                 label8.Text = "Herramienta:";
+                if (ac)
+                {
+                    button10.Text = "Modificar";
+                }
+                else
+                {
+                    button10.Text = "Eliminar";
+                }
+            }
+            else if (tipo == 5)
+            {
+                label8.Text = "Prestamo:";
                 if (ac)
                 {
                     button10.Text = "Modificar";
@@ -180,6 +197,15 @@ namespace ProTank_v1.View2
                 foreach (DataRow dr in dataTable.Rows)
                 {
                     comboBox2.Items.Add(new ComItem(dr["codigoH"] + " " + dr["nombre"] + " " + dr["cantidad"], dr["codigoH"].ToString().Trim()));
+                }
+            }
+            else if (tipo == 5)
+            {
+                dataTable = new Prestamo().tablePrestamo();
+                comboBox2.Items.Clear();
+                foreach (DataRow dr in dataTable.Rows)
+                {
+                    comboBox2.Items.Add(dr["Herramienta"] + " " + dr["Empleado"] + " " + dr["Fecha de préstamo"] + " " + dr["Cantidad"].ToString().Trim());
                 }
             }
         }

@@ -229,3 +229,9 @@ select * from empleados_apellidos_nombres
 
 alter table prodServ
 add tipo char(1)
+
+alter table prestamo
+drop column fechaD
+
+alter table prestamo
+add returned bit

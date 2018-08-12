@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProTank_v1.Model;
+using ProTank_v1.View2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +21,23 @@ namespace ProTank_v1.View
             InitializeComponent();
         }
 
+        public NewPrestamo(String idE, String codigoH, DateTime fechaP, Boolean returned, int cantidad)
+        {
+            this.ac = true;
+            InitializeComponent();
+            comboBox1.Items.Clear();
+            comboBox1.Items.Add(codigoH);
+            comboBox2.Items.Clear();
+            comboBox2.Items.Add(idE);
+            comboBox2.SelectedIndex = 0;
+            comboBox1.SelectedIndex = 0;
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = false;
+            numericUpDown1.Value = cantidad;
+            checkRet.Checked = returned;
+            label2.Text = "Modificar Prestamo";
+        }
+
         private void NewPerstamo_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Close();
@@ -28,8 +47,45 @@ namespace ProTank_v1.View
         {
             if (!ac)
             {
+                DataTable dt = new Herramienta().tableHerramientasPrestar();
+                foreach(DataRow dr in dt.Rows)
+                {
+                    comboBox1.Items.Add(new ComItem(dr["codigoH"] + " " + dr["nombre"], dr["codigoH"].ToString().Trim()));
+                }
+                DataTable dt2 = new Empleado().tableEmpleado();
+                foreach (DataRow dr in dt2.Rows)
+                {
+                    comboBox2.Items.Add(new ComItem(dr["idE"] + " " + dr["fname"] + " " + dr["lname"], dr["idE"].ToString().Trim()));
+                }
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String codigoH = comboBox1.SelectedItem.ToString();
+            String idE = comboBox2.SelectedItem.ToString();
+            int cantidad = Convert.ToInt32(numericUpDown1.Value);
+            Boolean returned = checkRet.Checked;
+            DateTime date = DateTime.Today;
+            if (ac)
+            {
 
             }
+            else
+            {
+                new Prestamo().insPrestamo(codigoH, idE, date, cantidad, returned);
+            }
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
