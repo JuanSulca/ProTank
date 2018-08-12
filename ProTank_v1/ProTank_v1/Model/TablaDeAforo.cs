@@ -123,7 +123,7 @@ namespace ProTank_v1.Model
 
         }
 
-        static double superficieTanque(double longitud, double diametro, int tapas)
+        public static double superficieTanque(double longitud, double diametro, int tapas)
         {
             double circulares, cilindro;
 
@@ -132,7 +132,7 @@ namespace ProTank_v1.Model
             return cilindro + circulares;
         }
 
-        static double posicionTapas(double diametro, double volumen)
+        public static double posicionTapas(double diametro, double volumen)
         {
 
             return ((Math.PI * Math.Pow(diametro / 2, 2)) / volumen);

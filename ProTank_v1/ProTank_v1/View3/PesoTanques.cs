@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProTank_v1.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,16 @@ namespace ProTank_v1.View3
         public PesoTanques()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = TablaDeAforo.superficieTanque((double)numericUpDownLon.Value, (double)numericUpDownDia.Value, (int)numericUpDownNum.Value) + string.Empty;
         }
     }
 }
