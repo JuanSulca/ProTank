@@ -391,6 +391,7 @@
             this.prestamosToolStripMenuItem.Name = "prestamosToolStripMenuItem";
             this.prestamosToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.prestamosToolStripMenuItem.Text = "Préstamos";
+            this.prestamosToolStripMenuItem.Click += new System.EventHandler(this.prestamosToolStripMenuItem_Click);
             // 
             // ragistrarPrestamoToolStripMenuItem
             // 
@@ -416,6 +417,7 @@
             this.buscarPrestaamoToolStripMenuItem.Name = "buscarPrestaamoToolStripMenuItem";
             this.buscarPrestaamoToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.buscarPrestaamoToolStripMenuItem.Text = "Buscar Préstamo";
+            this.buscarPrestaamoToolStripMenuItem.Click += new System.EventHandler(this.buscarPrestaamoToolStripMenuItem_Click);
             // 
             // toolStripSeparator8
             // 
@@ -435,21 +437,23 @@
             // todosToolStripMenuItem
             // 
             this.todosToolStripMenuItem.Name = "todosToolStripMenuItem";
-            this.todosToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.todosToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.todosToolStripMenuItem.Text = "Todos";
             this.todosToolStripMenuItem.Click += new System.EventHandler(this.todosToolStripMenuItem_Click);
             // 
             // devueltosToolStripMenuItem
             // 
             this.devueltosToolStripMenuItem.Name = "devueltosToolStripMenuItem";
-            this.devueltosToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.devueltosToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.devueltosToolStripMenuItem.Text = "Devueltos";
+            this.devueltosToolStripMenuItem.Click += new System.EventHandler(this.devueltosToolStripMenuItem_Click);
             // 
             // activosToolStripMenuItem
             // 
             this.activosToolStripMenuItem.Name = "activosToolStripMenuItem";
-            this.activosToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.activosToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.activosToolStripMenuItem.Text = "Activos";
+            this.activosToolStripMenuItem.Click += new System.EventHandler(this.activosToolStripMenuItem_Click);
             // 
             // toolStripSeparator9
             // 

@@ -13,8 +13,10 @@ namespace ProTank_v1.View3
 {
     public partial class MostrarPrestamos : Form
     {
-        public MostrarPrestamos()
+        int index = 0;
+        public MostrarPrestamos(int i)
         {
+            index = i;
             InitializeComponent();
         }
 
@@ -25,8 +27,21 @@ namespace ProTank_v1.View3
 
         private void listarPrestamos()
         {
-            DataTable dataTable = new Prestamo().tablePrestamo();
-            tableModulos_Contratos_tabla.DataSource = dataTable;
+            if (index == 0)
+            {
+                DataTable dataTable = new Prestamo().tablePrestamo();
+                tableModulos_Contratos_tabla.DataSource = dataTable;
+            }
+            else if(index == 1)
+            {
+                DataTable dataTable = new Prestamo().tablePrestamo1();
+                tableModulos_Contratos_tabla.DataSource = dataTable;
+            }
+            else if(index == 2)
+            {
+                DataTable dataTable = new Prestamo().tablePrestamo2();
+                tableModulos_Contratos_tabla.DataSource = dataTable;
+            }
             tableModulos_Contratos_tabla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 

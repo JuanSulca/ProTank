@@ -26,16 +26,37 @@ namespace ProTank_v1.View
             this.ac = true;
             InitializeComponent();
             comboBox1.Items.Clear();
-            comboBox1.Items.Add(codigoH);
+            comboBox1.Items.Add(new ComItem(codigoH, codigoH));
             comboBox2.Items.Clear();
-            comboBox2.Items.Add(idE);
+            comboBox2.Items.Add(new ComItem(idE, idE));
             comboBox2.SelectedIndex = 0;
             comboBox1.SelectedIndex = 0;
             comboBox1.Enabled = false;
             comboBox2.Enabled = false;
             numericUpDown1.Value = cantidad;
+            numericUpDown1.Enabled = false;
             checkRet.Checked = returned;
             label2.Text = "Modificar Prestamo";
+        }
+
+        public NewPrestamo(String idE, String codigoH, DateTime fechaP, Boolean returned, int cantidad, Boolean locked)
+        {
+            this.ac = true;
+            InitializeComponent();
+            comboBox1.Items.Clear();
+            comboBox1.Items.Add(new ComItem(codigoH, codigoH));
+            comboBox2.Items.Clear();
+            comboBox2.Items.Add(new ComItem(idE, idE));
+            comboBox2.SelectedIndex = 0;
+            comboBox1.SelectedIndex = 0;
+            comboBox1.Enabled = false;
+            comboBox2.Enabled = false;
+            numericUpDown1.Value = cantidad;
+            numericUpDown1.Enabled = false;
+            checkRet.Checked = returned;
+            checkRet.Enabled = false;
+            button1.Visible = false;
+            label2.Text = "Prestamo";
         }
 
         private void NewPerstamo_FormClosed(object sender, FormClosedEventArgs e)
@@ -74,7 +95,10 @@ namespace ProTank_v1.View
             DateTime date = DateTime.Today;
             if (ac)
             {
-
+                if (new Prestamo().upPrestamo(codigoH, idE, date, returned))
+                    MessageBox.Show("Modificacion exitoso!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Modificacion Fallido!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -95,7 +119,12 @@ namespace ProTank_v1.View
         {
             DataTable dt = new Herramienta().tableHerramientasPrestar();
             DataRow [] r = dt.Select("[codigoH] = '" + (comboBox1.SelectedItem as ComItem).value + "'");
-            numericUpDown1.Maximum = Convert.ToInt32(r[0]["disponibles"]);
+            try
+            {
+                numericUpDown1.Maximum = Convert.ToInt32(r[0]["disponibles"]);
+            }catch{
+
+            }
         }
     }
 }

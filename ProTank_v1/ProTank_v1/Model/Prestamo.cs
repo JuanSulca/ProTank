@@ -66,13 +66,13 @@ namespace ProTank_v1.Model
             return isSuccess;
         }
 
-        public bool upPrestamo(int cantidad, string codHerramienta, string empID, DateTime fecha)
+        public bool upPrestamo(string codHerramienta, string empID, DateTime fecha, Boolean returned)
         {
             bool isSuccess = false;
             try
             {
-                SqlCommand command = new SqlCommand("UPDATE prestamo SET cantidad = @cantidadWHERE codigoH = @codHerramienta AND idE = @empID AND fechaP = @fecha", DB);
-                command.Parameters.AddWithValue("@cantidad", cantidad);
+                SqlCommand command = new SqlCommand("UPDATE prestamo SET returned = @returned WHERE codigoH = @codHerramienta AND idE = @empID AND fechaP = @fecha", DB);
+                command.Parameters.AddWithValue("@returned", returned);
                 command.Parameters.AddWithValue("@codHerramienta", codHerramienta);
                 command.Parameters.AddWithValue("@empID", empID);
                 command.Parameters.AddWithValue("@fecha", fecha);
@@ -197,6 +197,24 @@ namespace ProTank_v1.Model
         public DataTable tablePrestamo()
         {
             SqlCommand command = new SqlCommand("SELECT codigoH [Herramienta], idE [Empleado], fechaP [Fecha de préstamo], cantidad [Cantidad], returned [Devuelto] FROM prestamo", DB);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            return dataTable;
+        }
+
+        public DataTable tablePrestamo1()
+        {
+            SqlCommand command = new SqlCommand("SELECT codigoH [Herramienta], idE [Empleado], fechaP [Fecha de préstamo], cantidad [Cantidad], returned [Devuelto] FROM prestamo WHERE returned = 1", DB);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            return dataTable;
+        }
+
+        public DataTable tablePrestamo2()
+        {
+            SqlCommand command = new SqlCommand("SELECT codigoH [Herramienta], idE [Empleado], fechaP [Fecha de préstamo], cantidad [Cantidad], returned [Devuelto] FROM prestamo WHERE returned = 0", DB);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);

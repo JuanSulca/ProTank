@@ -203,9 +203,9 @@ namespace ProTank_v1.View2
             {
                 dataTable = new Prestamo().tablePrestamo();
                 comboBox2.Items.Clear();
-                foreach (DataRow dr in dataTable.Rows)
+                foreach (DataRow dr in dataTable.Select("[Devuelto] = false"))
                 {
-                    comboBox2.Items.Add(dr["Herramienta"] + " " + dr["Empleado"] + " " + dr["Fecha de préstamo"] + " " + dr["Cantidad"].ToString().Trim());
+                    comboBox2.Items.Add(new ComItem(dr["Herramienta"] + " " + dr["Empleado"] + " " + dr["Fecha de préstamo"] + " " + dr["Cantidad"].ToString().Trim(), dr["Herramienta"] + ";" + dr["Empleado"] + ";" + dr["Fecha de préstamo"] + ";" + dr["Devuelto"] + ";" + dr["Cantidad"]));
                 }
             }
         }

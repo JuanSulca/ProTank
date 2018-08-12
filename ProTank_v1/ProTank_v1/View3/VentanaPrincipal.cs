@@ -512,7 +512,7 @@ namespace ProTank_v1.View3
         {
             if (this.panel3.Controls.Count > 0)
                 this.panel3.Controls.RemoveAt(0);
-            MostrarPrestamos fh = new MostrarPrestamos();
+            MostrarPrestamos fh = new MostrarPrestamos(0);
             fh.TopLevel = false;
             fh.FormBorderStyle = FormBorderStyle.None;
             fh.Dock = DockStyle.Fill;
@@ -655,7 +655,26 @@ namespace ProTank_v1.View3
 
         private void modificarPrestamoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Select s = new Select(5);
+            Select s = new Select(5, true);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                String[] d = data.Split(';');
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                NewPrestamo fh = new NewPrestamo(d[1], d[0], Convert.ToDateTime(d[2]), Convert.ToBoolean(d[3]), Convert.ToInt32(d[4]));
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
+            }
         }
 
         private void guardarTablaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -676,6 +695,61 @@ namespace ProTank_v1.View3
                 }
             }   
             
+        }
+
+        private void prestamosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buscarPrestaamoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Select s = new Select(5);
+            s.ShowDialog();
+            String data = s.getData();
+            if (data == "")
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                String[] d = data.Split(';');
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                NewPrestamo fh = new NewPrestamo(d[1], d[0], Convert.ToDateTime(d[2]), Convert.ToBoolean(d[3]), Convert.ToInt32(d[4]), true);
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
+            }
+        }
+
+        private void devueltosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            MostrarPrestamos fh = new MostrarPrestamos(1);
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
+        }
+
+        private void activosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            MostrarPrestamos fh = new MostrarPrestamos(2);
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
         }
     }
 }
