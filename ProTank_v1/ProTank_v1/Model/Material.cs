@@ -121,5 +121,14 @@ namespace ProTank_v1.Model
             dataAdapter.Fill(dataTable);
             return dataTable;
         }
+
+        public DataTable tableAll()
+        {
+            SqlCommand command = new SqlCommand("SELECT codigo, nombre, precio, unidad FROM prodServ", DB);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            return dataTable;
+        }
     }
 }

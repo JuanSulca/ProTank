@@ -699,6 +699,7 @@
             // 
             // configurarParámetrosToolStripMenuItem
             // 
+            this.configurarParámetrosToolStripMenuItem.Enabled = false;
             this.configurarParámetrosToolStripMenuItem.Name = "configurarParámetrosToolStripMenuItem";
             this.configurarParámetrosToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
             this.configurarParámetrosToolStripMenuItem.Text = "Configurar Parámetros";
