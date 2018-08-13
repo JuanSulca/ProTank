@@ -206,6 +206,24 @@
     <Compile Include="View3\VentanaPrincipal.Designer.cs">
       <DependentUpon>VentanaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="View4\BusquedaAux.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View4\BusquedaAux.Designer.cs">
+      <DependentUpon>BusquedaAux.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View4\comMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View4\comMantenimiento.Designer.cs">
+      <DependentUpon>comMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View4\newMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View4\newMantenimiento.Designer.cs">
+      <DependentUpon>newMantenimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,6 +325,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View3\VentanaPrincipal.resx">
       <DependentUpon>VentanaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View4\BusquedaAux.resx">
+      <DependentUpon>BusquedaAux.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View4\comMantenimiento.resx">
+      <DependentUpon>comMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View4\newMantenimiento.resx">
+      <DependentUpon>newMantenimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>

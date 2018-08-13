@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.buttonModCant = new System.Windows.Forms.Button();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -40,16 +45,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.buttonModCant);
             this.panel2.Controls.Add(this.numericUpDown2);
             this.panel2.Controls.Add(this.numericUpDown1);
             this.panel2.Controls.Add(this.textBox2);
@@ -68,15 +76,91 @@
             this.panel2.Size = new System.Drawing.Size(597, 306);
             this.panel2.TabIndex = 9;
             // 
-            // numericUpDown1
+            // panel3
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(272, 87);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.numericUpDown3);
+            this.panel3.Location = new System.Drawing.Point(376, 84);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(209, 36);
+            this.panel3.TabIndex = 22;
+            this.panel3.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Agregar",
+            "Disminuir"});
+            this.comboBox1.Location = new System.Drawing.Point(3, 1);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 24);
+            this.comboBox1.TabIndex = 20;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.DecimalPlaces = 2;
+            this.numericUpDown3.Location = new System.Drawing.Point(108, 2);
+            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown3.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(87, 22);
+            this.numericUpDown3.TabIndex = 19;
+            this.numericUpDown3.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            // 
+            // buttonModCant
+            // 
+            this.buttonModCant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonModCant.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModCant.ForeColor = System.Drawing.Color.White;
+            this.buttonModCant.Location = new System.Drawing.Point(393, 71);
+            this.buttonModCant.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonModCant.Name = "buttonModCant";
+            this.buttonModCant.Size = new System.Drawing.Size(123, 55);
+            this.buttonModCant.TabIndex = 21;
+            this.buttonModCant.Text = "Actualizar existencias";
+            this.buttonModCant.UseVisualStyleBackColor = false;
+            this.buttonModCant.Visible = false;
+            this.buttonModCant.Click += new System.EventHandler(this.buttonModCant_Click);
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.DecimalPlaces = 2;
+            this.numericUpDown2.Location = new System.Drawing.Point(429, 176);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            365,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            365,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(87, 22);
+            this.numericUpDown2.TabIndex = 19;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.DecimalPlaces = 2;
+            this.numericUpDown1.Location = new System.Drawing.Point(272, 87);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(87, 22);
             this.numericUpDown1.TabIndex = 18;
@@ -194,14 +278,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nueva Heramienta";
             // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(429, 176);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(87, 22);
-            this.numericUpDown2.TabIndex = 19;
-            // 
             // NewTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -209,15 +285,18 @@
             this.ClientSize = new System.Drawing.Size(597, 391);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NewTool";
             this.Text = "NewTool";
+            this.Load += new System.EventHandler(this.NewTool_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -237,5 +316,9 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Button buttonModCant;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
     }
 }

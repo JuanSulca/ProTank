@@ -49,6 +49,7 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(471, 179);
             this.panel17.TabIndex = 19;
+            this.panel17.Paint += new System.Windows.Forms.PaintEventHandler(this.panel17_Paint);
             // 
             // button1
             // 
@@ -92,6 +93,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "cm",

@@ -58,8 +58,6 @@
             this.buscarHerramientaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.mostrarMantenimientosUrgentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.próximosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.urgentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarHerramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prestamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ragistrarPrestamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -303,11 +301,11 @@
             this.modificarHerramientaToolStripMenuItem,
             this.darDeBajaAHerrmientaToolStripMenuItem,
             this.toolStripSeparator5,
-            this.buscarHerramientaToolStripMenuItem,
             this.ingresarHerramientaAMantenimientoToolStripMenuItem,
             this.recibirHerramientaDeMantenimientoToolStripMenuItem,
-            this.toolStripSeparator6,
             this.mostrarMantenimientosUrgentesToolStripMenuItem,
+            this.toolStripSeparator6,
+            this.buscarHerramientaToolStripMenuItem,
             this.mostrarHerramientasToolStripMenuItem});
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
             this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
@@ -353,27 +351,10 @@
             // 
             // mostrarMantenimientosUrgentesToolStripMenuItem
             // 
-            this.mostrarMantenimientosUrgentesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.próximosToolStripMenuItem,
-            this.urgentesToolStripMenuItem});
             this.mostrarMantenimientosUrgentesToolStripMenuItem.Name = "mostrarMantenimientosUrgentesToolStripMenuItem";
             this.mostrarMantenimientosUrgentesToolStripMenuItem.Size = new System.Drawing.Size(340, 26);
             this.mostrarMantenimientosUrgentesToolStripMenuItem.Text = "Mostrar mantenimientos";
             this.mostrarMantenimientosUrgentesToolStripMenuItem.Click += new System.EventHandler(this.mostrarMantenimientosUrgentesToolStripMenuItem_Click);
-            // 
-            // próximosToolStripMenuItem
-            // 
-            this.próximosToolStripMenuItem.Name = "próximosToolStripMenuItem";
-            this.próximosToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
-            this.próximosToolStripMenuItem.Text = "Próximos";
-            this.próximosToolStripMenuItem.Click += new System.EventHandler(this.próximosToolStripMenuItem_Click);
-            // 
-            // urgentesToolStripMenuItem
-            // 
-            this.urgentesToolStripMenuItem.Name = "urgentesToolStripMenuItem";
-            this.urgentesToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
-            this.urgentesToolStripMenuItem.Text = "Urgentes";
-            this.urgentesToolStripMenuItem.Click += new System.EventHandler(this.urgentesToolStripMenuItem_Click);
             // 
             // mostrarHerramientasToolStripMenuItem
             // 
@@ -751,12 +732,14 @@
             this.ingresarHerramientaAMantenimientoToolStripMenuItem.Name = "ingresarHerramientaAMantenimientoToolStripMenuItem";
             this.ingresarHerramientaAMantenimientoToolStripMenuItem.Size = new System.Drawing.Size(340, 26);
             this.ingresarHerramientaAMantenimientoToolStripMenuItem.Text = "Ingresar herramienta a mantenimiento";
+            this.ingresarHerramientaAMantenimientoToolStripMenuItem.Click += new System.EventHandler(this.ingresarHerramientaAMantenimientoToolStripMenuItem_Click);
             // 
             // recibirHerramientaDeMantenimientoToolStripMenuItem
             // 
             this.recibirHerramientaDeMantenimientoToolStripMenuItem.Name = "recibirHerramientaDeMantenimientoToolStripMenuItem";
             this.recibirHerramientaDeMantenimientoToolStripMenuItem.Size = new System.Drawing.Size(340, 26);
             this.recibirHerramientaDeMantenimientoToolStripMenuItem.Text = "Recibir herramienta de mantenimiento";
+            this.recibirHerramientaDeMantenimientoToolStripMenuItem.Click += new System.EventHandler(this.recibirHerramientaDeMantenimientoToolStripMenuItem_Click);
             // 
             // VentanaPrincipal
             // 
@@ -846,8 +829,6 @@
         private System.Windows.Forms.ToolStripMenuItem mostrarEmpleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarContratosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarMantenimientosUrgentesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem próximosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem urgentesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarHerramientasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarPrestamosActivosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem todosToolStripMenuItem;

@@ -162,6 +162,91 @@ namespace ProTank_v1
             return dataTable;
         }
 
+        public DataTable tableMantenimientoSW()
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM mantenimientoSW", DB);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            return dataTable;
+        }
+        public DataTable tableMantenimientoSW(string codH, DateTime fechaI)
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM mantenimientoSW WHERE codigoH = @codH AND CAST(fechaIngreso AS DATE) = CAST(@fechaI AS DATE)", DB);
+            command.Parameters.AddWithValue("@codH", codH);
+            command.Parameters.AddWithValue("@fechaI", fechaI);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            return dataTable;
+        }
+
+        public DataTable buscarRango(DateTime min, DateTime max)
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM mantenimientoSW WHERE CAST(fechaIngreso AS DATE) > CAST(@fechaI AS DATE) AND CAST(fechaSalida AS DATE) < CAST(@fechaF AS DATE)", DB);
+            command.Parameters.AddWithValue("@FechaF", max);
+            command.Parameters.AddWithValue("@fechaI", min);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            return dataTable;
+        }
+
+
+        public bool insMantenimiento(string herramientaID, DateTime fechaI, int cantidad)
+        {
+            bool isSuccess = false;
+            try
+            {
+                SqlCommand command = new SqlCommand("INSERT INTO mantenimientoSW (codigoH,cantidad,fechaIngreso) VALUES (@codH, @cantidad,@fechaI)", DB);
+                command.Parameters.AddWithValue("@codH", herramientaID);
+                command.Parameters.AddWithValue("@fechaI", fechaI);
+                command.Parameters.AddWithValue("@cantidad", cantidad);
+                DB.Open();
+                int rows = command.ExecuteNonQuery();
+                if (rows > 0)
+                {
+                    isSuccess = true;
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                DB.Close();
+            }
+            return isSuccess;
+        }
+
+        public bool upMantenimiento(string herramientaID, DateTime fechaI, DateTime fechaF, string notas)
+        {
+            bool isSuccess = false;
+            try
+            {
+                SqlCommand command = new SqlCommand("UPDATE mantenimientoSW SET fechaSalida = @fechaF, notas = @notas WHERE codigoH = @codH AND CAST(fechaIngreso AS DATE) = CAST(@fechaI AS DATE)", DB);
+                command.Parameters.AddWithValue("@codH", herramientaID);
+                command.Parameters.AddWithValue("@fechaF", fechaF);
+                command.Parameters.AddWithValue("@fechaI", fechaI);
+                command.Parameters.AddWithValue("@notas", notas);
+                DB.Open();
+                int rows = command.ExecuteNonQuery();
+                if (rows > 0)
+                {
+                    isSuccess = true;
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                DB.Close();
+            }
+            return isSuccess;
+        }
 
     }
 }

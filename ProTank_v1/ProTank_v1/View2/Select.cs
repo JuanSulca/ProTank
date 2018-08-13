@@ -215,6 +215,11 @@ namespace ProTank_v1.View2
             data = "";
             this.Close();
         }
+
+        private void panel17_Paint(object sender, PaintEventArgs e)
+        {
+            comboBox2.SelectedIndex = 0;
+        }
     }
 
     public class ComItem

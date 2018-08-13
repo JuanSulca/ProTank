@@ -1,6 +1,7 @@
 ﻿using ProTank_v1.Model;
 using ProTank_v1.View;
 using ProTank_v1.View2;
+using ProTank_v1.View4;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,10 +54,11 @@ namespace ProTank_v1.View3
 
         private void buscarHerramientaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Select s = new Select(4);
+            BusquedaAux s = new BusquedaAux(0);
             s.ShowDialog();
-            String data = s.getData();
-            if (data == "")
+            string opcion = s.Opcion;
+            string criterio = s.Criterio;
+            if (opcion == "" || criterio == "")
             {
                 //MessageBox.Show("Modificacion de cliente cancelada!");
             }
@@ -64,13 +66,20 @@ namespace ProTank_v1.View3
             {
                 if (this.panel3.Controls.Count > 0)
                     this.panel3.Controls.RemoveAt(0);
-                NewTool fh = new NewTool(data, true);
-                fh.TopLevel = false;
-                fh.FormBorderStyle = FormBorderStyle.None;
-                fh.Dock = DockStyle.Fill;
-                this.panel3.Controls.Add(fh);
-                this.panel3.Tag = fh;
-                fh.Show();
+                NewTool fh = new NewTool(opcion, criterio, true);
+                try
+                {
+                    fh.TopLevel = false;
+                    fh.FormBorderStyle = FormBorderStyle.None;
+                    fh.Dock = DockStyle.Fill;
+                    this.panel3.Controls.Add(fh);
+                    this.panel3.Tag = fh;
+                    fh.Show();
+                }
+                catch
+                {
+
+                }
             }
         }
 
@@ -505,7 +514,27 @@ namespace ProTank_v1.View3
 
         private void mostrarMantenimientosUrgentesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            BusquedaAux s = new BusquedaAux(true);
+            s.ShowDialog();
+            DateTime min = s.min;
+            DateTime max = s.max;
+            if (min == new DateTime() || max == new DateTime())
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                DataTable dt = new Mantenimiento().buscarRango(min, max);
+                MostrarHerramientas fh = new MostrarHerramientas(dt);
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
+            }
         }
 
         private void todosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -590,9 +619,9 @@ namespace ProTank_v1.View3
 
         private void darDeBajaAHerrmientaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Select s = new Select(4, false);
+            BusquedaAux s = new BusquedaAux(1);
             s.ShowDialog();
-            String data = s.getData();
+            string data = s.Criterio;
             if (data == "")
             {
                 //MessageBox.Show("Modificacion de cliente cancelada!");
@@ -608,7 +637,7 @@ namespace ProTank_v1.View3
                     }
                     else
                     {
-                        MessageBox.Show("Eliminación de herramienta fallida!");
+                        MessageBox.Show("No existe una herramienta registrada con ese código", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -750,6 +779,42 @@ namespace ProTank_v1.View3
             this.panel3.Controls.Add(fh);
             this.panel3.Tag = fh;
             fh.Show();
+        }
+
+        private void ingresarHerramientaAMantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            newMantenimiento fh = new newMantenimiento();
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(fh);
+            this.panel3.Tag = fh;
+            fh.Show();
+        }
+
+        private void recibirHerramientaDeMantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            newMantenimiento s = new newMantenimiento(1);
+            s.ShowDialog();
+            DataTable data = s.Table;
+            if (data == new DataTable())
+            {
+                //MessageBox.Show("Modificacion de cliente cancelada!");
+            }
+            else
+            {
+                if (this.panel3.Controls.Count > 0)
+                    this.panel3.Controls.RemoveAt(0);
+                comMantenimiento fh = new comMantenimiento(data);
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panel3.Controls.Add(fh);
+                this.panel3.Tag = fh;
+                fh.Show();
+            }
         }
     }
 }
