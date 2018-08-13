@@ -37,6 +37,7 @@ namespace ProTank_v1.View
             numericUpDown1.Enabled = false;
             checkRet.Checked = returned;
             label2.Text = "Modificar Prestamo";
+            button1.Text = "Modificar Prestamo";
         }
 
         public NewPrestamo(String idE, String codigoH, DateTime fechaP, Boolean returned, int cantidad, Boolean locked)
@@ -117,13 +118,15 @@ namespace ProTank_v1.View
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable dt = new Herramienta().tableHerramientasPrestar();
-            DataRow [] r = dt.Select("[codigoH] = '" + (comboBox1.SelectedItem as ComItem).value + "'");
-            try
-            {
-                numericUpDown1.Maximum = Convert.ToInt32(r[0]["disponibles"]);
-            }catch{
+            if (!ac) {
+                DataTable dt = new Herramienta().tableHerramientasPrestar();
+                DataRow[] r = dt.Select("[codigoH] = '" + (comboBox1.SelectedItem as ComItem).value + "'");
+                try
+                {
+                    numericUpDown1.Maximum = Convert.ToInt32(r[0]["disponibles"]);
+                } catch {
 
+                }
             }
         }
     }
