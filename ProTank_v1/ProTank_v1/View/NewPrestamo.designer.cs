@@ -84,9 +84,9 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(91, 133);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 23);
+            this.label1.Size = new System.Drawing.Size(118, 23);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Cantidad:";
+            this.label1.Text = "*Cantidad:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // numericUpDown1
@@ -122,6 +122,7 @@
             // comboBox2
             // 
             this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.empleadoBindingSource1, "lname", true));
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(336, 89);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -142,6 +143,7 @@
             // comboBox1
             // 
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.herramientaBindingSource1, "nombre", true));
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(336, 41);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -161,9 +163,9 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(91, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 23);
+            this.label5.Size = new System.Drawing.Size(145, 23);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Herammienta:";
+            this.label5.Text = "*Herramienta:";
             // 
             // button2
             // 
@@ -199,9 +201,9 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(91, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 23);
+            this.label3.Size = new System.Drawing.Size(150, 23);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Responsable:";
+            this.label3.Text = "*Responsable:";
             // 
             // empleadoBindingSource
             // 

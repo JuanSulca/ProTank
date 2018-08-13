@@ -60,8 +60,8 @@ namespace ProTank_v1.View3
                                 DataRow[] r = dt.Select("[codigo] = '" + codigo + "'");
                                 decimal precioU = Convert.ToDecimal(r[0]["precio"].ToString());
                                 decimal precio = precioU * cantidad;
-                                tablaVentas.Rows[row].Cells[2].Value = precioU;
-                                tablaVentas.Rows[row].Cells[3].Value = precio;
+                                tablaVentas.Rows[row].Cells[2].Value = Math.Round(precioU, 2);
+                                tablaVentas.Rows[row].Cells[3].Value = Math.Round(precio, 2);
                                 decimal total = 0;
                                 foreach (DataGridViewRow ro in tablaVentas.Rows)
                                 {
@@ -70,7 +70,7 @@ namespace ProTank_v1.View3
                                         total += Convert.ToDecimal(ro.Cells[3].Value.ToString());
                                     }
                                 }
-                                textBox1.Text = total + "";
+                                textBox1.Text = Math.Round(total, 2) + "";
                             }
                             else
                             {
@@ -99,8 +99,8 @@ namespace ProTank_v1.View3
                             DataRow[] r = dt.Select("[codigo] = '" + codigo + "'");
                             decimal precioU = Convert.ToDecimal(r[0]["precio"].ToString());
                             decimal precio = precioU * cantidad;
-                            tablaVentas.Rows[row].Cells[2].Value = precioU;
-                            tablaVentas.Rows[row].Cells[3].Value = precio;
+                            tablaVentas.Rows[row].Cells[2].Value = Math.Round(precioU, 2);
+                            tablaVentas.Rows[row].Cells[3].Value = Math.Round(precio, 2);
                             decimal total = 0;
                             foreach(DataGridViewRow ro in tablaVentas.Rows)
                             {
@@ -109,7 +109,7 @@ namespace ProTank_v1.View3
                                     total += Convert.ToDecimal(ro.Cells[3].Value.ToString());
                                 }
                             }
-                            textBox1.Text = total + "";
+                            textBox1.Text = Math.Round(total, 2) + "";
                         }
                         else
                         {

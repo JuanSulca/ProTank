@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -40,16 +41,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.numericUpDown2);
             this.panel2.Controls.Add(this.numericUpDown1);
             this.panel2.Controls.Add(this.textBox2);
@@ -65,13 +67,21 @@
             this.panel2.Location = new System.Drawing.Point(0, 85);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(597, 306);
+            this.panel2.Size = new System.Drawing.Size(700, 306);
             this.panel2.TabIndex = 9;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(429, 176);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(87, 22);
+            this.numericUpDown2.TabIndex = 19;
             // 
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(272, 87);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown1.Minimum = new decimal(new int[] {
             1,
             0,
@@ -108,9 +118,9 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(91, 132);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 23);
+            this.label6.Size = new System.Drawing.Size(96, 23);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Código:";
+            this.label6.Text = "*Código:";
             // 
             // label5
             // 
@@ -118,9 +128,9 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(91, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 23);
+            this.label5.Size = new System.Drawing.Size(104, 23);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Nombre:";
+            this.label5.Text = "*Nombre:";
             // 
             // button2
             // 
@@ -156,9 +166,9 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(91, 176);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(275, 23);
+            this.label4.Size = new System.Drawing.Size(284, 23);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Periodo de mantenimiento:";
+            this.label4.Text = "*Periodo de mantenimiento:";
             // 
             // label3
             // 
@@ -166,9 +176,9 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(91, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 23);
+            this.label3.Size = new System.Drawing.Size(118, 23);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Cantidad:";
+            this.label3.Text = "*Cantidad:";
             // 
             // panel1
             // 
@@ -179,7 +189,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(597, 85);
+            this.panel1.Size = new System.Drawing.Size(700, 85);
             this.panel1.TabIndex = 8;
             // 
             // label2
@@ -194,30 +204,32 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nueva Heramienta";
             // 
-            // numericUpDown2
+            // label1
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(429, 176);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(87, 22);
-            this.numericUpDown2.TabIndex = 19;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(536, 176);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 23);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "meses";
             // 
             // NewTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 391);
+            this.ClientSize = new System.Drawing.Size(700, 391);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NewTool";
             this.Text = "NewTool";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -237,5 +249,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Label label1;
     }
 }

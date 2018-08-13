@@ -260,6 +260,7 @@ namespace ProTank_v1.View2
                     comboBox2.Items.Add(new ComItem(dr["codigo"].ToString().Trim() + " " + dr["nombre"] + " " + dr["unidad"], dr["codigo"] + ""));
                 }
             }
+            comboBox2.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -267,6 +268,7 @@ namespace ProTank_v1.View2
             data = "";
             this.Close();
         }
+
     }
 
     public class ComItem

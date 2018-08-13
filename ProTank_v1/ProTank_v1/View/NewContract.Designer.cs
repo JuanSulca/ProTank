@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.numericUpDownMonto = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -47,12 +49,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.numericUpDownMonto = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMonto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMonto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -81,6 +81,36 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(620, 531);
             this.panel2.TabIndex = 9;
+            // 
+            // numericUpDownMonto
+            // 
+            this.numericUpDownMonto.DecimalPlaces = 2;
+            this.numericUpDownMonto.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.numericUpDownMonto.Location = new System.Drawing.Point(301, 223);
+            this.numericUpDownMonto.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownMonto.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.numericUpDownMonto.Name = "numericUpDownMonto";
+            this.numericUpDownMonto.Size = new System.Drawing.Size(166, 22);
+            this.numericUpDownMonto.TabIndex = 27;
+            this.toolTip1.SetToolTip(this.numericUpDownMonto, "Calidicación del contrato actual");
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(91, 218);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 23);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "*Monto:";
             // 
             // numericUpDown1
             // 
@@ -171,9 +201,9 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(91, 132);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(171, 23);
+            this.label6.Size = new System.Drawing.Size(180, 23);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Fecha  de Inicio:";
+            this.label6.Text = "*Fecha  de Inicio:";
             // 
             // label5
             // 
@@ -181,9 +211,9 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(91, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 23);
+            this.label5.Size = new System.Drawing.Size(93, 23);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Cliente:";
+            this.label5.Text = "*Cliente:";
             // 
             // textBox1
             // 
@@ -228,9 +258,9 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(91, 176);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(192, 23);
+            this.label4.Size = new System.Drawing.Size(201, 23);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Fecha de Entrega:";
+            this.label4.Text = "*Fecha de Entrega:";
             // 
             // label3
             // 
@@ -238,9 +268,9 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(91, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 23);
+            this.label3.Size = new System.Drawing.Size(138, 23);
             this.label3.TabIndex = 0;
-            this.label3.Text = "ID Contrato:";
+            this.label3.Text = "*ID Contrato:";
             // 
             // panel1
             // 
@@ -266,36 +296,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nuevo Contrato";
             // 
-            // numericUpDownMonto
-            // 
-            this.numericUpDownMonto.DecimalPlaces = 2;
-            this.numericUpDownMonto.Increment = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.numericUpDownMonto.Location = new System.Drawing.Point(301, 223);
-            this.numericUpDownMonto.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownMonto.Maximum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            0});
-            this.numericUpDownMonto.Name = "numericUpDownMonto";
-            this.numericUpDownMonto.Size = new System.Drawing.Size(166, 22);
-            this.numericUpDownMonto.TabIndex = 27;
-            this.toolTip1.SetToolTip(this.numericUpDownMonto, "Calidicación del contrato actual");
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(91, 218);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 23);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Monto:";
-            // 
             // NewContract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -309,10 +309,10 @@
             this.Load += new System.EventHandler(this.NewContract_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMonto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMonto)).EndInit();
             this.ResumeLayout(false);
 
         }

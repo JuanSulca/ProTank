@@ -129,6 +129,8 @@
             // checkModulos_NuevoUsuario_servicios
             // 
             this.checkModulos_NuevoUsuario_servicios.AutoSize = true;
+            this.checkModulos_NuevoUsuario_servicios.Checked = true;
+            this.checkModulos_NuevoUsuario_servicios.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkModulos_NuevoUsuario_servicios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkModulos_NuevoUsuario_servicios.Location = new System.Drawing.Point(416, 227);
             this.checkModulos_NuevoUsuario_servicios.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -189,12 +191,13 @@
             this.lblModulos_NuevoUsuario_password1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModulos_NuevoUsuario_password1.Location = new System.Drawing.Point(91, 132);
             this.lblModulos_NuevoUsuario_password1.Name = "lblModulos_NuevoUsuario_password1";
-            this.lblModulos_NuevoUsuario_password1.Size = new System.Drawing.Size(130, 23);
+            this.lblModulos_NuevoUsuario_password1.Size = new System.Drawing.Size(139, 23);
             this.lblModulos_NuevoUsuario_password1.TabIndex = 8;
-            this.lblModulos_NuevoUsuario_password1.Text = "Contraseña:";
+            this.lblModulos_NuevoUsuario_password1.Text = "*Contraseña:";
             // 
             // comboModulos_NuevoUsuario_nombre
             // 
+            this.comboModulos_NuevoUsuario_nombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboModulos_NuevoUsuario_nombre.FormattingEnabled = true;
             this.comboModulos_NuevoUsuario_nombre.Location = new System.Drawing.Point(272, 35);
             this.comboModulos_NuevoUsuario_nombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -209,9 +212,9 @@
             this.lblModulos_NuevoUsuario_nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModulos_NuevoUsuario_nombre.Location = new System.Drawing.Point(91, 36);
             this.lblModulos_NuevoUsuario_nombre.Name = "lblModulos_NuevoUsuario_nombre";
-            this.lblModulos_NuevoUsuario_nombre.Size = new System.Drawing.Size(95, 23);
+            this.lblModulos_NuevoUsuario_nombre.Size = new System.Drawing.Size(104, 23);
             this.lblModulos_NuevoUsuario_nombre.TabIndex = 6;
-            this.lblModulos_NuevoUsuario_nombre.Text = "Nombre:";
+            this.lblModulos_NuevoUsuario_nombre.Text = "*Nombre:";
             // 
             // txtModulos_NuevoUsuario_passsword2
             // 
@@ -264,9 +267,9 @@
             this.lblModulos_NuevoUsuario_password2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModulos_NuevoUsuario_password2.Location = new System.Drawing.Point(91, 176);
             this.lblModulos_NuevoUsuario_password2.Name = "lblModulos_NuevoUsuario_password2";
-            this.lblModulos_NuevoUsuario_password2.Size = new System.Drawing.Size(139, 23);
+            this.lblModulos_NuevoUsuario_password2.Size = new System.Drawing.Size(148, 23);
             this.lblModulos_NuevoUsuario_password2.TabIndex = 1;
-            this.lblModulos_NuevoUsuario_password2.Text = "*Contraseña:";
+            this.lblModulos_NuevoUsuario_password2.Text = "**Contraseña:";
             // 
             // lblModulos_NuevoUsuario_username
             // 
@@ -274,9 +277,9 @@
             this.lblModulos_NuevoUsuario_username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModulos_NuevoUsuario_username.Location = new System.Drawing.Point(91, 84);
             this.lblModulos_NuevoUsuario_username.Name = "lblModulos_NuevoUsuario_username";
-            this.lblModulos_NuevoUsuario_username.Size = new System.Drawing.Size(84, 23);
+            this.lblModulos_NuevoUsuario_username.Size = new System.Drawing.Size(93, 23);
             this.lblModulos_NuevoUsuario_username.TabIndex = 0;
-            this.lblModulos_NuevoUsuario_username.Text = "Usuario:";
+            this.lblModulos_NuevoUsuario_username.Text = "*Usuario:";
             // 
             // panel3
             // 

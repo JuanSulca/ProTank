@@ -145,3 +145,4 @@ C:\Users\JoseLuis\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v
 C:\Users\JoseLuis\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View3.MostrarTablaDeAforo.resources
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View3.MostrarTablaDeAforo.resources
 D:\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View3.Servicios.resources
+C:\Users\JoseLuis\Source\Repos\ProTank\ProTank_v1\ProTank_v1\obj\Debug\ProTank_v1.View3.Servicios.resources

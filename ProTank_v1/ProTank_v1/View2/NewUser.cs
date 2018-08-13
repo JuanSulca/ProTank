@@ -85,6 +85,7 @@ namespace ProTank_v1.View2
         private void NewUser_Load(object sender, EventArgs e)
         {
             auxNombres();
+            comboModulos_NuevoUsuario_nombre.SelectedItem = 0;
 
         }
 

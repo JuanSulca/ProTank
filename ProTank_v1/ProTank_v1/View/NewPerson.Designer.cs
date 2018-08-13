@@ -126,9 +126,9 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(91, 132);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 23);
+            this.label6.Size = new System.Drawing.Size(98, 23);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Cédula:";
+            this.label6.Text = "*Cédula:";
             // 
             // label5
             // 
@@ -136,9 +136,9 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(91, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 23);
+            this.label5.Size = new System.Drawing.Size(112, 23);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Nombres:";
+            this.label5.Text = "*Nombres:";
             // 
             // textBox1
             // 
@@ -194,9 +194,9 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(91, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 23);
+            this.label3.Size = new System.Drawing.Size(114, 23);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Apellidos:";
+            this.label3.Text = "*Apellidos:";
             // 
             // panel1
             // 

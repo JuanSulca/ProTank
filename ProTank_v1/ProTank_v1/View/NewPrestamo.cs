@@ -79,6 +79,8 @@ namespace ProTank_v1.View
                 {
                     comboBox2.Items.Add(new ComItem(dr["idE"] + " " + dr["fname"] + " " + dr["lname"], dr["idE"].ToString().Trim()));
                 }
+                comboBox1.SelectedIndex = 0;
+                comboBox2.SelectedIndex = 0;
             }
         }
 

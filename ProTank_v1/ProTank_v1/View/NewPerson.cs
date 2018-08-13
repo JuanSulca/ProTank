@@ -61,8 +61,11 @@ namespace ProTank_v1.View
                 label2.Text = "Actualizar Empleado";
                 Empleado e = new Empleado().getEmpleado(id);
                 textBox4.Text = e.fname;
+                textBox4.Enabled = false;
                 textBox1.Text = e.lname;
+                textBox1.Enabled = false;
                 textBox2.Text = e.id;
+                textBox2.Enabled = false;
                 textBox3.Text = e.tel;
                 textBox5.Text = e.cel;
             }
@@ -71,8 +74,11 @@ namespace ProTank_v1.View
                 label2.Text = "Actualizar Cliente";
                 Person e = new Person().getPerson(id);
                 textBox4.Text = e.fname;
+                textBox4.Enabled = false;
                 textBox1.Text = e.lname;
+                textBox1.Enabled = false;
                 textBox2.Text = e.id;
+                textBox2.Enabled = false;
                 textBox3.Text = e.tel;
                 textBox5.Text = e.cel;
             }
