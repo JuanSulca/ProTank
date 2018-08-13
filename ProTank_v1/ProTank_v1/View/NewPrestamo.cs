@@ -92,10 +92,10 @@ namespace ProTank_v1.View
             String idE = (comboBox2.SelectedItem as ComItem).value;
             int cantidad = (int)numericUpDown1.Value;
             Boolean returned = checkRet.Checked;
-            DateTime date = DateTime.Today;
+            DateTime date = DateTime.Now;
             if (ac)
             {
-                if (new Prestamo().upPrestamo(codigoH, idE, date, returned))
+                if (new Prestamo().upPrestamo(codigoH, idE, returned))
                     MessageBox.Show("Modificacion exitoso!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                     MessageBox.Show("Modificacion Fallido!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

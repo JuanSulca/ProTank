@@ -26,6 +26,26 @@ namespace ProTank_v1.View3
         public VentanaPrincipal(String rol)
         {
             InitializeComponent();
+            if (rol.Contains("A"))
+            {
+                
+            }
+            else if (rol.Contains("D"))
+            {
+
+            }
+            else if (rol.Contains("V"))
+            {
+
+            }
+            else if (rol.Contains("H"))
+            {
+
+            }
+            else if (rol.Contains("C"))
+            {
+
+            }
         }
 
         private void VentanaPrincipal_Load(object sender, EventArgs e)

@@ -38,16 +38,15 @@ namespace ProTank_v1.Model
         -----------------------------------Modificar Prestamo--------------------------------
         -----------------------------------------------------------------------------------*/
 
-        public bool upPrestamo(DateTime fechaDevolucion, string codHerramienta, string empleadoID, DateTime fecha)
+        public bool upPrestamo(DateTime fechaDevolucion, string codHerramienta, string empleadoID)
         {
             bool isSuccess = false;
             try
             {
-                SqlCommand command = new SqlCommand("UPDATE prestamo SET fechaD = @fechaD WHERE codigoH = @codHerramienta AND idE = @empID AND fechaP = @fecha", DB);
+                SqlCommand command = new SqlCommand("UPDATE prestamo SET fechaD = @fechaD WHERE codigoH = @codHerramienta AND idE = @empID", DB);
                 command.Parameters.AddWithValue("@fechaD", fechaDevolucion);
                 command.Parameters.AddWithValue("@codHerramienta", codHerramienta);
                 command.Parameters.AddWithValue("@empID", empleadoID);
-                command.Parameters.AddWithValue("@fecha", fecha);
                 DB.Open();
                 int rows = command.ExecuteNonQuery();
                 if (rows > 0)
@@ -66,16 +65,15 @@ namespace ProTank_v1.Model
             return isSuccess;
         }
 
-        public bool upPrestamo(string codHerramienta, string empID, DateTime fecha, Boolean returned)
+        public bool upPrestamo(string codHerramienta, string empID, Boolean returned)
         {
             bool isSuccess = false;
             try
             {
-                SqlCommand command = new SqlCommand("UPDATE prestamo SET returned = @returned WHERE codigoH = @codHerramienta AND idE = @empID AND fechaP = @fecha", DB);
+                SqlCommand command = new SqlCommand("UPDATE prestamo SET returned = @returned WHERE codigoH = @codHerramienta AND idE = @empID", DB);
                 command.Parameters.AddWithValue("@returned", returned);
                 command.Parameters.AddWithValue("@codHerramienta", codHerramienta);
                 command.Parameters.AddWithValue("@empID", empID);
-                command.Parameters.AddWithValue("@fecha", fecha);
                 DB.Open();
                 int rows = command.ExecuteNonQuery();
                 if (rows > 0)

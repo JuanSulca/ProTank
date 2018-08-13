@@ -115,7 +115,7 @@ namespace ProTank_v1.Model
 
         public DataTable tableMaterial()
         {
-            SqlCommand command = new SqlCommand("SELECT codigo [Código del servicio], nombre [Nombre], precio [Precio], unidad [Unidad de medida] FROM prodServ WHERE tipo = 'P'", DB);
+            SqlCommand command = new SqlCommand("SELECT codigo [Código del Material], nombre [Nombre], precio [Precio], unidad [Unidad de medida] FROM prodServ WHERE tipo = 'P'", DB);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
