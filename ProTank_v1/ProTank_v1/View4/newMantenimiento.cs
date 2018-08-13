@@ -70,7 +70,7 @@ namespace ProTank_v1.View4
                         }
                         else
                         {
-                            MessageBox.Show("La herramienta " + dt.Rows[0]["codigoH"].ToString() + " no se encuetra actualmente en mantenimiento.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("La herramienta " + dt.Rows[0]["codigoH"].ToString() + "no se encuentra actualmente en mantenimiento.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }

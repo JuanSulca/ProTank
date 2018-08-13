@@ -38,7 +38,14 @@ namespace ProTank_v1.View4
 
         private void comMantenimiento_Load(object sender, EventArgs e)
         {
-            dateTimePicker1.MinDate = Convert.ToDateTime(source.Rows[0]["fechaIngreso"].ToString());
+            try
+            {
+                dateTimePicker1.MinDate = Convert.ToDateTime(source.Rows[0]["fechaIngreso"].ToString());
+            }
+            catch
+            {
+
+            }
         }
     }
 }

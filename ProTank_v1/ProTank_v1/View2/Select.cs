@@ -208,6 +208,7 @@ namespace ProTank_v1.View2
                     comboBox2.Items.Add(new ComItem(dr["Herramienta"] + " " + dr["Empleado"] + " " + dr["Fecha de préstamo"] + " " + dr["Cantidad"].ToString().Trim(), dr["Herramienta"] + ";" + dr["Empleado"] + ";" + dr["Fecha de préstamo"] + ";" + dr["Devuelto"] + ";" + dr["Cantidad"]));
                 }
             }
+            comboBox2.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -218,7 +219,7 @@ namespace ProTank_v1.View2
 
         private void panel17_Paint(object sender, PaintEventArgs e)
         {
-            comboBox2.SelectedIndex = 0;
+            
         }
     }
 

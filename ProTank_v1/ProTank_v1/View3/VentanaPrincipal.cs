@@ -637,7 +637,7 @@ namespace ProTank_v1.View3
                     }
                     else
                     {
-                        MessageBox.Show("No existe una herramienta registrada con ese código", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No existe una herramienta registrada con ese código.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
