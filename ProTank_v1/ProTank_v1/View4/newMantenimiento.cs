@@ -53,6 +53,7 @@ namespace ProTank_v1.View4
                             if (isSucces)
                             {
                                 MessageBox.Show("Mantenimiento registrado con éxito.", "Información");
+                                this.Close();
                             }
                         }
                         else
