@@ -106,19 +106,19 @@ namespace ProTank_v1.View3
                     {
                         if (new Material().upMaterial(codigo, nombre, precio, unidad))
                         {
-                            MessageBox.Show("Modificacion Exitosa", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Modificación Exitosa", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
                         {
-                            MessageBox.Show("Modificacion Fallida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Modificación Fallida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
                     {
                         if (new Material().insMaterial(codigo, nombre, precio, unidad))
                         {
-                            MessageBox.Show("Registro Exitoso", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Registro Exitoso", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
@@ -133,19 +133,19 @@ namespace ProTank_v1.View3
                     {
                         if (new Servicio().upServicio(codigo, nombre, precio, unidad))
                         {
-                            MessageBox.Show("Modificacion Exitosa", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Modificación Exitosa", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
                         {
-                            MessageBox.Show("Modificacion Fallida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Modificación Fallida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
                     {
                         if (new Servicio().insServicio(codigo, nombre, precio, unidad))
                         {
-                            MessageBox.Show("Registro Exitoso", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Registro Exitoso", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else

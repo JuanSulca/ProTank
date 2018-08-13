@@ -174,12 +174,12 @@ namespace ProTank_v1.View
                         bool successAc = new Person().upPerson(nombres, apellido, cedula, telefono, celular);
                         if (successAc)
                         {
-                            MessageBox.Show("Actualizacion exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Actualización exitosa!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
                         {
-                            MessageBox.Show("Actualizacion fallida!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Actualización fallida!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                     else

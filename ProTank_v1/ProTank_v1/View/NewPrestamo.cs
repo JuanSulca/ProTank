@@ -36,8 +36,8 @@ namespace ProTank_v1.View
             numericUpDown1.Value = cantidad;
             numericUpDown1.Enabled = false;
             checkRet.Checked = returned;
-            label2.Text = "Modificar Prestamo";
-            button1.Text = "Modificar Prestamo";
+            label2.Text = "Modificar Préstamo";
+            button1.Text = "Modificar Préstamo";
         }
 
         public NewPrestamo(String idE, String codigoH, DateTime fechaP, Boolean returned, int cantidad, Boolean locked)
@@ -57,7 +57,7 @@ namespace ProTank_v1.View
             checkRet.Checked = returned;
             checkRet.Enabled = false;
             button1.Visible = false;
-            label2.Text = "Prestamo";
+            label2.Text = "Préstamo";
         }
 
         private void NewPerstamo_FormClosed(object sender, FormClosedEventArgs e)
@@ -97,9 +97,9 @@ namespace ProTank_v1.View
             if (ac)
             {
                 if (new Prestamo().upPrestamo(codigoH, idE, returned))
-                    MessageBox.Show("Modificacion exitoso!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Modificación exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
-                    MessageBox.Show("Modificacion Fallido!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Modificación Fallida!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

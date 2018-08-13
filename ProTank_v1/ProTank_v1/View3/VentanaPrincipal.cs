@@ -26,25 +26,52 @@ namespace ProTank_v1.View3
         public VentanaPrincipal(String rol)
         {
             InitializeComponent();
+            clienteToolStripMenuItem.Visible = false;
+            empleadosToolStripMenuItem.Visible = false;
+            contratosToolStripMenuItem.Visible = false;
+            inventarioToolStripMenuItem.Visible = false;
+            prestamosToolStripMenuItem.Visible = false;
+            tablaDeAforoToolStripMenuItem.Visible = false;
+            diseñoToolStripMenuItem.Visible = false;
+            serviciosToolStripMenuItem.Visible = false;
+            materialesToolStripMenuItem.Visible = false;
+            ventasToolStripMenuItem.Visible = false;
+            usuariosToolStripMenuItem.Visible = false;
             if (rol.Contains("A"))
             {
-                
+                clienteToolStripMenuItem.Visible = true;
+                empleadosToolStripMenuItem.Visible = true;
+                contratosToolStripMenuItem.Visible = true;
+                inventarioToolStripMenuItem.Visible = true;
+                prestamosToolStripMenuItem.Visible = true;
+                tablaDeAforoToolStripMenuItem.Visible = true;
+                diseñoToolStripMenuItem.Visible = true;
+                serviciosToolStripMenuItem.Visible = true;
+                materialesToolStripMenuItem.Visible = true;
+                ventasToolStripMenuItem.Visible = true;
+                usuariosToolStripMenuItem.Visible = true;
             }
-            else if (rol.Contains("D"))
+            if (rol.Contains("D"))
             {
-
+                tablaDeAforoToolStripMenuItem.Visible = true;
+                diseñoToolStripMenuItem.Visible = true;
             }
-            else if (rol.Contains("V"))
+            if (rol.Contains("V"))
             {
-
+                clienteToolStripMenuItem.Visible = true;
+                serviciosToolStripMenuItem.Visible = true;
+                materialesToolStripMenuItem.Visible = true;
+                ventasToolStripMenuItem.Visible = true;
             }
-            else if (rol.Contains("H"))
+            if (rol.Contains("H"))
             {
-
+                inventarioToolStripMenuItem.Visible = true;
+                prestamosToolStripMenuItem.Visible = true;
             }
-            else if (rol.Contains("C"))
+            if (rol.Contains("C"))
             {
-
+                contratosToolStripMenuItem.Visible = true;
+                clienteToolStripMenuItem.Visible = true;
             }
         }
 
@@ -230,13 +257,17 @@ namespace ProTank_v1.View3
             }
             else
             {
-                if (new User().delUser(data))
+                DialogResult r = MessageBox.Show("Desea eliminar el Cliente: " + data + "?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (r.Equals(DialogResult.Yes))
                 {
-                    MessageBox.Show("Eliminación de usuario exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Eliminación de usuario fallida!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (new User().delUser(data))
+                    {
+                        MessageBox.Show("Eliminación de usuario exitosa!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Eliminación de usuario fallida!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -277,12 +308,12 @@ namespace ProTank_v1.View3
             }
             else
             {
-                DialogResult r = MessageBox.Show("Desea eliminar el Cliente: " + data + "?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult r = MessageBox.Show("Desea eliminar el Cliente: " + data + "?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (r.Equals(DialogResult.Yes))
                 {
                     if (new Person().delPerson(data))
                     {
-                        MessageBox.Show("Eliminación de cliente exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Eliminación de cliente exitosa!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -303,12 +334,12 @@ namespace ProTank_v1.View3
             }
             else
             {
-                DialogResult r = MessageBox.Show("Desea eliminar el Empleado: " + data + "?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult r = MessageBox.Show("Desea eliminar el Empleado: " + data + "?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (r.Equals(DialogResult.Yes))
                 {
                     if (new Empleado().delEmpleado(data))
                     {
-                        MessageBox.Show("Eliminación de empleado exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Eliminación de empleado exitosa!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -422,12 +453,12 @@ namespace ProTank_v1.View3
             }
             else
             {
-                DialogResult r = MessageBox.Show("Desea eliminar el Contrato: " + data + "?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult r = MessageBox.Show("Desea eliminar el Contrato: " + data + "?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (r.Equals(DialogResult.Yes))
                 {
                     if (new Contrato().delContrato(data))
                     {
-                        MessageBox.Show("Eliminación de contrato exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Eliminación de contrato exitosa!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -619,12 +650,12 @@ namespace ProTank_v1.View3
             }
             else
             {
-                DialogResult r = MessageBox.Show("Desea eliminar la herramienta: " + data + "?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult r = MessageBox.Show("Desea eliminar la herramienta: " + data + "?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (r.Equals(DialogResult.Yes))
                 {
                     if (new Herramienta().delHerramienta(data))
                     {
-                        MessageBox.Show("Eliminación de herramienta exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Eliminación de herramienta exitosa!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -855,12 +886,12 @@ namespace ProTank_v1.View3
             }
             else
             {
-                DialogResult r = MessageBox.Show("Desea eliminar el servicio: " + data.Trim() + "?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult r = MessageBox.Show("Desea eliminar el servicio: " + data.Trim() + "?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (r.Equals(DialogResult.Yes))
                 {
                     if (new Servicio().delServicio(data))
                     {
-                        MessageBox.Show("Eliminación de Servicio exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Eliminación de Servicio exitosa!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -881,12 +912,12 @@ namespace ProTank_v1.View3
             }
             else
             {
-                DialogResult r = MessageBox.Show("Desea eliminar el producto: " + data.Trim() + "?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult r = MessageBox.Show("Desea eliminar el producto: " + data.Trim() + "?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (r.Equals(DialogResult.Yes))
                 {
                     if (new Material().delMaterial(data))
                     {
-                        MessageBox.Show("Eliminación de Producto exitosa!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Eliminación de Producto exitosa!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -953,6 +984,16 @@ namespace ProTank_v1.View3
             this.panel3.Controls.Add(fh);
             this.panel3.Tag = fh;
             fh.Show();
+        }
+
+        private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

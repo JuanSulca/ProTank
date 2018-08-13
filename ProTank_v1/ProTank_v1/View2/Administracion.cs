@@ -73,12 +73,12 @@ namespace ProTank_v1.View
             try
             {
                 tba.Delete(fname, lname, id, tel, cel);
-                MessageBox.Show("Empleado eliminado exitosamente", "Eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Empleado eliminado exitosamente", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.empleadoTableAdapter.Fill(this.protankDataSet.empleado);
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Empleado posee conecciones con otra tablas", "Eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Empleado posee conecciones con otra tablas", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -93,12 +93,12 @@ namespace ProTank_v1.View
             try
             {
                 tba.Delete(fname, lname, id, tel, cel);
-                MessageBox.Show("Cliente eliminado exitosamente", "Eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cliente eliminado exitosamente", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.personTableAdapter.Fill(this.protankDataSet.person);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Cliente posee conecciones con otra tablas", "Eliminacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cliente posee conecciones con otra tablas", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -123,7 +123,7 @@ namespace ProTank_v1.View2
                     rol += "A";
                 if (pass != new Hash().md5(txtModulos_NuevoUsuario_passsword2.Text))
                 {
-                    MessageBox.Show("Contraseñas no coinsiden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Contraseñas no coinciden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -140,12 +140,12 @@ namespace ProTank_v1.View2
                         cnx.Close();
                         if (i > 0)
                         {
-                            MessageBox.Show("Actualizacion exitosa", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Actualización exitosa", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
                         {
-                            MessageBox.Show("No se pudo actualizar el registro", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("No se pudo actualizar el registro", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             this.Close();
                         }
                     }
@@ -155,7 +155,7 @@ namespace ProTank_v1.View2
                         User u = new User(uname, pass, rol);
                         u.insUser(u, id);
                     }
-                    MessageBox.Show("Registro exitoso", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Registro exitoso", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
             }

@@ -308,6 +308,7 @@
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
             this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
             this.inventarioToolStripMenuItem.Text = "Herramientas";
+            this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
             // 
             // registrarHerramientaToolStripMenuItem
             // 
@@ -643,6 +644,7 @@
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
             this.usuariosToolStripMenuItem.Text = "Administración del Sistema";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // administraciónDeUsuariosToolStripMenuItem
             // 

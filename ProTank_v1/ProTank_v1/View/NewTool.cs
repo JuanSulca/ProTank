@@ -62,17 +62,17 @@ namespace ProTank_v1.View
                 {
                     Boolean b = new Herramienta().upHerramienta(nombre, Convert.ToInt32(cantidad), codigo, Convert.ToInt32(periodo));
                     if (b)
-                        MessageBox.Show("Actualizacion Exitoso!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Actualización Exitosa!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        MessageBox.Show("Actualizacion Fallido!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Actualización Fallida!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
                     Boolean b = new Herramienta().insHerramienta(nombre, Convert.ToInt32(cantidad), codigo, Convert.ToInt32(periodo));
                     if (b)
-                        MessageBox.Show("Registro Exitoso!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Registro Exitoso!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        MessageBox.Show("Registro Fallido!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Registro Fallido!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             this.Close();
